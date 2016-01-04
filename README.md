@@ -3,6 +3,7 @@
 ---
 
 #### Basics
+- [Buffers, windows, tabs?](#buffers-windows-tabs)
 - [Colorschemes?](#colorschemes)
 
 #### Usage
@@ -11,6 +12,35 @@
 ---
 
 ## Usage
+
+#### Buffers, windows, tabs?
+
+Vim is a text editor. Everytime text is shown, the text is part of a **buffer**.
+Each file will be opened in its own buffer. Plugins show stuff in their own
+buffers etc.
+
+Buffers have many attributes, e.g. whether the text it contains is modifiable,
+or whether it is associated with a file and thus needs to be synchronized to
+disk on saving.
+
+**Windows** are viewports _into_ buffers. If you want to view several files at
+the same time or even different locations of the same file, you use windows.
+
+And please, please don't call them _splits_. You can split a window in two, but
+that doesn't make them _splits_.
+
+Windows can be split vertically or horizontally and the heights and widths of
+existing windows can be altered, too. Therefore you can use whatever window
+layout you prefer.
+
+A **tab page** (or just tab) is a collection of windows. Thus, if you want to
+use multiple window layouts, use tabs.
+
+Putting it in a nutshell, if you start Vim without arguments, you'll have one
+tab page that holds one window that shows one buffer.
+
+By the way, the buffer list is global and you can access any buffer from any
+tab.
 
 #### Colorschemes?
 
