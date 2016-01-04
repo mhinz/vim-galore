@@ -23,7 +23,7 @@ Buffers have many attributes, e.g. whether the text it contains is modifiable,
 or whether it is associated with a file and thus needs to be synchronized to
 disk on saving.
 
-**Windows** are viewports _into_ buffers. If you want to view several files at
+**Windows** are viewports _onto_ buffers. If you want to view several files at
 the same time or even different locations of the same file, you use windows.
 
 And please, please don't call them _splits_. You can split a window in two, but
