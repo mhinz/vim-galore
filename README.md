@@ -4,6 +4,7 @@
 
 #### Basics
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
+- [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
 - [Colorschemes?](#colorschemes)
 
 #### Usage
@@ -11,7 +12,7 @@
 
 ---
 
-## Usage
+## Basics
 
 #### Buffers, windows, tabs?
 
@@ -41,6 +42,26 @@ tab page that holds one window that shows one buffer.
 
 By the way, the buffer list is global and you can access any buffer from any
 tab.
+
+#### Active, loaded, listed, named buffers?
+
+Run Vim like this `vim file1`. The file's content will be loaded into a buffer.
+You have a **loaded buffer** now. The content of the buffer is only synchronized
+to disk (written back to the file) if you save it within Vim.
+
+Since the buffer is also shown in a window, it's also an **active buffer**. Now
+if you load another file via `:e file2`, `file1` will become a **hidden buffer**
+and `file2` the active one.
+
+Both buffers are also **listed**, thus they will get listed in the output of
+`:ls`. Plugin buffers or help buffers are often marked as unlisted, since
+they're not regular files you usually edit with a text editor. Listed and
+unlisted buffers can be shown via `:ls!`.
+
+**Unnamed buffers**, also often used by plugins, are buffers that don't have an
+associated filename. E.g. `:enew` will create an unnamed scratch buffer. Add
+some text and write it to disk via `:w /tmp/foo`, and it will become a named
+buffer.
 
 #### Colorschemes?
 
@@ -79,7 +100,7 @@ Here's a list of commonly used colorschemes:
 I use gruvbox for the GUI and [janah](https://github.com/mhinz/vim-janah) for
 the terminal.
 
-## Basics
+## Usage
 
 #### Managing plugins
 
