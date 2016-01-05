@@ -23,6 +23,9 @@
 #### [Miscellaneous](#miscellaneous-1)
 - [Vim distributions](#vim-distributions)
 
+#### [Quirks](#quirks-1)
+- [Newline used for NUL](#newline-used-for-nul)
+
 #### [List of colorschemes](#list-of-colorschemes-1)
 
 #### [List of plugins](#list-of-plugins-1)
@@ -409,6 +412,15 @@ looking at some distributions:
 - [cream](http://cream.sourceforge.net)
 - [janus](https://github.com/carlhuda/janus.git)
 - [spf13](https://github.com/spf13/spf13-vim)
+
+## Quirks
+
+#### Newline used for NUL
+
+NUL characters (`\0`) in a file, are stored as newline (`\n`) in memory and
+displayed in a buffer as `^@`.
+
+See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
 
 ## List of colorschemes
 
