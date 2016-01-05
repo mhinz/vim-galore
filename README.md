@@ -325,6 +325,7 @@ Here's a list of commonly used colorschemes:
 - [jellybeans](https://github.com/nanotech/jellybeans.vim)
 - [molokai](https://github.com/tomasr/molokai)
 - [railscasts](https://github.com/jpo/vim-railscasts-theme)
+- [seoul256](https://github.com/junegunn/seoul256.vim)
 - [solarized](https://github.com/altercation/vim-colors-solarized) (or a lighter variant: [flattened](https://github.com/romainl/flattened))
 - [tomorrow](https://github.com/chriskempson/vim-tomorrow-theme)
 - [vividchalk](https://github.com/tpope/vim-vividchalk)
@@ -380,5 +381,5 @@ Also see [fuzzy finders](#fuzzy-finders).
 #### Taking notes
 
 - [journal](https://github.com/junegunn/vim-journal)
-- [vimwiki](https://github.com/vimwiki/vimwiki)
 - [notes](https://github.com/xolox/vim-notes)
+- [vimwiki](https://github.com/vimwiki/vimwiki)
