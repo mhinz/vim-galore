@@ -336,6 +336,7 @@ Here's a list of commonly used colorschemes:
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [sneak](https://github.com/justinmk/vim-sneak)
 - [tagbar](https://github.com/majutsushi/tagbar)
+- [vimfiler](https://github.com/Shougo/vimfiler.vim)
 - [vinegar](https://github.com/tpope/vim-vinegar)
 
 Also see [fuzzy finders](#fuzzy-finders).
