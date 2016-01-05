@@ -27,6 +27,7 @@
 - [Delimiter](#delimiter)
 - [Version control](#version-control)
 - [Statusline](#statusline)
+- [Taking notes](#taking-notes)
 
 ---
 
@@ -374,3 +375,9 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [flagship](https://github.com/tpope/vim-flagship)
 - [lightline](https://github.com/itchyny/lightline.vim)
 - [powerline](https://github.com/powerline/powerline)
+
+#### Taking notes
+
+- [journal](https://github.com/junegunn/vim-journal)
+- [vimwiki](https://github.com/vimwiki/vimwiki)
+- [notes](https://github.com/xolox/vim-notes)
