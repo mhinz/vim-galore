@@ -323,6 +323,7 @@ Here's a list of commonly used colorschemes:
 - [gruvbox](https://github.com/morhetz/gruvbox)
 - [janah](https://github.com/mhinz/vim-janah)
 - [jellybeans](https://github.com/nanotech/jellybeans.vim)
+- [lucius](https://github.com/jonathanfilip/vim-lucius)
 - [molokai](https://github.com/tomasr/molokai)
 - [railscasts](https://github.com/jpo/vim-railscasts-theme)
 - [seoul256](https://github.com/junegunn/seoul256.vim)
