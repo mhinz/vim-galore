@@ -12,6 +12,7 @@
 
 #### Plugins
 - [Fuzzy finders](#fuzzy-finders)
+- [Version control](#version-control)
 
 ---
 
@@ -129,5 +130,13 @@ Plug is my favorite, but your mileage may vary.
 
 - [command-t](https://github.com/wincent/Command-T)
 - [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git)
-- [fzf](https://github.com/junegunn/fzf) (my fav)
+- [fzf](https://github.com/junegunn/fzf)
 - [unite](https://github.com/Shougo/unite.vim)
+
+#### Version control
+
+- [fugitive](https://github.com/tpope/vim-fugitive)
+- [gitgutter](https://github.com/airblade/vim-gitgutter)
+- [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
+- [signify](https://github.com/mhinz/vim-signify)
+- [vcscommand](https://github.com/vim-scripts/vcscommand.vim)
