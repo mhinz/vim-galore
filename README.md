@@ -13,6 +13,7 @@
 - [Getting help offline](#getting-help-offline)
 - [Getting help online](#getting-help-online)
 - [Managing plugins](#managing-plugins)
+- [Block insert](#block-insert)
 
 #### [Debugging](#debugging-1)
 - [General tips](#general-tips)
@@ -257,6 +258,37 @@ in alphabetic sequence:
 - [vundle](https://github.com/VundleVim/Vundle.vim)
 
 Plug is my favorite, but your mileage may vary.
+
+#### Block insert
+
+This is a technique to insert the same text on multiple consecutive lines at the
+same time. See this
+[demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/pics/block_insert.gif).
+
+Switch to visual block mode with `<c-v>`. Afterwards go down for a few lines.
+Hit `I` or `A` and start entering your text.
+
+It might be a bit confusing at first, but text is always entered for the current
+line and only after finishing the current insertion, the same text will be
+applied to all other lines of the prior visual selection.
+
+So a simple example is `<c-v>3jItext<esc>`.
+
+If you have lines of different length and want to append the same text right
+after the end of each line, do this: `<c-v>3j$Atext<esc>`.
+
+Sometime you need to place the cursor somewhere after the end of the current
+line. You can't do that by default, but you can set the `virtualedit` option:
+```viml
+set virtualedit=all
+```
+Afterwards `$10l` or `90|` work even after the end of the line.
+
+See `:h blockwise-examples` for more info. It might seem complicated at first,
+but quickly becomes second nature.
+
+If you want to get real fancy, have a look at
+[multiple-cursors](https://github.com/terryma/vim-multiple-cursors).
 
 ## Debugging
 
