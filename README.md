@@ -12,6 +12,7 @@
 
 #### [Debugging](#debugging-1)
 - [General tips](#general-tips)
+- [Profiling startup time](#profiling-startup-time)
 
 #### [List of colorschemes](#list-of-colorschemes-1)
 
@@ -154,6 +155,18 @@ vimrc. Vim will skip everything after it. If it still happens, the problem is in
 the active upper half. Move the `:finish` to the middle of _that_ half.
 Otherwise the issue is in the inactive lower half. Move the `:finish` to the
 middle of _that_ half. And so on.
+
+#### Profiling startup time
+
+Vim startup feels slow? Time to crunch some numbers:
+
+```
+vim --startuptime /tmp/startup.log +q && vim /tmp/startup.log
+```
+
+The first column is the most important as it shows the elapsed absolute time. If
+there is a big jump in time between two lines, the second line is either a very
+big file or a file with faulty VimL code that is worth investigating.
 
 ## List of colorschemes
 
