@@ -368,6 +368,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [fugitive](https://github.com/tpope/vim-fugitive)
 - [gitgutter](https://github.com/airblade/vim-gitgutter)
+- [gitv](https://github.com/gregsexton/gitv)
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [signify](https://github.com/mhinz/vim-signify)
 - [vcscommand](https://github.com/vim-scripts/vcscommand.vim)
