@@ -21,15 +21,15 @@
 #### [List of colorschemes](#list-of-colorschemes-1)
 
 #### [List of plugins](#list-of-plugins-1)
-- [Navigation](#navigation)
-- [Fuzzy finders](#fuzzy-finders)
-- [Grep tools](#grep-tools)
 - [Code completion](#code-completion)
 - [Delimiter](#delimiter)
-- [Version control](#version-control)
+- [Fuzzy finders](#fuzzy-finders)
+- [Grep tools](#grep-tools)
+- [Navigation](#navigation)
 - [Statusline](#statusline)
 - [Taking notes](#taking-notes)
 - [Undo history](#undo-history)
+- [Version control](#version-control)
 
 ---
 
@@ -335,16 +335,18 @@ Here's a list of commonly used colorschemes:
 
 ## List of plugins
 
-#### Navigation
+#### Code completion
 
-- [easymotion](https://github.com/easymotion/vim-easymotion)
-- [nerdtree](https://github.com/scrooloose/nerdtree)
-- [sneak](https://github.com/justinmk/vim-sneak)
-- [tagbar](https://github.com/majutsushi/tagbar)
-- [vimfiler](https://github.com/Shougo/vimfiler.vim)
-- [vinegar](https://github.com/tpope/vim-vinegar)
+- [neocomplete](https://github.com/Shougo/neocomplete.vim)
+- [supertab](https://github.com/ervandew/supertab)
+- [youcompleteme](https://github.com/Valloric/YouCompleteMe)
 
-Also see [fuzzy finders](#fuzzy-finders).
+#### Delimiter
+
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+- [delimitmate](https://github.com/Raimondi/delimitMate)
+- [endwise](https://github.com/tpope/vim-endwise)
+- [ultisnips](https://github.com/SirVer/ultisnips)
 
 #### Fuzzy finders
 
@@ -360,27 +362,16 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [grepper](https://github.com/mhinz/vim-grepper) (tries to supercede all other
   grep plugins :-))
 
-#### Code completion
+#### Navigation
 
-- [neocomplete](https://github.com/Shougo/neocomplete.vim)
-- [supertab](https://github.com/ervandew/supertab)
-- [youcompleteme](https://github.com/Valloric/YouCompleteMe)
+- [easymotion](https://github.com/easymotion/vim-easymotion)
+- [nerdtree](https://github.com/scrooloose/nerdtree)
+- [sneak](https://github.com/justinmk/vim-sneak)
+- [tagbar](https://github.com/majutsushi/tagbar)
+- [vimfiler](https://github.com/Shougo/vimfiler.vim)
+- [vinegar](https://github.com/tpope/vim-vinegar)
 
-#### Delimiter
-
-- [auto-pairs](https://github.com/jiangmiao/auto-pairs)
-- [delimitmate](https://github.com/Raimondi/delimitMate)
-- [endwise](https://github.com/tpope/vim-endwise)
-- [ultisnips](https://github.com/SirVer/ultisnips)
-
-#### Version control
-
-- [fugitive](https://github.com/tpope/vim-fugitive)
-- [gitgutter](https://github.com/airblade/vim-gitgutter)
-- [gitv](https://github.com/gregsexton/gitv)
-- [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
-- [signify](https://github.com/mhinz/vim-signify)
-- [vcscommand](https://github.com/vim-scripts/vcscommand.vim)
+Also see [fuzzy finders](#fuzzy-finders).
 
 #### Statusline
 
@@ -399,3 +390,12 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [gundo](https://github.com/sjl/gundo.vim)
 - [undotree](https://github.com/mbbill/undotree)
+
+#### Version control
+
+- [fugitive](https://github.com/tpope/vim-fugitive)
+- [gitgutter](https://github.com/airblade/vim-gitgutter)
+- [gitv](https://github.com/gregsexton/gitv)
+- [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
+- [signify](https://github.com/mhinz/vim-signify)
+- [vcscommand](https://github.com/vim-scripts/vcscommand.vim)
