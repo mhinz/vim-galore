@@ -28,6 +28,7 @@
 - [Version control](#version-control)
 - [Statusline](#statusline)
 - [Taking notes](#taking-notes)
+- [Undo history](#undo-history)
 
 ---
 
@@ -385,3 +386,8 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [journal](https://github.com/junegunn/vim-journal)
 - [notes](https://github.com/xolox/vim-notes)
 - [vimwiki](https://github.com/vimwiki/vimwiki)
+
+#### Undo history
+
+- [gundo](https://github.com/sjl/gundo.vim)
+- [undotree](https://github.com/mbbill/undotree)
