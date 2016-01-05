@@ -357,6 +357,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Delimiter
 
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 - [delimitmate](https://github.com/Raimondi/delimitMate)
 - [endwise](https://github.com/tpope/vim-endwise)
 - [ultisnips](https://github.com/SirVer/ultisnips)
