@@ -8,7 +8,8 @@
 - [Colorschemes?](#colorschemes)
 
 #### [Usage](#usage-1)
-- [Using the help](#using-the-help)
+- [Getting help offline](#getting-help-offline)
+- [Getting help online](#getting-help-online)
 - [Managing plugins](#managing-plugins)
 
 #### [Debugging](#debugging-1)
@@ -105,7 +106,7 @@ More colorschemes: [here](#list-of-colorschemes-1)
 
 ## Usage
 
-#### Using the help
+#### Getting help offline
 
 Vim comes with great documentation in the form of single text files with a
 special layout. Vim uses a system based on tags for accessing certain parts of
@@ -141,6 +142,17 @@ match. The matches will be assembled in the quickfix list. Use `:cn`/`:cp` to
 jump to the next/previous match. Or use `:copen` to open the quickfix window,
 navigate to an entry and hit `<cr>` to jump to that match. See `:h quickfix` for
 the whole truth.
+
+#### Getting help online
+
+If you have an issue you can't resolve or are in need of general guidance, see
+the [vim_use](https://groups.google.com/forum/#!forum/vim_use) mailing list.
+Another great resource is using
+[IRC](https://de.wikipedia.org/wiki/Internet_Relay_Chat). The channel `#vim` on
+[Freenode](https://freenode.net) is huge and usually full of helpful people.
+
+If you want to report a Vim bug, use the
+[vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
 
 #### Managing plugins
 
