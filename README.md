@@ -21,6 +21,7 @@
 #### [List of colorschemes](#list-of-colorschemes-1)
 
 #### [List of plugins](#list-of-plugins-1)
+- [Alignment](#alignment)
 - [Code completion](#code-completion)
 - [Delimiter](#delimiter)
 - [Fuzzy finders](#fuzzy-finders)
@@ -334,6 +335,11 @@ Here's a list of commonly used colorschemes:
 - [vividchalk](https://github.com/tpope/vim-vividchalk)
 
 ## List of plugins
+
+#### Alignment
+
+- [easy-align](https://github.com/junegunn/vim-easy-align)
+- [tabular](https://github.com/godlygeek/tabular)
 
 #### Code completion
 
