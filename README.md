@@ -10,6 +10,9 @@
 #### Usage
 - [Managing plugins](#managing-plugins)
 
+#### Plugins
+- [Fuzzy finders](#fuzzy-finders)
+
 ---
 
 ## Basics
@@ -119,3 +122,12 @@ in alphabetic sequence:
 - [vundle](https://github.com/VundleVim/Vundle.vim)
 
 Plug is my favorite, but your mileage may vary.
+
+## Plugins
+
+#### Fuzzy finders
+
+- [command-t](https://github.com/wincent/Command-T)
+- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git)
+- [fzf](https://github.com/junegunn/fzf) (my fav)
+- [unite](https://github.com/Shougo/unite.vim)
