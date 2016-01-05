@@ -10,6 +10,9 @@
 #### [Usage](#usage-1)
 - [Managing plugins](#managing-plugins)
 
+#### [Debugging](#debugging-1)
+- [General tips](#general-tips)
+
 #### [List of colorschemes](#list-of-colorschemes-1)
 
 #### [List of plugins](#list-of-plugins-1)
@@ -116,6 +119,41 @@ in alphabetic sequence:
 - [vundle](https://github.com/VundleVim/Vundle.vim)
 
 Plug is my favorite, but your mileage may vary.
+
+## Debugging
+
+#### General tips
+
+If you encounter a strange behaviour, try reproducing it like this:
+
+```
+vim -u NONE -N
+```
+
+This will start Vim without vimrc (thus default settings) and in nocompatible
+mode (which makes it use Vim defaults instead of vi defaults). (See `:h
+--noplugin` for other combinations of what to load at start.)
+
+If you can still reproduce it now, it's most likeley a bug in Vim itself! Report
+it to the [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing
+list. Most of the time the issue won't be resolved at this time and you'll have to
+further investigate.
+
+Often plugin updates introduce new/changed/faulty behaviour. If you're using a
+plugin manager, comment them out until you find the culprit.
+
+Issue is still not resolved? If it's not a plugin, it must be your other
+settings, so maybe your options or autocmds etc.
+
+Time to use binary search. Repeatedly split the search space in two until you
+find the culprit line. Due to the nature of binary division, it won't take many
+steps.
+
+In practice it works like this: Put the `:finish` command in the middle of your
+vimrc. Vim will skip everything after it. If it still happens, the problem is in
+the active upper half. Move the `:finish` to the middle of _that_ half.
+Otherwise the issue is in the inactive lower half. Move the `:finish` to the
+middle of _that_ half. And so on.
 
 ## List of colorschemes
 
