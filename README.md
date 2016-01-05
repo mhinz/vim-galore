@@ -5,6 +5,7 @@
 #### [Basics](#basics-1)
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
+- [Mappings?](#mappings)
 - [Colorschemes?](#colorschemes)
 
 #### [Usage](#usage-1)
@@ -75,6 +76,58 @@ unlisted buffers can be shown via `:ls!`.
 associated filename. E.g. `:enew` will create an unnamed scratch buffer. Add
 some text and write it to disk via `:w /tmp/foo`, and it will become a named
 buffer.
+
+#### Mappings?
+
+You can define your own mappings with the `:map` family of commands. Each
+command of that family defines a mappping for a certain set of modes.
+Technically Vim comes with a whopping 12 modes, 6 of them can be mapped.
+
+| Command | Modes                            |
+|---------|----------------------------------|
+| `:map`  | normal, visual, operator-pending |
+| `:nmap` | normal                           |
+| `:xmap` | visual                           |
+| `:cmap` | command-line                     |
+| `:omap` | operator-pending                 |
+| `:imap` | insert                           |
+
+E.g. this defines the mapping for normal mode only:
+
+```viml
+:nmap <space> :echo "foo"<cr>
+```
+
+So far, so good. There's only one problem that can be pretty confusing to
+beginners: All the commands listed above are _recursive_. That is, the
+right-hand side takes other mappings into account.
+
+So you defined a mapping that simply echoes "Foo":
+
+```viml
+:nmap b :echo "Foo"<cr>
+```
+
+But what if you want to map the default behavior of `b` (going one word back) to
+another key?
+
+```viml
+:nmap a b
+```
+
+If you hit <kbd>a</kbd>, we expect the cursor to go back a word, but instead
+"Foo" is printed in the command-line! Because the right-hand side, `b`, was
+mapped to another action already, namely `:echo "Foo"<cr>`.
+
+The proper way to resolve this problem is to use a _non-recursive_ mapping
+instead. Take the commands from above and put a `nore` in front of the `map`, so
+`:noremap`, `:nnoremap`, `:xnoremap`, `:cnoremap`, `:onoremap`, `:inoremap`.
+
+Putting it in a nutshell, this solves our problem:
+
+```viml
+:nnoremap a b
+```
 
 #### Colorschemes?
 
