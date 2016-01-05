@@ -6,6 +6,7 @@
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
 - [Mappings?](#mappings)
+- [Mapleader?](#mapleader)
 - [Colorschemes?](#colorschemes)
 
 #### [Usage](#usage-1)
@@ -136,6 +137,30 @@ Putting it in a nutshell, this solves our problem:
 ```viml
 :nnoremap a b
 ```
+
+#### Mapleader?
+
+The mapleader is simply a placeholder than can be used with custom mappings and
+is set to `\` by default.
+```viml
+nnoremap <leader>h :helpgrep<right>
+```
+This mapping is triggered by `\h`.
+
+You can change the mapleader like this:
+
+```viml
+let mapleader = ';'
+```
+
+**Note**: It's important that the mapleader is set before the mappings that use
+it, otherwise `\` will be used anyway.
+
+Opposed to the global `<leader>`, there's is also `<localleader>` which is
+supposed to be used in filetype-specific plugins. There is no default set for
+the local mapleader.
+
+See `:h mapleader` and `:h maplocalleader` for more.
 
 #### Colorschemes?
 
