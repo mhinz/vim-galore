@@ -21,6 +21,7 @@
 #### [List of colorschemes](#list-of-colorschemes-1)
 
 #### [List of plugins](#list-of-plugins-1)
+- [Navigation](#navigation)
 - [Fuzzy finders](#fuzzy-finders)
 - [Version control](#version-control)
 
@@ -326,12 +327,22 @@ Here's a list of commonly used colorschemes:
 
 ## List of plugins
 
+#### Navigation
+
+- [easymotion](https://github.com/easymotion/vim-easymotion)
+- [nerdtree](https://github.com/scrooloose/nerdtree)
+- [sneak](https://github.com/justinmk/vim-sneak)
+- [tagbar](https://github.com/majutsushi/tagbar)
+- [vinegar](https://github.com/tpope/vim-vinegar)
+
+Also see [fuzzy finders](#fuzzy-finders).
+
 #### Fuzzy finders
 
-- [command-t](https://github.com/wincent/Command-T)
-- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git)
-- [fzf](https://github.com/junegunn/fzf)
-- [unite](https://github.com/Shougo/unite.vim)
+- [command-t](https://github.com/wincent/Command-T) (fuzzy finder)
+- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git) (fuzzy finder)
+- [fzf](https://github.com/junegunn/fzf) (fuzzy finder)
+- [unite](https://github.com/Shougo/unite.vim) (fuzzy finder)
 
 #### Version control
 
