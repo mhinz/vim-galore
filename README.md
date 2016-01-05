@@ -24,6 +24,7 @@
 - [Navigation](#navigation)
 - [Fuzzy finders](#fuzzy-finders)
 - [Version control](#version-control)
+- [Statusline](#statusline)
 
 ---
 
@@ -339,10 +340,10 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Fuzzy finders
 
-- [command-t](https://github.com/wincent/Command-T) (fuzzy finder)
-- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git) (fuzzy finder)
-- [fzf](https://github.com/junegunn/fzf) (fuzzy finder)
-- [unite](https://github.com/Shougo/unite.vim) (fuzzy finder)
+- [command-t](https://github.com/wincent/Command-T)
+- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git)
+- [fzf](https://github.com/junegunn/fzf)
+- [unite](https://github.com/Shougo/unite.vim)
 
 #### Version control
 
@@ -351,3 +352,10 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [signify](https://github.com/mhinz/vim-signify)
 - [vcscommand](https://github.com/vim-scripts/vcscommand.vim)
+
+#### Statusline
+
+- [airline](https://github.com/bling/vim-airline)
+- [flagship](https://github.com/tpope/vim-flagship)
+- [lightline](https://github.com/itchyny/lightline.vim)
+- [powerline](https://github.com/powerline/powerline)
