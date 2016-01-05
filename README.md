@@ -13,6 +13,7 @@
 #### [Debugging](#debugging-1)
 - [General tips](#general-tips)
 - [Profiling startup time](#profiling-startup-time)
+- [Profiling at runtime](#profiling-at-runtime)
 
 #### [List of colorschemes](#list-of-colorschemes-1)
 
@@ -167,6 +168,43 @@ vim --startuptime /tmp/startup.log +q && vim /tmp/startup.log
 The first column is the most important as it shows the elapsed absolute time. If
 there is a big jump in time between two lines, the second line is either a very
 big file or a file with faulty VimL code that is worth investigating.
+
+#### Profiling at runtime
+
+Vim provides a built-in capability for profiling at runtime and is a great way
+to find slow code in your environment.
+
+First and foremost, check if `:version` shows `+profile`, which means that the
+`profile` feature is enabled. Otherwise you're using a Vim with a smaller
+_feature set_. You want a Vim built with the **huge** feature set (see `:h
+:version`). Many distros install a Vim with minimal feature set by default, so
+you need to install a package called `vim-x11` or `vim-gtk` (yes, even if you
+don't use gvim) for more features.
+
+With that said, we're ready for profiling now. The `:profile` command takes a
+bunch of sub-commands for specifying what to profile.
+
+If you want to profile _everything_, do this:
+
+```
+:profile start /tmp/profile.log
+:profile file *
+:profile func *
+<do something in Vim>
+<quit Vim>
+```
+
+Vim keeps the profiling information in memory and only writes it out to the
+logfile on exit. (Neovim has fixed this using `:profile dump`).
+
+Have a look at `/tmp/profile.log`. All code that was executed during profiling
+will be shown. Every line, how often it was executed and how much time it took.
+
+Most of the time that will be plugin code the user isn't familiar with, but if
+you're investigating a certain issue, jump to the bottom of the log. Here are
+two different sections `FUNCTIONS SORTED ON TOTAL TIME` and `FUNCTIONS SORTED ON
+SELF TIME` that are worth gold. On a quick glance you can see, if a certain
+function is taking too long.
 
 ## List of colorschemes
 
