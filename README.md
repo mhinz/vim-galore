@@ -8,6 +8,7 @@
 - [Colorschemes?](#colorschemes)
 
 #### [Usage](#usage-1)
+- [Using the help](#using-the-help)
 - [Managing plugins](#managing-plugins)
 
 #### [Debugging](#debugging-1)
@@ -103,6 +104,43 @@ I use [gruvbox](https://github.com/morhetz/gruvbox) for the GUI and
 More colorschemes: [here](#list-of-colorschemes-1)
 
 ## Usage
+
+#### Using the help
+
+Vim comes with great documentation in the form of single text files with a
+special layout. Vim uses a system based on tags for accessing certain parts of
+those help files.
+
+First of all, read this: `:help :help`. This will open the file
+`$VIMRUNTIME/doc/helphelp.txt` in a new window and jump to the `:help` tag
+within that file.
+
+A few simple rules:
+
+- options are enclosed in single quotes, e.g. `:h 'textwidth'`
+- VimL functions end in (), e.g. `:h reverse()`
+- commands start with :, e.g. `:h :echo`
+
+You can use `<c-d>` (this is <kbd>ctrl</kbd>+<kbd>d</kbd>) to list all tags that
+match the currently entered query. E.g. `:h tab<c-d>` will get you a list of all
+tags from `tab` over `'softtabstop'` to `setting-guitablabel`.
+
+You want to list all VimL functions? Simple: `:h ()<c-d>`. You want to list all
+VimL functions that concern windows? `:h win*()<c-d>`.
+
+This quickly becomes second nature, but especially in the beginning, you
+sometimes don't know any part of the tag you are looking for. You can only
+imagine some keywords that could be involved. `:helpgrep` to the rescue!
+
+```
+:helpgrep backwards
+```
+
+This will look for "backwards" in all documentation files and jump to the first
+match. The matches will be assembled in the quickfix list. Use `:cn`/`:cp` to
+jump to the next/previous match. Or use `:copen` to open the quickfix window,
+navigate to an entry and hit `<cr>` to jump to that match. See `:h quickfix` for
+the whole truth.
 
 #### Managing plugins
 
