@@ -400,7 +400,9 @@ Also see [fuzzy finders](#fuzzy-finders).
 #### Version control
 
 - [fugitive](https://github.com/tpope/vim-fugitive)
+- [gist-vim](https://github.com/mattn/gist-vim)
 - [gitgutter](https://github.com/airblade/vim-gitgutter)
+- [github-dashboard](https://github.com/junegunn/vim-github-dashboard)
 - [gitv](https://github.com/gregsexton/gitv)
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [signify](https://github.com/mhinz/vim-signify)
