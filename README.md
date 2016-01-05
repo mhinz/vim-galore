@@ -23,6 +23,7 @@
 #### [List of plugins](#list-of-plugins-1)
 - [Navigation](#navigation)
 - [Fuzzy finders](#fuzzy-finders)
+- [Grep tools](#grep-tools)
 - [Code completion](#code-completion)
 - [Delimiter](#delimiter)
 - [Version control](#version-control)
@@ -351,6 +352,13 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git)
 - [fzf](https://github.com/junegunn/fzf)
 - [unite](https://github.com/Shougo/unite.vim)
+
+#### Grep tools
+
+- [ack](https://github.com/mileszs/ack.vim)
+- [ag](https://github.com/rking/ag.vim)
+- [grepper](https://github.com/mhinz/vim-grepper) (tries to supercede all other
+  grep plugins :-))
 
 #### Code completion
 
