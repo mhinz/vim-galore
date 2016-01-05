@@ -20,6 +20,9 @@
 - [Profiling startup time](#profiling-startup-time)
 - [Profiling at runtime](#profiling-at-runtime)
 
+#### [Miscellaneous](#miscellaneous-1)
+- [Vim distributions](#vim-distributions)
+
 #### [List of colorschemes](#list-of-colorschemes-1)
 
 #### [List of plugins](#list-of-plugins-1)
@@ -373,6 +376,39 @@ you're investigating a certain issue, jump to the bottom of the log. Here are
 two different sections `FUNCTIONS SORTED ON TOTAL TIME` and `FUNCTIONS SORTED ON
 SELF TIME` that are worth gold. On a quick glance you can see, if a certain
 function is taking too long.
+
+## Miscellaneous
+
+#### Vim distributions
+
+Vim distributions are Vim + custom settings + custom plugins from certain
+authors and are therefore very opinionated.
+
+The problems with such distributions is that they tend to be used by beginners.
+(More advanced users know how to choose their own plugins and settings after
+all.) It all goes good until an issue appears. Now where is the problem? The
+beginner doesn't know what to do and asks for advice on the internet. After long
+back and forth they figure out that the problem was a weird mapping provided by
+the distro. But the beginner thought it was a default Vim mapping... Time was
+wasted, everyone is pissed.
+
+I don't have problems with distributions per se, but please, if you don't
+understand exactly what they're doing, don't try to get help from others in case
+of emergencies.
+
+I know that many people don't want to spend hours and hours on customizing an
+editor (and actually you never stop customizing your vimrc when you finally got
+hooked), but in the long-term it's much better and more time-efficient to learn
+how to do stuff manually in the first place.
+
+Repeat after me: "A programmer should know his tools."
+
+Anyway, if you know what you're doing, you might get some inspiration from
+looking at some distributions:
+
+- [cream](http://cream.sourceforge.net)
+- [janus](https://github.com/carlhuda/janus.git)
+- [spf13](https://github.com/spf13/spf13-vim)
 
 ## List of colorschemes
 
