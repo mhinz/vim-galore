@@ -463,6 +463,7 @@ Here's a list of commonly used colorschemes:
 
 #### Navigation
 
+- [dirvish](https://github.com/justinmk/vim-dirvish)
 - [easymotion](https://github.com/easymotion/vim-easymotion)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [sneak](https://github.com/justinmk/vim-sneak)
