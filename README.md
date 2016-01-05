@@ -2,15 +2,17 @@
 
 ---
 
-#### Basics
+#### [Basics](#basics-1)
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
 - [Colorschemes?](#colorschemes)
 
-#### Usage
+#### [Usage](#usage-1)
 - [Managing plugins](#managing-plugins)
 
-#### Plugins
+#### [List of colorschemes](#list-of-colorschemes-1)
+
+#### [List of plugins](#list-of-plugins-1)
 - [Fuzzy finders](#fuzzy-finders)
 - [Version control](#version-control)
 
@@ -90,19 +92,10 @@ If you ever happen to use a certain colorscheme in Vim running in a terminal
 emulator and the colors don't look like the colors in the screenshot at all,
 chances are that the colorscheme only defined colors for the GUI.
 
-Here's a list of commonly used colorschemes:
+I use [gruvbox](https://github.com/morhetz/gruvbox) for the GUI and
+[janah](https://github.com/mhinz/vim-janah) for the terminal.
 
-- [base16](https://github.com/chriskempson/base16-vim)
-- [gotham](https://github.com/whatyouhide/vim-gotham)
-- [gruvbox](https://github.com/morhetz/gruvbox)
-- [jellybeans](https://github.com/nanotech/jellybeans.vim)
-- [molokai](https://github.com/tomasr/molokai)
-- [railscasts](https://github.com/jpo/vim-railscasts-theme)
-- [solarized](https://github.com/altercation/vim-colors-solarized) (or a lighter variant of it: [flattened](https://github.com/romainl/flattened))
-- [vividchalk](https://github.com/tpope/vim-vividchalk)
-
-I use gruvbox for the GUI and [janah](https://github.com/mhinz/vim-janah) for
-the terminal.
+More colorschemes: [here](#list-of-colorschemes-1)
 
 ## Usage
 
@@ -124,7 +117,22 @@ in alphabetic sequence:
 
 Plug is my favorite, but your mileage may vary.
 
-## Plugins
+## List of colorschemes
+
+Here's a list of commonly used colorschemes:
+
+- [base16](https://github.com/chriskempson/base16-vim)
+- [gotham](https://github.com/whatyouhide/vim-gotham)
+- [gruvbox](https://github.com/morhetz/gruvbox)
+- [janah](https://github.com/mhinz/vim-janah)
+- [jellybeans](https://github.com/nanotech/jellybeans.vim)
+- [molokai](https://github.com/tomasr/molokai)
+- [railscasts](https://github.com/jpo/vim-railscasts-theme)
+- [solarized](https://github.com/altercation/vim-colors-solarized) (or a lighter variant: [flattened](https://github.com/romainl/flattened))
+- [tomorrow](https://github.com/chriskempson/vim-tomorrow-theme)
+- [vividchalk](https://github.com/tpope/vim-vividchalk)
+
+## List of plugins
 
 #### Fuzzy finders
 
