@@ -23,6 +23,7 @@
 - [Quickly edit your macros](#quickly-edit-your-macros)
 - [Quickly jump to header or source file](#quickly-jump-to-header-or-source-file)
 - [Quickly change font size in GUI](#quickly-change-font-size-in-gui)
+- [Change cursor style in insert mode](#change-cursor-style-in-insert-mode)
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 
 #### [Debugging](#debugging-1)
@@ -417,6 +418,30 @@ I think this was taken from tpope's config:
 command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
 command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
 ```
+
+#### Change cursor style in insert mode
+
+I like to use a block cursor in normal mode and i-beam cursor in insert mode.
+Also when using tmux in the middle.
+```viml
+if empty($TMUX)
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+else
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+endif
+```
+This simply tells Vim to print a certain sequence of characters ([escape
+sequence](https://en.wikipedia.org/wiki/Escape_sequence)) when entering/leaving
+insert mode. The underlying terminal will process and evaluate it.
+
+There's one drawback though: there are many terminal emulator implementations
+and not all use the same sequences for doing the same things. The sequences used
+above might not work with your implementation. Your implementation might not
+even support different cursor styles. Check the documentation.
+
+The example above works with iTerm2.
 
 #### Don't lose selection when shifting sidewards
 

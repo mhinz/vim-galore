@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - Tips: [Quickly edit your macros](README.md#quickly-edit-your-macros)
 - Tips: [Quickly jump to header or source file](README.md#quickly-jump-to-header-or-source-file)
 - Tips: [Quickly change font size in GUI](README.md#quickly-change-font-size-in-gui)
+- Tips: [Change cursor style in insert mode](README.md#change-cursor-style-in-insert-mode)
 - Tips: [Don't lose selection when shifting sidewards](README.md#dont-lose-selection-when-shifting-sidewards)
 
 ## [1.0] - 2016-01-06
