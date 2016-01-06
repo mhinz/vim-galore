@@ -5,7 +5,8 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 ### Added
 
-- Quirks: Newline used for NUL
+- Basics: [Quickfix and location lists?](README.md#quickfix-and-location-lists)
+- Quirks: [Newline used for NUL](README.md#newline-used-for-nul)
 
 ## [1.0] - 2016-01-06
 First release!

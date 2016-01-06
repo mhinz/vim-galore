@@ -7,6 +7,7 @@
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
 - [Mappings?](#mappings)
 - [Mapleader?](#mapleader)
+- [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
 
 #### [Usage](#usage-1)
@@ -168,6 +169,51 @@ supposed to be used in filetype-specific plugins. There is no default set for
 the local mapleader.
 
 See `:h mapleader` and `:h maplocalleader` for more.
+
+#### Quickfix and location lists?
+
+Everytime an action has to return a list of locations, _quickfix_ or _location_
+lists can be used. In this case a location is a file, a line number and
+optionally a column.
+
+Examples are compiler errors assembled in a quickfix list or matches of an
+external grep tool assembled in a location list.
+
+The big advantage over just putting that stuff in an empty buffer is that you
+get a nice uniform interface for browsing the entries.
+
+At all time there's only one quickfix list, but every window can has its own
+location list. Both type of lists _feel_ the same, but use slighly different
+commands for navigation.
+
+Most common commands:
+
+| Action         | Quickfix     | Location     |
+|----------------|--------------|--------------|
+| open window    | `:copen`     | `:lopen`     |
+| close window   | `:cclose`    | `:lclose`    |
+| next entry     | `:cnext`     | `:lnext`     |
+| previous entry | `:cprevious` | `:lprevious` |
+| first entry    | `:cfirst`    | `:lfirst`    |
+| last entry     | `:clast`     | `:llast`     |
+
+See `:cc` and everything below for all commands.
+
+**Example**:
+
+Let's use our good old friend `grep` for searching the files in the current
+directory recursively for a certain query and put the results in the quickfix
+list.
+
+```viml
+:let &grepprg = 'grep -Rn $* .'
+:grep! foo
+<grep output - hit enter>
+:copen
+```
+
+Assuming any files contained the string "foo", it should be shown now in the
+quickfix window.
 
 #### Colorschemes?
 
