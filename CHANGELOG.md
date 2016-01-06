@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Tips: [Saner behavior of n and N](README.md#saner-behavior-of-n-and-n)
 - Tips: [Quickly move current line](README.md#quickly-move-current-line)
 - Tips: [Quickly add empty lines](README.md#quickly-add-empty-lines)
+- Tips: [Quickly edit your macros](README.md#quickly-edit-your-macros)
 - Tips: [Don't lose selection when shifting sidewards](README.md#dont-lose-selection-when-shifting-sidewards)
 
 ## [1.0] - 2016-01-06

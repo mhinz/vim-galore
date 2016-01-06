@@ -20,6 +20,7 @@
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Quickly move current line](#quickly-move-current-line)
 - [Quickly add empty lines](#quickly-add-empty-lines)
+- [Quickly edit your macros](#quickly-edit-your-macros)
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 
 #### [Debugging](#debugging-1)
@@ -381,6 +382,18 @@ This is surely no must-have, but I prefer the following mappings over
 nnoremap [<space>  :put! =''<cr>
 nnoremap ]<space>  :put =''<cr>
 ```
+
+#### Quickly edit your macros
+
+This is a real gem! The mapping takes a register (or `*` by default) and opens
+it in the cmdline-window. Hit `<cr>` when you're done editing for setting the
+register.
+
+I often use this to correct typos I did while recording a macro.
+```viml
+nnoremap <leader>m  :<c-u><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
+```
+Use it like this `<leader>m` or `"q<leader>m`.
 
 #### Don't lose selection when shifting sidewards
 
