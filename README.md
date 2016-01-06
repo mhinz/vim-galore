@@ -22,6 +22,7 @@
 - [Quickly add empty lines](#quickly-add-empty-lines)
 - [Quickly edit your macros](#quickly-edit-your-macros)
 - [Quickly jump to header or source file](#quickly-jump-to-header-or-source-file)
+- [Quickly change font size in GUI](#quickly-change-font-size-in-gui)
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 
 #### [Debugging](#debugging-1)
@@ -408,6 +409,14 @@ autocmd BufLeave *.h       mark H
 
 **NOTE**: The info is saved in the viminfo file, so make sure that `:set
 viminfo?` includes `:h viminfo-'`.
+
+#### Quickly change font size in GUI
+
+I think this was taken from tpope's config:
+```viml
+command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
+command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
+```
 
 #### Don't lose selection when shifting sidewards
 
