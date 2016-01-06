@@ -37,6 +37,7 @@
 
 #### [Quirks](#quirks-1)
 - [Newline used for NUL](#newline-used-for-nul)
+- [Bracketed paste (or why do I have to set 'paste' all the time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
 
 #### [List of colorschemes](#list-of-colorschemes-1)
 
@@ -623,6 +624,35 @@ NUL characters (`\0`) in a file, are stored as newline (`\n`) in memory and
 displayed in a buffer as `^@`.
 
 See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
+
+#### Bracketed paste (or why do I have to set 'paste' all the time?)
+
+Bracketed paste mode allows terminal emulators to distinguish between typed text
+and pasted text.
+
+Did you ever tried pasting code into Vim and afterwards everything seemed messed
+up?
+
+This only happens if you paste via `cmd+v`, `shift-insert`, `middle-click` etc.
+because then you're just throwing text at the terminal emulator. Vim doesn't
+know that you just pasted the text, it thinks you're an extremly fast typist.
+Accordingly it tries to indent the lines and fails.
+
+Obviously this is not an issue, if you paste using Vim's registers, e.g. `"+p`,
+because then Vim knows that you're actually pasting.
+
+To workaround this, you have to `:set paste`, so it gets pasted as-is. See `:h
+'paste'` and `:h 'pastetoggle'`.
+
+If you're fed up with toggling `'paste'` all the time, have a look at this fine
+plugin that does it for you:
+[bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste).
+
+Additional read from the same author as the plugin:
+[here](http://cirw.in/blog/bracketed-paste).
+
+**Neovim**: Neovim tries to make all of this much more seemless and sets
+bracketed paste mode automatically if the terminal emulator supports it.
 
 ## List of colorschemes
 

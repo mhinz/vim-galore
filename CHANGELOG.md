@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - Basics: [Quickfix and location lists?](README.md#quickfix-and-location-lists)
 - Basics: [Autocmds?](README.md#autocmds)
 - Quirks: [Newline used for NUL](README.md#newline-used-for-nul)
+- Quirks: [Bracketed paste (or why do I have to set 'paste' all the time?)](README.md#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
 - Plugins: [New section "Commenters"](README.md#commenters)
 - Plugins: [New section "Misc"](README.md#misc)
 - Plugins: [New section "Tmux"](README.md#tmux)
