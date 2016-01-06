@@ -19,6 +19,7 @@
 #### [Tips](#tips-1)
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Quickly move current line](#quickly-move-current-line)
+- [Quickly add empty lines](#quickly-add-empty-lines)
 
 #### [Debugging](#debugging-1)
 - [General tips](#general-tips)
@@ -370,6 +371,15 @@ nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
 nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 ```
 These mappings also take a count, so `2]e` moves the current line 2 lines below.
+
+#### Quickly add empty lines
+
+This is surely no must-have, but I prefer the following mappings over
+`o<esc>`/`O<esc>`:
+```viml
+nnoremap [<space>  :put! =''<cr>
+nnoremap ]<space>  :put =''<cr>
+```
 
 ## Debugging
 
