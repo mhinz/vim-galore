@@ -2,6 +2,12 @@
 
 ---
 
+Please keep in mind that I just started writing this guide and new things get
+added every day. Things about to be added can be found here:
+[issues](https://github.com/mhinz/vim-galore/issues). Thanks!
+
+---
+
 #### [Basics](#basics-1)
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
