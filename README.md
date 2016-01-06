@@ -18,6 +18,7 @@
 
 #### [Tips](#tips-1)
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
+- [Quickly move current line](#quickly-move-current-line)
 
 #### [Debugging](#debugging-1)
 - [General tips](#general-tips)
@@ -360,6 +361,15 @@ If you want `n` to always search forward and `N` backward, use this:
 nnoremap <expr> n  'Nn'[v:searchforward].'zvzz'
 nnoremap <expr> N  'nN'[v:searchforward].'zvzz'
 ```
+
+#### Quickly move current line
+
+Sometimes I need a quick way to move the current line above or below:
+```viml
+nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
+nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
+```
+These mappings also take a count, so `2]e` moves the current line 2 lines below.
 
 ## Debugging
 

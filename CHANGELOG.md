@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - Plugins: [New section "Tmux"](README.md#tmux)
 
 - Tips: [Saner behavior of n and N](README.md#saner-behavior-of-n-and-n)
+- Tips: [Quickly move current line](README.md#quickly-move-current-line)
 
 ## [1.0] - 2016-01-06
 First release!
