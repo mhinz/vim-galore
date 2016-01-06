@@ -411,8 +411,8 @@ searching forward or backward respectively. This is pretty confusing to me.
 
 If you want `n` to always search forward and `N` backward, use this:
 ```viml
-nnoremap <expr> n  'Nn'[v:searchforward].'zvzz'
-nnoremap <expr> N  'nN'[v:searchforward].'zvzz'
+nnoremap <expr> n  'Nn'[v:searchforward]
+nnoremap <expr> N  'nN'[v:searchforward]
 ```
 
 #### Quickly move current line
