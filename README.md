@@ -215,6 +215,28 @@ Vim provides 10 types of registers:
 There are numerous exceptions when registers get implicitely filled, so be sure
 to read `:h registers`.
 
+Yank with `y` and paste with `p`/`P`.
+
+Vim distinguishes between characterwise and linewise selections. See `:h linewise`.
+
+**Example: linewise**
+
+`yy` (or just `Y`) yanks the current line, move the cursor somewhere else, use
+`p` to paste below the current line `P` for pasting above it.
+
+**Example: charwise**
+
+Yank the first word with `0yw`, move somewhere else, paste after the cursor on
+the current line with `p` and before the cursor with `P`.
+
+**Example: explicit naming of register**
+
+`"aY` yanks the current line into register `a`. Move to another line. "AY"
+appends the current line to register `a`.
+
+I suggest playing around with with all these registers a bit and constantly
+checking `:reg`, so you can see what's actually happening.
+
 **Fun fact**: In Emacs "yanking" stands for pasting (or _reinserting previously
 killed text_) not copying.
 
