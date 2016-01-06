@@ -9,6 +9,7 @@ added every day. Things about to be added can be found here:
 ---
 
 #### [Basics](#basics-1)
+
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
 - [Mappings?](#mappings)
@@ -19,12 +20,14 @@ added every day. Things about to be added can be found here:
 - [Colorschemes?](#colorschemes)
 
 #### [Usage](#usage-1)
+
 - [Getting help offline](#getting-help-offline)
 - [Getting help online](#getting-help-online)
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
 
 #### [Tips](#tips-1)
+
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Quickly move current line](#quickly-move-current-line)
 - [Quickly add empty lines](#quickly-add-empty-lines)
@@ -35,20 +38,24 @@ added every day. Things about to be added can be found here:
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 
 #### [Debugging](#debugging-1)
+
 - [General tips](#general-tips)
 - [Profiling startup time](#profiling-startup-time)
 - [Profiling at runtime](#profiling-at-runtime)
 
 #### [Miscellaneous](#miscellaneous-1)
+
 - [Vim distributions](#vim-distributions)
 
 #### [Quirks](#quirks-1)
+
 - [Newline used for NUL](#newline-used-for-nul)
 - [Bracketed paste (or why do I have to set 'paste' all the time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
 
 #### [List of colorschemes](#list-of-colorschemes-1)
 
 #### [List of plugins](#list-of-plugins-1)
+
 - [Alignment](#alignment)
 - [Code completion](#code-completion)
 - [Commenters](#commenters)
@@ -172,9 +179,11 @@ Putting it in a nutshell, this solves our problem:
 
 The mapleader is simply a placeholder than can be used with custom mappings and
 is set to `\` by default.
+
 ```viml
 nnoremap <leader>h :helpgrep<right>
 ```
+
 This mapping is triggered by `\h`.
 
 You can change the mapleader like this:
@@ -201,18 +210,18 @@ Vim provides 10 types of registers:
 
 | Type | Character | Filled | Contains text from.. |
 |------|-----------|--------|----------------------|
-| Unnamed | `"` | implicitely | Last yank or deletion. (`d`, `c`, `s`, `x`, `y`) |
+| Unnamed | `"` | implicitly | Last yank or deletion. (`d`, `c`, `s`, `x`, `y`) |
 | Numbered | `0` to `9` | implicitly | Register `0`: Last yank. Registers `1`: Last deletion. Register `2`: Second last deletion. And so on. Think of registers `1`-`9` as a read-only [queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) with 9 elements. |
-| Small delete | `-` | implicitely | Last deletion that was less than one line. |
-| Named | `a` to `z`, `A` to `Z` | explicitely | For your own use. If you yank to register `a`, you replace its text. If you yank to register `A`, you append to the text in register `a`. |
-| Read-only | `:`, `.`, `%` | implicitely | Register `:`: Last command. Register `.`: Last inserted text. Register `%`: Current filename. |
-| Alternate buffer | `#` | implicitely | Most of the time the previously visited buffer of the current window. See `:h alternate-file` |
-| Expression | `=` | explicitely | Evaluation of the VimL expression that was yanked. E.g. do this in insert mode: `<c-r>=5+5<cr>` and "10" will be inserted in the buffer. |
-| Selection and Drop | `+`, `*`, `~` | implicitely | `*` and `+` are the [clipboard](#clipboard) registers. Register `~`: From last drag'n'drop. |
-| Black hole | `_` | explicitely | Use this register if you don't want any other registers implicitely affected. E.g. `"_dd` deletes the current line without affecting registers `"`, `1`, `+`, `*`. |
-| Last search pattern | `/` | implicitely | Last pattern used with `/`, `?`, `:global`, etc. |
+| Small delete | `-` | implicitly | Last deletion that was less than one line. |
+| Named | `a` to `z`, `A` to `Z` | explicitly | For your own use. If you yank to register `a`, you replace its text. If you yank to register `A`, you append to the text in register `a`. |
+| Read-only | `:`, `.`, `%` | implicitly | Register `:`: Last command. Register `.`: Last inserted text. Register `%`: Current filename. |
+| Alternate buffer | `#` | implicitly | Most of the time the previously visited buffer of the current window. See `:h alternate-file` |
+| Expression | `=` | explicitly | Evaluation of the VimL expression that was yanked. E.g. do this in insert mode: `<c-r>=5+5<cr>` and "10" will be inserted in the buffer. |
+| Selection and Drop | `+`, `*`, `~` | implicitly | `*` and `+` are the [clipboard](#clipboard) registers. Register `~`: From last drag'n'drop. |
+| Black hole | `_` | explicitly | Use this register if you don't want any other registers implicitly affected. E.g. `"_dd` deletes the current line without affecting registers `"`, `1`, `+`, `*`. |
+| Last search pattern | `/` | implicitly | Last pattern used with `/`, `?`, `:global`, etc. |
 
-There are numerous exceptions when registers get implicitely filled, so be sure
+There are numerous exceptions when registers get implicitly filled, so be sure
 to read `:h registers`.
 
 Yank with `y` and paste with `p`/`P`.
@@ -253,9 +262,11 @@ See `:h {event}` for a quick overview of all available events and `:h
 autocmd-events-abc` for more details.
 
 A typical example would be setting filetype-specific settings:
+
 ```viml
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 comments-=:#
 ```
+
 But how does a buffer even know that it contains Ruby code? Because another
 autocmd detected it as that and set the filetype accordingly which again
 triggered the `FileType` event.
@@ -267,9 +278,11 @@ filetypes under the sun.
 If you're brave enough, have a look at it: `:e $VIMRUNTIME/filetype.vim`. Search
 for "Ruby" and you'll find that Vim simply uses the file extension `.rb` to
 detect Ruby files:
+
 ```viml
 au BufNewFile,BufRead *.rb,*.rbw  setf ruby
 ```
+
 The `BufNewFile` and `BufRead` events in this case are hardcoded in the C
 sources of Vim and get emitted everytime you open a file via `:e` and similar
 commands. Afterwards all the hundreds of filetypes from `filetype.vim` are
@@ -281,7 +294,7 @@ customization.
 
 #### Quickfix and location lists?
 
-Everytime an action has to return a list of locations, _quickfix_ or _location_
+Every time an action has to return a list of locations, _quickfix_ or _location_
 lists can be used. In this case a location is a file, a line number and
 optionally a column.
 
@@ -292,7 +305,7 @@ The big advantage over just putting that stuff in an empty buffer is that you
 get a nice uniform interface for browsing the entries.
 
 At all time there's only one quickfix list, but every window can has its own
-location list. Both type of lists _feel_ the same, but use slighly different
+location list. Both type of lists _feel_ the same, but use slightly different
 commands for navigation.
 
 Most common commands:
@@ -330,9 +343,11 @@ Colorschemes are the way to style your Vim. Vim consists of many components and
 each of those can be customized with different colors for the foreground,
 background and a few other attributes like bold text etc. They can be set like
 this:
+
 ```viml
 :highlight Normal ctermbg=1 guibg=red
 ```
+
 This would paint the background of the editor red. See `:h :highlight` for more
 information.
 
@@ -341,7 +356,7 @@ So, colorschemes are mostly a collection of `:highlight` commands.
 Actually, most colorschemes are really 2 colorschemes! The example above sets
 colors via `ctermbg` and `guibg`. The former definition will only be used if Vim
 was started in a terminal emulator, e.g. xterm. The latter will be used in
-graphical environements like gVim.
+graphical environments like gVim.
 
 If you ever happen to use a certain colorscheme in Vim running in a terminal
 emulator and the colors don't look like the colors in the screenshot at all,
@@ -440,9 +455,11 @@ after the end of each line, do this: `<c-v>3j$Atext<esc>`.
 
 Sometime you need to place the cursor somewhere after the end of the current
 line. You can't do that by default, but you can set the `virtualedit` option:
+
 ```viml
 set virtualedit=all
 ```
+
 Afterwards `$10l` or `90|` work even after the end of the line.
 
 See `:h blockwise-examples` for more info. It might seem complicated at first,
@@ -459,6 +476,7 @@ The direction of `n` and `N` depends on whether `/` or `?` was used for
 searching forward or backward respectively. This is pretty confusing to me.
 
 If you want `n` to always search forward and `N` backward, use this:
+
 ```viml
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
@@ -467,16 +485,19 @@ nnoremap <expr> N  'nN'[v:searchforward]
 #### Quickly move current line
 
 Sometimes I need a quick way to move the current line above or below:
+
 ```viml
 nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
 nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 ```
+
 These mappings also take a count, so `2]e` moves the current line 2 lines below.
 
 #### Quickly add empty lines
 
 This is surely no must-have, but I prefer the following mappings over
 `o<esc>`/`O<esc>`:
+
 ```viml
 nnoremap [<space>  :put! =''<cr>
 nnoremap ]<space>  :put =''<cr>
@@ -489,9 +510,11 @@ it in the cmdline-window. Hit `<cr>` when you're done editing for setting the
 register.
 
 I often use this to correct typos I did while recording a macro.
+
 ```viml
 nnoremap <leader>m  :<c-u><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 ```
+
 Use it like this `<leader>m` or `"q<leader>m`.
 
 #### Quickly jump to header or source file
@@ -499,6 +522,7 @@ Use it like this `<leader>m` or `"q<leader>m`.
 This technique can probably be applied to many filetypes. It sets _file marks_
 (see `:h marks`) when leaving a source or header file, so you can quickly jump
 back to the last accessed one by using `'C` or `'H` (see `:h 'A`).
+
 ```viml
 autocmd BufLeave *.{c,cpp} mark C
 autocmd BufLeave *.h       mark H
@@ -510,6 +534,7 @@ viminfo?` includes `:h viminfo-'`.
 #### Quickly change font size in GUI
 
 I think this was taken from tpope's config:
+
 ```viml
 command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
 command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
@@ -519,6 +544,7 @@ command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1'
 
 I like to use a block cursor in normal mode and i-beam cursor in insert mode.
 Also when using tmux in the middle.
+
 ```viml
 if empty($TMUX)
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -528,6 +554,7 @@ else
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 endif
 ```
+
 This simply tells Vim to print a certain sequence of characters ([escape
 sequence](https://en.wikipedia.org/wiki/Escape_sequence)) when entering/leaving
 insert mode. The underlying terminal will process and evaluate it.
@@ -546,10 +573,12 @@ sidewards. Unfortunately you immediately lose the selection afterwards.
 
 You can use `gv` to reselect the last selection (see `:h gv`), thus you can work
 around it like this:
+
 ```viml
 xnoremap <  <gv
 xnoremap >  >gv
 ```
+
 Now you can use `>>>>>` on your visual selection without any problems.
 
 **NOTE**: The same can be achieved using `.`, which repeats the last change.
@@ -825,3 +854,4 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [startify](https://github.com/mhinz/vim-startify)
 - [surround](https://github.com/tpope/vim-surround)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
+
