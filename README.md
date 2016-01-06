@@ -39,6 +39,7 @@
 - [Navigation](#navigation)
 - [Statusline](#statusline)
 - [Taking notes](#taking-notes)
+- [Tmux](#tmux)
 - [Undo history](#undo-history)
 - [Version control](#version-control)
 - [Misc](#misc)
@@ -551,6 +552,12 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [journal](https://github.com/junegunn/vim-journal)
 - [notes](https://github.com/xolox/vim-notes)
 - [vimwiki](https://github.com/vimwiki/vimwiki)
+
+#### Tmux
+
+- [dispatch](https://github.com/tpope/vim-dispatch)
+- [tmux-complete](https://github.com/wellle/tmux-complete.vim)
+- [tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 
 #### Undo history
 

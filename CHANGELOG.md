@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Quirks: [Newline used for NUL](README.md#newline-used-for-nul)
 - Plugins: [New section "Commenters"](README.md#commenters)
 - Plugins: [New section "Misc"](README.md#misc)
+- Plugins: [New section "Tmux"](README.md#tmux)
 
 ## [1.0] - 2016-01-06
 First release!
