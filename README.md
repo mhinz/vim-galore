@@ -40,6 +40,7 @@
 - [Taking notes](#taking-notes)
 - [Undo history](#undo-history)
 - [Version control](#version-control)
+- [Misc](#misc)
 
 ---
 
@@ -559,3 +560,15 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [signify](https://github.com/mhinz/vim-signify)
 - [vcscommand](https://github.com/vim-scripts/vcscommand.vim)
+
+#### Misc
+
+- [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
+- [gnupg](https://github.com/jamessan/vim-gnupg)
+- [multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+- [projectionist](https://github.com/tpope/vim-projectionist)
+- [rsi](https://github.com/tpope/vim-rsi)
+- [splitjoin](https://github.com/AndrewRadev/splitjoin.vim)
+- [startify](https://github.com/mhinz/vim-startify)
+- [surround](https://github.com/tpope/vim-surround)
+- [unicode.vim](https://github.com/chrisbra/unicode.vim)
