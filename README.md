@@ -21,6 +21,7 @@
 - [Quickly move current line](#quickly-move-current-line)
 - [Quickly add empty lines](#quickly-add-empty-lines)
 - [Quickly edit your macros](#quickly-edit-your-macros)
+- [Quickly jump to header or source file](#quickly-jump-to-header-or-source-file)
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 
 #### [Debugging](#debugging-1)
@@ -394,6 +395,16 @@ I often use this to correct typos I did while recording a macro.
 nnoremap <leader>m  :<c-u><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 ```
 Use it like this `<leader>m` or `"q<leader>m`.
+
+#### Quickly jump to header or source file
+
+This technique can probably be applied to many filetypes. It sets _file marks_
+(see `:h marks`) when leaving a source or header file, so you can quickly jump
+back to the last accessed one by using `'C` or `'H` (see `:h 'A`).
+```viml
+autocmd BufLeave *.{c,cpp} mark C
+autocmd BufLeave *.h       mark H
+```
 
 #### Don't lose selection when shifting sidewards
 
