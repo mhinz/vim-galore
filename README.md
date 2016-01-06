@@ -740,6 +740,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [journal](https://github.com/junegunn/vim-journal)
 - [notes](https://github.com/xolox/vim-notes)
+- [pad](https://github.com/fmoralesc/vim-pad)
 - [vimwiki](https://github.com/vimwiki/vimwiki)
 
 #### Tmux
