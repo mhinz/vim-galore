@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Basics: [Quickfix and location lists?](README.md#quickfix-and-location-lists)
+- Basics: [Registers?](README.md#registers)
 - Basics: [Autocmds?](README.md#autocmds)
 - Quirks: [Newline used for NUL](README.md#newline-used-for-nul)
 - Quirks: [Bracketed paste (or why do I have to set 'paste' all the time?)](README.md#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)

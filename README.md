@@ -13,6 +13,7 @@ added every day. Things about to be added can be found here:
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
 - [Mappings?](#mappings)
 - [Mapleader?](#mapleader)
+- [Registers?](#registers)
 - [Autocmds?](#autocmds)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
@@ -190,6 +191,32 @@ supposed to be used in filetype-specific plugins. There is no default set for
 the local mapleader.
 
 See `:h mapleader` and `:h maplocalleader` for more.
+
+#### Registers?
+
+Registers are slots that save text. Copying text into a register is called
+**yanking** and extracing text from a register is called **pasting**.
+
+Vim provides 10 types of registers:
+
+| Type | Character | Filled | Contains text from.. |
+|------|-----------|--------|----------------------|
+| Unnamed | `"` | implicitely | Last yank or deletion. (`d`, `c`, `s`, `x`, `y`) |
+| Numbered | `0` to `9` | implicitly | Register `0`: Last yank. Registers `1`: Last deletion. Register `2`: Second last deletion. And so on. Think of registers `1`-`9` as a read-only [queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) with 9 elements. |
+| Small delete | `-` | implicitely | Last deletion that was less than one line. |
+| Named | `a` to `z`, `A` to `Z` | explicitely | For your own use. If you yank to register `a`, you replace its text. If you yank to register `A`, you append to the text in register `a`. |
+| Read-only | `:`, `.`, `%` | implicitely | Register `:`: Last command. Register `.`: Last inserted text. Register `%`: Current filename. |
+| Alternate buffer | `#` | implicitely | Most of the time the previously visited buffer of the current window. See `:h alternate-file` |
+| Expression | `=` | explicitely | Evaluation of the VimL expression that was yanked. E.g. do this in insert mode: `<c-r>=5+5<cr>` and "10" will be inserted in the buffer. |
+| Selection and Drop | `+`, `*`, `~` | implicitely | `*` and `+` are the [clipboard](#clipboard) registers. Register `~`: From last drag'n'drop. |
+| Black hole | `_` | explicitely | Use this register if you don't want any other registers implicitely affected. E.g. `"_dd` deletes the current line without affecting registers `"`, `1`, `+`, `*`. |
+| Last search pattern | `/` | implicitely | Last pattern used with `/`, `?`, `:global`, etc. |
+
+There are numerous exceptions when registers get implicitely filled, so be sure
+to read `:h registers`.
+
+**Fun fact**: In Emacs "yanking" stands for pasting (or _reinserting previously
+killed text_) not copying.
 
 #### Autocmds?
 
