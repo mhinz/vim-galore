@@ -16,6 +16,9 @@
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
 
+#### [Tips](#tips-1)
+- [Saner behavior of n and N](#saner-behavior-of-n-and-n)
+
 #### [Debugging](#debugging-1)
 - [General tips](#general-tips)
 - [Profiling startup time](#profiling-startup-time)
@@ -344,6 +347,19 @@ but quickly becomes second nature.
 
 If you want to get real fancy, have a look at
 [multiple-cursors](https://github.com/terryma/vim-multiple-cursors).
+
+## Tips
+
+#### Saner behavior of n and N
+
+The direction of `n` and `N` depends on whether `/` or `?` was used for
+searching forward or backward respectively. This is pretty confusing to me.
+
+If you want `n` to always search forward and `N` backward, use this:
+```viml
+nnoremap <expr> n  'Nn'[v:searchforward].'zvzz'
+nnoremap <expr> N  'nN'[v:searchforward].'zvzz'
+```
 
 ## Debugging
 

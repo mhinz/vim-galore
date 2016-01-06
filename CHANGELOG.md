@@ -6,10 +6,14 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Basics: [Quickfix and location lists?](README.md#quickfix-and-location-lists)
+
 - Quirks: [Newline used for NUL](README.md#newline-used-for-nul)
+
 - Plugins: [New section "Commenters"](README.md#commenters)
 - Plugins: [New section "Misc"](README.md#misc)
 - Plugins: [New section "Tmux"](README.md#tmux)
+
+- Tips: [Saner behavior of n and N](README.md#saner-behavior-of-n-and-n)
 
 ## [1.0] - 2016-01-06
 First release!
