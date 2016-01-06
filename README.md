@@ -18,6 +18,7 @@ added every day. Things about to be added can be found here:
 - [Mappings?](#mappings)
 - [Mapleader?](#mapleader)
 - [Registers?](#registers)
+- [Motions? Operators? Text objects?](#motions-operators-text-objects)
 - [Autocmds?](#autocmds)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
@@ -251,6 +252,43 @@ checking `:reg`, so you can see what's actually happening.
 
 **Fun fact**: In Emacs "yanking" stands for pasting (or _reinserting previously
 killed text_) not copying.
+
+#### Motions? Operators? Text objects?
+
+**Motions** move the cursor. You all know `h`/`j`/`k`/`l`. Or `w` and `b`. Even
+`/` is a motion. They also take a count. `2?the<cr>` jumps to the second last
+occurence of "the".
+
+See `:h navigation` and everything below for all available motions.
+
+**Operators** act on a region of text, e.g. `d`, `~`, `gU`, `>` to name just a
+few. They get used in two contexts, either in normal or visual mode. In normal
+mode, operators come first followed by a motion, e.g. `>j`. In visual mode,
+operators simply act on the selection, e.g. `Vjd`.
+
+Like motions, operators take a count, e.g. `2gUw` makes the rest of the current
+word and the next one uppercase. Since motions and operators take counts,
+`2gU2w` works just as well and executes `gU2w` twice.
+
+See `:h operator` for all available operators.
+
+**Text objects** act on the surrounding area, opposed to motions that act into
+one direction. Actually they work on objects, e.g. a whole word, a whole
+sentence, everything between parentheses, and so on.
+
+Text objects can't be used to move the cursor in normal mode, because even the
+most-skilled cursors can't jump into two directions at the same time. It works
+in visual mode though, because then one side of the object is already selected
+and the cursor simply jumps to the other side.
+
+Text objects start with either `i` or `a` followed by a character denoting the
+object. With `i` it only acts on the object itself, with `a` on the object plus
+trailing whitespace. E.g. `diw` deletes the current word and `ci(` changes
+everything between parentheses.
+
+Text objects don't take a count.
+
+See `:h text-objects` for all available text objects.
 
 #### Autocmds?
 
