@@ -456,6 +456,8 @@ xnoremap >  >gv
 ```
 Now you can use `>>>>>` on your visual selection without any problems.
 
+**NOTE**: The same can be achieved using `.`, which repeats the last change.
+
 ## Debugging
 
 #### General tips
