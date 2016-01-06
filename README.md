@@ -406,6 +406,9 @@ autocmd BufLeave *.{c,cpp} mark C
 autocmd BufLeave *.h       mark H
 ```
 
+**NOTE**: The info is saved in the viminfo file, so make sure that `:set
+viminfo?` includes `:h viminfo-'`.
+
 #### Don't lose selection when shifting sidewards
 
 If you select one or more lines, you can use `<` and `>` for shifting them
