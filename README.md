@@ -7,6 +7,7 @@
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
 - [Mappings?](#mappings)
 - [Mapleader?](#mapleader)
+- [Autocmds?](#autocmds)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
 
@@ -182,6 +183,45 @@ supposed to be used in filetype-specific plugins. There is no default set for
 the local mapleader.
 
 See `:h mapleader` and `:h maplocalleader` for more.
+
+#### Autocmds?
+
+On many occasions, Vim emits events. You hook into these events by using
+autocmds.
+
+You wouldn't use Vim if there weren't autocmds. They're used all the time, even
+if you don't even know it. Don't believe me? Check `:au`, but don't let the
+output overwhelm you. These are all the autocmds that are in effect right now!
+
+See `:h {event}` for a quick overview of all available events and `:h
+autocmd-events-abc` for more details.
+
+A typical example would be setting filetype-specific settings:
+```viml
+autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 comments-=:#
+```
+But how does a buffer even know that it contains Ruby code? Because another
+autocmd detected it as that and set the filetype accordingly which again
+triggered the `FileType` event.
+
+One of the first things everyone adds to his vimrc is `filetype on`. This simply
+means that `filetype.vim` is read at startup which sets autocmds for almost all
+filetypes under the sun.
+
+If you're brave enough, have a look at it: `:e $VIMRUNTIME/filetype.vim`. Search
+for "Ruby" and you'll find that Vim simply uses the file extension `.rb` to
+detect Ruby files:
+```viml
+au BufNewFile,BufRead *.rb,*.rbw  setf ruby
+```
+The `BufNewFile` and `BufRead` events in this case are hardcoded in the C
+sources of Vim and get emitted everytime you open a file via `:e` and similar
+commands. Afterwards all the hundreds of filetypes from `filetype.vim` are
+tested for.
+
+Putting it in a nutshell, Vim makes heavy use of events and autocmds but also
+exposes a clean interface to hook into that event-driven system for
+customization.
 
 #### Quickfix and location lists?
 
