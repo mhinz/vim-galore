@@ -1,3 +1,6 @@
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mhinz/vim-grepper/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/follow/_mhinz_.svg?style=social)](https://twitter.com/_mhinz_)
+
 ![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/pics/vim-galore.png)
 
 ---
