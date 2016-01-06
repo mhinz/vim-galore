@@ -20,6 +20,7 @@
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Quickly move current line](#quickly-move-current-line)
 - [Quickly add empty lines](#quickly-add-empty-lines)
+- [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 
 #### [Debugging](#debugging-1)
 - [General tips](#general-tips)
@@ -380,6 +381,19 @@ This is surely no must-have, but I prefer the following mappings over
 nnoremap [<space>  :put! =''<cr>
 nnoremap ]<space>  :put =''<cr>
 ```
+
+#### Don't lose selection when shifting sidewards
+
+If you select one or more lines, you can use `<` and `>` for shifting them
+sidewards. Unfortunately you immediately lose the selection afterwards.
+
+You can use `gv` to reselect the last selection (see `:h gv`), thus you can work
+around it like this:
+```viml
+xnoremap <  <gv
+xnoremap >  >gv
+```
+Now you can use `>>>>>` on your visual selection without any problems.
 
 ## Debugging
 
