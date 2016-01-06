@@ -32,6 +32,7 @@
 #### [List of plugins](#list-of-plugins-1)
 - [Alignment](#alignment)
 - [Code completion](#code-completion)
+- [Commenters](#commenters)
 - [Delimiter](#delimiter)
 - [Fuzzy finders](#fuzzy-finders)
 - [Grep tools](#grep-tools)
@@ -498,6 +499,12 @@ Here's a list of commonly used colorschemes:
 - [neocomplete](https://github.com/Shougo/neocomplete.vim)
 - [supertab](https://github.com/ervandew/supertab)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
+
+#### Commenters
+
+- [commentary](https://github.com/tpope/vim-commentary)
+- [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
+- [tcomment](https://github.com/tomtom/tcomment_vim)
 
 #### Delimiter
 
