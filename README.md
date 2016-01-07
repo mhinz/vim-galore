@@ -77,7 +77,7 @@ added every day. Things about to be added can be found here:
 
 #### Buffers, windows, tabs?
 
-Vim is a text editor. Everytime text is shown, the text is part of a **buffer**.
+Vim is a text editor. Every time text is shown, the text is part of a **buffer**.
 Each file will be opened in its own buffer. Plugins show stuff in their own
 buffers etc.
 
