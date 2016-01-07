@@ -25,7 +25,8 @@ added every day. Things about to be added can be found here:
 - [Getting help offline](#getting-help-offline)
 - [Getting help online](#getting-help-online)
 - [Clipboard](#clipboard)
-  - [Clipboard theory](#clipboard-theory)
+  - [Clipboard theory (Windows, OSX)](#clipboard-theory-windows-osx)
+  - [Clipboard theory (Linux, BSD, ...)](#clipboard-theory-linux-bsd-)
   - [Clipboard usage](#clipboard-usage)
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
@@ -460,20 +461,25 @@ If you want to report a Vim bug, use the
 
 #### Clipboard
 
-##### Clipboard theory
+##### Clipboard theory (Windows, OSX)
 
-Some theory first: **Windows** comes with a
+Some theory first: Windows comes with a
 [clipboard](https://msdn.microsoft.com/en-us/library/windows/desktop/ms649012(v=vs.85).aspx)
-and **OSX** comes with a
+and OSX comes with a
 [pasteboard](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008100-SW1).
+
 Both work like most users would expect them to work. You copy selected text (or
 even other data types) with `ctrl+c`/`cmd+c` and paste them in another
-application with `ctrl+v`/`cmd+v`. Note that copied text is actually transferred
-to the clipboard, so you can close the application you copied from before
-pasting in another application without problems.
+application with `ctrl+v`/`cmd+v`.
 
-If your OS uses [X](http://www.x.org/wiki) (**GNU/Linux**, **BSD**, etc.) on the
-other hand, things work a bit different. X implements the [X Window System
+Note that copied text is actually transferred to the clipboard, so you can close
+the application you copied from before pasting in another application without
+problems.
+
+##### Clipboard theory (Linux, BSD, ...)
+
+If your OS uses [X](http://www.x.org/wiki), things work a bit different. X
+implements the [X Window System
 Protocol](http://www.x.org/releases/X11R7.7/doc/xproto/x11protocol.html) which
 happens to be at major version 11 since 1987, hence X is also often called X11.
 
@@ -493,8 +499,8 @@ The **PRIMARY selection** is used when you simply select text in any
 application. Then it can be pasted somewhere else via `middle-click` or
 `shift+insert`.
 
-The **CLIPBOARD selection** if you copy/paste like you would normally do, via
-`ctrl+c`/`ctrl+v` and the likes.
+The **CLIPBOARD selection** is used when you copy/paste like you would normally
+do, via `ctrl+c`/`ctrl+v` and the likes.
 
 Selections work roughly like this:
 ```
