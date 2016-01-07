@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [1.1] - 2016-01-07
+
 ### Added
 
 - Basics: [Quickfix and location lists?](README.md#quickfix-and-location-lists)
@@ -26,7 +29,9 @@ All notable changes to this project will be documented in this file.
 - Tips: [Don't lose selection when shifting sidewards](README.md#dont-lose-selection-when-shifting-sidewards)
 
 ## [1.0] - 2016-01-06
+
 First release!
 
-[Unreleased]: https://github.com/mhinz/vim-galore/compare/v1.0...HEAD
+[Unreleased]: https://github.com/mhinz/vim-galore/compare/v1.1...HEAD
+[1.1]: https://github.com/mhinz/vim-galore/compare/v1.0...v1.1
 [1.0]: https://github.com/mhinz/vim-galore/compare/69677e2...v1.0
