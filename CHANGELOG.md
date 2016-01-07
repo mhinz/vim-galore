@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Basics: [Registers?](README.md#registers)
 - Basics: [Autocmds?](README.md#autocmds)
 - Basics: [Motions? Operators? Text objects?](README.md#motions-operators-text-objects)
+- Basics: [Locality?](#locality)
 - Usage: [Clipboard](README.md#clipboard)
 - Quirks: [Newline used for NUL](README.md#newline-used-for-nul)
 - Quirks: [Bracketed paste (or why do I have to set 'paste' all the time?)](README.md#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)

@@ -19,6 +19,7 @@ added every day. Things about to be added can be found here:
 - [Autocmds?](#autocmds)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
+- [Locality?](#locality)
 
 #### [Usage](#usage-1)
 
@@ -408,6 +409,20 @@ I use [gruvbox](https://github.com/morhetz/gruvbox) for the GUI and
 [janah](https://github.com/mhinz/vim-janah) for the terminal.
 
 More colorschemes: [here](#list-of-colorschemes-1)
+
+#### Locality?
+
+Many of the concepts mentioned above also have _local_ counterparts:
+
+| Global | Local | Scope | Help |
+|--------|-------|-------|------|
+| `:set`     | `:setlocal`           | buffer or window | `:h local-options`    |
+| `:map`     | `:map <buffer>`       | buffer           | `:h :map-local`       |
+| `:autocmd` | `:autocmd * <buffer>` | buffer           | `:h autocmd-buflocal` |
+| `:cd`      | `:lcd`                | window           | `:h :lcd`             |
+
+Variables also sport different scopes, but will be explained in
+[Vim scriping](#vim-scripting).
 
 ## Usage
 
