@@ -24,6 +24,9 @@ added every day. Things about to be added can be found here:
 
 - [Getting help offline](#getting-help-offline)
 - [Getting help online](#getting-help-online)
+- [Clipboard](#clipboard)
+  - [Clipboard theory](#clipboard-theory)
+  - [Clipboard usage](#clipboard-usage)
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
 
@@ -454,6 +457,110 @@ Another great resource is using
 
 If you want to report a Vim bug, use the
 [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
+
+#### Clipboard
+
+##### Clipboard theory
+
+Some theory first: **Windows** comes with a
+[clipboard](https://msdn.microsoft.com/en-us/library/windows/desktop/ms649012(v=vs.85).aspx)
+and **OSX** comes with a
+[pasteboard](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008100-SW1).
+Both work like most users would expect them to work. You copy selected text (or
+even other data types) with `ctrl+c`/`cmd+c` and paste them in another
+application with `ctrl+v`/`cmd+v`. Note that copied text is actually transferred
+to the clipboard, so you can close the application you copied from before
+pasting in another application without problems.
+
+If your OS uses [X](http://www.x.org/wiki) (**GNU/Linux**, **BSD**, etc.) on the
+other hand, things work a bit different. X implements the [X Window System
+Protocol](http://www.x.org/releases/X11R7.7/doc/xproto/x11protocol.html) which
+happens to be at major version 11 since 1987, hence X is also often called X11.
+
+Prior, in X10, [cut
+buffers](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Cut_Buffers)
+were introduced that kind of worked like a _clipboard_ as in copied text was
+actually hold by X and it was accessiable by all ofter applications. This
+mechanism still exists in X, but its use is deprecated now and most software
+doesn't use it anymore.
+
+Nowadays data is transferred between applications by the means of
+[selections](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Selections).
+From the 3 _selection atoms_ defined, only 2 are used in practice: PRIMARY and
+CLIPBOARD.
+
+The **PRIMARY selection** is used when you simply select text in any
+application. Then it can be pasted somewhere else via `middle-click` or
+`shift+insert`.
+
+The **CLIPBOARD selection** if you copy/paste like you would normally do, via
+`ctrl+c`/`ctrl+v` and the likes.
+
+Selections work roughly like this:
+```
+Program A: <ctrl+c>
+Program A: assert ownership of CLIPBOARD
+Program B: <ctrl+v>
+Program B: note that ownership of CLIPBOARD is hold by Program A
+Program B: request data from Program A
+Program A: respond to request and send data to Program B
+Program B: receives data from Program A and inserts it into the window
+```
+
+**NOTE**: Selections (no, not even the CLIPBOARD selection) are never kept in
+the X server! Thus you lose the data copied with `ctrl+c` when the application
+closes.
+
+##### Clipboard usage
+
+First of all, Vim needs certain _features_ compiled in for the clipboard to
+work. `:version` shows all features and should contain `+clipboard` and also
+`+xterm_clipboard` if you use Vim in a terminal emulator together with the X
+server. If that's not the case and you installed Vim from a package manager,
+make sure to install a package called `vim-x11`, `vim-gtk`, `vim-gnome` or
+similar. Even if you never use the GUI version of Vim, these packages bundle a
+Vim with a bigger feature set compiled in.
+
+As mentioned in [Registers?](#registers), the clipboard registers are `*` a `+`.
+
+Usage under **Windows** and **OSX** is easy: It doesn't matter whether you use
+the `*` or `+` register for transferring data between Vim and the
+clipboard/pasteboard. Both registers always have the same content on these
+systems. `:reg` will only show the `*` register, though.
+
+Under systems using **X11**, `*` is used for the PRIMARY selection and `+` for
+the CLIPBOARD selection.
+
+So, no matter what system you're on, you can copy data to the "clipboard" via
+`"+y` and paste from it via `"+p`.
+
+Remember that the unnamed register (`"`) always holds the text of the last yank
+or deletion. That's why you can simply use `y` in one Vim window and paste in
+another one via `p`. All operators and commands that optinally take registers
+default to the unnamed register.
+
+If you want a more seemless interaction between Vim and other applications
+without specifying `"+` all the time, use this:
+
+```viml
+set clipboard=unnamedplus
+```
+
+This basically synchronizes the `"` and `+` registers.
+
+If you don't even want to hit `y`, this this instead:
+
+```viml
+set clipboard=autoselectplus
+```
+
+Vim comes with a pretty extensive documentation:
+
+```
+:h 'clipboard'
+:h gui-clipboard
+:h gui-selections
+```
 
 #### Managing plugins
 
