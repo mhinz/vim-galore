@@ -557,7 +557,8 @@ This basically synchronizes the `"` and `+` registers.
 If you don't even want to hit `y`, this this instead:
 
 ```viml
-set clipboard=autoselectplus
+set clipboard=autoselectplus  " used in terminal Vim
+set guioptions+=a             " used in GUI Vim
 ```
 
 Vim comes with a pretty extensive documentation:
