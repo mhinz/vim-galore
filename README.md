@@ -133,16 +133,16 @@ buffer.
 
 You can define your own mappings with the `:map` family of commands. Each
 command of that family defines a mappping for a certain set of modes.
-Technically Vim comes with a whopping 12 modes, 6 of them can be mapped.
+Technically Vim comes with a whopping 12 modes, 6 of them can be mapped:
 
-| Command | Modes                            |
-|---------|----------------------------------|
-| `:map`  | normal, visual, operator-pending |
-| `:nmap` | normal                           |
-| `:xmap` | visual                           |
-| `:cmap` | command-line                     |
-| `:omap` | operator-pending                 |
-| `:imap` | insert                           |
+| Recursive | Non-recursive | Modes                            |
+|-----------|---------------|----------------------------------|
+| `:map`    | `:noremap`    | normal, visual, operator-pending |
+| `:nmap`   | `:nnoremap`   | normal                           |
+| `:xmap`   | `:xnoremap`   | visual                           |
+| `:cmap`   | `:cnoremap`   | command-line                     |
+| `:omap`   | `:onoremap`   | operator-pending                 |
+| `:imap`   | `:inoremap`   | insert                           |
 
 E.g. this defines the mapping for normal mode only:
 
@@ -151,8 +151,8 @@ E.g. this defines the mapping for normal mode only:
 ```
 
 So far, so good. There's only one problem that can be pretty confusing to
-beginners: All the commands listed above are _recursive_. That is, the
-right-hand side takes other mappings into account.
+beginners: `:nmap` is _recursive_! That is, the right-hand side takes other
+mappings into account.
 
 So you defined a mapping that simply echoes "Foo":
 
@@ -172,14 +172,14 @@ If you hit <kbd>a</kbd>, we expect the cursor to go back a word, but instead
 mapped to another action already, namely `:echo "Foo"<cr>`.
 
 The proper way to resolve this problem is to use a _non-recursive_ mapping
-instead. Take the commands from above and put a `nore` in front of the `map`, so
-`:noremap`, `:nnoremap`, `:xnoremap`, `:cnoremap`, `:onoremap`, `:inoremap`.
-
-Putting it in a nutshell, this solves our problem:
+instead:
 
 ```viml
 :nnoremap a b
 ```
+
+Rule of thumb: Always use non-recursive mappings unless recursing is actually
+desired.
 
 #### Mapleader?
 
