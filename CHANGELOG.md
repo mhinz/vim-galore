@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Debugging: [Verbosity](README.md#verbosity)
+
 ## [1.1] - 2016-01-07
 
 ### Added
