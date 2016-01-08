@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Debugging: [Verbosity](README.md#verbosity)
+- Debugging: [Debugging Vim scripts](README.md#debugging-vim-scripts)
 - Miscellaneous: [Easter eggs](README.md#easter-eggs)
 
 ## [1.1] - 2016-01-07

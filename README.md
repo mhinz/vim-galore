@@ -49,6 +49,7 @@ added every day. Things about to be added can be found here:
 - [Profiling startup time](#profiling-startup-time)
 - [Profiling at runtime](#profiling-at-runtime)
 - [Verbosity](#verbosity)
+- [Debugging Vim scripts](#debugging-vim-scripts)
 
 #### [Miscellaneous](#miscellaneous-1)
 
@@ -877,6 +878,59 @@ fear no more, you can simply redirect the output to a file:
 ```viml
 :set verbosefile=/tmp/foo | 15verbose echo "foo" | vsplit /tmp/foo
 ```
+
+#### Debugging Vim scripts
+
+If you ever used a command-line debugger before, `:debug` will quickly feel
+familiar.
+
+Simply prepend `:debug` to any other command and you'll be put into debug mode.
+That is, the execution will stop at the first line about to be executed and that
+line will be displayed.
+
+See `:h >cont` and below for the 6 available debugger commands and note that,
+like in gdb and similar debuggers, you can also use their short forms, that is
+`c`, `q`, `n`, `s`, `i`, and `f`.
+
+Apart from that those, you're free to use any Vim command, e.g. `:echo myvar`,
+which gets executed in the context of the current position in the code.
+
+You basically get a
+[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) by
+simply using `:debug 1`.
+
+It would be a pain if you had to single-step through every single line, so of
+course we can define breakpoints, too. (Breakpoints are called breakpoints,
+because the execution stops when they're hit, thus you can simply skip code
+you're not interested in.) See `:h :breakadd`, `:h :breakdel`, and `:h
+:breaklist` for further details.
+
+Let's assume you want to know what code is run every time you save a file:
+
+```viml
+:au BufWritePost
+" signify  BufWritePost
+"     *         call sy#start()
+:breakadd func *start
+:w
+" Breakpoint in "sy#start" line 1
+" Entering Debug mode.  Type "cont" to continue.
+" function sy#start
+" line 1: if g:signify_locked
+>s
+" function sy#start
+" line 3: endif
+>
+" function sy#start
+" line 5: let sy_path = resolve(expand('%:p'))
+>q
+:breakdel *
+```
+
+As you can see, using `<cr>` will repeat the previous debugger command, `s` in
+this case.
+
+`:debug` can be used in combination with the [verbose](#verbosity) option.
 
 ## Miscellaneous
 
