@@ -53,6 +53,7 @@ added every day. Things about to be added can be found here:
 #### [Miscellaneous](#miscellaneous-1)
 
 - [Vim distributions](#vim-distributions)
+- [Easter eggs](#easter-eggs)
 
 #### [Quirks](#quirks-1)
 
@@ -909,6 +910,19 @@ looking at some distributions:
 - [cream](http://cream.sourceforge.net)
 - [janus](https://github.com/carlhuda/janus.git)
 - [spf13](https://github.com/spf13/spf13-vim)
+
+#### Easter eggs
+
+| Help file | Message |
+|-----------|---------|
+| `:Ni!` | `Do you demand a shrubbery?` |
+| `:h 'sm'` | `NOTE: Use of the short form is rated PG.` |
+| `:h 42` | `What is the meaning of life, the universe and everything? Douglas Adams, the only person who knew what this question really was about is now dead, unfortunately.  So now you might wonder what the meaning of death is...` |
+| `:h UserGettingBored` | `When the user presses the same key 42 times. Just kidding! :-)` |
+| `:h bar` | `Ceci n'est pas une pipe.` |
+| `:h holy-grail` | `You found it, Arthur!` |
+| `:h map-modes` | `:nunmap can also be used outside of a monastery.` |
+| `:smile` | Try it out yourself. ;-) Added in 7.4.1005. |
 
 ## Quirks
 
