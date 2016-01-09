@@ -60,6 +60,7 @@ added every day. Things about to be added can be found here:
 
 #### [Quirks](#quirks-1)
 
+- [Editing small files is slow](#editing-small-files-is-slow)
 - [Editing huge files is slow](#editing-huge-files-is-slow)
 - [Newline used for NUL](#newline-used-for-nul)
 - [Bracketed paste (or why do I have to set 'paste' all the time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
@@ -1046,6 +1047,23 @@ looking at some distributions:
 | `:smile` | Try it out yourself. ;-) Added in 7.4.1005. |
 
 ## Quirks
+
+#### Editing small files is slow
+
+Most of the time this is caused by syntax files using complex regular
+expressions. Particulay the Ruby syntax file caused people to have slowdowns in
+the past. (Also see [Debugging syntax files](#debugging-syntax-files).)
+
+Moreover, some features tend to impact performance more than others. Check this
+list to ease slowdowns:
+
+| Option | Why? |
+|--------|------|
+| `:set nocursorline` | This makes screen redrawing quite a bit slower. |
+| `:set norelativenumber` | Constantly computing the relative numbers is expensive. |
+| `:set foldmethod=marker` | If the syntax file itself is slow already, `foldmethod=syntax` makes it even worse. |
+| `:set synmaxcol=200` | Due to internal representation, Vim has problems with long lines in general. Only syntax highlight till column 200. |
+| `:NoMatchParen` | Uses regular expressions to find the accompanying parenthesis. |
 
 #### Editing huge files is slow
 
