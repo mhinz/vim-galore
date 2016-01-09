@@ -60,6 +60,7 @@ added every day. Things about to be added can be found here:
 
 #### [Quirks](#quirks-1)
 
+- [Editing huge files is slow](#editing-huge-files-is-slow)
 - [Newline used for NUL](#newline-used-for-nul)
 - [Bracketed paste (or why do I have to set 'paste' all the time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
 
@@ -1045,6 +1046,31 @@ looking at some distributions:
 | `:smile` | Try it out yourself. ;-) Added in 7.4.1005. |
 
 ## Quirks
+
+#### Editing huge files is slow
+
+The biggest issue with big files is, that Vim reads the whole file at once. This
+is done due to how buffers are represented internally.
+([Discussion on vim_dev@](https://groups.google.com/forum/#!topic/vim_dev/oY3i8rqYGD4/discussion))
+
+If you only want to read, `tail hugefile | vim -` is a good workaround.
+
+If you can live without syntax, settings and plugins for the moment:
+
+```
+$ vim -u NONE -N
+```
+
+This should make navigation quite a lot faster, especially since no expensive
+regular expressions for syntax highlighting are used. You should also tell Vim
+not to use swapfiles and viminfo files to avoid long delays on writing:
+
+```
+$ vim -n -u NONE -i NONE -N
+```
+
+Putting it in a nutshell, try to avoid using Vim when intending to write really
+huge files. :\
 
 #### Newline used for NUL
 
