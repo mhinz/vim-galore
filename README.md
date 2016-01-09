@@ -36,6 +36,7 @@ added every day. Things about to be added can be found here:
 #### [Tips](#tips-1)
 
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
+- [Saner command-line history](#saner-command-line-history)
 - [Quickly move current line](#quickly-move-current-line)
 - [Quickly add empty lines](#quickly-add-empty-lines)
 - [Quickly edit your macros](#quickly-edit-your-macros)
@@ -696,6 +697,25 @@ If you want `n` to always search forward and `N` backward, use this:
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
 ```
+
+#### Saner command-line history
+
+If you're anything like me, you're used to going to next and previous items via
+`<c-n>` and `<c-p>` respectively. By default, this also works in the
+command-line and recalls older or more recent command-lines from history.
+
+So far, so good. But `<up>` and `<down>` are even smarter! They recall the
+command-line whose beginning matches the current command-line. E.g. `:echo <up>`
+may change to `:echo "Vim rocks!"`.
+
+Of course I don't want you to reach to the arrow keys, just map it instead:
+
+```viml
+cnoremap <c-n>  <down>
+cnoremap <c-p>  <up>
+```
+
+I depend on this behaviour several times a day.
 
 #### Quickly move current line
 
