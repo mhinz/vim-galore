@@ -15,6 +15,7 @@ added every day. Things about to be added can be found here:
 - [Mappings?](#mappings)
 - [Mapleader?](#mapleader)
 - [Registers?](#registers)
+- [Marks?](#marks)
 - [Motions? Operators? Text objects?](#motions-operators-text-objects)
 - [Autocmds?](#autocmds)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
@@ -257,6 +258,50 @@ checking `:reg`, so you can see what's actually happening.
 
 **Fun fact**: In Emacs "yanking" stands for pasting (or _reinserting previously
 killed text_) not copying.
+
+#### Marks?
+
+You use marks to remember a position, that is line number and column, in a file.
+
+| Marks | Set by.. | Usage |
+|-------|----------|-------|
+| `a` - `z` | User | Local to file, thus only valid within one file. Jumping to a lowercase mark, means jumping within the current file. |
+| `A` - `Z` | User | Global, thus valid between files. Also called _file marks_. Jumping to a file mark may switch to another buffer. |
+| `0` - `9` | viminfo | `0` is the position when the viminfo file was written last. In practice this means when the last Vim process ended. `1` is the position of when the second last Vim process ended and so on. |
+
+Put `'`/`g'` or `` ` ``/`` g` `` in front of a register to form a motion.
+
+Use `mm` to remember the current position with mark "m". Move around the file
+and then jump back via `'m` (first non-blank) or `` `m `` (exact column).
+Lowercase marks will be remembed after exiting Vim, if you tell your viminfo
+file to do so, see `:h viminfo-'`.
+
+Use `mM` to remember the current position with file mark "M". Switch to another
+buffer and switch back via `'M` or `` `M ``.
+
+Other motions include:
+
+| Motion           | Jump to.. |
+|------------------|-----------|
+| `'[`, `` `[ ``   | First line or character of previously changed or yanked text. |
+| `']`, `` `] ``   | Last line or character of previously changed or yanked text. |
+| `'<`, `` `< ``   | Beginning line or character of last visual selection. |
+| `'>`, `` `> ``   | Ending line or character of last visual selection. |
+| `''`, ``` `` ``` | Position before latest jump. |
+| `'"`, `` `" ``   | Position when last exiting the current buffer. |
+| `'^`, `` `^ ``   | Position where last insertion stopped. |
+| `'.`, `` `. ``   | Position where last change was made. |
+| `'(`, `` `( ``   | Start of current sentence. |
+| `')`, `` `) ``   | End of current sentence. |
+| `'{`, `` `{ ``   | Start of current paragraph. |
+| `'}`, `` `} ``   | End of current paragraph. |
+
+Marks can also be used in a [range](#ranges). You probably saw this before and
+wondered what it means: Select some text in visual mode and do `:`, the
+command-line will be prepended with `:'<,'>`, which means the following command
+would get a range that denotes the visual selection.
+
+Use `:marks` to list all marks. Read everything in `:h mark-motions`.
 
 #### Motions? Operators? Text objects?
 
@@ -967,7 +1012,7 @@ looking at some distributions:
 
 #### Easter eggs
 
-| Help file | Message |
+| Command   | Message |
 |-----------|---------|
 | `:Ni!` | `Do you demand a shrubbery?` |
 | `:h 'sm'` | `NOTE: Use of the short form is rated PG.` |

@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Basics: [Marks?](README.md#marks)
 - Debugging: [Verbosity](README.md#verbosity)
 - Debugging: [Debugging Vim scripts](README.md#debugging-vim-scripts)
 - Miscellaneous: [Easter eggs](README.md#easter-eggs)
