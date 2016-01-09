@@ -52,6 +52,7 @@ added every day. Things about to be added can be found here:
 - [Profiling at runtime](#profiling-at-runtime)
 - [Verbosity](#verbosity)
 - [Debugging Vim scripts](#debugging-vim-scripts)
+- [Debugging syntax files](#debugging-syntax-files)
 
 #### [Miscellaneous](#miscellaneous-1)
 
@@ -998,6 +999,25 @@ As you can see, using `<cr>` will repeat the previous debugger command, `s` in
 this case.
 
 `:debug` can be used in combination with the [verbose](#verbosity) option.
+
+#### Debugging syntax files
+
+Syntax files are often the cause for slowdowns due to wrong and/or complex
+regular expressions. If the `+profile` feature is compiled in, Vim provides the
+super useful `:syntime` command.
+
+```viml
+:syntime on
+" hit <c-l> a few times to redraw the window which causes the syntax rules to get applied again
+:syntime off
+:syntime report
+```
+
+The output contains important metrics. E.g. you can see which regexp takes too
+long and should be optimized or which regexps are used all the time but never
+even match.
+
+See `:h :syntime`.
 
 ## Miscellaneous
 

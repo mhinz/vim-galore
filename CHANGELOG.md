@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Debugging: [Verbosity](README.md#verbosity)
 - Debugging: [Debugging Vim scripts](README.md#debugging-vim-scripts)
+- Debugging: [Debugging syntax files](README.md#debugging-syntax-files)
 - Quirks: [Editing small files is slow](README.md#editing-small-files-is-slow)
 - Quirks: [Editing huge files is slow](README.md#editing-huge-files-is-slow)
 - Miscellaneous: [Easter eggs](README.md#easter-eggs)
