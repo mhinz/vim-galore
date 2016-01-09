@@ -30,6 +30,7 @@ added every day. Things about to be added can be found here:
   - [Clipboard theory (Windows, OSX)](#clipboard-theory-windows-osx)
   - [Clipboard theory (Linux, BSD, ...)](#clipboard-theory-linux-bsd-)
   - [Clipboard usage](#clipboard-usage)
+- [Restore cursor position when opening file](#restore-cursor-position-when-opening-file)
 - [Editing remote files](#editing-remote-files)
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
@@ -636,6 +637,24 @@ Vim comes with a pretty extensive documentation:
 :h gui-clipboard
 :h gui-selections
 ```
+#### Restore cursor position when opening file
+
+Without this, you will always be at line 1 when opening a file. With this, you
+will be at the position where you left off.
+
+Put this in your vimrc:
+```viml
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+```
+
+This simpy does `` g`" `` (jump to position where you left off without changing
+jumplist) if that position still exists (the file might have fewer lines since
+it was altered by another program).
+
+This requires the use of a viminfo file: `:h viminfo-'`.
 
 #### Editing remote files
 
