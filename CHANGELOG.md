@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 - Basics: [Marks?](README.md#marks)
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
+- Usage: [Editing remote files](README.md#editing-remote-files)
 - Debugging: [Verbosity](README.md#verbosity)
 - Debugging: [Debugging Vim scripts](README.md#debugging-vim-scripts)
 - Debugging: [Debugging syntax files](README.md#debugging-syntax-files)
