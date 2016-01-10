@@ -16,7 +16,8 @@ All notable changes to this project will be documented in this file.
 - Quirks: [Editing small files is slow](README.md#editing-small-files-is-slow)
 - Quirks: [Editing huge files is slow](README.md#editing-huge-files-is-slow)
 - Misc: [Additional resources](README.md#additional-resources)
-- Miscellaneous: [Easter eggs](README.md#easter-eggs)
+- Misc: [Easter eggs](README.md#easter-eggs)
+- Misc: [Why hjkl for navigation?](README.md#why-hjkl-for-navigation)
 
 ## [1.1] - 2016-01-07
 

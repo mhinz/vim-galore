@@ -61,6 +61,7 @@ added every day. Things about to be added can be found here:
 - [Additional resources](#additional-resources)
 - [Vim distributions](#vim-distributions)
 - [Easter eggs](#easter-eggs)
+- [Why hjkl for navigation?](#why-hjkl-for-navigation)
 
 #### [Quirks](#quirks-1)
 
@@ -68,6 +69,7 @@ added every day. Things about to be added can be found here:
 - [Editing huge files is slow](#editing-huge-files-is-slow)
 - [Newline used for NUL](#newline-used-for-nul)
 - [Bracketed paste (or why do I have to set 'paste' all the time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
+- [Delays when using escape key in terminal](#delays-when-using-escape-key-in-terminal)
 
 #### [List of colorschemes](#list-of-colorschemes-1)
 
@@ -1135,6 +1137,17 @@ looking at some distributions:
 | `:help!` | `E478: Don't panic!` (Glitch? When used in a help buffer (`buftype=help`) this works like `:h help.txt` instead.) |
 | `:smile` | Try it out yourself. ;-) Added in 7.4.1005. |
 
+#### Why hjkl for navigation?
+
+When [Bill Joy](https://en.wikipedia.org/wiki/Bill_Joy) created
+[vi](https://en.wikipedia.org/wiki/Vi), a predecessor of Vim, he did it on a
+[ADM-3A](https://en.wikipedia.org/wiki/ADM-3A) which had no extra cursor buttons
+but used, you might already guessed it, hjkl instead.
+
+Keyboard layout: [click](https://raw.githubusercontent.com/mhinz/vim-galore/master/pics/adm-3a-layout.jpg)
+
+This also shows why `~` is used to denote the home directory on Unix systems.
+
 ## Quirks
 
 #### Editing small files is slow
@@ -1214,6 +1227,12 @@ Additional read from the same author as the plugin:
 
 **Neovim**: Neovim tries to make all of this much more seemless and sets
 bracketed paste mode automatically if the terminal emulator supports it.
+
+#### Delays when using escape key in terminal
+
+If you live in the command-line, you probably don't use a real dumb terminal
+emulator anymore, but a so-called _terminal emulator_ like xterm,
+gnome-terminal, iTerm2 etc. instead.
 
 ## List of colorschemes
 
