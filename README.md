@@ -327,7 +327,8 @@ Like motions, operators take a count, e.g. `2gUw` makes the rest of the current
 word and the next one uppercase. Since motions and operators take counts,
 `2gU2w` works just as well and executes `gU2w` twice.
 
-See `:h operator` for all available operators.
+See `:h operator` for all available operators. Use `:set tildeop` to make `~`
+act as an operator.
 
 **Text objects** act on the surrounding area, opposed to motions that act into
 one direction. Actually they work on objects, e.g. a whole word, a whole
