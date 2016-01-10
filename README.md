@@ -58,6 +58,7 @@ added every day. Things about to be added can be found here:
 
 #### [Miscellaneous](#miscellaneous-1)
 
+- [Additional resources](#additional-resources)
 - [Vim distributions](#vim-distributions)
 - [Easter eggs](#easter-eggs)
 
@@ -1077,12 +1078,23 @@ See `:h :syntime`.
 
 ## Miscellaneous
 
+#### Additional resources
+
+| Resource | Description |
+|----------|-------------|
+| [Seven habits of effective text editing](http://www.moolenaar.net/habits.html) | By Bram Moolenaar, the author of Vim. |
+| [Seven habits of effective text editing 2.0 (PDF)](http://www.moolenaar.net/habits_2007.pdf) | See above. |
+| [IBM DeveloperWorks: Scripting the Vim editor](http://www.ibm.com/developerworks/views/linux/libraryview.jsp?sort_order=asc&sort_by=Title&search_by=scripting+the+vim+editor) | Five-part series on Vim scripting. |
+| [Practical Vim (2nd Edition)](http://www.amazon.com/Practical-Vim-Edit-Speed-Thought) | Hands down the best book about Vim. |
+| [Vimcasts.org](http://vimcasts.org/episodes/archive) | Vim screencasts. |
+| [Your problem with Vim is that you don't grok vi](http://stackoverflow.com/a/1220118) | Concise, informative and correct. A real gem. |
+
 #### Vim distributions
 
 Vim distributions are Vim + custom settings + custom plugins from certain
 authors and are therefore very opinionated.
 
-The problems with such distributions is that they tend to be used by beginners.
+The problem with such distributions is that they tend to be used by beginners.
 (More advanced users know how to choose their own plugins and settings after
 all.) It all goes good until an issue appears. Now where is the problem? The
 beginner doesn't know what to do and asks for advice on the internet. After long

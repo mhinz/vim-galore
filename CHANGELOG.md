@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Debugging: [Debugging syntax files](README.md#debugging-syntax-files)
 - Quirks: [Editing small files is slow](README.md#editing-small-files-is-slow)
 - Quirks: [Editing huge files is slow](README.md#editing-huge-files-is-slow)
+- Misc: [Additional resources](README.md#additional-resources)
 - Miscellaneous: [Easter eggs](README.md#easter-eggs)
 
 ## [1.1] - 2016-01-07
