@@ -1116,7 +1116,7 @@ editor (and actually you never stop customizing your vimrc when you finally got
 hooked), but in the long-term it's much better and more time-efficient to learn
 how to do stuff manually in the first place.
 
-Repeat after me: "A programmer should know his tools."
+Repeat after me: "A programmer should know their tools."
 
 Anyway, if you know what you're doing, you might get some inspiration from
 looking at some distributions:
