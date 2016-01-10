@@ -1230,9 +1230,65 @@ bracketed paste mode automatically if the terminal emulator supports it.
 
 #### Delays when using escape key in terminal
 
-If you live in the command-line, you probably don't use a real dumb terminal
-emulator anymore, but a so-called _terminal emulator_ like xterm,
-gnome-terminal, iTerm2 etc. instead.
+If you live in the command-line, you probably use a so-called _terminal
+emulator_ like xterm, gnome-terminanal, iTerm2, etc. (opposed to a real
+[terminal](https://en.wikipedia.org/wiki/Computer_terminal)).
+
+Like their ancestors, terminal emulators use [escape
+sequences](https://en.wikipedia.org/wiki/Escape_sequence) (or _control
+sequences_) to control things like moving the cursor, changing text colors, etc.
+They're simply strings of ASCII characters starting with an escape character
+(displayed as `^[`). When such a string arrives, the terminal emulator looks up the
+accompanying action in the [terminfo](https://en.wikipedia.org/wiki/Terminfo)
+database.
+
+To make the problem clearer, I'll explain mapping timeouts first. They always
+happen when there's ambiguity between mappings:
+
+```viml
+:nnoremap ,a  :echo 'foo'<cr>
+:nnoremap ,ab :echo 'bar'<cr>
+```
+
+Both mappings work as expected, but when typing `,a`, there will be a delay of 1
+second, because Vim waits whether the user keys in another `b` or not.
+
+Escape sequences pose the same problem:
+
+- `<esc>` is used a lot for returning to normal mode or quitting an action.
+- Cursor keys are encoded using escape sequences.
+- Vim expects <kbd>Alt</kbd> (also called _Meta key_) to send a proper 8-bit
+  encoding with the high bit set, but many terminal emulators don't support it
+  (or don't enable it by default) and send an escape sequence instead.
+
+You can test the above like this: `vim -u NONE -N` and type `i<c-v><left>` and
+you'll see a sequence inserted that starts with `^[` which denotes the escape
+character.
+
+Putting it in a nutshell, Vim has a hard time distinguishing between a typed
+`<esc>` character and a proper escape sequence.
+
+By default Vim uses `:set timeout timeoutlen=1000`, so it delays on ambiguity of
+mappings _and_ key codes by 1 second. This is a sane value for mappings, but you
+can define the key code timeout on its own which is the most common workaround
+for this entire issue:
+
+```viml
+set timeout           " for mappings
+set timeoutlen=1000   " default value
+set ttimeout          " for key codes
+set ttimeoutlen=10    " unnoticeable small value
+```
+
+Under `:h ttimeout` you find a small table showing the relationship between
+these options.
+
+If you're using tmux between Vim and your terminal emulator, also put this in
+your `~/.tmux.conf`:
+
+```tmux
+set -sg escape-time 0
+```
 
 ## List of colorschemes
 

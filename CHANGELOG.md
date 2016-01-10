@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Debugging: [Debugging syntax files](README.md#debugging-syntax-files)
 - Quirks: [Editing small files is slow](README.md#editing-small-files-is-slow)
 - Quirks: [Editing huge files is slow](README.md#editing-huge-files-is-slow)
+- Quirks: [Delays when using escape key in terminal](README.md#delays-when-using-escape-key-in-terminal)
 - Misc: [Additional resources](README.md#additional-resources)
 - Misc: [Easter eggs](README.md#easter-eggs)
 - Misc: [Why hjkl for navigation?](README.md#why-hjkl-for-navigation)
