@@ -354,7 +354,9 @@ object. With `i` it only acts on the object itself, with `a` on the object plus
 trailing whitespace. E.g. `diw` deletes the current word and `ci(` changes
 everything between parentheses.
 
-Text objects don't take a count.
+Text objects take a count. Imagine `((( )))` and the cursor on or between the
+most inner parentheses, then `d2a(` will remove the 2 inner pairs of parentheses
+and everything in between.
 
 See `:h text-objects` for all available text objects.
 
