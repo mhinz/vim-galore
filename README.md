@@ -209,14 +209,14 @@ let mapleader = ' '
 nnoremap <leader>h :helpgrep<space>
 ```
 
-**Note**: Set the mapleader before the mappings! All the leader mappings that
-are in effect already, won't change just because the mapleader was changed.
-`:nmap <leader>` will show all normal mode leader mappings with the mapleader
-resolved already, so use it to double-check your mappings.
+Moreover, there is `<localleader>` that is the local counterpart to `<leader>`
+and is supposed to be used for mappings that are local to the buffer, eg.
+filetype-specific plugins. It also defaults to `\`.
 
-Opposed to the global `<leader>`, there's is also `<localleader>` which is
-supposed to be used in filetype-specific plugins. There is no default set for
-the local mapleader.
+**Note**: Set the mapleaders before mappings! All leader mappings that are in
+effect already, won't change just because the mapleader was changed. `:nmap
+<leader>` will show all normal mode leader mappings with the mapleader resolved
+already, so use it to double-check your mappings.
 
 See `:h mapleader` and `:h maplocalleader` for more.
 
