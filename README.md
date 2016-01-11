@@ -202,16 +202,17 @@ is set to `\` by default.
 nnoremap <leader>h :helpgrep<right>
 ```
 
-This mapping is triggered by `\h`.
-
-You can change the mapleader like this:
+This mapping is triggered by `\h`. If you want to use `<space>h` instead:
 
 ```viml
-let mapleader = ';'
+let mapleader = ' '
+nnoremap <leader>h :helpgrep<right>
 ```
 
-**Note**: It's important that the mapleader is set before the mappings that use
-it, otherwise `\` will be used anyway.
+**Note**: Set the mapleader before the mappings! All the leader mappings that
+are in effect already, won't change just because the mapleader was changed.
+`:nmap <leader>` will show all normal mode leader mappings with the mapleader
+resolved already, so use it to double-check your mappings.
 
 Opposed to the global `<leader>`, there's is also `<localleader>` which is
 supposed to be used in filetype-specific plugins. There is no default set for

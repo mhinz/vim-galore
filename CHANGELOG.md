@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+- Basics: Improved [Mapleader?](README.md#mapleader)
 - Usage: rewrote [Clipboard](README.md#clipboard)
 
 ## [1.1] - 2016-01-07
