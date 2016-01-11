@@ -639,12 +639,10 @@ Program A: respond to request and send data to Program B
 Program B: receives data from Program A and inserts it into the window
 ```
 
-- **PRIMARY selection**: Used when you select text in any application.
-  Afterwards it can be pasted somewhere else via `middle-click` or
-  `shift+insert`. In Vim you access the selection using the `*` register.
-- **CLIPBOARD selection**: Used when you copy/paste like you would normally do,
-  via `ctrl+c`/`ctrl+v` and the likes. In Vim you access this selection by using
-  the `+` register.
+| Selection | When used? | How to paste? | How to access from Vim? |
+|-----------|------------|---------------|-------------------------|
+| PRIMARY   | Selecting text              | `middle-click`, `shift+insert` | `*` register |
+| CLIPBOARD | Selecting text and `ctrl+c` | `ctrl+v`                       | `+` register |
 
 **NOTE**: Selections (no, not even the CLIPBOARD selection) are never kept in
 the X server! Thus you lose the data copied with `ctrl+c` when the application
