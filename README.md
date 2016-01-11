@@ -234,7 +234,7 @@ Vim provides the following registers:
 | Small delete        | `-`                    | vim        | [ ]       | Last deletion that was less than one line. |
 | Named               | `a` to `z`, `A` to `Z` | user       | [ ]       | If you yank to register `a`, you replace its text. If you yank to register `A`, you append to the text in register `a`. |
 | Read-only           | `:`, `.`, `%`          | vim        | [x]       | `:`: Last command, `.`: Last inserted text, `%`: Current filename. |
-| Alternate buffer    | `#`                    | vim        | [x]       | Most of the time the previously visited buffer of the current window. See `:h alternate-file` |
+| Alternate buffer    | `#`                    | vim        | [ ]       | Most of the time the previously visited buffer of the current window. See `:h alternate-file` |
 | Expression          | `=`                    | user       | [ ]       | Evaluation of the VimL expression that was yanked. E.g. do this in insert mode: `<c-r>=5+5<cr>` and "10" will be inserted in the buffer. |
 | Selection           | `+`, `*`               | vim        | [ ]       | `*` and `+` are the [clipboard](#clipboard) registers. |
 | Drop                | `~`                    | vim        | [x]       | From last drag'n'drop. |
