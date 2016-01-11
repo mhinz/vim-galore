@@ -20,6 +20,10 @@ All notable changes to this project will be documented in this file.
 - Misc: [Easter eggs](README.md#easter-eggs)
 - Misc: [Why hjkl for navigation?](README.md#why-hjkl-for-navigation)
 
+### Changed
+
+- Usage: rewrote [Clipboard](README.md#clipboard)
+
 ## [1.1] - 2016-01-07
 
 ### Added

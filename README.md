@@ -27,9 +27,8 @@ added every day. Things about to be added can be found here:
 - [Getting help offline](#getting-help-offline)
 - [Getting help online](#getting-help-online)
 - [Clipboard](#clipboard)
-  - [Clipboard theory (Windows, OSX)](#clipboard-theory-windows-osx)
-  - [Clipboard theory (Linux, BSD, ...)](#clipboard-theory-linux-bsd-)
-  - [Clipboard usage](#clipboard-usage)
+  - [Clipboard usage (Windows, OSX)](#clipboard-usage-windows-osx)
+  - [Clipboard usage (Linux, BSD, ...)](#clipboard-usage-linux-bsd-)
 - [Restore cursor position when opening file](#restore-cursor-position-when-opening-file)
 - [Editing remote files](#editing-remote-files)
 - [Managing plugins](#managing-plugins)
@@ -534,22 +533,82 @@ If you want to report a Vim bug, use the
 
 #### Clipboard
 
-##### Clipboard theory (Windows, OSX)
+First of all, Vim needs certain _features_ compiled in for the clipboard to
+work. If you want to know what features your version of Vim has compiled in and
+whether it comes with GUI support or not, check the output of `:version`.
 
-Some theory first: Windows comes with a
+It should contain `+clipboard` (`-clipboard` means "not compiled in"), for
+general access to the clipboard.
+
+If that's not the case and you installed Vim from a package manager, make sure
+to install a package called `vim-x11`, `vim-gtk`, `vim-gnome` or similar. Even
+if you never use the GUI version of Vim, these packages bundle a Vim with a
+bigger feature set compiled in.
+
+You also need `+xterm_clipboard` if you want to use the `'clipboard'` option on
+a Unix system and don't have a Vim with GUI support.
+
+Related help:
+
+```
+:h 'clipboard'
+:h gui-clipboard
+:h gui-selections
+```
+
+Also see: [Bracketed paste (or why do I have to set 'paste' all the
+time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
+
+##### Clipboard usage (Windows, OSX)
+
+Windows comes with a
 [clipboard](https://msdn.microsoft.com/en-us/library/windows/desktop/ms649012(v=vs.85).aspx)
 and OSX comes with a
 [pasteboard](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008100-SW1).
 
-Both work like most users would expect them to work. You copy selected text (or
-even other data types) with `ctrl+c`/`cmd+c` and paste them in another
-application with `ctrl+v`/`cmd+v`.
+Both work like most users would expect them to work. You copy selected text with
+`ctrl+c`/`cmd+c` and paste them in another application with `ctrl+v`/`cmd+v`.
 
 Note that copied text is actually transferred to the clipboard, so you can close
 the application you copied from before pasting in another application without
 problems.
 
-##### Clipboard theory (Linux, BSD, ...)
+Whenever this happens, the clipboard register `*` gets filled with the
+selection. From Vim use `"*y` and `"*p` to yank and paste from the clipboard
+respectively.
+
+If you don't even want to specify the `*` register all the time, put this in
+your vimrc:
+
+```viml
+set clipboard=unnamed
+```
+
+Usually all yank/delete/put operations fill the `"` register, now the `*`
+register is used for the same operations, therefore simply `y` and `p` will be
+enough.
+
+Let me repeat: Using the option above means that every yank/paste, even when
+only used in the same Vim window, will alter the clipboard. Decide for yourself
+if this is useful or not.
+
+If you're even too lazy to type `y`, you can send every visual selection to the
+clipboard by using these settings:
+
+```viml
+set clipboard=unnamed,autoselect
+set guioptions+=a
+```
+
+Related help files:
+
+```
+:h clipboard-unnamed
+:h autoselect
+:h 'go_a'
+```
+
+##### Clipboard usage (Linux, BSD, ...)
 
 If your OS uses [X](http://www.x.org/wiki), things work a bit different. X
 implements the [X Window System
@@ -568,14 +627,8 @@ Nowadays data is transferred between applications by the means of
 From the 3 _selection atoms_ defined, only 2 are used in practice: PRIMARY and
 CLIPBOARD.
 
-The **PRIMARY selection** is used when you simply select text in any
-application. Then it can be pasted somewhere else via `middle-click` or
-`shift+insert`.
-
-The **CLIPBOARD selection** is used when you copy/paste like you would normally
-do, via `ctrl+c`/`ctrl+v` and the likes.
-
 Selections work roughly like this:
+
 ```
 Program A: <ctrl+c>
 Program A: assert ownership of CLIPBOARD
@@ -586,61 +639,34 @@ Program A: respond to request and send data to Program B
 Program B: receives data from Program A and inserts it into the window
 ```
 
+- **PRIMARY selection**: Used when you select text in any application.
+  Afterwards it can be pasted somewhere else via `middle-click` or
+  `shift+insert`. In Vim you access the selection using the `*` register.
+- **CLIPBOARD selection**: Used when you copy/paste like you would normally do,
+  via `ctrl+c`/`ctrl+v` and the likes. In Vim you access this selection by using
+  the `+` register.
+
 **NOTE**: Selections (no, not even the CLIPBOARD selection) are never kept in
 the X server! Thus you lose the data copied with `ctrl+c` when the application
 closes.
 
-##### Clipboard usage
-
-First of all, Vim needs certain _features_ compiled in for the clipboard to
-work. `:version` shows all features and should contain `+clipboard` and also
-`+xterm_clipboard` if you use Vim in a terminal emulator together with the X
-server. If that's not the case and you installed Vim from a package manager,
-make sure to install a package called `vim-x11`, `vim-gtk`, `vim-gnome` or
-similar. Even if you never use the GUI version of Vim, these packages bundle a
-Vim with a bigger feature set compiled in.
-
-As mentioned in [Registers?](#registers), the clipboard registers are `*` a `+`.
-
-Usage under **Windows** and **OSX** is easy: It doesn't matter whether you use
-the `*` or `+` register for transferring data between Vim and the
-clipboard/pasteboard. Both registers always have the same content on these
-systems. `:reg` will only show the `*` register, though.
-
-Under systems using **X11**, `*` is used for the PRIMARY selection and `+` for
+Use `"*p` to paste the PRIMARY selection or `"+y1G` to yank the entire file to
 the CLIPBOARD selection.
 
-So, no matter what system you're on, you can copy data to the "clipboard" via
-`"+y` and paste from it via `"+p`.
-
-Remember that the unnamed register (`"`) always holds the text of the last yank
-or deletion. That's why you can simply use `y` in one Vim window and paste in
-another one via `p`. All operators and commands that optinally take registers
-default to the unnamed register.
-
-If you want a more seemless interaction between Vim and other applications
-without specifying `"+` all the time, use this:
+If you happen to access one of the two registers all the time, consider using:
 
 ```viml
-set clipboard=unnamedplus
+set clipboard^=unnamed      " * register
+" or
+set clipboard^=unammedplus  " + register
 ```
 
-This basically synchronizes the `"` and `+` registers.
+(The `^=` is used to prepend to the default value, `:h :set^=`.)
 
-If you don't even want to hit `y`, this this instead:
+This will make all yank/delete/put operations use either `*` or `+` instead of
+the unnamed register `"`. Afterwards you can simply use `y` or `p` for accessing
+your chosen X selection.
 
-```viml
-set clipboard=autoselectplus  " used in terminal Vim
-set guioptions+=a             " used in GUI Vim
-```
-
-Vim comes with a pretty extensive documentation:
-
-```
-:h 'clipboard'
-:h gui-clipboard
-:h gui-selections
-```
 #### Restore cursor position when opening file
 
 Without this, you will always be at line 1 when opening a file. With this, you
