@@ -199,14 +199,14 @@ The mapleader is simply a placeholder than can be used with custom mappings and
 is set to `\` by default.
 
 ```viml
-nnoremap <leader>h :helpgrep<right>
+nnoremap <leader>h :helpgrep<space>
 ```
 
 This mapping is triggered by `\h`. If you want to use `<space>h` instead:
 
 ```viml
 let mapleader = ' '
-nnoremap <leader>h :helpgrep<right>
+nnoremap <leader>h :helpgrep<space>
 ```
 
 **Note**: Set the mapleader before the mappings! All the leader mappings that
