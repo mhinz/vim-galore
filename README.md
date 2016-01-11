@@ -665,6 +665,13 @@ This will make all yank/delete/put operations use either `*` or `+` instead of
 the unnamed register `"`. Afterwards you can simply use `y` or `p` for accessing
 your chosen X selection.
 
+Related help:
+
+```vim
+:h clipboard-unnamed
+:h clipboard-unammedplus
+```
+
 #### Restore cursor position when opening file
 
 Without this, you will always be at line 1 when opening a file. With this, you
