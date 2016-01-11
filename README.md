@@ -225,27 +225,35 @@ See `:h mapleader` and `:h maplocalleader` for more.
 Registers are slots that save text. Copying text into a register is called
 **yanking** and extracing text from a register is called **pasting**.
 
-Vim provides 10 types of registers:
+Vim provides the following registers:
 
-| Type | Character | Filled | Contains text from.. |
-|------|-----------|--------|----------------------|
-| Unnamed | `"` | implicitly | Last yank or deletion. (`d`, `c`, `s`, `x`, `y`) |
-| Numbered | `0` to `9` | implicitly | Register `0`: Last yank. Registers `1`: Last deletion. Register `2`: Second last deletion. And so on. Think of registers `1`-`9` as a read-only [queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) with 9 elements. |
-| Small delete | `-` | implicitly | Last deletion that was less than one line. |
-| Named | `a` to `z`, `A` to `Z` | explicitly | For your own use. If you yank to register `a`, you replace its text. If you yank to register `A`, you append to the text in register `a`. |
-| Read-only | `:`, `.`, `%` | implicitly | Register `:`: Last command. Register `.`: Last inserted text. Register `%`: Current filename. |
-| Alternate buffer | `#` | implicitly | Most of the time the previously visited buffer of the current window. See `:h alternate-file` |
-| Expression | `=` | explicitly | Evaluation of the VimL expression that was yanked. E.g. do this in insert mode: `<c-r>=5+5<cr>` and "10" will be inserted in the buffer. |
-| Selection and Drop | `+`, `*`, `~` | implicitly | `*` and `+` are the [clipboard](#clipboard) registers. Register `~`: From last drag'n'drop. |
-| Black hole | `_` | explicitly | Use this register if you don't want any other registers implicitly affected. E.g. `"_dd` deletes the current line without affecting registers `"`, `1`, `+`, `*`. |
-| Last search pattern | `/` | implicitly | Last pattern used with `/`, `?`, `:global`, etc. |
+| Type                | Character              | Filled by? | Readonly? | Contains text from? |
+|---------------------|------------------------|------------|-----------|---------------------|
+| Unnamed             | `"`                    | vim        | [ ]       | Last yank or deletion. (`d`, `c`, `s`, `x`, `y`) |
+| Numbered            | `0` to `9`             | vim        | [ ]       | Register `0`: Last yank. Registers `1`: Last deletion. Register `2`: Second last deletion. And so on. Think of registers `1`-`9` as a read-only [queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) with 9 elements. |
+| Small delete        | `-`                    | vim        | [ ]       | Last deletion that was less than one line. |
+| Named               | `a` to `z`, `A` to `Z` | user       | [ ]       | If you yank to register `a`, you replace its text. If you yank to register `A`, you append to the text in register `a`. |
+| Read-only           | `:`, `.`, `%`          | vim        | [x]       | `:`: Last command, `.`: Last inserted text, `%`: Current filename. |
+| Alternate buffer    | `#`                    | vim        | [x]       | Most of the time the previously visited buffer of the current window. See `:h alternate-file` |
+| Expression          | `=`                    | user       | [ ]       | Evaluation of the VimL expression that was yanked. E.g. do this in insert mode: `<c-r>=5+5<cr>` and "10" will be inserted in the buffer. |
+| Selection           | `+`, `*`               | vim        | [ ]       | `*` and `+` are the [clipboard](#clipboard) registers. |
+| Drop                | `~`                    | vim        | [x]       | From last drag'n'drop. |
+| Black hole          | `_`                    | vim        | [ ]       | If you don't want any other registers implicitly affected. E.g. `"_dd` deletes the current line without affecting registers `"`, `1`, `+`, `*`. |
+| Last search pattern | `/`                    | vim        | [ ]       | Last pattern used with `/`, `?`, `:global`, etc. |
+
+Each register that is not readonly can be set by the user:
+
+```viml
+:let @/ = 'register'
+```
+
+Afterwards <kbd>n</kbd> would jump to the next occurrence of "register".
 
 There are numerous exceptions when registers get implicitly filled, so be sure
 to read `:h registers`.
 
-Yank with `y` and paste with `p`/`P`.
-
-Vim distinguishes between characterwise and linewise selections. See `:h linewise`.
+Yank with `y` and paste with `p`/`P`, but mind that Vim distinguishes between
+characterwise and linewise visual selections. See `:h linewise`.
 
 **Example: linewise**
 
