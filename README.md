@@ -258,7 +258,7 @@ the current line with `p` and before the cursor with `P`.
 
 **Example: explicit naming of register**
 
-`"aY` yanks the current line into register `a`. Move to another line. "AY"
+`"aY` yanks the current line into register `a`. Move to another line. `"AY`
 appends the current line to register `a`.
 
 I suggest playing around with with all these registers a bit and constantly
