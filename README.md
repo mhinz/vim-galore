@@ -404,7 +404,7 @@ Putting it in a nutshell, Vim makes heavy use of events and autocmds but also
 exposes a clean interface to hook into that event-driven system for
 customization.
 
-#### Changelist
+#### Changelist?
 
 The positions of the last 100 changes are kept in the changelist.
 
@@ -417,6 +417,9 @@ position in the list. Usually that will be below change 1, the latest change.
 
 Use `g;` or `g,` to go an older or newer position respectively. These also take
 a count, e.g. `999g;` takes you to the oldest remembered position.
+
+If you want the changelist to persist after restarting Vim, you need to use the
+viminfo file and `:h viminfo-'`.
 
 Related help: `:h changelist`
 
