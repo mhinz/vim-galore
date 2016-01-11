@@ -155,6 +155,7 @@ Technically Vim comes with a whopping 12 modes, 6 of them can be mapped:
 | `:cmap`   | `:cnoremap`   | command-line                     |
 | `:omap`   | `:onoremap`   | operator-pending                 |
 | `:imap`   | `:inoremap`   | insert                           |
+| `:tmap`   | `:tnoremap`   | terminal                         |
 
 E.g. this defines the mapping for normal mode only:
 
