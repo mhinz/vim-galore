@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Basics: [Marks?](README.md#marks)
+- Basics: [Changelist?](README.md#changelist)
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](#restore-cursor-position-when-opening-file)

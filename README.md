@@ -18,6 +18,7 @@ added every day. Things about to be added can be found here:
 - [Marks?](#marks)
 - [Motions? Operators? Text objects?](#motions-operators-text-objects)
 - [Autocmds?](#autocmds)
+- [Changelist?](#changelist)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
 - [Locality?](#locality)
@@ -402,6 +403,22 @@ tested for.
 Putting it in a nutshell, Vim makes heavy use of events and autocmds but also
 exposes a clean interface to hook into that event-driven system for
 customization.
+
+#### Changelist
+
+The positions of the last 100 changes are kept in the changelist.
+
+Several small changes on the same line will be merged together, but the position
+will be that of the last change nevertheless (in case you added something in the
+middle of the line).
+
+Get the full list with `:changes`. A marker `>` will be used to show the current
+position in the list. Usually that will be below change 1, the latest change.
+
+Use `g;` or `g,` to go an older or newer position respectively. These also take
+a count, e.g. `999g;` takes you to the oldest remembered position.
+
+Related help: `:h changelist`
 
 #### Quickfix and location lists?
 
