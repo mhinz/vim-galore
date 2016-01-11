@@ -1301,7 +1301,8 @@ Like their ancestors, terminal emulators use [escape
 sequences](https://en.wikipedia.org/wiki/Escape_sequence) (or _control
 sequences_) to control things like moving the cursor, changing text colors, etc.
 They're simply strings of ASCII characters starting with an escape character
-(displayed as `^[`). When such a string arrives, the terminal emulator looks up the
+(displayed in [caret notation](https://en.wikipedia.org/wiki/Caret_notation) as
+`^[`). When such a string arrives, the terminal emulator looks up the
 accompanying action in the [terminfo](https://en.wikipedia.org/wiki/Terminfo)
 database.
 
