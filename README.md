@@ -536,6 +536,11 @@ Vim distinguishes between several types of fold methods:
 | marker       | Folds based on markers in the text (often in comments). |
 | syntax       | Folds based on syntax, e.g. folding `if` blocks. |
 
+**NOTE**: Folding can be computationally intensive! If you experience any
+performance drawbacks (small delays when typing), have a look at
+[FastFold](https://github.com/Konfekt/FastFold), which prevents Vim from
+updating folds when it's not needed.
+
 Related help:
 
 ```
