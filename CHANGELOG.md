@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](#restore-cursor-position-when-opening-file)
+- Usage: [MatchIt](README.md#matchit)
 - Debugging: [Verbosity](README.md#verbosity)
 - Debugging: [Debugging Vim scripts](README.md#debugging-vim-scripts)
 - Debugging: [Debugging syntax files](README.md#debugging-syntax-files)

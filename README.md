@@ -34,6 +34,7 @@ added every day. Things about to be added can be found here:
 - [Editing remote files](#editing-remote-files)
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
+- [MatchIt](#matchit)
 
 #### [Tips](#tips-1)
 
@@ -828,6 +829,53 @@ but quickly becomes second nature.
 
 If you want to get real fancy, have a look at
 [multiple-cursors](https://github.com/terryma/vim-multiple-cursors).
+
+#### MatchIt
+
+Since Vim is written in C, a lot of features assume C-like syntax. By default,
+if your cursor is on `{` or `#endif`, you can use `%` to jump to the
+corresponding `}` or `#ifdef` respectively.
+
+Vim comes bundled with a plugin called matchit.vim which is not enabled by
+default. It makes `%` also cycle through HTML tags, if/else/endif constructs in
+VimL etc. and introduces a few new commands.
+
+To always load the plugin, put this in your vimrc:
+
+```viml
+if !exists('g:loaded_matchit')
+  runtime macros/matchit.vim
+endif
+```
+
+Since the documentation of matchit is pretty extensive, I suggest also doing the
+following once:
+
+```viml
+:!mkdir -p ~/.vim/doc
+:!cp $VIMRUNTIME/macros/matchit.txt ~/.vim/doc
+:helptags ~/.vim/doc
+```
+
+The plugin is ready to use now. See `:h matchit-intro` for the supported
+commands and `:h matchit-languages` for the supported languages.
+
+That said, it's easy to define your own matching pairs:
+
+```viml
+autocmd FileType python let b:match_words = '\<if\>:\<elif\>:\<else\>'
+```
+
+Afterwards you can cycle through these 3 statements in any Python file by using
+`%` (forward) or `g%` (backward).
+
+Related help:
+
+```
+:h matchit-install
+:h matchit
+:h b:match_words
+```
 
 ## Tips
 
