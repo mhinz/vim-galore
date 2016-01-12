@@ -813,7 +813,7 @@ mount a remote filesystem into your local filesystem.
 
 [Pathogen](https://github.com/tpope/vim-pathogen) was the first popular tool for
 managing plugins. Actually it just adjusts the _runtimepath_ (`:h 'rtp'`) to
-include all the things put under a certain directory. You have have to clone the
+include all the things put under a certain directory. You have to clone the
 repositories of the plugins there yourself.
 
 Real plugin managers expose commands that help you installing and updating
