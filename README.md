@@ -8,6 +8,10 @@ added every day. Things about to be added can be found here:
 
 ---
 
+#### [Intro](#intro-1)
+
+- [What kind of Vim am I running?](#what-kind-of-vim-am-i-running)
+
 #### [Basics](#basics-1)
 
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
@@ -93,6 +97,43 @@ added every day. Things about to be added can be found here:
 - [Misc](#misc)
 
 ---
+
+## Intro
+
+#### What kind of Vim am I running?
+
+Looking at `:version` will give you all the information you need to know about
+how the currently running Vim binary was compiled.
+
+The first line tells you when the binary was compiled and the version, e.g. 7.4.
+One of the next lines states `Included patches: 1-1051`, which is the patch
+level. Thus your exact Vim version is 7.4.1051.
+
+Another line states something like `Tiny version without GUI` or `Huge version
+with GUI`. The obvious information from that is whether your Vim includes GUI
+support, e.g. for starting `gvim` from the shell or running `:gui` from Vim
+within a terminal emulator. The other important information is the `Tiny` and
+`Huge`. Vim distinguishes between feature sets called `tiny`, `small`, `normal`,
+big`, and `huge`, all enabling different subsets of features.
+
+The majority of `:version` output is consumed by the feature list itself.
+`+clipboard` means the clipboard feature was compiled in, `-clipboard` means it
+wasn't compiled in.
+
+A few Vim features need to be compiled in for them to work. E.g. for `:prof` to
+work, you need a Vim with a huge feature set.
+
+If that's not the case and you installed Vim from a package manager, make sure
+to install a package called `vim-x`, vim-x11`, `vim-gtk`, `vim-gnome` or
+similar, since these packages usually come with the huge feature set.
+
+Related help:
+
+```
+:h :version
+:h feature-list
+:h +feature-list
+```
 
 ## Basics
 
@@ -644,20 +685,9 @@ If you want to report a Vim bug, use the
 
 #### Clipboard
 
-First of all, Vim needs certain _features_ compiled in for the clipboard to
-work. If you want to know what features your version of Vim has compiled in and
-whether it comes with GUI support or not, check the output of `:version`.
-
-It should contain `+clipboard` (`-clipboard` means "not compiled in"), for
-general access to the clipboard.
-
-If that's not the case and you installed Vim from a package manager, make sure
-to install a package called `vim-x11`, `vim-gtk`, `vim-gnome` or similar. Even
-if you never use the GUI version of Vim, these packages bundle a Vim with a
-bigger feature set compiled in.
-
-You also need `+xterm_clipboard` if you want to use the `'clipboard'` option on
-a Unix system and don't have a Vim with GUI support.
+Required [features](#what-kind-of-vim-am-i-running): `+clipboard` and optionally
+`+xterm_clipboard` if you want to use the `'clipboard'` option on a Unix system
+with a Vim that doesn't have GUI support.
 
 Related help:
 
@@ -1121,18 +1151,13 @@ big file or a file with faulty VimL code that is worth investigating.
 
 #### Profiling at runtime
 
+Required [feature](#what-kind-of-vim-am-i-running): `+profile`
+
 Vim provides a built-in capability for profiling at runtime and is a great way
 to find slow code in your environment.
 
-First and foremost, check if `:version` shows `+profile`, which means that the
-`profile` feature is enabled. Otherwise you're using a Vim with a smaller
-_feature set_. You want a Vim built with the **huge** feature set (see `:h
-:version`). Many distros install a Vim with minimal feature set by default, so
-you need to install a package called `vim-x11` or `vim-gtk` (yes, even if you
-don't use gvim) for more features.
-
-With that said, we're ready for profiling now. The `:profile` command takes a
-bunch of sub-commands for specifying what to profile.
+The `:profile` command takes a bunch of sub-commands for specifying what to
+profile.
 
 If you want to profile _everything_, do this:
 
@@ -1254,8 +1279,8 @@ this case.
 #### Debugging syntax files
 
 Syntax files are often the cause for slowdowns due to wrong and/or complex
-regular expressions. If the `+profile` feature is compiled in, Vim provides the
-super useful `:syntime` command.
+regular expressions. If the `+profile` [feature](#what-kind-of-vim-am-i-running)
+is compiled in, Vim provides the super useful `:syntime` command.
 
 ```viml
 :syntime on

@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Intro: [What kind of Vim am I running?](README.md#what-kind-of-vim-am-i-running)
 - Basics: [Marks?](README.md#marks)
 - Basics: [Changelist?](README.md#changelist)
 - Basics: [Changelist? Jumplist?](README.md#changelist-jumplist)
