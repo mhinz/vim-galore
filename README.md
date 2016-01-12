@@ -56,6 +56,10 @@ added every day. Things about to be added can be found here:
 - [Change cursor style in insert mode](#change-cursor-style-in-insert-mode)
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 
+#### [Commands](#commands-1)
+
+- [:redir](#redir) - Redirect messages.
+
 #### [Debugging](#debugging-1)
 
 - [General tips](#general-tips)
@@ -1113,6 +1117,26 @@ xnoremap >  >gv
 Now you can use `>>>>>` on your visual selection without any problems.
 
 **NOTE**: The same can be achieved using `.`, which repeats the last change.
+
+## Commands
+
+Useful commands that are good to know.
+
+#### :redir
+
+Many commands print messages and `:redir` allows to redirect that output. You
+can redirect to files, [registers](#registers) or variables.
+
+```viml
+:redir => neatvar
+:reg
+:redir END
+:echo neatvar
+:" For fun let's also put it onto the current buffer.
+:put =nicevar
+```
+
+Related help: `:h :redir`
 
 ## Debugging
 
