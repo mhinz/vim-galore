@@ -21,6 +21,7 @@ added every day. Things about to be added can be found here:
 - [Changelist? Jumplist?](#changelist-jumplist)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
+- [Folding?](#folding)
 - [Sessions?](#sessions)
 - [Locality?](#locality)
 
@@ -516,6 +517,31 @@ I use [gruvbox](https://github.com/morhetz/gruvbox) for the GUI and
 [janah](https://github.com/mhinz/vim-janah) for the terminal.
 
 More colorschemes: [here](#list-of-colorschemes-1)
+
+#### Folding?
+
+Every text (or source code) has a certain structure. If you have a structure, it
+means you have regions of logically separated text. Folding allows to "fold"
+such a region into a single line and displaying a short description. There are
+many commands that act on these regions called _folds_. Folds can be nested.
+
+Vim distinguishes between several types of fold methods:
+
+| 'foldmethod' | Usage |
+|--------------|-------|
+| diff         | Used in diff windows to fold unchanged text. |
+| expr         | Uses `'foldexpr'` to basically create a new fold method. |
+| indent       | Folds based on indentation. |
+| manual       | Create folds yourself via `zf, `zF`, and `:fold`. |
+| marker       | Folds based on markers in the text (often in comments). |
+| syntax       | Folds based on syntax, e.g. folding `if` blocks. |
+
+Related help:
+
+```
+:h usr_28
+:h folds
+```
 
 #### Sessions?
 

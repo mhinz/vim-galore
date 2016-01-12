@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Basics: [Changelist?](README.md#changelist)
 - Basics: [Changelist? Jumplist?](README.md#changelist-jumplist)
 - Basics: [Sessions?](README.md#sessions)
+- Basics: [Folding?](README.md#folding)
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](#restore-cursor-position-when-opening-file)
