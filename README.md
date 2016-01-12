@@ -114,18 +114,28 @@ with GUI`. The obvious information from that is whether your Vim includes GUI
 support, e.g. for starting `gvim` from the shell or running `:gui` from Vim
 within a terminal emulator. The other important information is the `Tiny` and
 `Huge`. Vim distinguishes between feature sets called `tiny`, `small`, `normal`,
-big`, and `huge`, all enabling different subsets of features.
+`big`, and `huge`, all enabling different subsets of features.
 
 The majority of `:version` output is consumed by the feature list itself.
 `+clipboard` means the clipboard feature was compiled in, `-clipboard` means it
 wasn't compiled in.
 
 A few Vim features need to be compiled in for them to work. E.g. for `:prof` to
-work, you need a Vim with a huge feature set.
+work, you need a Vim with a huge feature set, because that set enables the
+`+profile` feature.
 
 If that's not the case and you installed Vim from a package manager, make sure
-to install a package called `vim-x`, vim-x11`, `vim-gtk`, `vim-gnome` or
+to install a package called `vim-x`, `vim-x11`, `vim-gtk`, `vim-gnome` or
 similar, since these packages usually come with the huge feature set.
+
+You can also test for the version or features programmatically:
+
+```viml
+" Do something if running at least Vim 7.4.42 with +profile enabled.
+if (v:version > 704 || v:version == 704 && has('patch42')) && has('profile')
+  " do stuff
+endif
+```
 
 Related help:
 
