@@ -21,6 +21,7 @@ added every day. Things about to be added can be found here:
 - [Changelist? Jumplist?](#changelist-jumplist)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
+- [Sessions?](#sessions)
 - [Locality?](#locality)
 
 #### [Usage](#usage-1)
@@ -515,6 +516,35 @@ I use [gruvbox](https://github.com/morhetz/gruvbox) for the GUI and
 [janah](https://github.com/mhinz/vim-janah) for the terminal.
 
 More colorschemes: [here](#list-of-colorschemes-1)
+
+#### Sessions?
+
+If you save a **view** (`:h :mkview`), the current state of the window (and
+options and mappings) gets saved for later use (`:h :loadview`).
+
+A **session** saves the views of all windows plus global settings. It basically
+makes a snapshot of your current Vim instance and saves it in a session file.
+
+This makes it perfect for saving your _projects_ and easy to switch between
+them.
+
+Try it right now! Open a few windows and tabs and do `:mksession! Foo.vim`. If
+you omit the filename, `Session.vim` will be assumed. The file will be saved to
+the current working directory, check `:pwd`. Restart Vim and do `:source
+Foo.vim` and voilà, the buffer list, window layout, mappings, working directory
+etc. should all be the same as before you saved the session.
+
+Note that a session file is really just a collection of Vim commands, so feel
+free to take a look at it: `:vs Foo.vim`.
+
+You can tell Vim what things to save in a session by setting `'sessionoptions'`.
+
+Related help:
+
+```
+:h Session
+:h 'sessionoptions'
+```
 
 #### Locality?
 
