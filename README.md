@@ -328,7 +328,7 @@ Use `:marks` to list all marks. Read everything in `:h mark-motions`.
 
 **Motions** move the cursor. You all know `h`/`j`/`k`/`l`. Or `w` and `b`. Even
 `/` is a motion. They also take a count. `2?the<cr>` jumps to the second last
-occurence of "the".
+occurrence of "the".
 
 See `:h navigation` and everything below for all available motions.
 
@@ -1401,7 +1401,7 @@ up?
 
 This only happens if you paste via `cmd+v`, `shift-insert`, `middle-click` etc.
 because then you're just throwing text at the terminal emulator. Vim doesn't
-know that you just pasted the text, it thinks you're an extremly fast typist.
+know that you just pasted the text, it thinks you're an extremely fast typist.
 Accordingly it tries to indent the lines and fails.
 
 Obviously this is not an issue, if you paste using Vim's registers, e.g. `"+p`,
