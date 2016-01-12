@@ -18,7 +18,7 @@ added every day. Things about to be added can be found here:
 - [Marks?](#marks)
 - [Motions? Operators? Text objects?](#motions-operators-text-objects)
 - [Autocmds?](#autocmds)
-- [Changelist?](#changelist)
+- [Changelist? Jumplist?](#changelist-jumplist)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Colorschemes?](#colorschemes)
 - [Locality?](#locality)
@@ -404,24 +404,41 @@ Putting it in a nutshell, Vim makes heavy use of events and autocmds but also
 exposes a clean interface to hook into that event-driven system for
 customization.
 
-#### Changelist?
+#### Changelist? Jumplist?
 
-The positions of the last 100 changes are kept in the changelist.
+The positions of the last 100 changes are kept in the **changelist**. Several
+small changes on the same line will be merged together, but the position will be
+that of the last change nevertheless (in case you added something in the middle
+of the line).
 
-Several small changes on the same line will be merged together, but the position
-will be that of the last change nevertheless (in case you added something in the
-middle of the line).
+Every time you jump, the position _before_ the jump is remembered in the
+**jumplist**. A jumplist has up to 100 entries. Each window has its own
+jumplist. When you split a window, the jumplist is copied.
 
-Get the full list with `:changes`. A marker `>` will be used to show the current
-position in the list. Usually that will be below change 1, the latest change.
+A jump is one of the following commands: `'`, `` ` ``, `G`, `/`, `?`, `n`, `N`,
+`%`, `(`, `)`, `[[`, `]]`, `{`, `}`, `:s`, `:tag`, `L`, `M`, `H` and commands
+that start editing a new file.
 
-Use `g;` or `g,` to go an older or newer position respectively. These also take
-a count, e.g. `999g;` takes you to the oldest remembered position.
+| List       | List all entries | Go to older position | Go to newer position |
+|------------|------------------|----------------------|----------------------|
+| jumplist   | `:jumps`         | `[count]<c-o>`       | `[count]<c-i>`       |
+| changelist | `:changes`       | `[count]g;`          | `[count]g,`          |
 
-If you want the changelist to persist after restarting Vim, you need to use the
+When you list all entries, a marker `>` will be used to show the current
+position. Usually that will be below position 1, the latest position.
+
+If you want both lists to persist after restarting Vim, you need to use the
 viminfo file and `:h viminfo-'`.
 
-Related help: `:h changelist`
+**NOTE**: The position before the latest jump is also kept as a [mark](#marks)
+and can be jumped to via ``` `` ``` or `''`.
+
+Related help:
+
+```
+:h changelist
+:h jumplist
+```
 
 #### Quickfix and location lists?
 
