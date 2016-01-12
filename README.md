@@ -1,3 +1,5 @@
+[![Join #vimrocks on Freenode](https://img.shields.io/badge/IRC%20(Freenode)-%23vimrocks-ff69b4.svg)](http://webchat.freenode.net/?channels=vimrocks)
+
 ![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/pics/vim-galore.png)
 
 ---
