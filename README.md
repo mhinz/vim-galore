@@ -12,7 +12,10 @@ added every day. Things about to be added can be found here:
 
 #### [Intro](#intro-1)
 
+- [What is Vim?](#what-is-vim)
+- [First steps](#first-steps)
 - [What kind of Vim am I running?](#what-kind-of-vim-am-i-running)
+- [Cheatsheets](#cheatsheets)
 
 #### [Basics](#basics-1)
 
@@ -106,6 +109,64 @@ added every day. Things about to be added can be found here:
 
 ## Intro
 
+#### What is Vim?
+
+[Vim](http://www.vim.org) is a text editor with a long line of ancestors that
+goes back to [qed](https://en.wikipedia.org/wiki/QED_(text_editor)). [Bram
+Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar) released it in 1991.
+
+The project is hosted online at [vim.org](http://www.vim.org/index.php).
+
+Getting Vim: Use your favourite package manager or visit the [download
+page](http://www.vim.org/download.php) from vim.org.
+
+Discussions and user questions are best done on the
+[vim_use](https://groups.google.com/forum/#!forum/vim_use) mailing list or using
+IRC ([Freenode](https://freenode.net)) in the `#vim` channel.
+
+Development happens on [Github](https://github.com/vim/vim), discussions on the
+[vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
+
+Read [Why, oh WHY, do those #?@! nutheads use
+vi?](http://www.viemu.com/a-why-vi-vim.html) to see common misconceptions about
+Vim explained.
+
+#### First steps
+
+Vim comes bundled with an interactive tutorial that teaches the most basic
+things you need to know about. You can start it from the shell:
+
+```
+$ vimtutor
+```
+
+Don't be put off by how boring it looks like and work through the exercises. The
+editors or IDEs you used before were most probably all non-modal, so working by
+switching modes will seem awkward at first, but the more you use Vim, the more
+it becomes [muscle memory](https://en.wikipedia.org/wiki/Muscle_memory).
+
+Vim was bolted on [Stevie](https://en.wikipedia.org/wiki/Stevie_(text_editor)), a
+[vi](https://en.wikipedia.org/wiki/Vi) clone, and supports two operating modes:
+"compatible" and "nocompatible". Using Vim in compatible mode means using vi
+defaults for all options, opposed to Vim defaults. As long as you didn't create
+a user vimrc yet or started Vim with `vim -N`, compatible mode is assumed! Don't
+use Vim in compatible mode. Just don't.
+
+Next steps:
+
+1. Create your own [vimrc](#minimal-vimrc). TODO
+2. Have some [cheatsheets](#cheatsheets) ready for the first weeks.
+3. Read through the [basics](#basics-1) section to learn what is even possible.
+4. Learn on demand! You never finish learning Vim. If you encounter any
+   problems, just look for it on the internet. Your problem was solved already.
+   Vim comes with great documentation and knowing how to navigate it is a must:
+   [Getting help offline](#getting-help-offline).
+5. Have a look at the [additional resources](#additional-resources).
+
+One last advice: Please learn how to use Vim properly before starting to add all
+kinds of hyped [plugins](#managing-plugins) that only implement features that
+Vim already supports natively.
+
 #### What kind of Vim am I running?
 
 Looking at `:version` will give you all the information you need to know about
@@ -150,6 +211,16 @@ Related help:
 :h feature-list
 :h +feature-list
 ```
+
+#### Cheatsheets
+
+To avoid copyright issues, I'll just link external URLs:
+
+- http://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png
+- https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png
+- http://www.nathael.org/Data/vi-vim-cheat-sheet.svg
+- http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_screen.png
+- http://www.rosipov.com/images/posts/vim-movement-commands-cheatsheet.png
 
 ## Basics
 
@@ -1343,6 +1414,7 @@ See `:h :syntime`.
 | [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com) | Develop a Vim plugin from scratch. |
 | [Practical Vim (2nd Edition)](http://www.amazon.com/Practical-Vim-Edit-Speed-Thought) | Hands down the best book about Vim. |
 | [Vimcasts.org](http://vimcasts.org/episodes/archive) | Vim screencasts. |
+| [Why, oh WHY, do those #?@! nutheads use vi?](http://www.viemu.com/a-why-vi-vim.html) | Common misconceptions explained. |
 | [Your problem with Vim is that you don't grok vi](http://stackoverflow.com/a/1220118) | Concise, informative and correct. A real gem. |
 
 #### Vim distributions
