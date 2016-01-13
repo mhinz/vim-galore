@@ -418,7 +418,7 @@ You use marks to remember a position, that is line number and column, in a file.
 | `A` - `Z` | User | Global, thus valid between files. Also called _file marks_. Jumping to a file mark may switch to another buffer. |
 | `0` - `9` | viminfo | `0` is the position when the viminfo file was written last. In practice this means when the last Vim process ended. `1` is the position of when the second last Vim process ended and so on. |
 
-Put `'`/`g'` or `` ` ``/`` g` `` in front of a register to form a motion.
+Put `'`/`g'` or `` ` ``/`` g` `` in front of a mark to form a motion.
 
 Use `mm` to remember the current position with mark "m". Move around the file
 and then jump back via `'m` (first non-blank) or `` `m `` (exact column).
