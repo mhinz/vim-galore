@@ -589,7 +589,7 @@ Vim distinguishes between several types of fold methods:
 | diff         | Used in diff windows to fold unchanged text. |
 | expr         | Uses `'foldexpr'` to basically create a new fold method. |
 | indent       | Folds based on indentation. |
-| manual       | Create folds yourself via `zf, `zF`, and `:fold`. |
+| manual       | Create folds yourself via `zf`, `zF`, and `:fold`. |
 | marker       | Folds based on markers in the text (often in comments). |
 | syntax       | Folds based on syntax, e.g. folding `if` blocks. |
 
