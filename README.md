@@ -1725,12 +1725,13 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [gitv](https://github.com/gregsexton/gitv)
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [signify](https://github.com/mhinz/vim-signify)
-- [vcscommand](https://github.com/vim-scripts/vcscommand.vim)
 
 #### Misc
 
 - [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
+- [covim](https://github.com/FredKSchott/CoVim)
 - [gnupg](https://github.com/jamessan/vim-gnupg)
+- [goyo](https://github.com/junegunn/goyo.vim)
 - [hackernews](https://github.com/ryanss/vim-hackernews)
 - [multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [projectionist](https://github.com/tpope/vim-projectionist)
