@@ -522,6 +522,9 @@ If you're brave enough, have a look at it: `:e $VIMRUNTIME/filetype.vim`. Search
 for "Ruby" and you'll find that Vim simply uses the file extension `.rb` to
 detect Ruby files:
 
+**NOTE**: Autocmds of the same event are executed in the order they were
+created. `:au` shows them in the correct order.
+
 ```viml
 au BufNewFile,BufRead *.rb,*.rbw  setf ruby
 ```
