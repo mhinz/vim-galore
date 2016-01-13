@@ -1693,7 +1693,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Statusline
 
-- [airline](https://github.com/bling/vim-airline)
+- [airline](https://github.com/vim-airline/vim-airline)
 - [flagship](https://github.com/tpope/vim-flagship)
 - [lightline](https://github.com/itchyny/lightline.vim)
 - [powerline](https://github.com/powerline/powerline)
