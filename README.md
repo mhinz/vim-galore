@@ -1405,20 +1405,23 @@ This also shows why `~` is used to denote the home directory on Unix systems.
 
 #### Editing small files is slow
 
-Most of the time this is caused by syntax files using complex regular
-expressions. Particulay the Ruby syntax file caused people to have slowdowns in
-the past. (Also see [Debugging syntax files](#debugging-syntax-files).)
+There are two things which can have a huge impact on performance:
 
-Moreover, some features tend to impact performance more than others. Check this
-list to ease slowdowns:
+1. Complex **regular expressions**. Particular the Ruby syntax file caused
+   people to have slowdowns in the past. (Also see [Debugging syntax files](#debugging-syntax-files).)
+2. **Screen redraws**. Some features force all lines to redraw.
 
-| Option | Why? |
-|--------|------|
-| `:set nocursorline` | This makes screen redrawing quite a bit slower. |
-| `:set norelativenumber` | Constantly computing the relative numbers is expensive. |
-| `:set foldmethod=marker` | If the syntax file itself is slow already, `foldmethod=syntax` makes it even worse. |
-| `:set synmaxcol=200` | Due to internal representation, Vim has problems with long lines in general. Only syntax highlight till column 200. |
-| `:NoMatchParen` | Uses regular expressions to find the accompanying parenthesis. |
+| Typical culprit | Why? | Solution? |
+|-----------------|------|-----------|
+| `:set cursorline`        | Causes all lines to redraw. | `:set nocursorline` |
+| `:set cursorcolumn`      | Causes all lines to redraw. | `:set nocursorcolumn` |
+| `:set relativenumber`    | Causes all lines to redraw. | `:set norelativenumber` |
+| `:set foldmethod=syntax` | If the syntax file is slow already, this makes it even worse. | `:set foldmethod=manual`, `:set foldmethod=marker` or [FastFold](https://github.com/Konfekt/FastFold) |
+| `:set synmaxcol=3000`    | Due to internal representation, Vim has problems with long lines in general. Highlights columns till column 3000. | `:set synmaxcol=200` |
+| matchparen.vim           | Loaded by default. Uses regular expressions to find the accompanying parenthesis. | Disable plugin: `:h matchparen` |
+
+**NOTE**: You only need to do this if you experience actual performance
+drawbacks. In most cases using the things mentioned above is absolutely fine.
 
 #### Editing huge files is slow
 
