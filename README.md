@@ -1653,6 +1653,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
 - [gnupg](https://github.com/jamessan/vim-gnupg)
+- [hackernews](https://github.com/ryanss/vim-hackernews)
 - [multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [projectionist](https://github.com/tpope/vim-projectionist)
 - [rsi](https://github.com/tpope/vim-rsi)
@@ -1660,4 +1661,3 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [startify](https://github.com/mhinz/vim-startify)
 - [surround](https://github.com/tpope/vim-surround)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
-
