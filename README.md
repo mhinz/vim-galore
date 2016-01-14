@@ -1727,6 +1727,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 #### Misc
 
 - [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
+- [calendar](https://github.com/itchyny/calendar.vim)
 - [covim](https://github.com/FredKSchott/CoVim)
 - [gnupg](https://github.com/jamessan/vim-gnupg)
 - [goyo](https://github.com/junegunn/goyo.vim)
