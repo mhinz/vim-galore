@@ -1723,6 +1723,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [gitgutter](https://github.com/airblade/vim-gitgutter)
 - [github-dashboard](https://github.com/junegunn/vim-github-dashboard)
 - [gitv](https://github.com/gregsexton/gitv)
+- [gv](https://github.com/junegunn/gv.vim)
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [signify](https://github.com/mhinz/vim-signify)
 
