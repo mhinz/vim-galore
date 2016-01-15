@@ -1698,8 +1698,10 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Taking notes
 
+- [dotoo](https://github.com/dhruvasagar/vim-dotoo)
 - [journal](https://github.com/junegunn/vim-journal)
 - [notes](https://github.com/xolox/vim-notes)
+- [orgmode](https://github.com/jceb/vim-orgmode)
 - [pad](https://github.com/fmoralesc/vim-pad)
 - [vimwiki](https://github.com/vimwiki/vimwiki)
 
