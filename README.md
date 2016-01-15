@@ -353,7 +353,7 @@ See `:h mapleader` and `:h maplocalleader` for more.
 #### Registers?
 
 Registers are slots that save text. Copying text into a register is called
-**yanking** and extracing text from a register is called **pasting**.
+**yanking** and extracting text from a register is called **pasting**.
 
 Vim provides the following registers:
 
