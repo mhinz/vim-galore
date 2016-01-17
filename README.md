@@ -719,7 +719,7 @@ Many of the concepts mentioned above also have _local_ counterparts:
 | `<leader>` | `<localleader>`       | buffer           | `:h maplocalleader`   |
 
 Variables also sport different scopes, but will be explained in
-[Vim scriping](#vim-scripting).
+[Vim scripting](#vim-scripting).
 
 ## Usage
 
