@@ -945,7 +945,7 @@ Host awesome
 Assuming the above content in `~/.ssh/config`, this works just as well:
 
 ```
-:e scp//awesome/.vimrc
+:e scp://awesome/.vimrc
 ```
 
 Similar can be done with a `~/.netrc`, see `:h netrw-netrc`.
