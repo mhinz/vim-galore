@@ -49,6 +49,7 @@ added every day. Things about to be added can be found here:
 
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Saner command-line history](#saner-command-line-history)
+- [Saner CTRL-L](#saner-ctrl-l)
 - [Quickly move current line](#quickly-move-current-line)
 - [Quickly add empty lines](#quickly-add-empty-lines)
 - [Quickly edit your macros](#quickly-edit-your-macros)
@@ -1090,6 +1091,18 @@ cnoremap <c-p>  <up>
 ```
 
 I depend on this behaviour several times a day.
+
+#### Saner CTRL-L
+
+By default `<c-l>` clears and redraws the screen (like `:redraw!`). The following
+mapping does the same, plus de-highlighting the matches found via `/`, `?` etc.,
+plus fixing syntax highlighting (sometimes Vim loses highlighting due to complex
+highlighting rules), plus force updating the syntax highlighting in diff mode:
+
+
+```viml
+nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
+```
 
 #### Quickly move current line
 

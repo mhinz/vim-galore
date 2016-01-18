@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Tips: [Reload a file on saving](README.md#reload-a-file-on-saving)
 - Tips: [Smarter cursorline](README.md#smarter-cursorline)
+- Tips: [Saner CTRL-L](README.md#saner-ctrl-l)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](README.md#restore-cursor-position-when-opening-file)
 - Usage: [MatchIt](README.md#matchit)
