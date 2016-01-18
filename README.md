@@ -60,6 +60,7 @@ added every day. Things about to be added can be found here:
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 - [Reload a file on saving](#reload-a-file-on-saving)
 - [Smarter cursorline](#smarter-cursorline)
+- [Faster keyword completion](#faster-keyword-completion)
 
 #### [Commands](#commands-1)
 
@@ -1239,6 +1240,18 @@ autocmd WinEnter    * set cursorline
 autocmd WinLeave    * set nocursorline
 autocmd InsertEnter * set nocursorline
 autocmd InsertLeave * set cursorline
+```
+
+#### Faster keyword completion
+
+The keyword completion (`<c-n>`/`<c-p>`) tries completing whatever is listed in
+the `'complete'` option. By default this also includes tags (which can be
+annoying) and scanning all included files (which can be very slow). If you can
+live without these things, disable them:
+
+```viml
+set complete-=i   " disable scanning included files
+set complete-=t   " disable searching tags
 ```
 
 ## Commands

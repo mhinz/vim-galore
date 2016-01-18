@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file.
 - Tips: [Smarter cursorline](README.md#smarter-cursorline)
 - Tips: [Saner CTRL-L](README.md#saner-ctrl-l)
 - Tips: [Disable audible and visual bells](README.md#disable-audible-and-visual-bells)
+- Tips: [Faster keyword completion](README.md#faster-keyword-completion)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](README.md#restore-cursor-position-when-opening-file)
 - Usage: [MatchIt](README.md#matchit)
