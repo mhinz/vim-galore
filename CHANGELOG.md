@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Basics: [Changelist? Jumplist?](README.md#changelist-jumplist)
 - Basics: [Sessions?](README.md#sessions)
 - Basics: [Folding?](README.md#folding)
+- Basics: [Macros?](README.md#macros)
 - Commands: [:redir](README.md#redir)
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Tips: [Reload a file on saving](README.md#reload-a-file-on-saving)

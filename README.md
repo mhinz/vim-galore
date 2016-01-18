@@ -27,6 +27,7 @@ added every day. Things about to be added can be found here:
 - [Autocmds?](#autocmds)
 - [Changelist? Jumplist?](#changelist-jumplist)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
+- [Macros?](#macros)
 - [Colorschemes?](#colorschemes)
 - [Folding?](#folding)
 - [Sessions?](#sessions)
@@ -621,6 +622,64 @@ list.
 
 Assuming any files contained the string "foo", it should be shown now in the
 quickfix window.
+
+#### Macros?
+
+Vim allows _recording_ typed characters into a [register](#registers). It's a
+great way to automate certain tasks on the fly. (For more elaborate tasks, [Vim
+scripting](#vim-scripting) should be used instead.)
+
+- Start recording by typing `q` followed by the register, e.g. `q`. (The
+  command-line will signify this via "recording @q".)
+- Stop recording by by hitting `q` once again.
+- Execute the macro via `[count]@q`.
+- Repeat the last used macro via `[count]@@`.
+
+**Example 1:**
+
+Insert a line and repeat it 10 times:
+
+```
+qq
+iabc<cr><esc>
+q
+10@q
+```
+
+(The same could be done without registers: `oabc<esc>10.`)
+
+**Example 2:**
+
+For adding line numbers in front of all lines, start on the first line and add
+"1. " to it manually. Increment the number under the cursor by using `<c-a>`,
+displayed as `^A`.
+
+```
+qq
+0yf jP0^A
+q
+1000@q
+```
+
+Here we simply hope that the file doesn't contain more than 1000 lines when
+using `1000@q`, but we can also use a _recursive macro_, which executes until
+the macro can't be applied to a line anymore:
+
+```
+qq
+0yf jP0^A@q
+q
+@q
+```
+
+Also see: [Quickly edit your macros](#quickly-edit-your-macros)
+
+Related help:
+
+```
+:h recording`
+:h 'lazyredraw'
+```
 
 #### Colorschemes?
 
