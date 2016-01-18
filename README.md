@@ -56,6 +56,7 @@ added every day. Things about to be added can be found here:
 - [Quickly change font size in GUI](#quickly-change-font-size-in-gui)
 - [Change cursor style in insert mode](#change-cursor-style-in-insert-mode)
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
+- [Reload a file on saving](#reload-a-file-on-saving)
 
 #### [Commands](#commands-1)
 
@@ -1191,6 +1192,17 @@ xnoremap >  >gv
 Now you can use `>>>>>` on your visual selection without any problems.
 
 **NOTE**: The same can be achieved using `.`, which repeats the last change.
+
+#### Reload a file on saving
+
+Using [autocmds](#autocmds) you can do anything on saving a file, e.g. sourcing
+it in case of a dotfile or running a linter to check for syntactical errors in
+your source code.
+
+```viml
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+autocmd BufWritePost ~/.Xdefaults call system('xrdb ~/.Xdefaults')
+```
 
 ## Commands
 
