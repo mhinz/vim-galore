@@ -57,6 +57,7 @@ added every day. Things about to be added can be found here:
 - [Change cursor style in insert mode](#change-cursor-style-in-insert-mode)
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 - [Reload a file on saving](#reload-a-file-on-saving)
+- [Smarter cursorline](#smarter-cursorline)
 
 #### [Commands](#commands-1)
 
@@ -1202,6 +1203,18 @@ your source code.
 ```viml
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePost ~/.Xdefaults call system('xrdb ~/.Xdefaults')
+```
+
+#### Smarter cursorline
+
+I love the cursorline, but I only want to use it in the current window and not
+when being in insert mode:
+
+```viml
+autocmd WinEnter    * set cursorline
+autocmd WinLeave    * set nocursorline
+autocmd InsertEnter * set nocursorline
+autocmd InsertLeave * set cursorline
 ```
 
 ## Commands

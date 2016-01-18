@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Commands: [:redir](README.md#redir)
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Tips: [Reload a file on saving](README.md#reload-a-file-on-saving)
+- Tips: [Smarter cursorline](README.md#smarter-cursorline)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](README.md#restore-cursor-position-when-opening-file)
 - Usage: [MatchIt](README.md#matchit)
