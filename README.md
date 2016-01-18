@@ -631,7 +631,7 @@ scripting](#vim-scripting) should be used instead.)
 
 - Start recording by typing `q` followed by the register, e.g. `q`. (The
   command-line will signify this via "recording @q".)
-- Stop recording by by hitting `q` once again.
+- Stop recording by hitting `q` once again.
 - Execute the macro via `[count]@q`.
 - Repeat the last used macro via `[count]@@`.
 
@@ -646,7 +646,7 @@ q
 10@q
 ```
 
-(The same could be done without registers: `oabc<esc>10.`)
+(The same could be done without macros: `oabc<esc>10.`)
 
 **Example 2:**
 
@@ -671,6 +671,12 @@ qq
 q
 @q
 ```
+
+(The same could be done without macros: `:%s/^/\=line('.') . '. '`)
+
+Mind that I also show how to achieve the same without using macros, but this
+mostly works only for such simple examples. For more complex automation, macros
+are the bomb!
 
 Also see: [Quickly edit your macros](#quickly-edit-your-macros)
 
