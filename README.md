@@ -50,6 +50,7 @@ added every day. Things about to be added can be found here:
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Saner command-line history](#saner-command-line-history)
 - [Saner CTRL-L](#saner-ctrl-l)
+- [Disable audible and visual bells](#disable-audible-and-visual-bells)
 - [Quickly move current line](#quickly-move-current-line)
 - [Quickly add empty lines](#quickly-add-empty-lines)
 - [Quickly edit your macros](#quickly-edit-your-macros)
@@ -1103,6 +1104,16 @@ highlighting rules), plus force updating the syntax highlighting in diff mode:
 ```viml
 nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 ```
+
+#### Disable audible and visual bells
+
+```viml
+set noerrorbells
+set novisualbell
+set t_vb=
+```
+
+See [Vim Wiki: Disable beeping](http://vim.wikia.com/wiki/Disable_beeping).
 
 #### Quickly move current line
 

@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file.
 - Tips: [Reload a file on saving](README.md#reload-a-file-on-saving)
 - Tips: [Smarter cursorline](README.md#smarter-cursorline)
 - Tips: [Saner CTRL-L](README.md#saner-ctrl-l)
+- Tips: [Disable audible and visual bells](README.md#disable-audible-and-visual-bells)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](README.md#restore-cursor-position-when-opening-file)
 - Usage: [MatchIt](README.md#matchit)
