@@ -22,6 +22,7 @@ added every day. Things about to be added can be found here:
 - [Mappings?](#mappings)
 - [Mapleader?](#mapleader)
 - [Registers?](#registers)
+- [Ranges?](#ranges)
 - [Marks?](#marks)
 - [Motions? Operators? Text objects?](#motions-operators-text-objects)
 - [Autocmds?](#autocmds)
@@ -411,6 +412,75 @@ checking `:reg`, so you can see what's actually happening.
 
 **Fun fact**: In Emacs "yanking" stands for pasting (or _reinserting previously
 killed text_) not copying.
+
+#### Ranges?
+
+Ranges are pretty easy to understand, but many Vimmers don't know about their
+full potential.
+
+- Many commands take ranges.
+- An address denotes a certain line.
+- A range is either a single address or a pair of addresses separated by either
+  `,` or `;`.
+- Ranges tell commands which lines to act on.
+- Most commands act only on the current line by default.
+- Only `:write` and `:global` act on all lines by default.
+
+The usage of ranges is pretty intuitive, so here are some examples (using `:d`
+as short form of `:delete`):
+
+| Command | Lines acted on |
+|---------|----------------|
+| `:d` | Current line. |
+| `:.d` | Current line. |
+| `:1d` | First line. |
+| `:$d` | Last line. |
+| `:1,$d` | All lines. |
+| `:%d` | All lines (syntactic sugar for `1,$`). |
+| `:.,5d` | Current line to line 5. |
+| `:,5d` | Also current line to line 5. |
+| `:,+3d` | Current line and the next 3 lines. |
+| `:1,+3d` | First line to current line + 3. |
+| `:,-3d` | Current line and the last 3 lines. (Vim will prompt you, since this is a reversed range.) |
+| `:3,'xdelete` | Lines 3 to the line marked by [mark](#marks) x. |
+| `:/^foo/,$delete` | From the next line that starts with "foo" to the end. |
+| `:/^foo/+1,$delete` | From the line after the line that starts with "foo" to the end. |
+
+Note that instead of `,`, `;` can be used as a separator. The difference is that
+in the case of `from,to`, the _to_ is relative to the current line, but when
+using `from;to`, the _to_ is relative to the address of _from_! Assuming you're
+on line 5, `:1,+1d` would delete lines 1 to 6, whereas `:1;+1d` would only
+delete lines 1 and 2.
+
+The `/` address can be preceded with another address. This allows you to _stack_
+patterns, e.g.:
+
+```viml
+:/foo//bar//quux/d
+```
+
+This would delete the first line containing "quux" after the first line
+containing "bar" after the first line containing "foo" after the current line.
+
+Somtimes Vim automatically prepends the command-line with a range. E.g. start a
+visual line selection with `V`, select some lines and type `:`. The command-line
+will be populated with the range `'<,'>`, which means the following command will
+use the previously selected lines as a range. (This is also why you sometimes
+see mappings like `:vnoremap foo :<c-u>command`. Here `<c-u>` is used to remove
+the range, because Vim will throw an error when giving a range to a command that
+doesn't support it.)
+
+Another example is using `!!` in normal mode. This will populate the
+command-line with `:.!`. If followed by an external program, that program's
+output would replace the current line. So you could replace the current
+paragraph with the output of ls by using `:?^$?+1,/^$/-1!ls`. Fancy!
+
+Related help:
+
+```
+:h cmdline-ranges
+:h 10.3
+```
 
 #### Marks?
 
