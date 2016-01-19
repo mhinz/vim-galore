@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Basics: [Macros?](README.md#macros)
 - Basics: [Ranges?](README.md#ranges)
 - Basics: [Completion?](README.md#completion)
+- Basics: [Undo tree?](README.md#undo-tree)
 - Commands: [:redir](README.md#redir)
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Tips: [Reload a file on saving](README.md#reload-a-file-on-saving)

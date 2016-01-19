@@ -28,6 +28,7 @@ added every day. Things about to be added can be found here:
 - [Motions? Operators? Text objects?](#motions-operators-text-objects)
 - [Autocmds?](#autocmds)
 - [Changelist? Jumplist?](#changelist-jumplist)
+- [Undo tree?](#undo-tree)
 - [Quickfix and location lists?](#quickfix-and-location-lists)
 - [Macros?](#macros)
 - [Colorschemes?](#colorschemes)
@@ -700,6 +701,84 @@ Related help:
 ```
 :h changelist
 :h jumplist
+```
+
+#### Undo tree?
+
+The latest changes to the text state are remembered. You can use _undo_ to
+revert changes and _redo_ to reapply previously reverted changes.
+
+The important bit to understand it that the data structure holding recent
+changes is not a
+[queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) but a
+[tree](https://en.wikipedia.org/wiki/Tree_(data_structure))! Your changes are
+nodes in the tree and each (but the top node) has a parent node. Each node keeps
+information about the changed text and time. A branch is a series of nodes that
+starts from any node and goes up to the top node. New branches get created when
+you undo a change and then insert something else.
+
+```
+ifoo<esc>
+obar<esc>
+obaz<esc>
+u
+oquux<esc>
+```
+
+Now you have 3 lines and the undo tree looks like this:
+
+```
+     foo(1)
+       /
+    bar(2)
+   /      \
+baz(3)   quux(4)
+```
+
+The undo tree has 4 changes. The numbers represent the _time_ the nodes were
+created.
+
+Now there are two ways to traverse this tree, let's call them _branch-wise_ and
+_time-wise_.
+
+Undo (`u`) and redo (`<c-r>`) work branch-wise. They go up and down the current
+branch. `u` will revert the text state to the one of node "bar". Another `u`
+will revert the text state even further, to the one of node "foo". Now `<c-r>`
+goes back to the state of node "bar" and another `<c-r>` to the state of node
+"quux". (There's no way to reach node "baz" using branch-wise commands anymore.)
+
+Opposed to this, `g-` and `g+` work time-wise. Thus `g-` won't revert to the
+state of node "bar", like `u` does, but to the chronologically previous state,
+node "baz". Another `g-` would revert the state to the one of node "bar" and so
+on. Thus, `g-` and `g+` simply go back and forth in time, respectively.
+
+| Command / Mapping | Action |
+|-------------------|--------|
+| `[count]u`, `:undo [count]` | Undo [count] changes. |
+| `[count]<c-r>`, `:redo` | Redo [count] changes. |
+| `U` | Undo all all changes to the line of the latest change. |
+| `[count]g-`, `:earlier [count]?` | Go to older text state [count] times. The "?" can be either "s", "m", "h", "d", or "f". E.g. `:earlier 2d` goes to the text state from 2 days ago. `:earlier 1f` will go to the state of the latest file save. |
+| `[count]g+`, `:later [count]?` | Same as as above, but other direction. |
+
+The undo tree is kept in memory and will be lost when Vim quits. If you want it
+to persist, put the following in your vimrc:
+
+```
+set undofile
+set undordir=$HOME/.vim/files/undo/
+```
+
+(Make sure that `~/.vim/files/undo/` actually exists.)
+
+If you're confused by the undo tree,
+[undotree](https://github.com/mbbill/undotree) does a great job at visualizing
+it.
+
+Related help:
+
+```
+:h undo.txt
+:h usr_32
 ```
 
 #### Quickfix and location lists?
