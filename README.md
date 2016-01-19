@@ -1,4 +1,4 @@
-![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/pics/vim-galore.png)
+![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/vim-galore.png)
 
 ---
 
@@ -1374,7 +1374,7 @@ Plug is my favorite, but your mileage may vary.
 
 This is a technique to insert the same text on multiple consecutive lines at the
 same time. See this
-[demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/pics/block_insert.gif).
+[demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/block_insert.gif).
 
 Switch to visual block mode with `<c-v>`. Afterwards go down for a few lines.
 Hit `I` or `A` and start entering your text.
@@ -1923,7 +1923,7 @@ When [Bill Joy](https://en.wikipedia.org/wiki/Bill_Joy) created
 [ADM-3A](https://en.wikipedia.org/wiki/ADM-3A) which had no extra cursor buttons
 but used, you might already guessed it, hjkl instead.
 
-Keyboard layout: [click](https://raw.githubusercontent.com/mhinz/vim-galore/master/pics/adm-3a-layout.jpg)
+Keyboard layout: [click](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/adm-3a-layout.jpg)
 
 This also shows why `~` is used to denote the home directory on Unix systems.
 
