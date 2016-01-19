@@ -39,6 +39,7 @@ added every day. Things about to be added can be found here:
 #### [Usage](#usage-1)
 
 - [Getting help offline](#getting-help-offline)
+- [Getting help offline (alternative)](#getting-help-offline-alternative)
 - [Getting help online](#getting-help-online)
 - [Clipboard](#clipboard)
   - [Clipboard usage (Windows, OSX)](#clipboard-usage-windows-osx)
@@ -1032,6 +1033,126 @@ match. The matches will be assembled in the quickfix list. Use `:cn`/`:cp` to
 jump to the next/previous match. Or use `:copen` to open the quickfix window,
 navigate to an entry and hit `<cr>` to jump to that match. See `:h quickfix` for
 the whole truth.
+
+#### Getting help offline (alternative)
+
+This list was compiled by @chrisbra, one of the most active Vim developers, and
+posted to [vim_dev](https://groups.google.com/forum/#!forum/vim_dev).
+
+It's reposted here with minor changes.
+
+---
+
+If you know what you are looking for, it is usually easier to search for it
+using the help system. Because the subjects follow a certain style guide.
+
+Also the help has the advantage of belonging to your particular Vim version, so
+that obsolete topics or topics that have been added later won't turn up.
+
+Therefore, it is essential to learn the help system and the language it uses.
+Here are some examples (not necessarily complete and I might have forgotten
+something).
+
+1. Options are enclosed in single quotes. So you would use `:h 'list'` to go to
+   the help topic for the list option. If you only know, you are looking for a
+   certain option, you can also do `:h options.txt` to open the help page which
+   describes all option handling and then you can search using regular
+   expressions e.g. `/width`. Certain options have their own namespace, e.g. `:h
+   cpo-a`, `:h cpo-A`, `:h cpo-b`, and so on.
+
+2. Normal mode commands are just that. Use `:h gt` to go to the help page for
+   the "gt" command.
+
+3. Regexp items always start with "/", so `:h /\+` takes you to the help item
+   for the "\+" quantifier in Vim regexes. If you need to know anything about
+   regular expressions, start reading at `:h pattern.txt`.
+
+4. Key combinations. They usually start with a single letter indicating the mode
+   for which they can be used. E.g. `:h i_CTRL-X` takes you to the family of
+   CTRL-X commands for insert mode which can be used to auto complete different
+   things. Note that certain keys will always be written the same, e.g. Control
+   will always be CTRL. Note, for normal mode commands, the "n" is left away,
+   e.g. `:h CTRL-A`. In contrast `:h c_CTRL-R` will describe what CTRL-R does
+   when entering commands in the command line and `:h v_Ctrl-A` talks about
+   incrementing numbers in visual mode and `:h g_CTRL-A` talks about the g<C-A>
+   command (thus you have to press "g" then <Ctrl-A>). Here the "g" stand for
+   the normal command "g" which always expect a second key before doing
+   something similar to the commands starting with "z".
+
+5. Registers always start with "quote" so use `:h quote` to find out about the
+   special ":" register.
+
+6. Vim script (VimL) is available at `:h eval.txt`. Certain aspects of the
+   language are available at `:h expr-X` where 'X' is a single letter, e.g. `:h
+   expr-!` will take you to the topic describing the '!' (Not) operator for
+   VimL. Also important, see `:h function-list` to find a short description of
+   all functions available.
+
+7. Mappings are talked about in the help page `:h map.txt`. Use `:h mapmode-i`
+   to find out about the `:imap` command. Also use `:map-topic` to find out
+   about certain subtopics particular for mappings (e.g. `:h :map-local` for
+   buffer-local mappings or `:h map_bar` for how the '|' is handled in mappings.
+
+8. Command definitions are talked about at `:h command-*`, so use :h command-bar
+   to find out about the '!' argument for custom commands.
+
+9. Window management commands always start with CTRL-W, so you find the
+   corresponding help at `:h CTRL-W_*` (e.g. `:h CTRL-W_p` for switch to the
+   previously accessed window). You can also access `:h windows.txt` and read
+   your way through, if you are looking for window handling command.
+
+10. Ex commands always start with ":", so `:h :s` covers the ":s" command.
+
+11. Use CTRL-D after typing a topic and let Vim try to complete to all available
+    topics.
+
+12. Use `:helpgrep` to search in all help pages (usually also includes help
+    pages by installed plugins). See `:h :helpgrep` for how to use it. Once you
+    have searched for a topic, all matches are available in the quickfix (or
+    location) window which can be opened with `:copen` or `:lopen`. There you
+    can also use `/` to further filter the matches.
+
+13. `:h helphelp` contains some information on how to use the help.
+
+14. The user manual. This describes help topics for beginners in a rather
+    friendly way. Start at `:h usr_toc.txt` to find the table of content (as you
+    might have guessed). Skimming over that help finding certain topics, .e.g
+    you will find an entry "Digraphs" and "Entering special characters" in
+    chapter 24 (so use `:h usr_24.txt` to go to that particular help page).
+
+15. Highlighting groups always start with `hl-*`. E.g. `:h hl-WarningMsg` talks
+    about the "WarningMsg" highlighting group.
+
+16. Syntax highlighting is namespaced to ":syn-topic", e.g. `:h :syn-conceal`
+    talks about the conceal argument for the :syn command.
+
+17. Quickfix commands usually start with ":c", while location list commands
+    usually start with ":l".
+
+18. `:h BufWinLeave` talks about the BufWinLeave autocmd. Also `:h
+    autocommands-events` talks about all possible events.
+
+19. Startup arguments always start with "-", so `:h -f` takes you to the help of
+    the "-f" command switch of Vim.
+
+20. Compiled extra features always start with "+", so `:h +conceal` talks about
+    the conceal support.
+
+21. Error codes can be looked up directly in the help. `:h E297` takes you
+    exactly to the description of the error message. Sometimes however, those
+    error codes are not described, but rather are listed at the Vim command that
+    usually causes this. E.g. `:h hE128` takes you directly to the `:function`
+    command.
+
+22. Documentation for included syntax files is usually available at `:h
+    ft-*-syntax`. E.g. `:h ft-c-syntax` talks about the C syntax file and the
+    options it provides. Sometimes, additional sections for omni completion (`:h
+    ft-php-omni`) or filetype plugins (`:h ft-tex-plugin`) are available.
+
+Also a link to the user documentation (which describes certain commands more
+from a user perspective and less detailed) will be mentioned at the top of help
+pages if they are available. So `:h pattern.txt` mentions the user guide topics
+`:h 03.9` and `:h usr_27`.
 
 #### Getting help online
 
