@@ -538,7 +538,7 @@ Typical kinds of completion are tags, functions from imported modules or
 libraries, file names, dictionary or simply words from the current buffer.
 
 Vim provides a mapping for each kind of completion and they all start with
-`<c-x>`:
+`<c-x>` (remember to use them in insert mode):
 
 | Mapping | Kind | Related help |
 |---------|------|--------------|
