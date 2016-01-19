@@ -462,7 +462,7 @@ patterns, e.g.:
 This would delete the first line containing "quux" after the first line
 containing "bar" after the first line containing "foo" after the current line.
 
-Somtimes Vim automatically prepends the command-line with a range. E.g. start a
+Sometimes Vim automatically prepends the command-line with a range. E.g. start a
 visual line selection with `V`, select some lines and type `:`. The command-line
 will be populated with the range `'<,'>`, which means the following command will
 use the previously selected lines as a range. (This is also why you sometimes
