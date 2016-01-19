@@ -281,7 +281,7 @@ buffer.
 #### Mappings?
 
 You can define your own mappings with the `:map` family of commands. Each
-command of that family defines a mappping for a certain set of modes.
+command of that family defines a mapping for a certain set of modes.
 Technically Vim comes with a whopping 12 modes, 6 of them can be mapped:
 
 | Recursive | Non-recursive | Modes                            |
