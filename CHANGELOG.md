@@ -29,6 +29,7 @@ All notable changes to this project will be documented in this file.
 - Usage: [Getting help offline (alternative)](README.md#getting-help-offline-alternative)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](README.md#restore-cursor-position-when-opening-file)
+- Usage: [Handling backup, swap, undo, and viminfo files](README.md#handling-backup-swap-undo-and-viminfo-files)
 - Usage: [MatchIt](README.md#matchit)
 - Debugging: [Verbosity](README.md#verbosity)
 - Debugging: [Debugging Vim scripts](README.md#debugging-vim-scripts)
