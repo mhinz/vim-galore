@@ -98,7 +98,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [goyo](https://github.com/junegunn/goyo.vim)
 - [hackernews](https://github.com/ryanss/vim-hackernews)
 - [multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
-- [nrrwrgn](https://github.com/blueyed/vim-diminactive)
+- [nrrwrgn](https://github.com/chrisbra/NrrwRgn)
 - [projectionist](https://github.com/tpope/vim-projectionist)
 - [rsi](https://github.com/tpope/vim-rsi)
 - [splitjoin](https://github.com/AndrewRadev/splitjoin.vim)
