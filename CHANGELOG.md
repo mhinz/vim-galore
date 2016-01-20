@@ -44,6 +44,7 @@ All notable changes to this project will be documented in this file.
 
 - Basics: Improved [Mapleader?](README.md#mapleader)
 - Usage: rewrote [Clipboard](README.md#clipboard)
+- Move "List of Plugins" section to `content/plugins.md`
 
 ## [1.1] - 2016-01-07
 
