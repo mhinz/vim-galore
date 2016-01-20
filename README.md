@@ -1304,7 +1304,7 @@ autocmd BufReadPost *
     \ endif
 ```
 
-This simpy does `` g`" `` (jump to position where you left off without changing
+This simply does `` g`" `` (jump to position where you left off without changing
 jumplist) if that position still exists (the file might have fewer lines since
 it was altered by another program).
 
@@ -1373,7 +1373,7 @@ marks, buffer list, global variables etc.
 
 By default the viminfo is written to `~/.viminfo`.
 
-Releted help: `:h viminfo` and `:h 'viminfo'`
+Related help: `:h viminfo` and `:h 'viminfo'`
 
 ---
 
@@ -1769,7 +1769,7 @@ This will start Vim without vimrc (thus default settings) and in nocompatible
 mode (which makes it use Vim defaults instead of vi defaults). (See `:h
 --noplugin` for other combinations of what to load at start.)
 
-If you can still reproduce it now, it's most likeley a bug in Vim itself! Report
+If you can still reproduce it now, it's most likely a bug in Vim itself! Report
 it to the [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing
 list. Most of the time the issue won't be resolved at this time and you'll have to
 further investigate.
