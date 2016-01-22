@@ -883,7 +883,7 @@ Also see: [Quickly edit your macros](#quickly-edit-your-macros)
 Related help:
 
 ```
-:h recording`
+:h recording
 :h 'lazyredraw'
 ```
 
