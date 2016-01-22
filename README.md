@@ -206,7 +206,7 @@ similar, since these packages usually come with the huge feature set.
 
 You can also test for the version or features programmatically:
 
-```viml
+```vim
 " Do something if running at least Vim 7.4.42 with +profile enabled.
 if (v:version > 704 || v:version == 704 && has('patch42')) && has('profile')
   " do stuff
@@ -299,7 +299,7 @@ Technically Vim comes with a whopping 12 modes, 6 of them can be mapped:
 
 E.g. this defines the mapping for normal mode only:
 
-```viml
+```vim
 :nmap <space> :echo "foo"<cr>
 ```
 
@@ -309,14 +309,14 @@ mappings into account.
 
 So you defined a mapping that simply echoes "Foo":
 
-```viml
+```vim
 :nmap b :echo "Foo"<cr>
 ```
 
 But what if you want to map the default behavior of `b` (going one word back) to
 another key?
 
-```viml
+```vim
 :nmap a b
 ```
 
@@ -327,7 +327,7 @@ mapped to another action already, namely `:echo "Foo"<cr>`.
 The proper way to resolve this problem is to use a _non-recursive_ mapping
 instead:
 
-```viml
+```vim
 :nnoremap a b
 ```
 
@@ -339,13 +339,13 @@ desired.
 The mapleader is simply a placeholder than can be used with custom mappings and
 is set to `\` by default.
 
-```viml
+```vim
 nnoremap <leader>h :helpgrep<space>
 ```
 
 This mapping is triggered by `\h`. If you want to use `<space>h` instead:
 
-```viml
+```vim
 let mapleader = ' '
 nnoremap <leader>h :helpgrep<space>
 ```
@@ -384,7 +384,7 @@ Vim provides the following registers:
 
 Each register that is not readonly can be set by the user:
 
-```viml
+```vim
 :let @/ = 'register'
 ```
 
@@ -459,7 +459,7 @@ delete lines 1 and 2.
 The `/` address can be preceded with another address. This allows you to _stack_
 patterns, e.g.:
 
-```viml
+```vim
 :/foo//bar//quux/d
 ```
 
@@ -637,7 +637,7 @@ autocmd-events-abc` for more details.
 
 A typical example would be setting filetype-specific settings:
 
-```viml
+```vim
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 comments-=:#
 ```
 
@@ -656,7 +656,7 @@ detect Ruby files:
 **NOTE**: Autocmds of the same event are executed in the order they were
 created. `:au` shows them in the correct order.
 
-```viml
+```vim
 au BufNewFile,BufRead *.rb,*.rbw  setf ruby
 ```
 
@@ -813,7 +813,7 @@ Let's use our good old friend `grep` for searching the files in the current
 directory recursively for a certain query and put the results in the quickfix
 list.
 
-```viml
+```vim
 :let &grepprg = 'grep -Rn $* .'
 :grep! foo
 <grep output - hit enter>
@@ -894,7 +894,7 @@ each of those can be customized with different colors for the foreground,
 background and a few other attributes like bold text etc. They can be set like
 this:
 
-```viml
+```vim
 :highlight Normal ctermbg=1 guibg=red
 ```
 
@@ -1199,7 +1199,7 @@ respectively.
 If you don't even want to specify the `*` register all the time, put this in
 your vimrc:
 
-```viml
+```vim
 set clipboard=unnamed
 ```
 
@@ -1214,7 +1214,7 @@ if this is useful or not.
 If you're even too lazy to type `y`, you can send every visual selection to the
 clipboard by using these settings:
 
-```viml
+```vim
 set clipboard=unnamed,autoselect
 set guioptions+=a
 ```
@@ -1272,7 +1272,7 @@ the CLIPBOARD selection.
 
 If you happen to access one of the two registers all the time, consider using:
 
-```viml
+```vim
 set clipboard^=unnamed      " * register
 " or
 set clipboard^=unammedplus  " + register
@@ -1297,7 +1297,7 @@ Without this, you will always be at line 1 when opening a file. With this, you
 will be at the position where you left off.
 
 Put this in your vimrc:
-```viml
+```vim
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
@@ -1395,7 +1395,7 @@ set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 The directory `~/.vim/files` has to be created beforehand, otherwise Vim will
 spew errors. If you often work on new hosts, you might want to automate it:
 
-```viml
+```vim
 if exists('*mkdir') && !isdirectory($HOME.'/.vim/files')
   call mkdir($HOME.'/.vim/files')
 endif
@@ -1483,7 +1483,7 @@ after the end of each line, do this: `<c-v>3j$Atext<esc>`.
 Sometime you need to place the cursor somewhere after the end of the current
 line. You can't do that by default, but you can set the `virtualedit` option:
 
-```viml
+```vim
 set virtualedit=all
 ```
 
@@ -1507,7 +1507,7 @@ VimL etc. and introduces a few new commands.
 
 To always load the plugin, put this in your vimrc:
 
-```viml
+```vim
 if !exists('g:loaded_matchit')
   runtime macros/matchit.vim
 endif
@@ -1516,7 +1516,7 @@ endif
 Since the documentation of matchit is pretty extensive, I suggest also doing the
 following once:
 
-```viml
+```vim
 :!mkdir -p ~/.vim/doc
 :!cp $VIMRUNTIME/macros/matchit.txt ~/.vim/doc
 :helptags ~/.vim/doc
@@ -1527,7 +1527,7 @@ commands and `:h matchit-languages` for the supported languages.
 
 That said, it's easy to define your own matching pairs:
 
-```viml
+```vim
 autocmd FileType python let b:match_words = '\<if\>:\<elif\>:\<else\>'
 ```
 
@@ -1551,7 +1551,7 @@ searching forward or backward respectively. This is pretty confusing to me.
 
 If you want `n` to always search forward and `N` backward, use this:
 
-```viml
+```vim
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
 ```
@@ -1568,7 +1568,7 @@ may change to `:echo "Vim rocks!"`.
 
 Of course I don't want you to reach to the arrow keys, just map it instead:
 
-```viml
+```vim
 cnoremap <c-n>  <down>
 cnoremap <c-p>  <up>
 ```
@@ -1583,13 +1583,13 @@ plus fixing syntax highlighting (sometimes Vim loses highlighting due to complex
 highlighting rules), plus force updating the syntax highlighting in diff mode:
 
 
-```viml
+```vim
 nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 ```
 
 #### Disable audible and visual bells
 
-```viml
+```vim
 set noerrorbells
 set novisualbell
 set t_vb=
@@ -1601,7 +1601,7 @@ See [Vim Wiki: Disable beeping](http://vim.wikia.com/wiki/Disable_beeping).
 
 Sometimes I need a quick way to move the current line above or below:
 
-```viml
+```vim
 nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
 nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 ```
@@ -1613,7 +1613,7 @@ These mappings also take a count, so `2]e` moves the current line 2 lines below.
 This is surely no must-have, but I prefer the following mappings over
 `o<esc>`/`O<esc>`:
 
-```viml
+```vim
 nnoremap [<space>  :put! =''<cr>
 nnoremap ]<space>  :put =''<cr>
 ```
@@ -1626,7 +1626,7 @@ register.
 
 I often use this to correct typos I did while recording a macro.
 
-```viml
+```vim
 nnoremap <leader>m  :<c-u><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 ```
 
@@ -1638,7 +1638,7 @@ This technique can probably be applied to many filetypes. It sets _file marks_
 (see `:h marks`) when leaving a source or header file, so you can quickly jump
 back to the last accessed one by using `'C` or `'H` (see `:h 'A`).
 
-```viml
+```vim
 autocmd BufLeave *.{c,cpp} mark C
 autocmd BufLeave *.h       mark H
 ```
@@ -1650,7 +1650,7 @@ viminfo?` includes `:h viminfo-'`.
 
 I think this was taken from tpope's config:
 
-```viml
+```vim
 command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
 command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
 ```
@@ -1660,7 +1660,7 @@ command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1'
 I like to use a block cursor in normal mode, i-beam cursor in insert mode, and
 underline cursor in replace mode. Also when using tmux in the middle.
 
-```viml
+```vim
 if empty($TMUX)
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
@@ -1691,7 +1691,7 @@ sidewards. Unfortunately you immediately lose the selection afterwards.
 You can use `gv` to reselect the last selection (see `:h gv`), thus you can work
 around it like this:
 
-```viml
+```vim
 xnoremap <  <gv
 xnoremap >  >gv
 ```
@@ -1706,7 +1706,7 @@ Using [autocmds](#autocmds) you can do anything on saving a file, e.g. sourcing
 it in case of a dotfile or running a linter to check for syntactical errors in
 your source code.
 
-```viml
+```vim
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePost ~/.Xdefaults call system('xrdb ~/.Xdefaults')
 ```
@@ -1716,7 +1716,7 @@ autocmd BufWritePost ~/.Xdefaults call system('xrdb ~/.Xdefaults')
 I love the cursorline, but I only want to use it in the current window and not
 when being in insert mode:
 
-```viml
+```vim
 autocmd WinEnter    * set cursorline
 autocmd WinLeave    * set nocursorline
 autocmd InsertEnter * set nocursorline
@@ -1730,7 +1730,7 @@ the `'complete'` option. By default this also includes tags (which can be
 annoying) and scanning all included files (which can be very slow). If you can
 live without these things, disable them:
 
-```viml
+```vim
 set complete-=i   " disable scanning included files
 set complete-=t   " disable searching tags
 ```
@@ -1744,7 +1744,7 @@ Useful commands that are good to know.
 Many commands print messages and `:redir` allows to redirect that output. You
 can redirect to files, [registers](#registers) or variables.
 
-```viml
+```vim
 :redir => neatvar
 :reg
 :redir END
@@ -1840,7 +1840,7 @@ Another useful way for observing what Vim is currently doing is increasing the
 verbosity level. Currently Vim supports 9 different levels. See `:h 'verbose'`
 for the full list.
 
-```viml
+```vim
 :e /tmp/foo
 :set verbose=2
 :w
@@ -1854,7 +1854,7 @@ If you only want increase verbosity for a single command, there's also
 `:verbose`, which simply gets put in front of any other command. It takes the
 verbosity level as count and defaults to 1:
 
-```viml
+```vim
 :verb set verbose
 "  verbose=1
 :10verb set verbose
@@ -1864,7 +1864,7 @@ verbosity level as count and defaults to 1:
 It's very often used with its default verbosity level 1 to show where an option
 was set last:
 
-```viml
+```vim
 :verb set ai?
 "      Last set from ~/.vim/vimrc
 ```
@@ -1872,7 +1872,7 @@ was set last:
 Naturally, the higher the verbosity level the more overwhelming the output. But
 fear no more, you can simply redirect the output to a file:
 
-```viml
+```vim
 :set verbosefile=/tmp/foo | 15verbose echo "foo" | vsplit /tmp/foo
 ```
 
@@ -1904,7 +1904,7 @@ you're not interested in.) See `:h :breakadd`, `:h :breakdel`, and `:h
 
 Let's assume you want to know what code is run every time you save a file:
 
-```viml
+```vim
 :au BufWritePost
 " signify  BufWritePost
 "     *         call sy#start()
@@ -1935,7 +1935,7 @@ Syntax files are often the cause for slowdowns due to wrong and/or complex
 regular expressions. If the `+profile` [feature](#what-kind-of-vim-am-i-running)
 is compiled in, Vim provides the super useful `:syntime` command.
 
-```viml
+```vim
 :syntime on
 " hit <c-l> a few times to redraw the window which causes the syntax rules to get applied again
 :syntime off
@@ -2120,7 +2120,7 @@ database.
 To make the problem clearer, I'll explain mapping timeouts first. They always
 happen when there's ambiguity between mappings:
 
-```viml
+```vim
 :nnoremap ,a  :echo 'foo'<cr>
 :nnoremap ,ab :echo 'bar'<cr>
 ```
@@ -2148,7 +2148,7 @@ mappings _and_ key codes by 1 second. This is a sane value for mappings, but you
 can define the key code timeout on its own which is the most common workaround
 for this entire issue:
 
-```viml
+```vim
 set timeout           " for mappings
 set timeoutlen=1000   " default value
 set ttimeout          " for key codes
