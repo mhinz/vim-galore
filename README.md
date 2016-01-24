@@ -285,23 +285,29 @@ buffer.
 #### Mappings?
 
 You can define your own mappings with the `:map` family of commands. Each
-command of that family defines a mapping for a certain set of modes.
-Technically Vim comes with a whopping 12 modes, 6 of them can be mapped:
+command of that family defines a mapping for a certain set of modes. Technically
+Vim comes with a whopping 12 modes, 6 of them can be mapped. Additionally, some
+commands act on multiple modes at once.
 
-| Recursive | Non-recursive | Modes                            |
-|-----------|---------------|----------------------------------|
-| `:map`    | `:noremap`    | normal, visual, operator-pending |
-| `:nmap`   | `:nnoremap`   | normal                           |
-| `:xmap`   | `:xnoremap`   | visual                           |
-| `:cmap`   | `:cnoremap`   | command-line                     |
-| `:omap`   | `:onoremap`   | operator-pending                 |
-| `:imap`   | `:inoremap`   | insert                           |
+| Recursive | Non-recursive | Unmap     | Modes                            |
+|-----------|---------------|-----------|----------------------------------|
+| `:map`    | `:noremap`    | `:unmap`  | normal, visual, operator-pending |
+| `:nmap`   | `:nnoremap`   | `:nunmap` | normal                           |
+| `:xmap`   | `:xnoremap`   | `:xunmap` | visual                           |
+| `:cmap`   | `:cnoremap`   | `:cunmap` | command-line                     |
+| `:omap`   | `:onoremap`   | `:ounmap` | operator-pending                 |
+| `:imap`   | `:inoremap`   | `:iunmap` | insert                           |
 
 E.g. this defines the mapping for normal mode only:
 
 ```vim
 :nmap <space> :echo "foo"<cr>
 ```
+
+Unmap it again by using `:nunmap <space>`.
+
+For a few more but rather uncommon modes (or combinations of them), see `:h
+map-modes`.
 
 So far, so good. There's only one problem that can be pretty confusing to
 beginners: `:nmap` is _recursive_! That is, the right-hand side takes other
@@ -333,6 +339,13 @@ instead:
 
 Rule of thumb: Always use non-recursive mappings unless recursing is actually
 desired.
+
+Look up your mappings by not giving a right-hand side. E.g. `:nmap` shows all
+normal mappings and `:nmap <leader>` shows all normal mappings that start with
+the mapleader.
+
+If you want to disable a standard mapping, map them to the special `<nop>`
+character, e.g. `:noremap <left> <nop>`.
 
 #### Mapleader?
 
