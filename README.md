@@ -375,6 +375,12 @@ the mapleader.
 If you want to disable a standard mapping, map them to the special `<nop>`
 character, e.g. `:noremap <left> <nop>`.
 
+Related help:
+
+    :h key-notation
+    :h mapping
+    :h 05.3
+
 #### Mapleader?
 
 The mapleader is simply a placeholder than can be used with custom mappings and
