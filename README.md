@@ -1544,9 +1544,14 @@ A good use case for filtering is the [Go programming
 language](https://golang.org). The indentation is pretty opiniated, it even
 comes with a filter called `gofmt` for indenting Go source code properly. So
 plugins for Go often provide helper commands called `:Fmt` that basically do
-`%!gofmt`, so they indent all lines in the file.
+`:%!gofmt`, so they indent all lines in the file.
 
-Related help: `:h filter`
+People often use `:r !prog` to put the output of prog below the current line,
+which is fine for scripts, but when doing it on the fly, I find it easier to use
+`!!ls` instead, which replaces the current line.
+
+    :h filter
+    :h :read!
 
 #### MatchIt
 
