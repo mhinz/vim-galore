@@ -13,6 +13,7 @@ added every day. Things about to be added can be found here:
 - [What is Vim?](#what-is-vim)
 - [The Vim Philosphy](#the-vim-philosophy)
 - [First steps](#first-steps)
+- [Minimal vimrc](#minimal-vimrc)
 - [What kind of Vim am I running?](#what-kind-of-vim-am-i-running)
 - [Cheatsheets](#cheatsheets)
 
@@ -191,7 +192,7 @@ use Vim in compatible mode. Just don't.
 
 Next steps:
 
-1. Create your own [vimrc](#minimal-vimrc). TODO
+1. Create your own [vimrc](#minimal-vimrc).
 2. Have some [cheatsheets](#cheatsheets) ready for the first weeks.
 3. Read through the [basics](#basics-1) section to learn what is even possible.
 4. Learn on demand! You never finish learning Vim. If you encounter any
@@ -203,6 +204,29 @@ Next steps:
 One last advice: Please learn how to use Vim properly before starting to add all
 kinds of hyped [plugins](#managing-plugins) that only implement features that
 Vim already supports natively.
+
+#### Minimal vimrc
+
+The user vimrc can be put into `~/.vimrc` or for the sake of better separation
+into `~/.vim/vimrc`. The latter makes it easy to put the entire configuration
+under version control and upload it to, let's say Github.
+
+You find many "minimal vimrcs" all over the net, and maybe my version isn't as
+minimal as it should be, but it provides a good set of sane settings that I deem
+to be useful for starting out.
+
+Eventually you have to read up on all the mentioned settings anyway and decide
+for yourself. :-)
+
+So here it is: [minimal-vimrc](content/minimal-vimrc.vim)
+
+In case you're interested, here's [my
+vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
+
+**TIP**: Most plugin authors maintain several plugins and also publish their
+vimrc on Github (often in a repositoy called "vim-config" or "dotfiles"), so
+whenever you find a plugin you like, look up its maintainer's Github page and
+look through the repositories.
 
 #### What kind of Vim am I running?
 

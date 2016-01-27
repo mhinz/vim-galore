@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - Intro: [What kind of Vim am I running?](README.md#what-kind-of-vim-am-i-running)
 - Intro: [Cheatsheets](README.md#cheatsheets)
 - Intro: [The Vim Philosphy](README.md#the-vim-philosophy)
+- Intro: [Minimal vimrc](README.md#minimal-vimrc)
 - Basics: [Marks?](README.md#marks)
 - Basics: [Changelist?](README.md#changelist)
 - Basics: [Changelist? Jumplist?](README.md#changelist-jumplist)
