@@ -626,10 +626,10 @@ most-skilled cursors can't jump into two directions at the same time. It works
 in visual mode though, because then one side of the object is already selected
 and the cursor simply jumps to the other side.
 
-Text objects start with either `i` or `a` followed by a character denoting the
-object. With `i` it only acts on the object itself, with `a` on the object plus
-trailing whitespace. E.g. `diw` deletes the current word and `ci(` changes
-everything between parentheses.
+Text objects start with either `i` (think _inner_) or `a` (think _around_)
+followed by a character denoting the object. With `i` it only acts on the object
+itself, with `a` on the object plus trailing whitespace. E.g. `diw` deletes the
+current word and `ci(` changes everything between parentheses.
 
 Text objects take a count. Imagine `((( )))` and the cursor on or between the
 most inner parentheses, then `d2a(` will remove the 2 inner pairs of parentheses
