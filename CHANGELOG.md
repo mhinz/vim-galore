@@ -43,6 +43,7 @@ All notable changes to this project will be documented in this file.
 - Misc: [Additional resources](README.md#additional-resources)
 - Misc: [Easter eggs](README.md#easter-eggs)
 - Misc: [Why hjkl for navigation?](README.md#why-hjkl-for-navigation)
+- Misc: [Standard plugins](README.md#standard-plugins)
 
 ### Changed
 

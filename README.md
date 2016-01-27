@@ -88,6 +88,7 @@ added every day. Things about to be added can be found here:
 
 - [Additional resources](#additional-resources)
 - [Vim distributions](#vim-distributions)
+- [Standard plugins](#standard-plugins)
 - [Easter eggs](#easter-eggs)
 - [Why hjkl for navigation?](#why-hjkl-for-navigation)
 
@@ -2109,6 +2110,30 @@ looking at some distributions:
 - [janus](https://github.com/carlhuda/janus.git)
 - [spf13](https://github.com/spf13/spf13-vim)
 
+#### Standard plugins
+
+Surprising to many people, Vim comes with a handful of plugins on its own that
+all get loaded by default. Check `:scriptnames` after starting Vim to see all
+sourced files.
+
+Most of them will never get used, so disable them as you see fit. They will
+still be shown as sourced, but only the first lines actually get read before Vim
+bails out. No further code (mappings, commands, logic) will be processed.
+
+| Plugin     | Disable it using..                  | Help |
+|------------|-------------------------------------|------|
+| 2html      | `let g:loaded_2html_plugin = 1`     | `:h 2html` |
+| getscript  | `let g:loaded_getscriptPlugin = 1`  | `:h pi_getscript` |
+| gzip       | `let g:loaded_gzip = 1`             | `:h pi_gzip` |
+| logipat    | `let g:loaded_logipat = 1`          | `:h pi_logipat` |
+| matchparen | `let g:loaded_matchparen = 1`       | `:h pi_paren` |
+| netrw      | `let g:loaded_netrwPlugin = 1`      | `:h pi_netrw` |
+| rrhelper   | `let g:loaded_rrhelper = 1`         | `:e $VIMRUNTIME/plugin/rrhelper.vim` |
+| spellfile  | `let g:loaded_spellfile_plugin = 1` | `:h spellfile.vim` |
+| tar        | `let g:loaded_tarPlugin = 1`        | `:h pi_tar` |
+| vimball    | `let g:loaded_vimballPlugin = 1`    | `:h pi_vimball` |
+| zip        | `let g:loaded_zipPlugin = 1`        | `:h pi_zip` |
+
 #### Easter eggs
 
 | Command   | Message |
@@ -2122,6 +2147,8 @@ looking at some distributions:
 | `:h map-modes` | `:nunmap can also be used outside of a monastery.` |
 | `:help!` | `E478: Don't panic!` (Glitch? When used in a help buffer (`buftype=help`) this works like `:h help.txt` instead.) |
 | `:smile` | Try it out yourself. ;-) Added in 7.4.1005. |
+
+#### Standard plugins
 
 #### Why hjkl for navigation?
 
