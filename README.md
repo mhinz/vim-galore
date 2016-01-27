@@ -11,6 +11,7 @@ added every day. Things about to be added can be found here:
 #### [Intro](#intro-1)
 
 - [What is Vim?](#what-is-vim)
+- [The Vim Philosphy](#the-vim-philosophy)
 - [First steps](#first-steps)
 - [What kind of Vim am I running?](#what-kind-of-vim-am-i-running)
 - [Cheatsheets](#cheatsheets)
@@ -140,6 +141,32 @@ Development happens on [Github](https://github.com/vim/vim), discussions on the
 Read [Why, oh WHY, do those #?@! nutheads use
 vi?](http://www.viemu.com/a-why-vi-vim.html) to see common misconceptions about
 Vim explained.
+
+#### The Vim Philosophy
+
+Vim adheres to the modal editing philosophy. This means that it provides
+multiple modes and the meaning of keys changes according to the mode. You
+navigate files in _normal mode_, you insert text in _insert mode_, you select
+lines in _visual mode_, you access commands in _command-line mode_ and so on.
+This might sound complicated at first, but has a huge advantage: you don't have
+to break your fingers by holding several keys at once, most of the time you
+simply press them one after the other. The more common the task, the fewer keys
+are needed.
+
+A related concept that works well with modal editing are operators and motions.
+_Operators_ start a certain action, e.g. changing, removing, or selecting text.
+Afterwards you specify the region of text you want to act on using a _motion_.
+To change everything between parentheses, use `ci(` (read _change inner
+parentheses_). To remove an entire paragraph of text, use `dap` (read _delete
+around paragraph_).
+
+If you see advanced Vim users working, you'll notice that they speak the
+_language of Vim_ as well as pianists handle their instruments. Complex
+operations are done using only a few key presses. They don't even think about it
+anymore as [muscle memory](https://en.wikipedia.org/wiki/Muscle_memory) took
+over already. This reduces [cognitive
+load](https://en.wikipedia.org/wiki/Cognitive_load) and helps focusing on the
+actual task.
 
 #### First steps
 
