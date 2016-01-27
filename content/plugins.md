@@ -93,6 +93,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
 - [calendar](https://github.com/itchyny/calendar.vim)
 - [covim](https://github.com/FredKSchott/CoVim)
+- [devicons](https://github.com/ryanoasis/vim-devicons)
 - [diminactive](https://github.com/blueyed/vim-diminactive)
 - [gnupg](https://github.com/jamessan/vim-gnupg)
 - [goyo](https://github.com/junegunn/goyo.vim)
