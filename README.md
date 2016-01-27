@@ -49,6 +49,7 @@ added every day. Things about to be added can be found here:
 - [Editing remote files](#editing-remote-files)
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
+- [Running external programs and using filters](#running-external-programs-and-using-filters)
 - [MatchIt](#matchit)
 
 #### [Tips](#tips-1)
@@ -1507,6 +1508,45 @@ but quickly becomes second nature.
 
 If you want to get real fancy, have a look at
 [multiple-cursors](https://github.com/terryma/vim-multiple-cursors).
+
+#### Running external programs and using filters
+
+Disclaimer: Vim is single-threaded, so running an external program in the
+foreground will block everything else. Sure, you can use one of Vim's
+programming interfaces, e.g. Lua, and use its thread support, but during that
+time the Vim process is blocked nevertheless. Neovim fixed that by adding a
+proper job API.
+
+(Apparently Bram is thinking about adding job control to Vim as well. If you
+have a very recent version, see `:helpgrep startjob`.)
+
+Use `:!` to start a job. If you want to list the files in the current working
+directory, use `:!ls`. Use `|` for piping in the shell as usual, e.g. `:!ls -1 |
+sort | tail -n5`.
+
+Without a range, the output of `:!` will be shown in a scrollable window. On the
+other hand, if a range is given, these lines will be
+[filtered](https://en.wikipedia.org/wiki/Filter_(software)). This means they
+will be piped to the
+[stdin](https://en.wikipedia.org/wiki/Standard_streams#Standard_input_.28stdin.29)
+of the filter program and after processing be replaced by the
+[stdout](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29)
+of the filter. E.g. for prepending numbers to the next 5 lines, use this:
+
+    :.,+4!nl -ba -w1 -s' '
+
+Since manually adding the range is quite burdensome, Vim also provides some
+helpers for convenience. As always with ranges, you can also select lines in
+visual mode and then hit `:`. There's also an operator `!` that takes a motion.
+E.g. `!ip!sort` will sort the lines of the current paragraph.
+
+A good use case for filtering is the [Go programming
+language](https://golang.org). The indentation is pretty opiniated, it even
+comes with a filter called `gofmt` for indenting Go source code properly. So
+plugins for Go often provide helper commands called `:Fmt` that basically do
+`%!gofmt`, so they indent all lines in the file.
+
+Related help: `:h filter`
 
 #### MatchIt
 
