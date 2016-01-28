@@ -89,6 +89,7 @@ added every day. Things about to be added can be found here:
 - [Additional resources](#additional-resources)
 - [Vim distributions](#vim-distributions)
 - [Standard plugins](#standard-plugins)
+- [Map CapsLock to Control](#map-capslock-to-control)
 - [Easter eggs](#easter-eggs)
 - [Why hjkl for navigation?](#why-hjkl-for-navigation)
 
@@ -2133,6 +2134,39 @@ bails out. No further code (mappings, commands, logic) will be processed.
 | tar        | `let g:loaded_tarPlugin = 1`        | `:h pi_tar` |
 | vimball    | `let g:loaded_vimballPlugin = 1`    | `:h pi_vimball` |
 | zip        | `let g:loaded_zipPlugin = 1`        | `:h pi_zip` |
+
+#### Map CapsLock to Control
+
+CapsLock belongs to the most useless keys on your keyboard, but it's much easier
+to reach than the Control key, since it lies on your [home
+row](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/homerow.png).
+Mapping CapsLock to Control is a great way to prevent or at least reduce
+[RSI](https://de.wikipedia.org/wiki/Repetitive-Strain-Injury-Syndrom) if you
+program a lot.
+
+Attention: When you get used to it, you can't live without it anymore.
+
+**OSX**:
+
+`System Preferences -> Keyboard -> Keyboard Tab -> Modifier Keys`. Change
+"CapsLock" to "Control".
+
+**Linux**:
+
+To change the keys in X, put this in your `~/.xmodmap`:
+
+    remove Lock = Caps_Lock
+    keysym Caps_Lock = Control_L
+    add Control = Control_L
+
+Afterwards source it via `$ xmodmap ~/.xmodmap`.
+
+An alternative would be using [xcape](https://github.com/alols/xcape).
+
+**Windows**:
+
+See [superuser.com: Map Caps-Lock to Control in Windows
+8.1](http://superuser.com/questions/764782/map-caps-lock-to-control-in-windows-8-1).
 
 #### Easter eggs
 
