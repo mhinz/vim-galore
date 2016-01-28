@@ -18,6 +18,8 @@
 
 #### [By filetype](#by-filetype-1)
 
+- [Lua](#lua)
+
 ## By topic
 
 #### Alignment
@@ -130,3 +132,8 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
 
 ## By filetype
+
+#### Lua
+
+- [lua-ftplugin](https://github.com/xolox/vim-lua-ftplugin)
+- [lua-inspect](https://github.com/xolox/vim-lua-inspect)
