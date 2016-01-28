@@ -121,6 +121,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [indentline](https://github.com/Yggdroot/indentLine)
 - [multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [nrrwrgn](https://github.com/chrisbra/NrrwRgn)
+- [online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus)
 - [projectionist](https://github.com/tpope/vim-projectionist)
 - [rsi](https://github.com/tpope/vim-rsi)
 - [splitjoin](https://github.com/AndrewRadev/splitjoin.vim)
