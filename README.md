@@ -2,9 +2,9 @@
 
 ---
 
-Please keep in mind that I just started writing this guide and new things get
-added every day. Things about to be added can be found here:
-[issues](https://github.com/mhinz/vim-galore/issues). Thanks!
+Want me to write about a certain topic? Create an
+[issue](https://github.com/mhinz/vim-galore/issues) for it or tell [me on
+Twitter](https://twitter.com/_mhinz_). Thanks!
 
 ---
 
