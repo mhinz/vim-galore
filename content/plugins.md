@@ -18,6 +18,8 @@
 
 #### [By filetype](#by-filetype-1)
 
+- [HTML](#html)
+- [Javascript](#javascript)
 - [Lua](#lua)
 
 ## By topic
@@ -132,6 +134,22 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
 
 ## By filetype
+
+#### HTML
+
+- [emmet](https://github.com/mattn/emmet-vim)
+- [html5](https://github.com/othree/html5.vim)
+
+#### Javascript
+
+- [es.next.syntax](https://github.com/othree/es.next.syntax.vim)
+- [esformatter](https://github.com/millermedeiros/vim-esformatter)
+- [javascript-libraries-syntax](https://github.com/othree/javascript-libraries-syntax.vim)
+- [javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
+- [javascript](https://github.com/pangloss/vim-javascript)
+- [node-vim-debugger](https://github.com/sidorares/node-vim-debugger)
+- [node](https://github.com/moll/vim-node)
+- [tern_for_vim](https://github.com/ternjs/tern_for_vim)
 
 #### Lua
 
