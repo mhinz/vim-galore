@@ -105,20 +105,6 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 
 #### [List of plugins](content/plugins.md)
 
-- [Alignment](content/plugins.md#alignment)
-- [Code completion](content/plugins.md#code-completion)
-- [Commenters](content/plugins.md#commenters)
-- [Delimiter](content/plugins.md#delimiter)
-- [Fuzzy finders](content/plugins.md#fuzzy-finders)
-- [Grep tools](content/plugins.md#grep-tools)
-- [Navigation](content/plugins.md#navigation)
-- [Statusline](content/plugins.md#statusline)
-- [Taking notes](content/plugins.md#taking-notes)
-- [Tmux](content/plugins.md#tmux)
-- [Undo history](content/plugins.md#undo-history)
-- [Version control](content/plugins.md#version-control)
-- [Misc](content/plugins.md#misc)
-
 ---
 
 ## Intro

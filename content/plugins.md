@@ -1,5 +1,25 @@
 ## List of plugins
 
+#### [By topic](#by-topic-1)
+
+- [Alignment](#alignment)
+- [Code completion](#code-completion)
+- [Commenters](#commenters)
+- [Delimiter](#delimiter)
+- [Fuzzy finders](#fuzzy-finders)
+- [Grep tools](#grep-tools)
+- [Navigation](#navigation)
+- [Statusline](#statusline)
+- [Taking notes](#taking-notes)
+- [Tmux](#tmux)
+- [Undo history](#undo-history)
+- [Version control](#version-control)
+- [Misc](#misc)
+
+#### [By filetype](#by-filetype-1)
+
+## By topic
+
 #### Alignment
 
 - [easy-align](https://github.com/junegunn/vim-easy-align)
@@ -107,3 +127,5 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [startify](https://github.com/mhinz/vim-startify)
 - [surround](https://github.com/tpope/vim-surround)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
+
+## By filetype
