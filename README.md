@@ -1713,13 +1713,12 @@ These mappings also take a count, so `2]e` moves the current line 2 lines below.
 
 #### Quickly add empty lines
 
-This is surely no must-have, but I prefer the following mappings over
-`o<esc>`/`O<esc>`:
-
 ```vim
-nnoremap [<space>  :put! =''<cr>
-nnoremap ]<space>  :put =''<cr>
+nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
+nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 ```
+
+Now `5[<space>` inserts 5 blank lines above the current line.
 
 #### Quickly edit your macros
 
