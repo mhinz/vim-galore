@@ -111,6 +111,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [gv](https://github.com/junegunn/gv.vim)
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [signify](https://github.com/mhinz/vim-signify)
+- [github-issues](https://github.com/jaxbot/github-issues.vim)
 
 #### Misc
 
