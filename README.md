@@ -259,6 +259,7 @@ Related help:
 :h :version
 :h feature-list
 :h +feature-list
+:h has-patch
 ```
 
 #### Cheatsheets
