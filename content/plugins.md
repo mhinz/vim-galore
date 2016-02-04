@@ -21,6 +21,7 @@
 - [HTML](#html)
 - [Javascript](#javascript)
 - [Lua](#lua)
+- [TeX](#tex)
 
 ## By topic
 
@@ -156,3 +157,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [lua-ftplugin](https://github.com/xolox/vim-lua-ftplugin)
 - [lua-inspect](https://github.com/xolox/vim-lua-inspect)
+
+#### TeX
+
+- [vimtex](https://github.com/lervag/vimtex)
