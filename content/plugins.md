@@ -133,6 +133,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [splitjoin](https://github.com/AndrewRadev/splitjoin.vim)
 - [startify](https://github.com/mhinz/vim-startify)
 - [surround](https://github.com/tpope/vim-surround)
+- [targets](https://github.com/wellle/targets.vim)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
 
 ## By filetype
