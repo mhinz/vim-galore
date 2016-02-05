@@ -20,6 +20,16 @@ and `$XDG_DATA_HOME` defaults to `~/.local/share`.
 [Working files](../README.md#handling-backup-swap-undo-and-viminfo-files) are
 put under `~/.local/share/nvim` by default.
 
+If you want to share your vimrc with Neovim, you can easily do that like this
+(assuming you already put your vimrc into `~/.vim` for clearer separation):
+
+```sh
+$ cd
+$ ln -s .vim .config/nvim
+$ cd .vim
+$ ln -s vimrc init.vim
+```
+
 Related help: `:h nvim-configuration`
 
 #### Terminal emulator
