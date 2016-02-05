@@ -47,6 +47,7 @@ All notable changes to this project will be documented in this file.
 - Misc: [Map CapsLock to Control](README.md#map-capslock-to-control)
 - Neovim: [Terminal emulator](content/neovim.md#terminal-emulator)
 - Neovim: [Configuration](content/neovim.md#configuration)
+- Neovim: [Change cursor style dependent on mode](content/neovim.md#change-cursor-style-dependent-on-mode)
 
 ### Changed
 

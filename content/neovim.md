@@ -3,6 +3,7 @@
 - [Help](#help)
 - [Configuration](#configuration)
 - [Terminal emulator](#terminal-emulator)
+- [Change cursor style dependent on mode](#change-cursor-style-dependent-on-mode)
 
 ---
 
@@ -82,3 +83,18 @@ Related help:
 
     :h :terminal
     :h nvim-terminal-emulator
+
+#### Change cursor style dependent on mode
+
+The method mentioned in the [Vim
+section](../README.md#change-cursor-style-dependent-on-mode) doesn't work in
+Neovim. Instead, define the environment variable `NVIM_TUI_ENABLE_CURSOR_SHAPE`
+either in your shell config or in your vimrc:
+
+```vim
+if has('nvim')
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+endif
+```
+
+Related help: `$ man 1 nvim`

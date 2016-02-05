@@ -67,7 +67,7 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 - [Quickly edit your macros](#quickly-edit-your-macros)
 - [Quickly jump to header or source file](#quickly-jump-to-header-or-source-file)
 - [Quickly change font size in GUI](#quickly-change-font-size-in-gui)
-- [Change cursor style in insert mode](#change-cursor-style-in-insert-mode)
+- [Change cursor style dependent on mode](#change-cursor-style-dependent-on-mode)
 - [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
 - [Reload a file on saving](#reload-a-file-on-saving)
 - [Smarter cursorline](#smarter-cursorline)
@@ -1762,7 +1762,7 @@ command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1'
 command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
 ```
 
-#### Change cursor style in insert mode
+#### Change cursor style dependent on mode
 
 I like to use a block cursor in normal mode, i-beam cursor in insert mode, and
 underline cursor in replace mode. Also when using tmux in the middle.
