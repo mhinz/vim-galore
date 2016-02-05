@@ -1788,6 +1788,12 @@ even support different cursor styles. Check the documentation.
 
 The example above works with iTerm2.
 
+---
+
+Note that the above code snippet doesn't work with Neovim; use the
+`NVIM_TUI_ENABLE_CURSOR_SHAPE` environment variable instead.
+See `man 1 nvim` for more information.
+
 #### Don't lose selection when shifting sidewards
 
 If you select one or more lines, you can use `<` and `>` for shifting them
