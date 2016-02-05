@@ -1,10 +1,28 @@
 ## Neovim
 
-- [:terminal](#terminal)
+- [Configuration](#configuration)
+- [Terminal emulator](#terminal-emulator)
 
 ---
 
-#### :terminal
+#### Configuration
+
+Neovim adheres to the [XDG Base Directory
+Specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+If you don't have them set already, `$XDG_CONFIG_HOME` defaults to `~/.config`
+and `$XDG_DATA_HOME` defaults to `~/.local/share`.
+
+| Flavour | User configuration directory | vimrc |
+|---------|------------------------------|-------|
+| Vim | `~/.vim` | `~/.vimrc` or `/.vim/vimrc` |
+| Neovim | `~/.config/nvim` | `~/.config/nvim/init.vim` |
+
+[Working files](../README.md#handling-backup-swap-undo-and-viminfo-files) are
+put under `~/.local/share/nvim` by default.
+
+Related help: `:h nvim-configuration`
+
+#### Terminal emulator
 
 Neovim implements a proper terminal emulator
 ([libvterm](http://www.leonerd.org.uk/code/libvterm/)) and can easily fire up a
