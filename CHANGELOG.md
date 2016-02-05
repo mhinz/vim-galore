@@ -45,6 +45,7 @@ All notable changes to this project will be documented in this file.
 - Misc: [Why hjkl for navigation?](README.md#why-hjkl-for-navigation)
 - Misc: [Standard plugins](README.md#standard-plugins)
 - Misc: [Map CapsLock to Control](README.md#map-capslock-to-control)
+- Neovim: [:terminal](content/neovim.md#terminal)
 
 ### Changed
 

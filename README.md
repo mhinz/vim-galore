@@ -107,6 +107,8 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 
 #### [List of plugins](content/plugins.md)
 
+#### [Neovim](content/neovim.md)
+
 ---
 
 ## Intro
