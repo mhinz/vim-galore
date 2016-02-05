@@ -1,9 +1,15 @@
 ## Neovim
 
+- [Help](#help)
 - [Configuration](#configuration)
 - [Terminal emulator](#terminal-emulator)
 
 ---
+
+#### Help
+
+See `:h nvim`. Seriously, do it. It contains a table of contents for all the
+things that either changed or were added to Neovim.
 
 #### Configuration
 
