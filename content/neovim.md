@@ -12,7 +12,10 @@ Specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest
 If you don't have them set already, `$XDG_CONFIG_HOME` defaults to `~/.config`
 and `$XDG_DATA_HOME` defaults to `~/.local/share`.
 
-| Flavour | User configuration directory | vimrc |
+NOTE: The term "vimrc" doesn't refer to a filename, it refers to a configuration
+file and is used by Vim and Neovim.
+
+| Flavour | User configuration directory | User vimrc |
 |---------|------------------------------|-------|
 | Vim | `~/.vim` | `~/.vimrc` or `/.vim/vimrc` |
 | Neovim | `~/.config/nvim` | `~/.config/nvim/init.vim` |
