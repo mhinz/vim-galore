@@ -35,6 +35,7 @@ If you want to share your vimrc with Neovim, you can easily do that like this
 
 ```sh
 $ cd
+$ mkdir -p .config
 $ ln -s .vim .config/nvim
 $ cd .vim
 $ ln -s vimrc init.vim
