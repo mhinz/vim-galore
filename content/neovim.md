@@ -1,6 +1,7 @@
 ## Neovim
 
 - [Help](#help)
+- [Additional resources](#additional-resources)
 - [Configuration](#configuration)
 - [Terminal emulator](#terminal-emulator)
 - [Change cursor style dependent on mode](#change-cursor-style-dependent-on-mode)
@@ -11,6 +12,19 @@
 
 See `:h nvim`. Seriously, do it. It contains a table of contents for all the
 things that either changed or were added to Neovim.
+
+#### Additional resources
+
+Mind that Neovim is under heavy development and that it seeks to fix _design_
+issues from Vim. Expect things to change frequently!
+
+| Resource | Description |
+|----------|-------------|
+| [Wiki](https://github.com/neovim/neovim/wiki) | Likely the most important resource, especially for new folks. |
+| [Issues](https://github.com/neovim/neovim/issues) | The bleeding edge. |
+| [Newsletter](https://neovim.io/news) | A newsletter about all things Neovim. |
+| [Gitter channel](https://gitter.im/neovim/neovim) | If you feel like chatting. The devs hang out there. |
+| [IRC channel on Freenode](https://webchat.freenode.net/?channels=neovim) | Gitter alternative. A bot bridges between Gitter and IRC. |
 
 #### Configuration
 

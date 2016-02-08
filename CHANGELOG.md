@@ -51,6 +51,7 @@ All notable changes to this project will be documented in this file.
 - Neovim: [Terminal emulator](content/neovim.md#terminal-emulator)
 - Neovim: [Configuration](content/neovim.md#configuration)
 - Neovim: [Change cursor style dependent on mode](content/neovim.md#change-cursor-style-dependent-on-mode)
+- Neovim: [Additional resources](content/neovim.md#additional-resources)
 
 ### Changed
 
