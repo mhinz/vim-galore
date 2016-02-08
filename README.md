@@ -1768,10 +1768,13 @@ register.
 I often use this to correct typos I did while recording a macro.
 
 ```vim
-nnoremap <leader>m  :<c-u><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
+nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 ```
 
 Use it like this `<leader>m` or `"q<leader>m`.
+
+Notice the use of `<c-r><c-r>` to make sure that the `<c-r>` is inserted
+literally. See `:h c_^R^R`.
 
 #### Quickly jump to header or source file
 
