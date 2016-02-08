@@ -24,6 +24,7 @@ All notable changes to this project will be documented in this file.
 - Basics: [Undo tree?](README.md#undo-tree)
 - Commands: [:redir](README.md#redir)
 - Commands: [:normal and :execute](README.md#normal-and-execute)
+- Commands: [:global](README.md#global)
 - Tips: [Saner command-line history](README.md#saner-command-line-history)
 - Tips: [Reload a file on saving](README.md#reload-a-file-on-saving)
 - Tips: [Smarter cursorline](README.md#smarter-cursorline)

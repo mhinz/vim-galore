@@ -76,6 +76,7 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 
 #### [Commands](#commands-1)
 
+- [:global](#global) - Execute a command on all matching lines.
 - [:normal and :execute](#normal-and-execute) - The scripting dream team.
 - [:redir](#redir) - Redirect messages.
 
@@ -1877,7 +1878,26 @@ set complete-=t   " disable searching tags
 
 ## Commands
 
-Useful commands that are good to know.
+Useful commands that are good to know. Use `:h :<command name>` to learn more
+about them, e.g. `:h :global`.
+
+#### :global
+
+Execute a command on all matching lines. E.g. `:global /regexp/ print` will use
+`:print` on all lines that contain "regexp".
+
+Fun fact: You probably all know good old grep, the filter program written by Ken
+Thompson. What does it do? It prints all lines matching a certain regular
+expression! Now guess the short form of `:global /regexp/ print`? That's right!
+It's `:g/re/p`. Ken Thompson was inspired by vi's `:global` when he wrote grep.
+
+Despite its name, `:global` only acts on all lines by default, but it also takes
+a range. Assume you want use `:delete` on all lines from the current line to the
+next blank line (matched by the regular expression `^$`) that contain "foo":
+
+```vim
+:,/^$/g/foo/d
+```
 
 #### :normal and :execute
 
