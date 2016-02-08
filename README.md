@@ -23,6 +23,7 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
+- [Agument list?](#argument-list)
 - [Mappings?](#mappings)
 - [Mapleader?](#mapleader)
 - [Registers?](#registers)
@@ -326,6 +327,37 @@ unlisted buffers can be shown via `:ls!`.
 associated filename. E.g. `:enew` will create an unnamed scratch buffer. Add
 some text and write it to disk via `:w /tmp/foo`, and it will become a named
 buffer.
+
+#### Argument list?
+
+The [global buffer list](#buffers-windows-tabs) is a Vim thing. Before that, in
+vi, there only used to be the argument list, which is also available in Vim.
+
+Every filename given to Vim on the shell command-line, is remembered in the
+argument list. There can be multiple argument lists: by default all arguments
+are put into the global argument list, but you can use `:arglocal` to create a
+new argument list that is local to the window.
+
+List the current arguments with `:args`. Switch between files from the argument
+list with `:next`, `:previous`, `:first`, `:last` and friends. Alter it with
+`:argadd`, `:argdelete` or `:args` with a list of files.
+
+If you should prefer using the buffer or argument list for working with files is
+a matter of taste. My impression is that most people use the buffer list
+exclusively.
+
+Nevertheless there is one huge use case for the argument list: batch processing
+via `:argdo`! A simple refactoring example:
+
+```vim
+:args **/*.[ch]
+:argdo %s/foo/bar/ge | update
+```
+
+This replaces all occurrences of "foo" by "bar" in all C source and header files
+from the current directory and below.
+
+Related help: `:h argument-list`
 
 #### Mappings?
 
