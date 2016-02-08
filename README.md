@@ -76,6 +76,7 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 
 #### [Commands](#commands-1)
 
+- [:normal and :execute](#normal-and-execute) - The scripting dream team.
 - [:redir](#redir) - Redirect messages.
 
 #### [Debugging](#debugging-1)
@@ -1877,6 +1878,32 @@ set complete-=t   " disable searching tags
 ## Commands
 
 Useful commands that are good to know.
+
+#### :normal and :execute
+
+These commands are commonly used in Vim scripts.
+
+With `:normal` you can do normal mode mappings from the command-line. E.g.
+`:normal! 4j` will make the cursor go down 4 lines (without using any custom
+mapping for "j" due to the "!").
+
+Mind that `:normal` also takes a count, so `:%norm! Iabc` would prepend "abc" to
+every line.
+
+With `:execute` you can mix commands with expressions. Assume you edit a C
+source file and want to switch to its header file:
+
+```vim
+:execute 'edit' fnamemodify(expand('%'), ':r') . '.h'
+```
+
+Both commands are often used together. Assume you want to make the cursor go
+down "n" lines:
+
+```vim
+:let n = 4
+:execute 'normal!' n . 'j'
+```
 
 #### :redir
 
