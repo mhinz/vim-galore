@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.2] - 2016-02-08
+
 ### Added
 
 - Intro: [What is Vim?](README.md#what-is-vim)
@@ -87,6 +89,7 @@ All notable changes to this project will be documented in this file.
 
 First release!
 
-[Unreleased]: https://github.com/mhinz/vim-galore/compare/v1.1...HEAD
+[Unreleased]: https://github.com/mhinz/vim-galore/compare/v1.2...HEAD
+[1.2]: https://github.com/mhinz/vim-galore/compare/v1.1...v1.2
 [1.1]: https://github.com/mhinz/vim-galore/compare/v1.0...v1.1
 [1.0]: https://github.com/mhinz/vim-galore/compare/69677e2...v1.0
