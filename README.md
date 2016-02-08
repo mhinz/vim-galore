@@ -1960,8 +1960,10 @@ it to the [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing
 list. Most of the time the issue won't be resolved at this time and you'll have to
 further investigate.
 
-Often plugin updates introduce new/changed/faulty behaviour. If you're using a
-plugin manager, comment them out until you find the culprit.
+Plugins often introduce new/changed/faulty behaviour. E.g. if it happens on
+saving, check `:verb au BufWritePost` to get a list of potential culprits.
+
+If you're using a plugin manager, comment them out until you find the culprit.
 
 Issue is still not resolved? If it's not a plugin, it must be your other
 settings, so maybe your options or autocmds etc.
