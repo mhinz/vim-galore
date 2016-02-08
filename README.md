@@ -1373,7 +1373,7 @@ If you happen to access one of the two registers all the time, consider using:
 ```vim
 set clipboard^=unnamed      " * register
 " or
-set clipboard^=unammedplus  " + register
+set clipboard^=unnamedplus  " + register
 ```
 
 (The `^=` is used to prepend to the default value, `:h :set^=`.)
@@ -1386,7 +1386,7 @@ Related help:
 
 ```vim
 :h clipboard-unnamed
-:h clipboard-unammedplus
+:h clipboard-unnamedplus
 ```
 
 #### Restore cursor position when opening file
