@@ -34,6 +34,7 @@
 
 - [neocomplete](https://github.com/Shougo/neocomplete.vim)
 - [supertab](https://github.com/ervandew/supertab)
+- [vimcompletesme](https://github.com/ajh17/VimCompletesMe)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
 
 #### Commenters
