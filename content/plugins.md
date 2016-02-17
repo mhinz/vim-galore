@@ -18,6 +18,7 @@
 
 #### [By filetype](#by-filetype-1)
 
+- [C and C++](#c-and-c)
 - [Clojure](#clojure)
 - [HTML](#html)
 - [Javascript](#javascript)
@@ -139,6 +140,13 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
 
 ## By filetype
+
+#### C and C++
+
+- [a](https://github.com/vim-scripts/a.vim)
+- [clang_complete](https://github.com/Rip-Rip/clang_complete)
+- [color_coded](https://github.com/jeaye/color_coded.git)
+- [lh-cpp](https://github.com/LucHermitte/lh-cpp)
 
 #### Clojure
 
