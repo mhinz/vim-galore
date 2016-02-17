@@ -142,8 +142,9 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Clojure
 
+- [clojure-highlight](https://github.com/guns/vim-clojure-highlight)
 - [fireplace](https://github.com/tpope/vim-fireplace)
-- [paredit](https://github.com/vim-scripts/paredit.vim)
+- [paredit](https://github.com/kovisoft/paredit)
 - [rainbow_parentheses](https://github.com/junegunn/rainbow_parentheses.vim)
 - [salve](https://github.com/tpope/vim-salve)
 - [sexp-mappings-for-regular-people](https://github.com/tpope/vim-sexp-mappings-for-regular-people)
