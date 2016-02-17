@@ -18,6 +18,7 @@
 
 #### [By filetype](#by-filetype-1)
 
+- [Clojure](#clojure)
 - [HTML](#html)
 - [Javascript](#javascript)
 - [Lua](#lua)
@@ -138,6 +139,15 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
 
 ## By filetype
+
+#### Clojure
+
+- [fireplace](https://github.com/tpope/vim-fireplace)
+- [paredit](https://github.com/vim-scripts/paredit.vim)
+- [rainbow_parentheses](https://github.com/junegunn/rainbow_parentheses.vim)
+- [salve](https://github.com/tpope/vim-salve)
+- [sexp-mappings-for-regular-people](https://github.com/tpope/vim-sexp-mappings-for-regular-people)
+- [sexp](https://github.com/guns/vim-sexp)
 
 #### HTML
 
