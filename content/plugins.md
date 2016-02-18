@@ -21,6 +21,7 @@
 - [C and C++](#c-and-c)
 - [Clojure](#clojure)
 - [HTML](#html)
+- [Java](#java)
 - [Javascript](#javascript)
 - [Lua](#lua)
 - [TeX](#tex)
@@ -162,6 +163,10 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [emmet](https://github.com/mattn/emmet-vim)
 - [html5](https://github.com/othree/html5.vim)
+
+#### Java
+
+- [javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)
 
 #### Javascript
 
