@@ -13,7 +13,7 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 #### [Intro](#intro-1)
 
 - [What is Vim?](#what-is-vim)
-- [The Vim Philosphy](#the-vim-philosophy)
+- [The Vim Philosophy](#the-vim-philosophy)
 - [First steps](#first-steps)
 - [Minimal vimrc](#minimal-vimrc)
 - [What kind of Vim am I running?](#what-kind-of-vim-am-i-running)
@@ -23,7 +23,7 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 
 - [Buffers, windows, tabs?](#buffers-windows-tabs)
 - [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
-- [Agument list?](#argument-list)
+- [Argument list?](#argument-list)
 - [Mappings?](#mappings)
 - [Mapleader?](#mapleader)
 - [Registers?](#registers)
@@ -219,7 +219,7 @@ In case you're interested, here's [my
 vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 
 **TIP**: Most plugin authors maintain several plugins and also publish their
-vimrc on Github (often in a repositoy called "vim-config" or "dotfiles"), so
+vimrc on Github (often in a repository called "vim-config" or "dotfiles"), so
 whenever you find a plugin you like, look up its maintainer's Github page and
 look through the repositories.
 
@@ -598,7 +598,7 @@ Put `'`/`g'` or `` ` ``/`` g` `` in front of a mark to form a motion.
 
 Use `mm` to remember the current position with mark "m". Move around the file
 and then jump back via `'m` (first non-blank) or `` `m `` (exact column).
-Lowercase marks will be remembed after exiting Vim, if you tell your viminfo
+Lowercase marks will be remembered after exiting Vim, if you tell your viminfo
 file to do so, see `:h viminfo-'`.
 
 Use `mM` to remember the current position with file mark "M". Switch to another
@@ -1625,7 +1625,7 @@ visual mode and then hit `:`. There's also an operator `!` that takes a motion.
 E.g. `!ip!sort` will sort the lines of the current paragraph.
 
 A good use case for filtering is the [Go programming
-language](https://golang.org). The indentation is pretty opiniated, it even
+language](https://golang.org). The indentation is pretty opinionated, it even
 comes with a filter called `gofmt` for indenting Go source code properly. So
 plugins for Go often provide helper commands called `:Fmt` that basically do
 `:%!gofmt`, so they indent all lines in the file.
@@ -2349,13 +2349,13 @@ plugin that does it for you:
 Additional read from the same author as the plugin:
 [here](http://cirw.in/blog/bracketed-paste).
 
-**Neovim**: Neovim tries to make all of this much more seemless and sets
+**Neovim**: Neovim tries to make all of this much more seamless and sets
 bracketed paste mode automatically if the terminal emulator supports it.
 
 #### Delays when using escape key in terminal
 
 If you live in the command-line, you probably use a so-called _terminal
-emulator_ like xterm, gnome-terminanal, iTerm2, etc. (opposed to a real
+emulator_ like xterm, gnome-terminal, iTerm2, etc. (opposed to a real
 [terminal](https://en.wikipedia.org/wiki/Computer_terminal)).
 
 Like their ancestors, terminal emulators use [escape
