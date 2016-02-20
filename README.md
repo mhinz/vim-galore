@@ -2419,6 +2419,7 @@ set -sg escape-time 0
 
 Here's a list of commonly used colorschemes:
 
+- [acme-colors](https://github.com/plan9-for-vimspace/acme-colors)
 - [base16](https://github.com/chriskempson/base16-vim)
 - [gotham](https://github.com/whatyouhide/vim-gotham)
 - [gruvbox](https://github.com/morhetz/gruvbox)
