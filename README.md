@@ -2432,4 +2432,5 @@ Here's a list of commonly used colorschemes:
 - [solarized](https://github.com/altercation/vim-colors-solarized) (or a lighter variant: [flattened](https://github.com/romainl/flattened))
 - [tomorrow](https://github.com/chriskempson/vim-tomorrow-theme)
 - [vividchalk](https://github.com/tpope/vim-vividchalk)
+- [yowish](https://github.com/kabbamine/yowish.vim)
 
