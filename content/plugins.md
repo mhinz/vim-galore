@@ -108,15 +108,16 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Version control
 
+- [agit](https://github.com/cohama/agit.vim)
 - [fugitive](https://github.com/tpope/vim-fugitive)
 - [gist-vim](https://github.com/mattn/gist-vim)
 - [gitgutter](https://github.com/airblade/vim-gitgutter)
 - [github-dashboard](https://github.com/junegunn/vim-github-dashboard)
+- [github-issues](https://github.com/jaxbot/github-issues.vim)
 - [gitv](https://github.com/gregsexton/gitv)
 - [gv](https://github.com/junegunn/gv.vim)
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [signify](https://github.com/mhinz/vim-signify)
-- [github-issues](https://github.com/jaxbot/github-issues.vim)
 
 #### Misc
 
