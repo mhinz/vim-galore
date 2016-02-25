@@ -24,6 +24,7 @@
 - [Java](#java)
 - [Javascript](#javascript)
 - [Lua](#lua)
+- [Python](#python)
 - [TeX](#tex)
 
 ## By topic
@@ -184,6 +185,13 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [lua-ftplugin](https://github.com/xolox/vim-lua-ftplugin)
 - [lua-inspect](https://github.com/xolox/vim-lua-inspect)
+
+#### Python
+
+- [braceless](https://github.com/tweekmonster/braceless.vim)
+- [flake8](https://github.com/nvie/vim-flake8)
+- [jedi](https://github.com/davidhalter/jedi-vim)
+- [python-mode](https://github.com/klen/python-mode)
 
 #### TeX
 
