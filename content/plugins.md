@@ -118,6 +118,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [gitv](https://github.com/gregsexton/gitv)
 - [gv](https://github.com/junegunn/gv.vim)
 - [lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
+- [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 - [signify](https://github.com/mhinz/vim-signify)
 - [vimagit](https://github.com/jreybert/vimagit)
 
