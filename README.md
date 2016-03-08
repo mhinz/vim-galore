@@ -55,6 +55,7 @@ Twitter](https://twitter.com/_mhinz_). Thanks!
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
 - [Running external programs and using filters](#running-external-programs-and-using-filters)
+- [Cscope](#cscope)
 - [MatchIt](#matchit)
 
 #### [Tips](#tips-1)
@@ -1636,6 +1637,100 @@ which is fine for scripts, but when doing it on the fly, I find it easier to use
 
     :h filter
     :h :read!
+
+#### Cscope
+
+[Cscope](http://cscope.sourceforge.net/) is a better
+[ctags](http://ctags.sourceforge.net/) and supports [quite some
+languages](http://ctags.sourceforge.net/languages.html).
+
+Whereas a tags file only knows where a symbol was defined, a cscope database
+knows much more about your data:
+
+- Where is this symbol defined?
+- Where is this symbol used?
+- What is this global symbol's definition?
+- Where did this variable get its value?
+- Where is this function in the source files?
+- What functions call this function?
+- What functions are called by this function?
+- Where does the message "out of space" come from?
+- Where is this source file in the directory structure?
+- What files include this header file?
+
+##### 1. Build the database
+
+Do this in the root of your project:
+
+```sh
+$ cscope -bqR
+```
+
+This will create 3 files: `cscope{,.in,.po}.out` in the current working
+directory. Think of them as your database.
+
+Unfortunately `cscope` only analyzes `*.[c|h|y|l]` files by default. If you want
+to use cscope for a Ruby project instead, do this:
+
+```sh
+$ find . -name "*.rb" > cscope.files
+$ cscope -bq
+```
+
+##### 2. Add the database
+
+Open a connection to your freshly built database:
+
+```vim
+:cs add cscope.out
+```
+
+Verify that the connection was made:
+
+```vim
+:cs show
+```
+
+(Yes, you can add multiple connections.)
+
+##### 3. Query the database
+
+```vim
+:cs find <kind> <query>
+```
+
+E.g. `:cs find d foo` will list all functions that are called by `foo(...)`.
+
+| Kind | Explanation |
+|------|-------------|
+| s    | **s**ymbol: find all references to the token        |
+| g    | **g**lobal: find global definition(s) of the token  |
+| c    | **c**alls: find all calls to the function           |
+| t    | **t**ext: find all instances of the text            |
+| e    | **e**grep: egrep search for the word                |
+| f    | **f**ile: open the filename                         |
+| i    | **i**ncludes: find files that include the filename  |
+| d    | **d**epends: find functions called by this function |
+
+I suggest some convenience mappings e.g.:
+
+```vim
+nnoremap <buffer> <leader>cs :cscope find s  <c-r>=expand('<cword>')<cr><cr>
+nnoremap <buffer> <leader>cg :cscope find g  <c-r>=expand('<cword>')<cr><cr>
+nnoremap <buffer> <leader>cc :cscope find c  <c-r>=expand('<cword>')<cr><cr>
+nnoremap <buffer> <leader>ct :cscope find t  <c-r>=expand('<cword>')<cr><cr>
+nnoremap <buffer> <leader>ce :cscope find e  <c-r>=expand('<cword>')<cr><cr>
+nnoremap <buffer> <leader>cf :cscope find f  <c-r>=expand('<cfile>')<cr><cr>
+nnoremap <buffer> <leader>ci :cscope find i ^<c-r>=expand('<cfile>')<cr>$<cr>
+nnoremap <buffer> <leader>cd :cscope find d  <c-r>=expand('<cword>')<cr><cr>
+```
+
+So, when `:tag` (or `<c-]>`) jumps to a definition from the tags file, `:cstag`
+does the same, but also takes connected cscope databases into account. The
+option `'cscopetag'` makes `:tag` act like `:cstag` automatically. This is very
+convenient if you already have tag-related mappings.
+
+Related help: `:h cscope`
 
 #### MatchIt
 

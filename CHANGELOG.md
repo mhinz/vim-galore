@@ -39,6 +39,7 @@ All notable changes to this project will be documented in this file.
 - Usage: [Handling backup, swap, undo, and viminfo files](README.md#handling-backup-swap-undo-and-viminfo-files)
 - Usage: [Running external programs and using filters](README.md#running-external-programs-and-using-filters)
 - Usage: [MatchIt](README.md#matchit)
+- Usage: [Cscope](README.md#cscope)
 - Debugging: [Verbosity](README.md#verbosity)
 - Debugging: [Debugging Vim scripts](README.md#debugging-vim-scripts)
 - Debugging: [Debugging syntax files](README.md#debugging-syntax-files)
