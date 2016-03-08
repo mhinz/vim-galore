@@ -1640,9 +1640,9 @@ which is fine for scripts, but when doing it on the fly, I find it easier to use
 
 #### Cscope
 
-[Cscope](http://cscope.sourceforge.net/) is a better
-[ctags](http://ctags.sourceforge.net/) and supports [quite some
-languages](http://ctags.sourceforge.net/languages.html).
+[Cscope](http://cscope.sourceforge.net/) does more things than
+[ctags](http://ctags.sourceforge.net/), but only supports C (and C++ and Java to
+some extent).
 
 Whereas a tags file only knows where a symbol was defined, a cscope database
 knows much more about your data:
@@ -1670,10 +1670,10 @@ This will create 3 files: `cscope{,.in,.po}.out` in the current working
 directory. Think of them as your database.
 
 Unfortunately `cscope` only analyzes `*.[c|h|y|l]` files by default. If you want
-to use cscope for a Ruby project instead, do this:
+to use cscope for a Java project instead, do this:
 
 ```sh
-$ find . -name "*.rb" > cscope.files
+$ find . -name "*.java" > cscope.files
 $ cscope -bq
 ```
 
