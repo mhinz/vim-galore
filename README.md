@@ -1053,26 +1053,36 @@ options and mappings) gets saved for later use (`:h :loadview`).
 
 A **session** saves the views of all windows plus global settings. It basically
 makes a snapshot of your current Vim instance and saves it in a session file.
+Let me stress this: it saves the current state; everything done after saving a
+session won't be part of the session file. To "update" a session, simply write
+it out again.
 
 This makes it perfect for saving your _projects_ and easy to switch between
 them.
 
-Try it right now! Open a few windows and tabs and do `:mksession! Foo.vim`. If
+Try it right now! Open a few windows and tabs and do `:mksession Foo.vim`. If
 you omit the filename, `Session.vim` will be assumed. The file will be saved to
 the current working directory, check `:pwd`. Restart Vim and do `:source
 Foo.vim` and voilà, the buffer list, window layout, mappings, working directory
-etc. should all be the same as before you saved the session.
+etc. should all be the same as before you saved the session. Do some more work
+and update the session by overwriting the already existing session file with
+`:mksession! Foo.vim`.
 
-Note that a session file is really just a collection of Vim commands, so feel
-free to take a look at it: `:vs Foo.vim`.
+Note that a session file is really just a collection of Vim commands that are
+supposed to restore a certain state of a Vim instance, so feel free to take a
+look at it: `:vs Foo.vim`.
 
 You can tell Vim what things to save in a session by setting `'sessionoptions'`.
+
+For scripting purposes Vim keeps the name of the last sourced or written session
+in the internal variable `v:this_session`.
 
 Related help:
 
 ```
 :h Session
 :h 'sessionoptions'
+:h v:this_session
 ```
 
 #### Locality?
