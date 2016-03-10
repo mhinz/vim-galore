@@ -1,0 +1,8 @@
+sudo: false
+os: linux
+
+language: go
+go: 1.6
+
+install: go get github.com/mhinz/gomali
+script: gomali README.md
