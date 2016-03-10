@@ -285,9 +285,9 @@ To avoid copyright issues, I'll just link external URLs:
 
 #### Buffers, windows, tabs?
 
-Vim is a text editor. Every time text is shown, the text is part of a **buffer**.
-Each file will be opened in its own buffer. Plugins show stuff in their own
-buffers etc.
+Vim is a text editor. Every time text is shown, the text is part of a
+**buffer**. Each file will be opened in its own buffer. Plugins show stuff in
+their own buffers etc.
 
 Buffers have many attributes, e.g. whether the text it contains is modifiable,
 or whether it is associated with a file and thus needs to be synchronized to
@@ -1407,6 +1407,7 @@ Without this, you will always be at line 1 when opening a file. With this, you
 will be at the position where you left off.
 
 Put this in your vimrc:
+
 ```vim
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
@@ -1825,11 +1826,11 @@ I depend on this behaviour several times a day.
 
 #### Saner CTRL-L
 
-By default `<c-l>` clears and redraws the screen (like `:redraw!`). The following
-mapping does the same, plus de-highlighting the matches found via `/`, `?` etc.,
-plus fixing syntax highlighting (sometimes Vim loses highlighting due to complex
-highlighting rules), plus force updating the syntax highlighting in diff mode:
-
+By default `<c-l>` clears and redraws the screen (like `:redraw!`). The
+following mapping does the same, plus de-highlighting the matches found via `/`,
+`?` etc., plus fixing syntax highlighting (sometimes Vim loses highlighting due
+to complex highlighting rules), plus force updating the syntax highlighting in
+diff mode:
 
 ```vim
 nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
@@ -2066,8 +2067,8 @@ mode (which makes it use Vim defaults instead of vi defaults). (See `:h
 
 If you can still reproduce it now, it's most likely a bug in Vim itself! Report
 it to the [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing
-list. Most of the time the issue won't be resolved at this time and you'll have to
-further investigate.
+list. Most of the time the issue won't be resolved at this time and you'll have
+to further investigate.
 
 Plugins often introduce new/changed/faulty behaviour. E.g. if it happens on
 saving, check `:verb au BufWritePost` to get a list of potential culprits.
