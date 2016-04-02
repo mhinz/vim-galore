@@ -747,9 +747,9 @@ But how does a buffer even know that it contains Ruby code? Because another
 autocmd detected it as that and set the filetype accordingly which again
 triggered the `FileType` event.
 
-One of the first things everyone adds to his vimrc is `filetype on`. This simply
-means that `filetype.vim` is read at startup which sets autocmds for almost all
-filetypes under the sun.
+One of the first things everyone adds to their vimrc is `filetype on`. This
+simply means that `filetype.vim` is read at startup which sets autocmds for
+almost all filetypes under the sun.
 
 If you're brave enough, have a look at it: `:e $VIMRUNTIME/filetype.vim`. Search
 for "Ruby" and you'll find that Vim simply uses the file extension `.rb` to
