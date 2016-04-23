@@ -282,6 +282,7 @@ To avoid copyright issues, I'll just link external URLs:
 - http://www.nathael.org/Data/vi-vim-cheat-sheet.svg
 - http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_screen.png
 - http://www.rosipov.com/images/posts/vim-movement-commands-cheatsheet.png
+- https://github.com/alx741/vim_cheat_ball/blob/master/small.pdf
 
 ## Basics
 
