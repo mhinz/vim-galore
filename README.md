@@ -2542,4 +2542,5 @@ Here's a list of commonly used colorschemes:
 - [tomorrow](https://github.com/chriskempson/vim-tomorrow-theme)
 - [vividchalk](https://github.com/tpope/vim-vividchalk)
 - [yowish](https://github.com/kabbamine/yowish.vim)
+- [zenburn](https://github.com/jnurmine/Zenburn)
 
