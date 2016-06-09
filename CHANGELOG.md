@@ -33,6 +33,7 @@ All notable changes to this project will be documented in this file.
 - Tips: [Saner CTRL-L](README.md#saner-ctrl-l)
 - Tips: [Disable audible and visual bells](README.md#disable-audible-and-visual-bells)
 - Tips: [Faster keyword completion](README.md#faster-keyword-completion)
+- Tips: [Cosmetic changes to colorschemes](README.md#cosmetic-changes-to-colorschemes)
 - Usage: [Getting help offline (alternative)](README.md#getting-help-offline-alternative)
 - Usage: [Editing remote files](README.md#editing-remote-files)
 - Usage: [Restore cursor position when opening file](README.md#restore-cursor-position-when-opening-file)

@@ -77,6 +77,7 @@ Twitter](https://twitter.com/_mhinz_).
 - [Reload a file on saving](#reload-a-file-on-saving)
 - [Smarter cursorline](#smarter-cursorline)
 - [Faster keyword completion](#faster-keyword-completion)
+- [Cosmetic changes to colorschemes](#cosmetic-changes-to-colorschemes)
 
 #### [Commands](#commands-1)
 
@@ -1017,7 +1018,10 @@ chances are that the colorscheme only defined colors for the GUI.
 I use [gruvbox](https://github.com/morhetz/gruvbox) for the GUI and
 [janah](https://github.com/mhinz/vim-janah) for the terminal.
 
-More colorschemes: [here](#list-of-colorschemes-1)
+Related:
+
+- [List of colorschemes](#list-of-colorschemes-1)
+- [Cosmetic changes to colorschemes](#cosmetic-changes-to-colorschemes)
 
 #### Folding?
 
@@ -1986,6 +1990,21 @@ live without these things, disable them:
 ```vim
 set complete-=i   " disable scanning included files
 set complete-=t   " disable searching tags
+```
+
+#### Cosmetic changes to colorschemes
+
+Always use a dark gray statusline, no matter what colorscheme is chosen:
+
+```vim
+autocmd ColorScheme * highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
+```
+
+The same, but only for the "lucius" colorscheme (check `:echo
+color_name` which should be set by all valid colorschemes):
+
+```vim
+autocmd ColorScheme lucius highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
 ```
 
 ## Commands
