@@ -1974,10 +1974,8 @@ I love the cursorline, but I only want to use it in the current window and not
 when being in insert mode:
 
 ```vim
-autocmd WinEnter    * set cursorline
-autocmd WinLeave    * set nocursorline
-autocmd InsertEnter * set nocursorline
-autocmd InsertLeave * set cursorline
+autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter,WinLeave * set nocursorline
 ```
 
 #### Faster keyword completion
