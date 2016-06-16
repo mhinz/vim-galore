@@ -2,7 +2,7 @@
 " A (not so) minimal vimrc.
 "
 
-" You want Vim, not vi. When Vim finds a vimrc, 'nocomptaible' is set anyway.
+" You want Vim, not vi. When Vim finds a vimrc, 'nocompatible' is set anyway.
 " We set it explicitely to make our position clear!
 set nocompatible
 
