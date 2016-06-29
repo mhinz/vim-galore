@@ -192,6 +192,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [braceless](https://github.com/tweekmonster/braceless.vim)
 - [flake8](https://github.com/nvie/vim-flake8)
+- [impsort](https://github.com/tweekmonster/impsort.vim)
 - [jedi](https://github.com/davidhalter/jedi-vim)
 - [python-mode](https://github.com/klen/python-mode)
 
