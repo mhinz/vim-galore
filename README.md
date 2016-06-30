@@ -5,10 +5,8 @@
 
 ---
 
-Want me to write about a certain topic? Create an
-[issue](https://github.com/mhinz/vim-galore/issues) for it! ∴ My
-[vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc). ∴ [Me on
-Twitter](https://twitter.com/_mhinz_).
+Ask me anything on [Twitter](https://twitter.com/_mhinz_)!
+My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 
 ---
 
