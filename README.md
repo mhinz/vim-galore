@@ -1,5 +1,4 @@
 [![vim-galore](https://cdn.rawgit.com/mhinz/vim-galore/master/media/badge-awesome.svg)](https://github.com/sindresorhus/awesome)
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mhinz/vim-galore/master/LICENSE)
 [![Build Status](https://travis-ci.org/mhinz/vim-galore.svg?branch=master)](https://travis-ci.org/mhinz/vim-galore)
 
 ![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/vim-galore.png)
