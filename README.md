@@ -112,8 +112,6 @@ My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 
 #### [List of plugins](content/plugins.md)
 
-#### [Neovim](content/neovim.md)
-
 ---
 
 ## Intro
