@@ -161,7 +161,7 @@ _language of Vim_ as well as pianists handle their instruments. Complex
 operations are done using only a few key presses. They don't even think about it
 anymore as [muscle memory](https://en.wikipedia.org/wiki/Muscle_memory) took
 over already. This reduces [cognitive
-load](https://en.wikipedia.org/wiki/Cognitive_load) and helps focusing on the
+load](https://en.wikipedia.org/wiki/Cognitive_load) and helps to focus on the
 actual task.
 
 #### First steps
@@ -230,7 +230,7 @@ how the currently running Vim binary was compiled.
 
 The first line tells you when the binary was compiled and the version, e.g. 7.4.
 One of the next lines states `Included patches: 1-1051`, which is the patch
-level. Thus your exact Vim version is 7.4.1051.
+level. Thus, your exact Vim version is 7.4.1051.
 
 Another line states something like `Tiny version without GUI` or `Huge version
 with GUI`. The obvious information from that is whether your Vim includes GUI
@@ -298,7 +298,7 @@ And please, please don't call them _splits_. You can split a window in two, but
 that doesn't make them _splits_.
 
 Windows can be split vertically or horizontally and the heights and widths of
-existing windows can be altered, too. Therefore you can use whatever window
+existing windows can be altered, too. Therefore, you can use whatever window
 layout you prefer.
 
 A **tab page** (or just tab) is a collection of windows. Thus, if you want to
@@ -348,7 +348,7 @@ If you should prefer using the buffer or argument list for working with files is
 a matter of taste. My impression is that most people use the buffer list
 exclusively.
 
-Nevertheless there is one huge use case for the argument list: batch processing
+Nevertheless, there is one huge use case for the argument list: batch processing
 via `:argdo`! A simple refactoring example:
 
 ```vim
@@ -509,8 +509,8 @@ the current line with `p` and before the cursor with `P`.
 `"aY` yanks the current line into register `a`. Move to another line. `"AY`
 appends the current line to register `a`.
 
-I suggest playing around with with all these registers a bit and constantly
-checking `:reg`, so you can see what's actually happening.
+I suggest playing around with all these registers a bit and constantly checking
+`:reg`, so you can see what's actually happening.
 
 **Fun fact**: In Emacs "yanking" stands for pasting (or _reinserting previously
 killed text_) not copying.
@@ -612,7 +612,7 @@ Other motions include:
 | `']`, `` `] ``   | Last line or character of previously changed or yanked text. |
 | `'<`, `` `< ``   | Beginning line or character of last visual selection. |
 | `'>`, `` `> ``   | Ending line or character of last visual selection. |
-| `''`, ``` `` ``` | Position before latest jump. |
+| `''`, ``` `` ``` | Position before the latest jump. |
 | `'"`, `` `" ``   | Position when last exiting the current buffer. |
 | `'^`, `` `^ ``   | Position where last insertion stopped. |
 | `'.`, `` `. ``   | Position where last change was made. |
@@ -630,9 +630,8 @@ Use `:marks` to list all marks. Read everything in `:h mark-motions`.
 
 #### Completion?
 
-Vim provides many different kinds of insert mode completions. If there are
-multiple matches, a popup menu will let you navigate to the match of your
-choice.
+Vim provides many kinds of insert mode completions. If there are multiple
+matches, a popup menu will let you navigate to the match of your choice.
 
 Typical kinds of completion are tags, functions from imported modules or
 libraries, file names, dictionary or simply words from the current buffer.
@@ -847,7 +846,7 @@ will revert the text state even further, to the one of node "foo". Now `<c-r>`
 goes back to the state of node "bar" and another `<c-r>` to the state of node
 "quux". (There's no way to reach node "baz" using branch-wise commands anymore.)
 
-Opposed to this, `g-` and `g+` work time-wise. Thus `g-` won't revert to the
+Opposed to this, `g-` and `g+` work time-wise. Thus, `g-` won't revert to the
 state of node "bar", like `u` does, but to the chronologically previous state,
 node "baz". Another `g-` would revert the state to the one of node "bar" and so
 on. Thus, `g-` and `g+` simply go back and forth in time, respectively.
@@ -856,9 +855,9 @@ on. Thus, `g-` and `g+` simply go back and forth in time, respectively.
 |-------------------|--------|
 | `[count]u`, `:undo [count]` | Undo [count] changes. |
 | `[count]<c-r>`, `:redo` | Redo [count] changes. |
-| `U` | Undo all all changes to the line of the latest change. |
+| `U` | Undo all changes to the line of the latest change. |
 | `[count]g-`, `:earlier [count]?` | Go to older text state [count] times. The "?" can be either "s", "m", "h", "d", or "f". E.g. `:earlier 2d` goes to the text state from 2 days ago. `:earlier 1f` will go to the state of the latest file save. |
-| `[count]g+`, `:later [count]?` | Same as as above, but other direction. |
+| `[count]g+`, `:later [count]?` | Same as above, but other direction. |
 
 The undo tree is kept in memory and will be lost when Vim quits. See [Handling
 backup, swap, undo, and viminfo
@@ -888,7 +887,7 @@ external grep tool assembled in a location list.
 The big advantage over just putting that stuff in an empty buffer is that you
 get a nice uniform interface for browsing the entries.
 
-At all time there's only one quickfix list, but every window can has its own
+At all time there's only one quickfix list, but every window can have its own
 location list. Both type of lists _feel_ the same, but use slightly different
 commands for navigation.
 
@@ -1151,9 +1150,9 @@ It's reposted here with minor changes.
 ---
 
 If you know what you are looking for, it is usually easier to search for it
-using the help system. Because the subjects follow a certain style guide.
+using the help system, because the subjects follow a certain style guide.
 
-Also the help has the advantage of belonging to your particular Vim version, so
+Also, the help has the advantage of belonging to your particular Vim version, so
 that obsolete topics or topics that have been added later won't turn up.
 
 Therefore, it is essential to learn the help system and the language it uses.
@@ -1179,7 +1178,7 @@ something).
    CTRL-X commands for insert mode which can be used to auto complete different
    things. Note that certain keys will always be written the same, e.g. Control
    will always be CTRL. Note, for normal mode commands, the "n" is left away,
-   e.g. `:h CTRL-A`. In contrast `:h c_CTRL-R` will describe what CTRL-R does
+   e.g. `:h CTRL-A`. In contrast, `:h c_CTRL-R` will describe what CTRL-R does
    when entering commands in the command line and `:h v_Ctrl-A` talks about
    incrementing numbers in visual mode and `:h g_CTRL-A` talks about the g<C-A>
    command (thus you have to press "g" then <Ctrl-A>). Here the "g" stand for
@@ -1223,7 +1222,7 @@ something).
 
 14. The user manual. This describes help topics for beginners in a rather
     friendly way. Start at `:h usr_toc.txt` to find the table of content (as you
-    might have guessed). Skimming over that help finding certain topics, .e.g
+    might have guessed). Skimming over that help to find certain topics, .e.g
     you will find an entry "Digraphs" and "Entering special characters" in
     chapter 24 (so use `:h usr_24.txt` to go to that particular help page).
 
@@ -1236,7 +1235,7 @@ something).
 17. Quickfix commands usually start with ":c", while location list commands
     usually start with ":l".
 
-18. `:h BufWinLeave` talks about the BufWinLeave autocmd. Also `:h
+18. `:h BufWinLeave` talks about the BufWinLeave autocmd. Also, `:h
     autocommands-events` talks about all possible events.
 
 19. Startup arguments always start with "-", so `:h -f` takes you to the help of
@@ -1256,7 +1255,7 @@ something).
     options it provides. Sometimes, additional sections for omni completion (`:h
     ft-php-omni`) or filetype plugins (`:h ft-tex-plugin`) are available.
 
-Also a link to the user documentation (which describes certain commands more
+Also, a link to the user documentation (which describes certain commands more
 from a user perspective and less detailed) will be mentioned at the top of help
 pages if they are available. So `:h pattern.txt` mentions the user guide topics
 `:h 03.9` and `:h usr_27`.
@@ -1348,7 +1347,7 @@ happens to be at major version 11 since 1987, hence X is also often called X11.
 Prior, in X10, [cut
 buffers](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Cut_Buffers)
 were introduced that kind of worked like a _clipboard_ as in copied text was
-actually hold by X and it was accessible by all ofter applications. This
+actually held by X and it was accessible by all ofter applications. This
 mechanism still exists in X, but its use is deprecated now and most software
 doesn't use it anymore.
 
@@ -1375,7 +1374,7 @@ Program B: receives data from Program A and inserts it into the window
 | CLIPBOARD | Selecting text and `ctrl+c` | `ctrl+v`                       | `+` register |
 
 **NOTE**: Selections (no, not even the CLIPBOARD selection) are never kept in
-the X server! Thus you lose the data copied with `ctrl+c` when the application
+the X server! Thus, you lose the data copied with `ctrl+c` when the application
 closes.
 
 Use `"*p` to paste the PRIMARY selection or `"+y1G` to yank the entire file to
@@ -1429,7 +1428,7 @@ Depending on the options, Vim creates up to 4 kinds of working files.
 **Backup files**:
 
 You can tell Vim to keep a backup of the original file before writing to it. By
-default Vim keeps a backup but immediately removes it when writing to the file
+default, Vim keeps a backup but immediately removes it when writing to the file
 was successful (`:set writebackup`). If you always want the latest backup file
 to persist, `:set backup`. Or you disable backups altogether, `:set nobackup
 nowritebackup`.
@@ -1456,9 +1455,9 @@ contains unsaved changes. Try it for yourself, open any file and get the current
 swap file by using `:swapname`. You can also disable swap file by putting `:set
 noswapfile` in your vimrc.
 
-By default the swap file is created in the same directory as the edited file and
-called something like `.file.swp`, updated either all 200 characters or when you
-haven't typed anything for 4 seconds, and deleted when you stop editing the
+By default, the swap file is created in the same directory as the edited file
+and called something like `.file.swp`, updated either all 200 characters or when
+you haven't typed anything for 4 seconds, and deleted when you stop editing the
 file. You can change these numbers with `:h 'updatecount'` and `:h
 'updatetime'`.
 
@@ -1483,7 +1482,7 @@ used for saving everything else that would otherwise be lost when quitting Vim.
 The viminfo file keeps histories (command line, search, input), registers,
 marks, buffer list, global variables etc.
 
-By default the viminfo is written to `~/.viminfo`.
+By default, the viminfo is written to `~/.viminfo`.
 
 Related help: `:h viminfo` and `:h 'viminfo'`
 
@@ -1563,9 +1562,9 @@ managing plugins. Actually it just adjusts the _runtimepath_ (`:h 'rtp'`) to
 include all the things put under a certain directory. You have to clone the
 repositories of the plugins there yourself.
 
-Real plugin managers expose commands that help you installing and updating
-plugins from within Vim. Hereinafter is a list of commonly used plugin managers
-in alphabetic sequence:
+Real plugin managers expose commands that help you to install and update plugins
+from within Vim. Hereinafter is a list of commonly used plugin managers in
+alphabetic sequence:
 
 - [neobundle](https://github.com/Shougo/neobundle.vim)
 - [plug](https://github.com/junegunn/vim-plug)
@@ -1816,7 +1815,7 @@ So far, so good. But `<up>` and `<down>` are even smarter! They recall the
 command-line whose beginning matches the current command-line. E.g. `:echo <up>`
 may change to `:echo "Vim rocks!"`.
 
-Of course I don't want you to reach to the arrow keys, just map it instead:
+Of course, I don't want you to reach to the arrow keys, just map it instead:
 
 ```vim
 cnoremap <c-n>  <down>
@@ -1827,7 +1826,7 @@ I depend on this behaviour several times a day.
 
 #### Saner CTRL-L
 
-By default `<c-l>` clears and redraws the screen (like `:redraw!`). The
+By default, `<c-l>` clears and redraws the screen (like `:redraw!`). The
 following mapping does the same, plus de-highlighting the matches found via `/`,
 `?` etc., plus fixing syntax highlighting (sometimes Vim loses highlighting due
 to complex highlighting rules), plus force updating the syntax highlighting in
@@ -1910,7 +1909,7 @@ command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1'
 #### Change cursor style dependent on mode
 
 I like to use a block cursor in normal mode, i-beam cursor in insert mode, and
-underline cursor in replace mode. Also when using tmux in the middle.
+underline cursor in replace mode.
 
 ```vim
 if empty($TMUX)
@@ -1926,7 +1925,9 @@ endif
 
 This simply tells Vim to print a certain sequence of characters ([escape
 sequence](https://en.wikipedia.org/wiki/Escape_sequence)) when entering/leaving
-insert mode. The underlying terminal will process and evaluate it.
+insert mode. The underlying terminal, or programs like
+[tmux](https://tmux.github.io) that sit between Vim and the terminal, will
+process and evaluate it.
 
 There's one drawback though: there are many terminal emulator implementations
 and not all use the same sequences for doing the same things. The sequences used
@@ -1976,7 +1977,7 @@ autocmd InsertEnter,WinLeave * set nocursorline
 #### Faster keyword completion
 
 The keyword completion (`<c-n>`/`<c-p>`) tries completing whatever is listed in
-the `'complete'` option. By default this also includes tags (which can be
+the `'complete'` option. By default, this also includes tags (which can be
 annoying) and scanning all included files (which can be very slow). If you can
 live without these things, disable them:
 
@@ -2096,10 +2097,10 @@ Time to use binary search. Repeatedly split the search space in two until you
 find the culprit line. Due to the nature of binary division, it won't take many
 steps.
 
-In practice it works like this: Put the `:finish` command in the middle of your
+In practice, it works like this: Put the `:finish` command in the middle of your
 vimrc. Vim will skip everything after it. If it still happens, the problem is in
 the active upper half. Move the `:finish` to the middle of _that_ half.
-Otherwise the issue is in the inactive lower half. Move the `:finish` to the
+Otherwise, the issue is in the inactive lower half. Move the `:finish` to the
 middle of _that_ half. And so on.
 
 #### Profiling startup time
@@ -2143,7 +2144,7 @@ will be shown. Every line, how often it was executed and how much time it took.
 Most of the time that will be plugin code the user isn't familiar with, but if
 you're investigating a certain issue, jump to the bottom of the log. Here are
 two different sections `FUNCTIONS SORTED ON TOTAL TIME` and `FUNCTIONS SORTED ON
-SELF TIME` that are worth gold. On a quick glance you can see, if a certain
+SELF TIME` that are worth gold. At a quick glance you can see, if a certain
 function is taking too long.
 
 #### Verbosity
@@ -2286,7 +2287,7 @@ all.) It all goes good until an issue appears. Now where is the problem? The
 beginner doesn't know what to do and asks for advice on the internet. After long
 back and forth they figure out that the problem was a weird mapping provided by
 the distro. But the beginner thought it was a default Vim mapping... Time was
-wasted, everyone is pissed.
+wasted, everyone got annoyed.
 
 I don't have problems with distributions per se, but please, if you don't
 understand exactly what they're doing, don't try to get help from others in case
@@ -2455,7 +2456,7 @@ up?
 This only happens if you paste via `cmd+v`, `shift-insert`, `middle-click` etc.
 because then you're just throwing text at the terminal emulator. Vim doesn't
 know that you just pasted the text, it thinks you're an extremely fast typist.
-Accordingly it tries to indent the lines and fails.
+Accordingly, it tries to indent the lines and fails.
 
 Obviously this is not an issue, if you paste using Vim's registers, e.g. `"+p`,
 because then Vim knows that you're actually pasting.
@@ -2514,10 +2515,10 @@ character.
 Putting it in a nutshell, Vim has a hard time distinguishing between a typed
 `<esc>` character and a proper escape sequence.
 
-By default Vim uses `:set timeout timeoutlen=1000`, so it delays on ambiguity of
-mappings _and_ key codes by 1 second. This is a sane value for mappings, but you
-can define the key code timeout on its own which is the most common workaround
-for this entire issue:
+By default, Vim uses `:set timeout timeoutlen=1000`, so it delays on ambiguity
+of mappings _and_ key codes by 1 second. This is a sane value for mappings, but
+you can define the key code timeout on its own which is the most common
+workaround for this entire issue:
 
 ```vim
 set timeout           " for mappings
