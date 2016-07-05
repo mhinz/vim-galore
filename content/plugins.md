@@ -14,6 +14,7 @@
 - [Tmux](#tmux)
 - [Undo history](#undo-history)
 - [Version control](#version-control)
+- [Writing](#writing)
 - [Misc](#misc)
 
 #### [By filetype](#by-filetype-1)
@@ -122,6 +123,11 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [signify](https://github.com/mhinz/vim-signify)
 - [vimagit](https://github.com/jreybert/vimagit)
 
+#### Writing
+
+[grammarous](https://github.com/rhysd/vim-grammarous)
+[online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus)
+
 #### Misc
 
 - [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
@@ -135,7 +141,6 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [indentline](https://github.com/Yggdroot/indentLine)
 - [multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [nrrwrgn](https://github.com/chrisbra/NrrwRgn)
-- [online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus)
 - [projectionist](https://github.com/tpope/vim-projectionist)
 - [rsi](https://github.com/tpope/vim-rsi)
 - [splitjoin](https://github.com/AndrewRadev/splitjoin.vim)
