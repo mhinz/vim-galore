@@ -85,9 +85,9 @@ My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 #### [Debugging](#debugging-1)
 
 - [General tips](#general-tips)
+- [Verbosity](#verbosity)
 - [Profiling startup time](#profiling-startup-time)
 - [Profiling at runtime](#profiling-at-runtime)
-- [Verbosity](#verbosity)
 - [Debugging Vim scripts](#debugging-vim-scripts)
 - [Debugging syntax files](#debugging-syntax-files)
 
@@ -2103,6 +2103,48 @@ the active upper half. Move the `:finish` to the middle of _that_ half.
 Otherwise, the issue is in the inactive lower half. Move the `:finish` to the
 middle of _that_ half. And so on.
 
+#### Verbosity
+
+Another useful way for observing what Vim is currently doing is increasing the
+verbosity level. Currently Vim supports 9 different levels. See `:h 'verbose'`
+for the full list.
+
+```vim
+:e /tmp/foo
+:set verbose=2
+:w
+:set verbose=0
+```
+
+This would show all the files that get sourced, e.g. the undo file or various
+plugins that act on saving.
+
+If you only want increase verbosity for a single command, there's also
+`:verbose`, which simply gets put in front of any other command. It takes the
+verbosity level as count and defaults to 1:
+
+```vim
+:verb set verbose
+"  verbose=1
+:10verb set verbose
+"  verbose=10
+```
+
+It's very often used with its default verbosity level 1 to show where an option
+was set last:
+
+```vim
+:verb set ai?
+"      Last set from ~/.vim/vimrc
+```
+
+Naturally, the higher the verbosity level the more overwhelming the output. But
+fear no more, you can simply redirect the output to a file:
+
+```vim
+:set verbosefile=/tmp/foo | 15verbose echo "foo" | vsplit /tmp/foo
+```
+
 #### Profiling startup time
 
 Vim startup feels slow? Time to crunch some numbers:
@@ -2146,48 +2188,6 @@ you're investigating a certain issue, jump to the bottom of the log. Here are
 two different sections `FUNCTIONS SORTED ON TOTAL TIME` and `FUNCTIONS SORTED ON
 SELF TIME` that are worth gold. At a quick glance you can see, if a certain
 function is taking too long.
-
-#### Verbosity
-
-Another useful way for observing what Vim is currently doing is increasing the
-verbosity level. Currently Vim supports 9 different levels. See `:h 'verbose'`
-for the full list.
-
-```vim
-:e /tmp/foo
-:set verbose=2
-:w
-:set verbose=0
-```
-
-This would show all the files that get sourced, e.g. the undo file or various
-plugins that act on saving.
-
-If you only want increase verbosity for a single command, there's also
-`:verbose`, which simply gets put in front of any other command. It takes the
-verbosity level as count and defaults to 1:
-
-```vim
-:verb set verbose
-"  verbose=1
-:10verb set verbose
-"  verbose=10
-```
-
-It's very often used with its default verbosity level 1 to show where an option
-was set last:
-
-```vim
-:verb set ai?
-"      Last set from ~/.vim/vimrc
-```
-
-Naturally, the higher the verbosity level the more overwhelming the output. But
-fear no more, you can simply redirect the output to a file:
-
-```vim
-:set verbosefile=/tmp/foo | 15verbose echo "foo" | vsplit /tmp/foo
-```
 
 #### Debugging Vim scripts
 
