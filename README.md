@@ -2145,6 +2145,9 @@ fear no more, you can simply redirect the output to a file:
 :set verbosefile=/tmp/foo | 15verbose echo "foo" | vsplit /tmp/foo
 ```
 
+You can also enable verbosity at starting time, with the `-V` option. It
+defaults to verbosity level 10. E.g. `vim -V5`.
+
 #### Profiling startup time
 
 Vim startup feels slow? Time to crunch some numbers:
