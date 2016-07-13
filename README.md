@@ -46,6 +46,7 @@ My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 - [Getting help offline](#getting-help-offline)
 - [Getting help offline (alternative)](#getting-help-offline-alternative)
 - [Getting help online](#getting-help-online)
+- [Autocmds in practice](#autocmds-in-practice)
 - [Clipboard](#clipboard)
   - [Clipboard usage (Windows, OSX)](#clipboard-usage-windows-osx)
   - [Clipboard usage (Linux, BSD, ...)](#clipboard-usage-linux-bsd-)
@@ -1270,6 +1271,65 @@ Another great resource is using
 
 If you want to report a Vim bug, use the
 [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
+
+#### Autocmds in practice
+
+You can trigger any event right now: `:doautocmd BufRead`.
+
+---
+
+Especially for plugins it's useful to create your own "User" events:
+
+```vim
+function! Chibby()
+  " A lot of stuff is happening here.
+  " And at last..
+  doautocmd User ChibbyExit
+endfunction
+```
+
+Now users of your plugin can execute anything when Chibby finishes running:
+
+```vim
+autocmd User CheebyExit call ChibbyCleanup()
+```
+
+By the way, if there's no "catching" :autocmd, :doautocmd will output a pesky
+"No matching autocommands" message. That's why many plugins use `silent
+doautocmd ...` instead. But this has the disadvantage, that you can't simply use
+`echo "foo"` in the :autocmd, you have to use `unsilent echo "foo"` instead..
+
+That's why it's better to check if there even is a receiving autocmd and not
+bothering emitting the event otherwise:
+
+```vim
+if exists('#User#ChibbyExit')
+  doautocmd User ChibbyExit
+endif
+```
+
+---
+
+By default, autocmds do not nest! If an autocmd executes a command, which in
+turn would usually trigger another event, it won't happen.
+
+Let's say every time you start Vim, you want to automatically open your vimrc:
+
+```vim
+autocmd VimEnter * edit $MYVIMRC
+```
+
+When you now start Vim, it will open your vimrc, but the first thing you'll
+notice is that there won't be any highlighting although usually there would be.
+
+The problem is that `:edit` in your non-nested autocmd won't trigger the
+"BufRead" event, so the filetype never gets set to "vim" and
+`$VIMRUNTIME/syntax/vim.vim` never sourced. See `:au BufRead *.vim`. Use this
+instead:
+
+```vim
+autocmd VimEnter * nested edit $MYVIMRC
+```
 
 #### Clipboard
 
