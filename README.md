@@ -47,6 +47,8 @@ My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 - [Getting help offline (alternative)](#getting-help-offline-alternative)
 - [Getting help online](#getting-help-online)
 - [Autocmds in practice](#autocmds-in-practice)
+  - [User events](#user-events)
+  - [Nested autocmds](#nested-autocmds)
 - [Clipboard](#clipboard)
   - [Clipboard usage (Windows, OSX)](#clipboard-usage-windows-osx)
   - [Clipboard usage (Linux, BSD, ...)](#clipboard-usage-linux-bsd-)
@@ -1276,7 +1278,7 @@ If you want to report a Vim bug, use the
 
 You can trigger any event right now: `:doautocmd BufRead`.
 
----
+### User events
 
 Especially for plugins it's useful to create your own "User" events:
 
@@ -1308,7 +1310,7 @@ if exists('#User#ChibbyExit')
 endif
 ```
 
----
+### Nested autocmds
 
 By default, autocmds do not nest! If an autocmd executes a command, which in
 turn would usually trigger another event, it won't happen.
