@@ -726,8 +726,8 @@ On many occasions, Vim emits events. You hook into these events by using
 autocmds.
 
 You wouldn't use Vim if there weren't autocmds. They're used all the time, even
-if you don't even know it. Don't believe me? Check `:au`, but don't let the
-output overwhelm you. These are all the autocmds that are in effect right now!
+if you don't notice it. Don't believe me? Check `:au`, but don't let the output
+overwhelm you. These are all the autocmds that are in effect right now!
 
 See `:h {event}` for a quick overview of all available events and `:h
 autocmd-events-abc` for more details.
