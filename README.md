@@ -769,6 +769,8 @@ Putting it in a nutshell, Vim makes heavy use of events and autocmds but also
 exposes a clean interface to hook into that event-driven system for
 customization.
 
+Related: `:h autocommand`
+
 ## Changelist? Jumplist?
 
 The positions of the last 100 changes are kept in the **changelist**. Several
@@ -1310,6 +1312,8 @@ if exists('#User#ChibbyExit')
 endif
 ```
 
+Related: `:h User`
+
 ### Nested autocmds
 
 By default, autocmds do not nest! If an autocmd executes a command, which in
@@ -1332,6 +1336,8 @@ instead:
 ```vim
 autocmd VimEnter * nested edit $MYVIMRC
 ```
+
+Related: `:h autocmd-nested`
 
 ## Clipboard
 
