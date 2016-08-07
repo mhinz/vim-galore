@@ -104,13 +104,14 @@ My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 - [Easter eggs](#easter-eggs)
 - [Why hjkl for navigation?](#why-hjkl-for-navigation)
 
-## [Quirks](#quirks-1)
+## [Common problems](#common-problems-1)
 
 - [Editing small files is slow](#editing-small-files-is-slow)
 - [Editing huge files is slow](#editing-huge-files-is-slow)
 - [Newline used for NUL](#newline-used-for-nul)
 - [Bracketed paste (or why do I have to set 'paste' all the time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
 - [Delays when using escape key in terminal](#delays-when-using-escape-key-in-terminal)
+- [Function search undo](#function-search-undo)
 
 ## [List of colorschemes](#list-of-colorschemes-1)
 
@@ -2463,7 +2464,7 @@ Keyboard layout: [click](https://raw.githubusercontent.com/mhinz/vim-galore/mast
 
 This also shows why `~` is used to denote the home directory on Unix systems.
 
-# Quirks
+# Common problems
 
 ## Editing small files is slow
 
@@ -2608,6 +2609,19 @@ your `~/.tmux.conf`:
 ```tmux
 set -sg escape-time 0
 ```
+
+## Function search undo
+
+- A search pattern in a command (`/`, `:substitute`, ...) changes the "last used
+  search pattern". (It's saved in the `/` register; print it with `:echo @/`).
+- A simple text change can be redone with `.`. (It's saved in the `.` register;
+  print it with `:echo @.`).
+
+Both things are _not_ the case, if you do them from a function, though! Thus you
+can't easily highlight words from a function or redo the text changes made by
+it.
+
+Related: `:h function-search-undo`
 
 # List of colorschemes
 
