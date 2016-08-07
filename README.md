@@ -2270,8 +2270,8 @@ That is, the execution will stop at the first line about to be executed and that
 line will be displayed.
 
 See `:h >cont` and below for the 6 available debugger commands and note that,
-like in gdb and similar debuggers, you can also use their short forms, that is
-`c`, `q`, `n`, `s`, `i`, and `f`.
+like in gdb and similar debuggers, you can also use their short forms: `c`, `q`,
+`n`, `s`, `i`, and `f`.
 
 Apart from that those, you're free to use any Vim command, e.g. `:echo myvar`,
 which gets executed in the context of the current position in the code.
