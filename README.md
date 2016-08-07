@@ -1,7 +1,7 @@
-[![vim-galore](https://cdn.rawgit.com/mhinz/vim-galore/master/media/badge-awesome.svg)](https://github.com/sindresorhus/awesome)
+[![vim-galore](https://cdn.rawgit.com/mhinz/vim-galore/master/contents/images/badge-awesome.svg)](https://github.com/sindresorhus/awesome)
 [![Build Status](https://travis-ci.org/mhinz/vim-galore.svg?branch=master)](https://travis-ci.org/mhinz/vim-galore)
 
-![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/vim-galore.png)
+![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/contents/images/logo-vim-galore.png)
 
 ---
 
@@ -113,7 +113,7 @@ My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 
 ## [List of colorschemes](#list-of-colorschemes-1)
 
-## [List of plugins](content/plugins.md)
+## [List of plugins](contents/plugins.md)
 
 ---
 
@@ -216,7 +216,7 @@ to be useful for starting out.
 Eventually you have to read up on all the mentioned settings anyway and decide
 for yourself. :-)
 
-So here it is: [minimal-vimrc](content/minimal-vimrc.vim)
+So here it is: [minimal-vimrc](contents/minimal-vimrc.vim)
 
 In case you're interested, here's [my
 vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
@@ -1645,7 +1645,7 @@ Plug is my favorite, but your mileage may vary.
 
 This is a technique to insert the same text on multiple consecutive lines at the
 same time. See this
-[demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/block_insert.gif).
+[demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/contents/images/content-block_insert.gif).
 
 Switch to visual block mode with `<c-v>`. Afterwards go down for a few lines.
 Hit `I` or `A` and start entering your text.
@@ -2406,7 +2406,7 @@ bails out. No further code (mappings, commands, logic) will be processed.
 
 CapsLock belongs to the most useless keys on your keyboard, but it's much easier
 to reach than the Control key, since it lies on your [home
-row](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/homerow.png).
+row](https://raw.githubusercontent.com/mhinz/vim-galore/master/contents/images/content-homerow.png).
 Mapping CapsLock to Control is a great way to prevent or at least reduce
 [RSI](https://de.wikipedia.org/wiki/Repetitive-Strain-Injury-Syndrom) if you
 program a lot.
@@ -2458,7 +2458,7 @@ When [Bill Joy](https://en.wikipedia.org/wiki/Bill_Joy) created
 [ADM-3A](https://en.wikipedia.org/wiki/ADM-3A) which had no extra cursor buttons
 but used, you might already guessed it, hjkl instead.
 
-Keyboard layout: [click](https://raw.githubusercontent.com/mhinz/vim-galore/master/media/adm-3a-layout.jpg)
+Keyboard layout: [click](https://raw.githubusercontent.com/mhinz/vim-galore/master/contents/images/content-adm-3a-layout.jpg)
 
 This also shows why `~` is used to denote the home directory on Unix systems.
 
