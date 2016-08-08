@@ -108,10 +108,13 @@ My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
 
 - [Editing small files is slow](#editing-small-files-is-slow)
 - [Editing huge files is slow](#editing-huge-files-is-slow)
-- [Newline used for NUL](#newline-used-for-nul)
 - [Bracketed paste (or why do I have to set 'paste' all the time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
 - [Delays when using escape key in terminal](#delays-when-using-escape-key-in-terminal)
 - [Function search undo](#function-search-undo)
+
+## [Technical quirks](#technical-quirks-1)
+
+- [Newline used for NUL](#newline-used-for-nul)
 
 ## [List of colorschemes](#list-of-colorschemes-1)
 
@@ -2511,13 +2514,6 @@ $ vim -n -u NONE -i NONE -N
 Putting it in a nutshell, try to avoid using Vim when intending to write really
 huge files. :\
 
-## Newline used for NUL
-
-NUL characters (`\0`) in a file, are stored as newline (`\n`) in memory and
-displayed in a buffer as `^@`.
-
-See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
-
 ## Bracketed paste (or why do I have to set 'paste' all the time?)
 
 Bracketed paste mode allows terminal emulators to distinguish between typed text
@@ -2622,6 +2618,15 @@ can't easily highlight words from a function or redo the text changes made by
 it.
 
 Related: `:h function-search-undo`
+
+# Technical quirks
+
+## Newline used for NUL
+
+NUL characters (`\0`) in a file, are stored as newline (`\n`) in memory and
+displayed in a buffer as `^@`.
+
+See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
 
 # List of colorschemes
 
