@@ -912,7 +912,7 @@ Most common commands:
 | first entry    | `:cfirst`    | `:lfirst`    |
 | last entry     | `:clast`     | `:llast`     |
 
-See `:cc` and everything below for all commands.
+See `:h :cc` and everything below for all commands.
 
 **Example**:
 
