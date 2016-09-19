@@ -1013,11 +1013,19 @@ So, colorschemes are mostly a collection of `:highlight` commands.
 Actually, most colorschemes are really 2 colorschemes! The example above sets
 colors via `ctermbg` and `guibg`. The former definition will only be used if Vim
 was started in a terminal emulator, e.g. xterm. The latter will be used in
-graphical environments like gVim.
+graphical environments like gVim or when you enable true colors (24bits) support
+in terminal Vim by using `set termguicolors`.
 
 If you ever happen to use a certain colorscheme in Vim running in a terminal
 emulator and the colors don't look like the colors in the screenshot at all,
-chances are that the colorscheme only defined colors for the GUI.
+chances are that the colorscheme only defined colors for the GUI _in case of
+older Vim versions_ or in can you are running Vim `7.4.1830` or Neovim you
+didn't enable true colors in your `.vimrc`
+
+Many people think that running Vim in the terminal won't give you nice color
+support for themes like normal editors, but this is not the case anymore.
+
+For more info on this you can check `:h termguicolors`.
 
 I use [gruvbox](https://github.com/morhetz/gruvbox) for the GUI and
 [janah](https://github.com/mhinz/vim-janah) for the terminal.
