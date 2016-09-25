@@ -1008,30 +1008,29 @@ this:
 This would paint the background of the editor red. See `:h :highlight` for more
 information.
 
-So, colorschemes are mostly a collection of `:highlight` commands.
+So, colorschemes are mostly collections of `:highlight` commands.
 
 Actually, most colorschemes are really 2 colorschemes! The example above sets
-colors via `ctermbg` and `guibg`. The former definition will only be used if Vim
-was started in a terminal emulator, e.g. xterm. The latter will be used in
-graphical environments like gVim or when you enable true colors (24bits) support
-in terminal Vim by using `set termguicolors`.
+colors via `ctermbg` and `guibg`. The former definition (`cterm*`) will only be
+used if Vim was started in a terminal emulator, e.g. xterm. The latter (`gui*`)
+will be used in graphical environments like gvim or MacVim.
 
-If you ever happen to use a certain colorscheme in Vim running in a terminal
-emulator and the colors don't look like the colors in the screenshot at all,
-chances are that the colorscheme only defined colors for the GUI _in case of
-older Vim versions_ or in can you are running Vim `7.4.1830` or Neovim you
-didn't enable true colors in your `.vimrc`
+If you ever happen to use a colorscheme in terminal Vim and the colors don't
+look like the ones in the screenshot at all, chances are that the colorscheme
+only defines colors for the GUI. Conversely, if you use a graphical Vim (e.g.
+gvim or MacVim) and the colors look off, the colorscheme might only define
+colors for the terminal.
 
-Many people think that running Vim in the terminal won't give you nice color
-support for themes like normal editors, but this is not the case anymore.
-
-For more info on this you can check `:h termguicolors`.
-
-I use [gruvbox](https://github.com/morhetz/gruvbox) for the GUI and
-[janah](https://github.com/mhinz/vim-janah) for the terminal.
+The latter case can be "solved" by enabling true colors in Neovim or Vim
+7.4.1830 and newer. This makes terminal Vim use the GUI definitions instead, but
+also requires the terminal emulator itself and all software in between (e.g.
+tmux) to be capable of handling true colors. ([This
+gist](https://gist.github.com/XVilka/8346728) gives a good overview about the
+topic.)
 
 Related:
 
+- `:h 'termguicolors'`
 - [List of colorschemes](#list-of-colorschemes-1)
 - [Cosmetic changes to colorschemes](#cosmetic-changes-to-colorschemes)
 
