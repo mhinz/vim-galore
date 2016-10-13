@@ -2440,7 +2440,8 @@ To change the keys in X, put this in your `~/.xmodmap`:
 
 Afterwards source it via `$ xmodmap ~/.xmodmap`.
 
-An alternative would be using [xcape](https://github.com/alols/xcape).
+An alternative would be using [caps2esc](https://github.com/oblitum/caps2esc) or
+[xcape](https://github.com/alols/xcape).
 
 **Windows**:
 
