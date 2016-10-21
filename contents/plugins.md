@@ -132,8 +132,8 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Writing
 
-[grammarous](https://github.com/rhysd/vim-grammarous)
-[online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus)
+- [grammarous](https://github.com/rhysd/vim-grammarous)
+- [online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus)
 
 #### Misc
 
