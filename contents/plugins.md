@@ -3,6 +3,7 @@
 #### [By topic](#by-topic-1)
 
 - [Alignment](#alignment)
+- [Building and linting](#building-and-linting)
 - [Code completion](#code-completion)
 - [Commenters](#commenters)
 - [Delimiter](#delimiter)
@@ -34,6 +35,12 @@
 
 - [easy-align](https://github.com/junegunn/vim-easy-align)
 - [tabular](https://github.com/godlygeek/tabular)
+
+#### Building and linting
+
+- [ale](https://github.com/w0rp/ale)
+- [neomake](https://github.com/neomake/neomake)
+- [syntastic](https://github.com/scrooloose/syntastic)
 
 #### Code completion
 
