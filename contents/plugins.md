@@ -44,6 +44,7 @@
 
 #### Code completion
 
+- [deoplete](https://github.com/Shougo/deoplete.nvim)
 - [neocomplete](https://github.com/Shougo/neocomplete.vim)
 - [supertab](https://github.com/ervandew/supertab)
 - [vimcompletesme](https://github.com/ajh17/VimCompletesMe)
