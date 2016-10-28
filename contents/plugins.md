@@ -86,6 +86,7 @@
 - [tagbar](https://github.com/majutsushi/tagbar)
 - [vimfiler](https://github.com/Shougo/vimfiler.vim)
 - [vinegar](https://github.com/tpope/vim-vinegar)
+- [numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
 
 Also see [fuzzy finders](#fuzzy-finders).
 
