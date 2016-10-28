@@ -111,6 +111,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [dispatch](https://github.com/tpope/vim-dispatch)
 - [tmux-complete](https://github.com/wellle/tmux-complete.vim)
 - [tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+- [vitality](https://github.com/sjl/vitality.vim)
 
 #### Undo history
 
