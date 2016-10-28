@@ -158,6 +158,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [surround](https://github.com/tpope/vim-surround)
 - [targets](https://github.com/wellle/targets.vim)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
+- [exec](https://github.com/SamTebbs33/vim-exec)
 - [indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 
 ## By filetype
