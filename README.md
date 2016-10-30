@@ -7,7 +7,7 @@
 ---
 
 Ask me anything on [Twitter](https://twitter.com/_mhinz_).
-My [vimrc](https://github.com/mhinz/dotfiles/blob/master/vim/vimrc).
+My [vimrc](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc).
 
 ---
 
