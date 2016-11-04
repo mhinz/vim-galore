@@ -1532,7 +1532,7 @@ moment you realize that the last time you saved
 
 But not all hope is lost! When editing a file, Vim creates a swap file that
 contains unsaved changes. Try it for yourself, open any file and get the current
-swap file by using `:swapname`. You can also disable swap file by putting `:set
+swap file by using `:swapname`. You can also disable swap files by putting `:set
 noswapfile` in your vimrc.
 
 By default, the swap file is created in the same directory as the edited file
