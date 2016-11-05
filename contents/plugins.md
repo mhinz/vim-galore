@@ -196,6 +196,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [node-vim-debugger](https://github.com/sidorares/node-vim-debugger)
 - [node](https://github.com/moll/vim-node)
 - [tern_for_vim](https://github.com/ternjs/tern_for_vim)
+- [yajs](https://github.com/othree/yajs.vim)
 
 #### Lua
 
