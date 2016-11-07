@@ -86,6 +86,7 @@
 - [tagbar](https://github.com/majutsushi/tagbar)
 - [vimfiler](https://github.com/Shougo/vimfiler.vim)
 - [vinegar](https://github.com/tpope/vim-vinegar)
+- [numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
 
 Also see [fuzzy finders](#fuzzy-finders).
 
@@ -110,6 +111,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [dispatch](https://github.com/tpope/vim-dispatch)
 - [tmux-complete](https://github.com/wellle/tmux-complete.vim)
 - [tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+- [vitality](https://github.com/sjl/vitality.vim)
 
 #### Undo history
 
@@ -157,6 +159,8 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [surround](https://github.com/tpope/vim-surround)
 - [targets](https://github.com/wellle/targets.vim)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
+- [exec](https://github.com/SamTebbs33/vim-exec)
+- [indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 
 ## By filetype
 
