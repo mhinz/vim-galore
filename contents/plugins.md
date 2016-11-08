@@ -10,6 +10,7 @@
 - [Delimiter](#delimiter)
 - [Fuzzy finders](#fuzzy-finders)
 - [Grep tools](#grep-tools)
+- [Indent](#indent)
 - [Navigation](#navigation)
 - [Snippets](#snippets)
 - [Statusline](#statusline)
@@ -86,6 +87,11 @@
 - [grepper](https://github.com/mhinz/vim-grepper) (tries to supercede all other
   grep plugins :-))
 
+#### Indent
+
+- [indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
+- [indentline](https://github.com/Yggdroot/indentLine)
+
 #### Navigation
 
 - [dirvish](https://github.com/justinmk/vim-dirvish)
@@ -138,6 +144,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [dispatch](https://github.com/tpope/vim-dispatch)
 - [tmux-complete](https://github.com/wellle/tmux-complete.vim)
 - [tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+- [vitality](https://github.com/sjl/vitality.vim)
 
 #### Undo history
 
