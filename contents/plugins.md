@@ -5,13 +5,17 @@
 - [Alignment](#alignment)
 - [Building and linting](#building-and-linting)
 - [Code completion](#code-completion)
+- [Cycle](#cycle)
 - [Commenters](#commenters)
 - [Delimiter](#delimiter)
 - [Fuzzy finders](#fuzzy-finders)
 - [Grep tools](#grep-tools)
 - [Navigation](#navigation)
+- [Snippets](#snippets)
 - [Statusline](#statusline)
+- [Surround](#surround)
 - [Taking notes](#taking-notes)
+- [Text objects](#text-objects)
 - [Tmux](#tmux)
 - [Undo history](#undo-history)
 - [Version control](#version-control)
@@ -28,6 +32,7 @@
 - [Lua](#lua)
 - [Python](#python)
 - [TeX](#tex)
+- [VimL](#viml)
 
 ## By topic
 
@@ -50,6 +55,11 @@
 - [vimcompletesme](https://github.com/ajh17/VimCompletesMe)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
 
+#### Cycle
+
+- [speeddating](https://github.com/tpope/vim-speeddating)
+- [switch](https://github.com/AndrewRadev/switch.vim)
+
 #### Commenters
 
 - [commentary](https://github.com/tpope/vim-commentary)
@@ -61,11 +71,10 @@
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 - [delimitmate](https://github.com/Raimondi/delimitMate)
 - [endwise](https://github.com/tpope/vim-endwise)
-- [ultisnips](https://github.com/SirVer/ultisnips)
 
 #### Fuzzy finders
 
-- [command-t](https://github.com/wincent/Command-T)
+- [command-t](https://github.com/wincent/Command-T) (_requires +ruby_)
 - [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git)
 - [fzf](https://github.com/junegunn/fzf)
 - [unite](https://github.com/Shougo/unite.vim)
@@ -84,10 +93,17 @@
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [sneak](https://github.com/justinmk/vim-sneak)
 - [tagbar](https://github.com/majutsushi/tagbar)
-- [vimfiler](https://github.com/Shougo/vimfiler.vim)
+- [vimfiler](https://github.com/Shougo/vimfiler.vim) (_depends on other plugins_)
 - [vinegar](https://github.com/tpope/vim-vinegar)
 
 Also see [fuzzy finders](#fuzzy-finders).
+
+#### Snippets
+
+- [neosnippet](https://github.com/Shougo/neosnippet.vim) (_depends on other plugins_)
+- [snipmate](https://github.com/garbas/vim-snipmate) (_depends on other plugins_)
+- [ultisnips](https://github.com/SirVer/ultisnips)
+- [xptemplate](https://github.com/drmingdrmer/xptemplate)
 
 #### Statusline
 
@@ -95,6 +111,12 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [flagship](https://github.com/tpope/vim-flagship)
 - [lightline](https://github.com/itchyny/lightline.vim)
 - [powerline](https://github.com/powerline/powerline)
+
+#### Surround
+
+- [operator-surround](https://github.com/rhysd/vim-operator-surround)
+- [sandwich](https://github.com/machakann/vim-sandwich)
+- [surround](https://github.com/tpope/vim-surround)
 
 #### Taking notes
 
@@ -104,6 +126,12 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [orgmode](https://github.com/jceb/vim-orgmode)
 - [pad](https://github.com/fmoralesc/vim-pad)
 - [vimwiki](https://github.com/vimwiki/vimwiki)
+
+#### Text objects
+
+- [exchange](https://github.com/tommcdo/vim-exchange)
+- [targets](https://github.com/wellle/targets.vim)
+- [textobj-user](https://github.com/kana/vim-textobj-user)
 
 #### Tmux
 
@@ -144,6 +172,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [covim](https://github.com/FredKSchott/CoVim)
 - [devicons](https://github.com/ryanoasis/vim-devicons)
 - [diminactive](https://github.com/blueyed/vim-diminactive)
+- [fastfold](https://github.com/Konfekt/FastFold)
 - [gnupg](https://github.com/jamessan/vim-gnupg)
 - [goyo](https://github.com/junegunn/goyo.vim)
 - [hackernews](https://github.com/ryanss/vim-hackernews)
@@ -152,11 +181,12 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [nrrwrgn](https://github.com/chrisbra/NrrwRgn)
 - [projectionist](https://github.com/tpope/vim-projectionist)
 - [rsi](https://github.com/tpope/vim-rsi)
+- [sideways](https://github.com/AndrewRadev/sideways.vim)
 - [splitjoin](https://github.com/AndrewRadev/splitjoin.vim)
 - [startify](https://github.com/mhinz/vim-startify)
-- [surround](https://github.com/tpope/vim-surround)
 - [targets](https://github.com/wellle/targets.vim)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
+- [unimpaired](https://github.com/tpope/vim-unimpaired)
 
 ## By filetype
 
@@ -214,3 +244,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 #### TeX
 
 - [vimtex](https://github.com/lervag/vimtex)
+
+#### VimL
+
+- [scriptease](https://github.com/tpope/vim-scriptease)
