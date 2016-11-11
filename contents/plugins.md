@@ -180,6 +180,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [devicons](https://github.com/ryanoasis/vim-devicons)
 - [diminactive](https://github.com/blueyed/vim-diminactive)
 - [fastfold](https://github.com/Konfekt/FastFold)
+- [fixkey](https://github.com/drmikehenry/vim-fixkey)
 - [gnupg](https://github.com/jamessan/vim-gnupg)
 - [goyo](https://github.com/junegunn/goyo.vim)
 - [hackernews](https://github.com/ryanss/vim-hackernews)
