@@ -7,7 +7,7 @@
 ---
 
 Ask me anything on [Twitter](https://twitter.com/_mhinz_).
-My [vimrc](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc).
+My [vimrc][vimrc].
 
 ---
 
@@ -223,8 +223,7 @@ for yourself. :-)
 
 So here it is: [minimal-vimrc](contents/minimal-vimrc.vim)
 
-In case you're interested, here's [my
-vimrc](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc).
+In case you're interested, here's [my vimrc][vimrc].
 
 **TIP**: Most plugin authors maintain several plugins and also publish their
 vimrc on Github (often in a repository called "vim-config" or "dotfiles"), so
@@ -2656,3 +2655,4 @@ Here's a list of commonly used colorschemes:
 - [yowish](https://github.com/kabbamine/yowish.vim)
 - [zenburn](https://github.com/jnurmine/Zenburn)
 
+[vimrc]: https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc
