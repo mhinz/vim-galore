@@ -184,6 +184,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [goyo](https://github.com/junegunn/goyo.vim)
 - [hackernews](https://github.com/ryanss/vim-hackernews)
 - [indentline](https://github.com/Yggdroot/indentLine)
+- [move](https://github.com/matze/vim-move)
 - [multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [nrrwrgn](https://github.com/chrisbra/NrrwRgn)
 - [projectionist](https://github.com/tpope/vim-projectionist)
