@@ -195,6 +195,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [targets](https://github.com/wellle/targets.vim)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
 - [unimpaired](https://github.com/tpope/vim-unimpaired)
+- [vim-move](https://github.com/matze/vim-move)
 
 ## By filetype
 
