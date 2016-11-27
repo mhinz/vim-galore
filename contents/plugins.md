@@ -82,10 +82,9 @@
 
 #### Grep tools
 
-- [ack](https://github.com/mileszs/ack.vim)
-- [ag](https://github.com/rking/ag.vim)
-- [grepper](https://github.com/mhinz/vim-grepper) (tries to supercede all other
-  grep plugins :-))
+- [ctrlsf](https://github.com/dyng/ctrlsf.vim)
+- [ferret](https://github.com/wincent/ferret)
+- [grepper](https://github.com/mhinz/vim-grepper)
 
 #### Indent
 
