@@ -68,7 +68,7 @@ My [vimrc][vimrc].
 - [Saner command-line history](#saner-command-line-history)
 - [Saner CTRL-L](#saner-ctrl-l)
 - [Disable audible and visual bells](#disable-audible-and-visual-bells)
-- [Quickly move current line](#quickly-move-current-line)
+- [Quickly move current line, multiples lines](#quickly-move-current-line-multiple-lines)
 - [Quickly add empty lines](#quickly-add-empty-lines)
 - [Quickly edit your macros](#quickly-edit-your-macros)
 - [Quickly jump to header or source file](#quickly-jump-to-header-or-source-file)
@@ -1922,7 +1922,7 @@ set t_vb=
 
 See [Vim Wiki: Disable beeping](http://vim.wikia.com/wiki/Disable_beeping).
 
-## Quickly move current line
+## Quickly move current line, multiple lines
 
 Sometimes I need a quick way to move the current line above or below:
 
@@ -1932,6 +1932,25 @@ nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 ```
 
 These mappings also take a count, so `2]e` moves the current line 2 lines below.
+
+You can also try out [Vim Move](https://github.com/matze/vim-move) which provides similar functionalities that allow move curren line as well as multiples lines with custom mappings:
+
+```vim
+" Disable Vim Move default mappings
+let g:move_map_keys = 0
+
+" Move current line up with Shift-K
+nmap <S-k> <Plug>MoveLineUp
+
+" Move current line down with Shift-J
+nmap <S-j> <Plug>MoveLineDown
+
+" Move a block of code up with Shift K
+vmap <S-k> <Plug>MoveBlockUp
+
+" Move a block of code down with Shift J
+vmap <S-j> <Plug>MoveBlockDown
+```
 
 ## Quickly add empty lines
 
