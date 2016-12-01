@@ -77,6 +77,7 @@
 
 - [command-t](https://github.com/wincent/Command-T) (_requires +ruby_)
 - [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git)
+- [denite](https://github.com/Shougo/denite.nvim) (_requires +python3_)
 - [fzf](https://github.com/junegunn/fzf)
 - [unite](https://github.com/Shougo/unite.vim)
 
