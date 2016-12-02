@@ -50,11 +50,13 @@
 
 #### Code completion
 
+- [completor](https://github.com/maralla/completor.vim)
 - [deoplete](https://github.com/Shougo/deoplete.nvim)
 - [neocomplete](https://github.com/Shougo/neocomplete.vim)
 - [supertab](https://github.com/ervandew/supertab)
 - [vimcompletesme](https://github.com/ajh17/VimCompletesMe)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
+- [µcomplete](https://github.com/lifepillar/vim-mucomplete)
 
 #### Cycle
 
