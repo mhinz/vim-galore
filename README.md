@@ -2357,30 +2357,21 @@ See `:h :syntime`.
 
 ## Vim distributions
 
-Vim distributions are Vim + custom settings + custom plugins from certain
-authors and are therefore very opinionated.
+Vim distributions are bundles of custom settings and plugins for Vim.
 
-The problem with such distributions is that they tend to be used by beginners.
-(More advanced users know how to choose their own plugins and settings after
-all.) It all goes good until an issue appears. Now where is the problem? The
-beginner doesn't know what to do and asks for advice on the internet. After long
-back and forth they figure out that the problem was a weird mapping provided by
-the distro. But the beginner thought it was a default Vim mapping... Time was
-wasted, everyone got annoyed.
-
-I don't have problems with distributions per se, but please, if you don't
-understand exactly what they're doing, don't try to get help from others in case
-of emergencies.
+More advanced users know how to configure their editor anyway, so distributions
+are mostly targeted at beginners. If you think about that, it's quite
+paradoxical though: Making it easier by adding even more things to learn about?
 
 I know that many people don't want to spend hours and hours on customizing an
 editor (and actually you never stop customizing your vimrc when you finally got
-hooked), but in the long-term it's much better and more time-efficient to learn
-how to do stuff manually in the first place.
+hooked), but eventually you only get efficient in Vim when you take the time to
+learn it properly.
 
 Repeat after me: "A programmer should know their tools."
 
-Anyway, if you know what you're doing, you might get some inspiration from
-looking at some distributions:
+Anyway, if you know what you're doing, you might draw some inspiration from
+looking at a few distributions:
 
 - [cream](http://cream.sourceforge.net)
 - [janus](https://github.com/carlhuda/janus.git)
