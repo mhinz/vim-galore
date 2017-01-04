@@ -1830,12 +1830,18 @@ Vim comes bundled with a plugin called matchit.vim which is not enabled by
 default. It makes `%` also cycle through HTML tags, if/else/endif constructs in
 VimL etc. and introduces a few new commands.
 
-To always load the plugin, put this in your vimrc:
+#### Installation for Vim 8
 
 ```vim
-if !exists('g:loaded_matchit')
-  runtime macros/matchit.vim
-endif
+" vimrc
+packadd! matchit
+```
+
+#### Installation for Vim 7 and older
+
+```vim
+" vimrc
+runtime macros/matchit.vim
 ```
 
 Since the documentation of matchit is pretty extensive, I suggest also doing the
@@ -1846,6 +1852,8 @@ following once:
 :!cp $VIMRUNTIME/macros/matchit.txt ~/.vim/doc
 :helptags ~/.vim/doc
 ```
+
+#### Small intro
 
 The plugin is ready to use now. See `:h matchit-intro` for the supported
 commands and `:h matchit-languages` for the supported languages.
