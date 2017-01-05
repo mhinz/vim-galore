@@ -82,7 +82,7 @@ My [vimrc][vimrc].
 
 ## [Commands](#commands-1)
 
-- [:global](#global) - Execute a command on all matching lines.
+- [:global and :vglobal](#global-and-vglobal) - Execute a command on all matching lines.
 - [:normal and :execute](#normal-and-execute) - The scripting dream team.
 - [:redir](#redir) - Redirect messages.
 
@@ -2090,7 +2090,7 @@ autocmd ColorScheme lucius highlight StatusLine ctermbg=darkgray cterm=NONE guib
 Useful commands that are good to know. Use `:h :<command name>` to learn more
 about them, e.g. `:h :global`.
 
-## :global
+## :global and :vglobal
 
 Execute a command on all matching lines. E.g. `:global /regexp/ print` will use
 `:print` on all lines that contain "regexp".
@@ -2107,6 +2107,9 @@ next blank line (matched by the regular expression `^$`) that contain "foo":
 ```vim
 :,/^$/g/foo/d
 ```
+
+For executing commands on all lines that do _not_ match a given pattern, use
+`:global!` or its alias `:vglobal` (think _inVerse_) instead.
 
 ## :normal and :execute
 
