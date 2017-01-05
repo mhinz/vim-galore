@@ -22,25 +22,25 @@ My [vimrc][vimrc].
 
 ## [Basics](#basics-1)
 
-- [Buffers, windows, tabs?](#buffers-windows-tabs)
-- [Active, loaded, listed, named buffers?](#active-loaded-listed-named-buffers)
-- [Argument list?](#argument-list)
-- [Mappings?](#mappings)
-- [Mapleader?](#mapleader)
-- [Registers?](#registers)
-- [Ranges?](#ranges)
-- [Marks?](#marks)
-- [Completion?](#completion)
-- [Motions? Operators? Text objects?](#motions-operators-text-objects)
-- [Autocmds?](#autocmds)
-- [Changelist? Jumplist?](#changelist-jumplist)
-- [Undo tree?](#undo-tree)
-- [Quickfix and location lists?](#quickfix-and-location-lists)
-- [Macros?](#macros)
-- [Colorschemes?](#colorschemes)
-- [Folding?](#folding)
-- [Sessions?](#sessions)
-- [Locality?](#locality)
+- [Buffers, windows, tabs](#buffers-windows-tabs)
+- [Active, loaded, listed, named buffers](#active-loaded-listed-named-buffers)
+- [Argument list](#argument-list)
+- [Mappings](#mappings)
+- [Mapleader](#mapleader)
+- [Registers](#registers)
+- [Ranges](#ranges)
+- [Marks](#marks)
+- [Completion](#completion)
+- [Motions, operators, text objects](#motions-operators-text-objects)
+- [Autocmds](#autocmds)
+- [Changelist, jumplist](#changelist-jumplist)
+- [Undo tree](#undo-tree)
+- [Quickfix and location lists](#quickfix-and-location-lists)
+- [Macros](#macros)
+- [Colorschemes](#colorschemes)
+- [Folding](#folding)
+- [Sessions](#sessions)
+- [Locality](#locality)
 
 ## [Usage](#usage-1)
 
@@ -288,7 +288,7 @@ Or quickly open a cheatsheet from within Vim: [vim-cheat40](https://github.com/l
 
 # Basics
 
-## Buffers, windows, tabs?
+## Buffers, windows, tabs
 
 Vim is a text editor. Every time text is shown, the text is part of a
 **buffer**. Each file will be opened in its own buffer. Plugins show stuff in
@@ -317,7 +317,7 @@ tab page that holds one window that shows one buffer.
 By the way, the buffer list is global and you can access any buffer from any
 tab.
 
-## Active, loaded, listed, named buffers?
+## Active, loaded, listed, named buffers
 
 Run Vim like this `vim file1`. The file's content will be loaded into a buffer.
 You have a **loaded buffer** now. The content of the buffer is only synchronized
@@ -337,7 +337,7 @@ associated filename. E.g. `:enew` will create an unnamed scratch buffer. Add
 some text and write it to disk via `:w /tmp/foo`, and it will become a named
 buffer.
 
-## Argument list?
+## Argument list
 
 The [global buffer list](#buffers-windows-tabs) is a Vim thing. Before that, in
 vi, there only used to be the argument list, which is also available in Vim.
@@ -368,7 +368,7 @@ from the current directory and below.
 
 Related help: `:h argument-list`
 
-## Mappings?
+## Mappings
 
 You can define your own mappings with the `:map` family of commands. Each
 command of that family defines a mapping for a certain set of modes. Technically
@@ -439,7 +439,7 @@ Related help:
     :h mapping
     :h 05.3
 
-## Mapleader?
+## Mapleader
 
 The mapleader is simply a placeholder than can be used with custom mappings and
 is set to `\` by default.
@@ -466,7 +466,7 @@ already, so use it to double-check your mappings.
 
 See `:h mapleader` and `:h maplocalleader` for more.
 
-## Registers?
+## Registers
 
 Registers are slots that save text. Copying text into a register is called
 **yanking** and extracting text from a register is called **pasting**.
@@ -522,7 +522,7 @@ I suggest playing around with all these registers a bit and constantly checking
 **Fun fact**: In Emacs "yanking" stands for pasting (or _reinserting previously
 killed text_) not copying.
 
-## Ranges?
+## Ranges
 
 Ranges are pretty easy to understand, but many Vimmers don't know about their
 full potential.
@@ -591,7 +591,7 @@ Related help:
 :h 10.3
 ```
 
-## Marks?
+## Marks
 
 You use marks to remember a position, that is line number and column, in a file.
 
@@ -635,7 +635,7 @@ would get a range that denotes the visual selection.
 
 Use `:marks` to list all marks. Read everything in `:h mark-motions`.
 
-## Completion?
+## Completion
 
 Vim provides many kinds of insert mode completions. If there are multiple
 matches, a popup menu will let you navigate to the match of your choice.
@@ -687,7 +687,7 @@ Related help:
 :h new-omni-completion
 ```
 
-## Motions? Operators? Text objects?
+## Motions, operators, text objects
 
 **Motions** move the cursor. You all know `h`/`j`/`k`/`l`. Or `w` and `b`. Even
 `/` is a motion. They also take a count. `2?the<cr>` jumps to the second last
@@ -727,7 +727,7 @@ and everything in between.
 
 See `:h text-objects` for all available text objects.
 
-## Autocmds?
+## Autocmds
 
 On many occasions, Vim emits events. You hook into these events by using
 autocmds.
@@ -775,7 +775,7 @@ customization.
 
 Related: `:h autocommand`
 
-## Changelist? Jumplist?
+## Changelist, jumplist
 
 The positions of the last 100 changes are kept in the **changelist**. Several
 small changes on the same line will be merged together, but the position will be
@@ -811,7 +811,7 @@ Related help:
 :h jumplist
 ```
 
-## Undo tree?
+## Undo tree
 
 The latest changes to the text state are remembered. You can use _undo_ to
 revert changes and _redo_ to reapply previously reverted changes.
@@ -884,7 +884,7 @@ Related help:
 :h usr_32
 ```
 
-## Quickfix and location lists?
+## Quickfix and location lists
 
 Every time an action has to return a list of locations, _quickfix_ or _location_
 lists can be used. In this case a location is a file, a line number and
@@ -929,7 +929,7 @@ list.
 Assuming any files contained the string "foo", it should be shown now in the
 quickfix window.
 
-## Macros?
+## Macros
 
 Vim allows _recording_ typed characters into a [register](#registers). It's a
 great way to automate certain tasks on the fly. (For more elaborate tasks, [Vim
@@ -993,7 +993,7 @@ Related help:
 :h 'lazyredraw'
 ```
 
-## Colorschemes?
+## Colorschemes
 
 Colorschemes are the way to style your Vim. Vim consists of many components and
 each of those can be customized with different colors for the foreground,
@@ -1033,7 +1033,7 @@ Related:
 - [List of colorschemes](#list-of-colorschemes-1)
 - [Cosmetic changes to colorschemes](#cosmetic-changes-to-colorschemes)
 
-## Folding?
+## Folding
 
 Every text (or source code) has a certain structure. If you have a structure, it
 means you have regions of logically separated text. Folding allows to "fold"
@@ -1063,7 +1063,7 @@ Related help:
 :h folds
 ```
 
-## Sessions?
+## Sessions
 
 If you save a **view** (`:h :mkview`), the current state of the window (and
 options and mappings) gets saved for later use (`:h :loadview`).
@@ -1102,7 +1102,7 @@ Related help:
 :h v:this_session
 ```
 
-## Locality?
+## Locality
 
 Many of the concepts mentioned above also have _local_ counterparts:
 
