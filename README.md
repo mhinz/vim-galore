@@ -4,13 +4,6 @@
 
 ![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/contents/images/logo-vim-galore.png)
 
----
-
-Ask me anything on [Twitter](https://twitter.com/_mhinz_).
-My [vimrc][vimrc].
-
----
-
 ## [Intro](#intro-1)
 
 - [What is Vim?](#what-is-vim)
@@ -223,7 +216,8 @@ for yourself. :-)
 
 So here it is: [minimal-vimrc](contents/minimal-vimrc.vim)
 
-In case you're interested, here's [my vimrc][vimrc].
+In case you're interested, here's
+[my vimrc][https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc].
 
 **TIP**: Most plugin authors maintain several plugins and also publish their
 vimrc on Github (often in a repository called "vim-config" or "dotfiles"), so
@@ -2655,4 +2649,3 @@ Here's a list of commonly used colorschemes:
 - [yowish](https://github.com/kabbamine/yowish.vim)
 - [zenburn](https://github.com/jnurmine/Zenburn)
 
-[vimrc]: https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc
