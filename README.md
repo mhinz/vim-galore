@@ -265,7 +265,7 @@ if (v:version > 704 || v:version == 704 && has('patch42')) && has('profile')
 endif
 ```
 
-Related help:
+Help:
 
 ```
 :h :version
@@ -364,7 +364,7 @@ via `:argdo`! A simple refactoring example:
 This replaces all occurrences of "foo" by "bar" in all C source and header files
 from the current directory and below.
 
-Related help: `:h argument-list`
+Help: `:h argument-list`
 
 ## Mappings
 
@@ -431,7 +431,7 @@ the mapleader.
 If you want to disable a standard mapping, map them to the special `<nop>`
 character, e.g. `:noremap <left> <nop>`.
 
-Related help:
+Help:
 
     :h key-notation
     :h mapping
@@ -582,7 +582,7 @@ command-line with `:.!`. If followed by an external program, that program's
 output would replace the current line. So you could replace the current
 paragraph with the output of ls by using `:?^$?+1,/^$/-1!ls`. Fancy!
 
-Related help:
+Help:
 
 ```
 :h cmdline-ranges
@@ -644,7 +644,7 @@ libraries, file names, dictionary or simply words from the current buffer.
 Vim provides a mapping for each kind of completion and they all start with
 `<c-x>` (remember to use them in insert mode):
 
-| Mapping | Kind | Related help |
+| Mapping | Kind | Help         |
 |---------|------|--------------|
 | `<c-x><c-l>` | whole lines | `:h i^x^l` |
 | `<c-x><c-n>` | keywords from current file | `:h i^x^n` |
@@ -677,7 +677,7 @@ this.
 Be sure to check out `:h 'completeopt'` for configuring the behaviour of the
 popup menu. The default is quite sane, but I prefer adding "noselect" as well.
 
-Related help:
+Help:
 
 ```
 :h ins-completion
@@ -771,7 +771,7 @@ Putting it in a nutshell, Vim makes heavy use of events and autocmds but also
 exposes a clean interface to hook into that event-driven system for
 customization.
 
-Related: `:h autocommand`
+Help: `:h autocommand`
 
 ## Changelist, jumplist
 
@@ -802,7 +802,7 @@ viminfo file and `:h viminfo-'`.
 **NOTE**: The position before the latest jump is also kept as a [mark](#marks)
 and can be jumped to via ``` `` ``` or `''`.
 
-Related help:
+Help:
 
 ```
 :h changelist
@@ -875,7 +875,7 @@ If you're confused by the undo tree,
 [undotree](https://github.com/mbbill/undotree) does a great job at visualizing
 it.
 
-Related help:
+Help:
 
 ```
 :h undo.txt
@@ -984,7 +984,7 @@ are the bomb!
 
 Also see: [Quickly edit your macros](#quickly-edit-your-macros)
 
-Related help:
+Help:
 
 ```
 :h recording
@@ -1025,7 +1025,7 @@ tmux) to be capable of handling true colors. ([This
 gist](https://gist.github.com/XVilka/8346728) gives a good overview about the
 topic.)
 
-Related:
+Help:
 
 - `:h 'termguicolors'`
 - [List of colorschemes](#list-of-colorschemes-1)
@@ -1054,7 +1054,7 @@ performance drawbacks (small delays when typing), have a look at
 [FastFold](https://github.com/Konfekt/FastFold), which prevents Vim from
 updating folds when it's not needed.
 
-Related help:
+Help:
 
 ```
 :h usr_28
@@ -1092,7 +1092,7 @@ You can tell Vim what things to save in a session by setting `'sessionoptions'`.
 For scripting purposes Vim keeps the name of the last sourced or written session
 in the internal variable `v:this_session`.
 
-Related help:
+Help:
 
 ```
 :h Session
@@ -1321,7 +1321,7 @@ if exists('#User#ChibbyExit')
 endif
 ```
 
-Related: `:h User`
+Help: `:h User`
 
 ### Nested autocmds
 
@@ -1346,7 +1346,7 @@ instead:
 autocmd VimEnter * nested edit $MYVIMRC
 ```
 
-Related: `:h autocmd-nested`
+Help: `:h autocmd-nested`
 
 ## Clipboard
 
@@ -1354,7 +1354,7 @@ Required [features](#what-kind-of-vim-am-i-running): `+clipboard` and optionally
 `+xterm_clipboard` if you want to use the `'clipboard'` option on a Unix system
 with a Vim that doesn't have GUI support.
 
-Related help:
+Help:
 
 ```
 :h 'clipboard'
@@ -1406,7 +1406,7 @@ set clipboard=unnamed,autoselect
 set guioptions+=a
 ```
 
-Related help files:
+Help:
 
 ```
 :h clipboard-unnamed
@@ -1471,7 +1471,7 @@ This will make all yank/delete/put operations use either `*` or `+` instead of
 the unnamed register `"`. Afterwards you can simply use `y` or `p` for accessing
 your chosen X selection.
 
-Related help:
+Help:
 
 ```vim
 :h clipboard-unnamed
@@ -1518,7 +1518,7 @@ $ diff ~/.vim/vimrc ~/.vim/files/backup/vimrc-vimbackup
 < command! -bar -nargs=* -complete=help H helpgrep <args>
 ```
 
-Related help: `:h backup`
+Help: `:h backup`
 
 **Swap files**:
 
@@ -1542,7 +1542,7 @@ Due to the power outage, the swap file was never deleted. If you do `vim
 ~/wicked_alien_invaders_from_outer_space.txt`, Vim will prompt you to recover
 the file.
 
-Related help: `:h swap-file` and `:h usr_11`
+Help: `:h swap-file` and `:h usr_11`
 
 **Undo files**:
 
@@ -1550,7 +1550,7 @@ The [undo tree](#undo-tree) is kept in memory and will be lost when Vim quits.
 If you want it to persist, `:set undofile`. This will save the undo file for
 `~/foo.c` in `~/foo.c.un~`.
 
-Related help: `:h 'undofile'` and `:h undo-persistence`
+Help: `:h 'undofile'` and `:h undo-persistence`
 
 **Viminfo file**:
 
@@ -1561,7 +1561,7 @@ marks, buffer list, global variables etc.
 
 By default, the viminfo is written to `~/.viminfo`.
 
-Related help: `:h viminfo` and `:h 'viminfo'`
+Help: `:h viminfo` and `:h 'viminfo'`
 
 ---
 
@@ -1816,7 +1816,7 @@ does the same, but also takes connected cscope databases into account. The
 option `'cscopetag'` makes `:tag` act like `:cstag` automatically. This is very
 convenient if you already have tag-related mappings.
 
-Related help: `:h cscope`
+Help: `:h cscope`
 
 ## MatchIt
 
@@ -1865,7 +1865,7 @@ autocmd FileType python let b:match_words = '\<if\>:\<elif\>:\<else\>'
 Afterwards you can cycle through these 3 statements in any Python file by using
 `%` (forward) or `g%` (backward).
 
-Related help:
+Help:
 
 ```
 :h matchit-install
@@ -2149,7 +2149,7 @@ can redirect to files, [registers](#registers) or variables.
 :put =nicevar
 ```
 
-Related help: `:h :redir`
+Help: `:h :redir`
 
 # Debugging
 
@@ -2622,7 +2622,7 @@ Both things are _not_ the case, if you do them from a function, though! Thus you
 can't easily highlight words from a function or redo the text changes made by
 it.
 
-Related: `:h function-search-undo`
+Help: `:h function-search-undo`
 
 # Technical quirks
 
