@@ -221,7 +221,7 @@ for yourself. :-)
 So here it is: [minimal-vimrc](contents/minimal-vimrc.vim)
 
 In case you're interested, here's
-[my vimrc][https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc].
+[my vimrc](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc).
 
 **TIP**: Most plugin authors maintain several plugins and also publish their
 vimrc on Github (often in a repository called "vim-config" or "dotfiles"), so
