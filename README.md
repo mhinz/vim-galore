@@ -1305,7 +1305,7 @@ endfunction
 Now users of your plugin can execute anything when Chibby finishes running:
 
 ```vim
-autocmd User CheebyExit call ChibbyCleanup()
+autocmd User ChibbyExit call ChibbyCleanup()
 ```
 
 By the way, if there's no "catching" :autocmd, :doautocmd will output a pesky
