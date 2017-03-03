@@ -2460,8 +2460,6 @@ See [superuser.com: Map Caps-Lock to Control in Windows
 | `:help!` | `E478: Don't panic!` (Glitch? When used in a help buffer (`buftype=help`) this works like `:h help.txt` instead.) |
 | `:smile` | Try it out yourself. ;-) Added in 7.4.1005. |
 
-## Standard plugins
-
 ## Why hjkl for navigation?
 
 When [Bill Joy](https://en.wikipedia.org/wiki/Bill_Joy) created
