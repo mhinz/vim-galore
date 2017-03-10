@@ -1114,7 +1114,7 @@ Many of the concepts mentioned above also have _local_ counterparts:
 | `<leader>` | `<localleader>`       | buffer           | `:h maplocalleader`   |
 
 Variables also sport different scopes, but will be explained in
-[Vim scripting](#vim-scripting).
+[Vim scripting](http://vimdoc.sourceforge.net/htmldoc/usr_41.html).
 
 # Usage
 
