@@ -156,7 +156,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 #### Version control
 
 - [agit](https://github.com/cohama/agit.vim)
-- [committia](rhysd/committia.vim)
+- [committia](https://github.com/rhysd/committia.vim)
 - [fugitive](https://github.com/tpope/vim-fugitive)
 - [gist-vim](https://github.com/mattn/gist-vim)
 - [gitgutter](https://github.com/airblade/vim-gitgutter)
