@@ -9,7 +9,7 @@
 [![badge-translation-japanese](https://img.shields.io/badge/Translation-Japanese-lightgrey.svg)](http://postd.cc/?s=vim-galore)
 [![badge-translation-portuguese](https://img.shields.io/badge/Translation-Portuguese-lightgrey.svg)](https://github.com/lsrdg/vim-galore)
 
-## [Intro](#intro-1)
+### [Intro](#intro-1)
 
 - [What is Vim?](#what-is-vim)
 - [The Vim Philosophy](#the-vim-philosophy)
@@ -18,7 +18,7 @@
 - [What kind of Vim am I running?](#what-kind-of-vim-am-i-running)
 - [Cheatsheets](#cheatsheets)
 
-## [Basics](#basics-1)
+### [Basics](#basics-1)
 
 - [Buffers, windows, tabs](#buffers-windows-tabs)
 - [Active, loaded, listed, named buffers](#active-loaded-listed-named-buffers)
@@ -40,7 +40,7 @@
 - [Sessions](#sessions)
 - [Locality](#locality)
 
-## [Usage](#usage-1)
+### [Usage](#usage-1)
 
 - [Getting help offline](#getting-help-offline)
 - [Getting help offline (alternative)](#getting-help-offline-alternative)
@@ -60,7 +60,7 @@
 - [Cscope](#cscope)
 - [MatchIt](#matchit)
 
-## [Tips](#tips-1)
+### [Tips](#tips-1)
 
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Saner command-line history](#saner-command-line-history)
@@ -78,13 +78,13 @@
 - [Faster keyword completion](#faster-keyword-completion)
 - [Cosmetic changes to colorschemes](#cosmetic-changes-to-colorschemes)
 
-## [Commands](#commands-1)
+### [Commands](#commands-1)
 
 - [:global and :vglobal](#global-and-vglobal) - Execute a command on all matching lines.
 - [:normal and :execute](#normal-and-execute) - The scripting dream team.
 - [:redir](#redir) - Redirect messages.
 
-## [Debugging](#debugging-1)
+### [Debugging](#debugging-1)
 
 - [General tips](#general-tips)
 - [Verbosity](#verbosity)
@@ -93,7 +93,7 @@
 - [Debugging Vim scripts](#debugging-vim-scripts)
 - [Debugging syntax files](#debugging-syntax-files)
 
-## [Miscellaneous](#miscellaneous-1)
+### [Miscellaneous](#miscellaneous-1)
 
 - [Additional resources](#additional-resources)
 - [Vim distributions](#vim-distributions)
@@ -102,7 +102,7 @@
 - [Easter eggs](#easter-eggs)
 - [Why hjkl for navigation?](#why-hjkl-for-navigation)
 
-## [Common problems](#common-problems-1)
+### [Common problems](#common-problems-1)
 
 - [Editing small files is slow](#editing-small-files-is-slow)
 - [Editing huge files is slow](#editing-huge-files-is-slow)
@@ -110,15 +110,15 @@
 - [Delays when using escape key in terminal](#delays-when-using-escape-key-in-terminal)
 - [Function search undo](#function-search-undo)
 
-## [Technical quirks](#technical-quirks-1)
+### [Technical quirks](#technical-quirks-1)
 
 - [Newline used for NUL](#newline-used-for-nul)
 
-## [List of colorschemes](#list-of-colorschemes-1)
+### [List of colorschemes](#list-of-colorschemes-1)
 
-## [List of plugins](contents/plugins.md)
+### [List of plugins](contents/plugins.md)
 
----
+<br>
 
 # Intro
 
