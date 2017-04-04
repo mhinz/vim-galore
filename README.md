@@ -1,6 +1,6 @@
 <div align='center'>
   <br /><br />
-  <img src='https://raw.githubusercontent.com/mhinz/vim-galore/smaller-logo/contents/images/logo-vim-galore.png' alt='vim-galore logo' />
+  <img src='https://raw.githubusercontent.com/mhinz/vim-galore/master/contents/images/logo-vim-galore.png' alt='vim-galore logo' />
   <br /><br /><br /><br />
 
   <div>
@@ -12,15 +12,6 @@
     </a>
     <a href='https://github.com/lsrdg/vim-galore'>
       <img src='https://img.shields.io/badge/Translation-Portuguese-lightgrey.svg' alt='translation: portuguese' />
-    </a>
-  </div>
-
-  <div>
-    <a href='https://travis-ci.org/mhinz/vim-galore'>
-      <img src='https://travis-ci.org/mhinz/vim-galore.svg?branch=master' alt='build status' />
-    </a>
-    <a href='https://github.com/sindresorhus/awesome'>
-      <img src='https://cdn.rawgit.com/mhinz/vim-galore/master/contents/images/badge-awesome.svg' alt='awesome repo' />
     </a>
   </div>
 </div>
