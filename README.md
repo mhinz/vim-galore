@@ -5,13 +5,13 @@
 
   <div>
     <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>
-      <img src='https://img.shields.io/badge/Translation-Chinese-lightgrey.svg' alt='translation: chinese' />
+      <img src='https://img.shields.io/badge/Translation:-Chinese-grey.svg' alt='translation: chinese' />
     </a>
     <a href='http://postd.cc/?s=vim-galore'>
-      <img src='https://img.shields.io/badge/Translation-Japanese-lightgrey.svg' alt='tranlsation: japanese' />
+      <img src='https://img.shields.io/badge/Translation:-Japanese-grey.svg' alt='tranlsation: japanese' />
     </a>
     <a href='https://github.com/lsrdg/vim-galore'>
-      <img src='https://img.shields.io/badge/Translation-Portuguese-lightgrey.svg' alt='translation: portuguese' />
+      <img src='https://img.shields.io/badge/Translation:-Portuguese-grey.svg' alt='translation: portuguese' />
     </a>
   </div>
 </div>
