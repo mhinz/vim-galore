@@ -1,14 +1,29 @@
-<br>
+<div align='center'>
+  <br /><br />
+  <img src='https://raw.githubusercontent.com/mhinz/vim-galore/smaller-logo/contents/images/logo-vim-galore.png' alt='vim-galore logo' />
+  <br /><br /><br /><br />
 
-![vim-galore](https://raw.githubusercontent.com/mhinz/vim-galore/master/contents/images/logo-vim-galore.png)
+  <div>
+    <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>
+      <img src='https://img.shields.io/badge/Translation-Chinese-lightgrey.svg' alt='translation: chinese' />
+    </a>
+    <a href='http://postd.cc/?s=vim-galore'>
+      <img src='https://img.shields.io/badge/Translation-Japanese-lightgrey.svg' alt='tranlsation: japanese' />
+    </a>
+    <a href='https://github.com/lsrdg/vim-galore'>
+      <img src='https://img.shields.io/badge/Translation-Portuguese-lightgrey.svg' alt='translation: portuguese' />
+    </a>
+  </div>
 
-<br>
-
-[![Build Status](https://travis-ci.org/mhinz/vim-galore.svg?branch=master)](https://travis-ci.org/mhinz/vim-galore)
-[![vim-galore](https://cdn.rawgit.com/mhinz/vim-galore/master/contents/images/badge-awesome.svg)](https://github.com/sindresorhus/awesome)
-[![badge-translation-chinese](https://img.shields.io/badge/Translation-Chinese-lightgrey.svg)](https://github.com/wsdjeg/vim-galore-zh_cn)
-[![badge-translation-japanese](https://img.shields.io/badge/Translation-Japanese-lightgrey.svg)](http://postd.cc/?s=vim-galore)
-[![badge-translation-portuguese](https://img.shields.io/badge/Translation-Portuguese-lightgrey.svg)](https://github.com/lsrdg/vim-galore)
+  <div>
+    <a href='https://travis-ci.org/mhinz/vim-galore'>
+      <img src='https://travis-ci.org/mhinz/vim-galore.svg?branch=master' alt='build status' />
+    </a>
+    <a href='https://github.com/sindresorhus/awesome'>
+      <img src='https://cdn.rawgit.com/mhinz/vim-galore/master/contents/images/badge-awesome.svg' alt='awesome repo' />
+    </a>
+  </div>
+</div>
 
 ### [Intro](#intro-1)
 
