@@ -27,6 +27,7 @@
 
 - [C and C++](#c-and-c)
 - [Clojure](#clojure)
+- [Go](#go)
 - [HTML](#html)
 - [Java](#java)
 - [Javascript](#javascript)
@@ -222,6 +223,10 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [emmet](https://github.com/mattn/emmet-vim)
 - [html5](https://github.com/othree/html5.vim)
+
+#### Go
+
+- [go](https://github.com/fatih/vim-go)
 
 #### Java
 
