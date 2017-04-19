@@ -1,8 +1,7 @@
 <div align='center'>
-  <br /><br />
+  <br /><br /><br />
   <img src='https://raw.githubusercontent.com/mhinz/vim-galore/master/contents/images/logo-vim-galore.png' alt='vim-galore logo' />
   <br /><br /><br /><br />
-
   <div>
     <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>
       <img src='https://img.shields.io/badge/Translation:-Chinese-grey.svg' alt='translation: chinese' />
@@ -13,7 +12,12 @@
     <a href='https://github.com/lsrdg/vim-galore'>
       <img src='https://img.shields.io/badge/Translation:-Portuguese-grey.svg' alt='translation: portuguese' />
     </a>
+    <div>
+      <br />
+      <sub>Licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0<a/>.</sub>
+    </div>
   </div>
+  <br /><br />
 </div>
 
 ### [Intro](#intro-1)
