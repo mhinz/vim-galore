@@ -60,7 +60,7 @@
   - [User events](#user-events)
   - [Nested autocmds](#nested-autocmds)
 - [Clipboard](#clipboard)
-  - [Clipboard usage (Windows, OSX)](#clipboard-usage-windows-osx)
+  - [Clipboard usage (Windows, macOS)](#clipboard-usage-windows-macos)
   - [Clipboard usage (Linux, BSD, ...)](#clipboard-usage-linux-bsd-)
 - [Restore cursor position when opening file](#restore-cursor-position-when-opening-file)
 - [Handling backup, swap, undo, and viminfo files](#handling-backup-swap-undo-and-viminfo-files)
@@ -1378,11 +1378,11 @@ Help:
 Also see: [Bracketed paste (or why do I have to set 'paste' all the
 time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
 
-### Clipboard usage (Windows, OSX)
+### Clipboard usage (Windows, macOS)
 
 Windows comes with a
 [clipboard](https://msdn.microsoft.com/en-us/library/windows/desktop/ms649012(v=vs.85).aspx)
-and OSX comes with a
+and macOS comes with a
 [pasteboard](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008100-SW1).
 
 Both work like most users would expect them to work. You copy selected text with
@@ -2446,7 +2446,7 @@ program a lot.
 
 Attention: When you get used to it, you can't live without it anymore.
 
-**OSX**:
+**macOS**:
 
 `System Preferences -> Keyboard -> Keyboard Tab -> Modifier Keys`. Change
 "CapsLock" to "Control".
