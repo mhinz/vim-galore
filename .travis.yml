@@ -5,4 +5,4 @@ language: go
 go: 1.8
 
 install: go get github.com/mhinz/gomali
-script: gomali **/*.md
+script: gomali *.md
