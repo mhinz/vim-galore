@@ -127,7 +127,8 @@
 
 ### [List of colorschemes](#list-of-colorschemes-1)
 
-### [List of plugins](contents/plugins.md)
+### [List of plugins](PLUGINS.md)
+pick 8a371b0 Use CC BY-SA 4.0
 
 <br>
 
