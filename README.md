@@ -63,7 +63,12 @@
   - [Clipboard usage (Windows, macOS)](#clipboard-usage-windows-macos)
   - [Clipboard usage (Linux, BSD, ...)](#clipboard-usage-linux-bsd-)
 - [Restore cursor position when opening file](#restore-cursor-position-when-opening-file)
-- [Handling backup, swap, undo, and viminfo files](#handling-backup-swap-undo-and-viminfo-files)
+- [Temporary files](#temporary-files)
+  - [Backup files](#backup-files)
+  - [Swap files](#swap-files)
+  - [Undo files](#undo-files)
+  - [Viminfo files](#viminfo-files)
+  - [Example configuration for temporary files](#example-configuration-for-temporary-files)
 - [Editing remote files](#editing-remote-files)
 - [Managing plugins](#managing-plugins)
 - [Block insert](#block-insert)
@@ -1510,61 +1515,58 @@ it was altered by another program).
 
 This requires the use of a viminfo file: `:h viminfo-'`.
 
-## Handling backup, swap, undo, and viminfo files
+## Temporary files
 
-Depending on the options, Vim creates up to 4 kinds of working files.
-
-**Backup files**:
+### Backup files
 
 You can tell Vim to keep a backup of the original file before writing to it. By
 default, Vim keeps a backup but immediately removes it when writing to the file
-was successful (`:set writebackup`). If you always want the latest backup file
-to persist, `:set backup`. Or you disable backups altogether, `:set nobackup
-nowritebackup`.
+was successful (`:set writebackup`). If you want the backup file to persist,
+`:set backup`. Or disable backups altogether: `:set nobackup nowritebackup`.
 
 Let's see what I added last to my vimrc..
 
-```
-$ diff ~/.vim/vimrc ~/.vim/files/backup/vimrc-vimbackup
-390d389
-< command! -bar -nargs=* -complete=help H helpgrep <args>
-```
+    $ diff ~/.vim/vimrc ~/.vim/files/backup/vimrc-vimbackup
+    390d389
+    < command! -bar -nargs=* -complete=help H helpgrep <args>
 
-Help: `:h backup`
 
-**Swap files**:
+    :h backup
 
-You came up with an idea for the best scifi novel ever. After being in the flow
-for hours and writing several thousands of words.. power outage! That's the
-moment you realize that the last time you saved
-`~/wicked_alien_invaders_from_outer_space.txt` was.. well, you never did.
+### Swap files
 
-But not all hope is lost! When editing a file, Vim creates a swap file that
-contains unsaved changes. Try it for yourself, open any file and get the current
-swap file by using `:swapname`. You can also disable swap files by putting `:set
-noswapfile` in your vimrc.
+When editing a file, unsaved changes get written to a swap file.
 
-By default, the swap file is created in the same directory as the edited file
-and called something like `.file.swp`, updated either all 200 characters or when
-you haven't typed anything for 4 seconds, and deleted when you stop editing the
-file. You can change these numbers with `:h 'updatecount'` and `:h
-'updatetime'`.
+Get the name of the current swap file with `:swapname`. Disable them with `:set
+noswapfile`.
 
-Due to the power outage, the swap file was never deleted. If you do `vim
-~/wicked_alien_invaders_from_outer_space.txt`, Vim will prompt you to recover
-the file.
+A swap file gets updated either all 200 characters or when nothing was typed for
+4 seconds. They get deleted when you stop editing the file. You can change these
+numbers with `:h 'updatecount'` and `:h 'updatetime'`.
 
-Help: `:h swap-file` and `:h usr_11`
+If Vim gets killed (e.g. power outage), you lose all changes since the last time
+the file was written to disk, but the swap file won't be deleted. Now, if you
+edit the file again, Vim will offer the chance to recover the file from the swap
+file.
 
-**Undo files**:
+When two persons try to edit the same file, the second person will get a notice
+that the swap file already exists. It prevents people from trying to save
+different versions of a file. If you don't want that behaviour, see `:h
+'directory'`.
+
+    :h swap-file
+    :h usr_11
+
+### Undo files
 
 The [undo tree](#undo-tree) is kept in memory and will be lost when Vim quits.
 If you want it to persist, `:set undofile`. This will save the undo file for
 `~/foo.c` in `~/foo.c.un~`.
 
-Help: `:h 'undofile'` and `:h undo-persistence`
+    :h 'undofile'
+    :h undo-persistence
 
-**Viminfo file**:
+### Viminfo files
 
 When backup, swap, and undo files are all about text state, viminfo files are
 used for saving everything else that would otherwise be lost when quitting Vim.
@@ -1573,38 +1575,33 @@ marks, buffer list, global variables etc.
 
 By default, the viminfo is written to `~/.viminfo`.
 
-Help: `:h viminfo` and `:h 'viminfo'`
+    :h viminfo
+    :h 'viminfo'
 
----
+### Example configuration for temporary files
 
-If you're anything like me, you prefer keeping all these files in the same
-place, e.g. `~/.vim/files`:
+Put all temporary files in their own directory under `~/.vim/files`:
 
-```
+```vim
+" create directory if needed
+if !isdirectory($HOME.'/.vim/files') && exists('*mkdir')
+  call mkdir($HOME.'/.vim/files')
+endif
+
+" backup files
 set backup
 set backupdir   =$HOME/.vim/files/backup/
 set backupext   =-vimbackup
 set backupskip  =
+" swap files
 set directory   =$HOME/.vim/files/swap//
 set updatecount =100
+" undo files
 set undofile
 set undodir     =$HOME/.vim/files/undo/
+" viminfo files
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 ```
-
-The directory `~/.vim/files` has to be created beforehand, otherwise Vim will
-spew errors. If you often work on new hosts, you might want to automate it:
-
-```vim
-if exists('*mkdir') && !isdirectory($HOME.'/.vim/files')
-  call mkdir($HOME.'/.vim/files')
-endif
-```
-
-NOTE: If you edit a file on a multi-user system and Vim prompts you that a swap
-file already exists, it probably means that someone else is editing the file at
-the moment. You lose this "feature" when you save your swap files in the home
-directory.
 
 ## Editing remote files
 
