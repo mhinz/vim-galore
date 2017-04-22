@@ -1519,19 +1519,63 @@ This requires the use of a viminfo file: `:h viminfo-'`.
 
 ### Backup files
 
-You can tell Vim to keep a backup of the original file before writing to it. By
-default, Vim keeps a backup but immediately removes it when writing to the file
-was successful (`:set writebackup`). If you want the backup file to persist,
-`:set backup`. Or disable backups altogether: `:set nobackup nowritebackup`.
+Before saving a file, Vim creates a backup file. If writing to disk was
+successful, the backup file will be deleted.
 
-Let's see what I added last to my vimrc..
+With `:set backup`, the backup will persist. This means, the backup file will
+always have the same content as the original file _before_ the most recent save.
+It's up to you to decide whether this is useful or not.
 
-    $ diff ~/.vim/vimrc ~/.vim/files/backup/vimrc-vimbackup
-    390d389
-    < command! -bar -nargs=* -complete=help H helpgrep <args>
+You can disable backups entirely with `:set nobackup nowritebackup`, but you
+shouldn't need to nowadays. `'writebackup'` is a security feature that makes
+sure that you don't lose the original file in case saving it should ever fail,
+no matter whether you keep the backup file afterwards or not.
 
+If you frequently use Vim to edit huge files, [and you probably
+shouldn't](#editing-huge-files-is-slow), you can exclude those from backups with
+`'backupskip'`.
+
+Vim knows different ways to create a backup: _copying_ and _renaming_.
+
+- **Copying**
+    1. A full copy of the original file is created and used as backup.
+    1. The original file gets emptied and then filled with the content of the
+    Vim buffer.
+- **Renaming**
+    1. The original file is renamed to the backup file.
+    1. The content of the Vim buffer gets written to a new file with the name of
+    the original file.
+
+See `:h 'backupcopy'` for all the nitty-gritty details.
+
+---
+
+Demo:
+
+```vim
+:set backup backupskip= backupdir=. backupext=-backup
+:e /tmp/foo
+ifoo<esc>
+:w
+" original file gets created, no need for backup file
+obar<esc>
+:w
+" backup file is created, original file gets updated
+```
+
+```diff
+$ diff -u /tmp/foo-backup /tmp/foo
+--- /tmp/foo-backup     2017-04-22 15:05:13.000000000 +0200
++++ /tmp/foo    2017-04-22 15:05:25.000000000 +0200
+@@ -1 +1,2 @@
+ foo
++bar
+```
+
+---
 
     :h backup
+    :h write-fail
 
 ### Swap files
 
