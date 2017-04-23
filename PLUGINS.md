@@ -225,7 +225,10 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Go
 
+- [gofmt.vim](https://github.com/tweekmonster/gofmt.vim)
+- [hl-goimport.vim](https://github.com/tweekmonster/hl-goimport.vim)
 - [vim-go](https://github.com/fatih/vim-go)
+- [vim-godebug](https://github.com/jodosha/vim-godebug)
 
 #### Java
 
