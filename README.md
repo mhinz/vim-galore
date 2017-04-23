@@ -1497,23 +1497,23 @@ Help:
 
 ## Restore cursor position when opening file
 
-Without this, you will always be at line 1 when opening a file. With this, you
-will be at the position where you left off.
-
-Put this in your vimrc:
+When you open a file, the cursor will be positioned at line 1, column 1.
+Fortunately the viminfo file remembers [marks](#marks). The `"` mark contains
+the position in the buffer where you left off.
 
 ```vim
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
+    \   execute "normal! g`\"" |
     \ endif
 ```
 
-This simply does `` g`" `` (jump to position where you left off without changing
-jumplist) if that position still exists (the file might have fewer lines since
-it was altered by another program).
+Read: If the mark `"` contains a line number greater than line 1 but not greater
+than the last line in the file, jump to it.
 
-This requires the use of a viminfo file: `:h viminfo-'`.
+    :h viminfo-'
+    :h `quote
+    :h g`
 
 ## Temporary files
 
