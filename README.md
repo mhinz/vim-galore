@@ -2425,6 +2425,7 @@ See `:h :syntime`.
 | [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com) | Develop a Vim plugin from scratch. |
 | [Practical Vim (2nd Edition)](http://www.amazon.com/Practical-Vim-Edit-Speed-Thought/dp/1680501275/) | Hands down the best book about Vim. |
 | [Vimcasts.org](http://vimcasts.org/episodes/archive) | Vim screencasts. |
+| [wincent's screencasts on YouTube](https://www.youtube.com/channel/UCXPHFM88IlFn68OmLwtPmZA) | Vim screencasts. |
 | [Why, oh WHY, do those #?@! nutheads use vi?](http://www.viemu.com/a-why-vi-vim.html) | Common misconceptions explained. |
 | [Your problem with Vim is that you don't grok vi](http://stackoverflow.com/a/1220118) | Concise, informative and correct. A real gem. |
 
