@@ -1147,8 +1147,8 @@ within that file.
 A few simple rules:
 
 - options are enclosed in single quotes, e.g. `:h 'textwidth'`
-- VimL functions end in (), e.g. `:h reverse()`
-- commands start with :, e.g. `:h :echo`
+- VimL functions end in `()`, e.g. `:h reverse()`
+- commands start with `:`, e.g. `:h :echo`
 
 You can use `<c-d>` (this is <kbd>ctrl</kbd>+<kbd>d</kbd>) to list all tags that
 match the currently entered query. E.g. `:h tab<c-d>` will get you a list of all
