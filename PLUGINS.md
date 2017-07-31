@@ -218,17 +218,17 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-sexp-mappings-for-regular-people](https://github.com/tpope/vim-sexp-mappings-for-regular-people)
 - [vim-sexp](https://github.com/guns/vim-sexp)
 
-#### HTML
-
-- [emmet-vim](https://github.com/mattn/emmet-vim)
-- [html5.vim](https://github.com/othree/html5.vim)
-
 #### Go
 
 - [gofmt.vim](https://github.com/tweekmonster/gofmt.vim)
 - [hl-goimport.vim](https://github.com/tweekmonster/hl-goimport.vim)
 - [vim-go](https://github.com/fatih/vim-go)
 - [vim-godebug](https://github.com/jodosha/vim-godebug)
+
+#### HTML
+
+- [emmet-vim](https://github.com/mattn/emmet-vim)
+- [html5.vim](https://github.com/othree/html5.vim)
 
 #### Java
 
