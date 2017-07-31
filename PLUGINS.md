@@ -265,4 +265,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### VimL
 
+- [exception.vim](https://github.com/tweekmonster/exception.vim)
+- [helpful.vim](https://github.com/tweekmonster/helpful.vim)
+- [vim-lookup](https://github.com/mhinz/vim-lookup)
 - [vim-scriptease](https://github.com/tpope/vim-scriptease)
