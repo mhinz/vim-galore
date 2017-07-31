@@ -27,6 +27,7 @@
 
 - [C and C++](#c-and-c)
 - [Clojure](#clojure)
+- [Elixir](#elixir)
 - [Go](#go)
 - [HTML](#html)
 - [Java](#java)
@@ -217,6 +218,10 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-salve](https://github.com/tpope/vim-salve)
 - [vim-sexp-mappings-for-regular-people](https://github.com/tpope/vim-sexp-mappings-for-regular-people)
 - [vim-sexp](https://github.com/guns/vim-sexp)
+
+#### Elixir
+
+- [vim-elixir](https://github.com/elixir-editors/vim-elixir)
 
 #### Go
 
