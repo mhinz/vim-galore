@@ -221,6 +221,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Elixir
 
+- [alchemist.vim](https://github.com/slashmili/alchemist.vim)
 - [vim-elixir](https://github.com/elixir-editors/vim-elixir)
 
 #### Go
