@@ -186,6 +186,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [gitv](https://github.com/gregsexton/gitv)
 - [gv.vim](https://github.com/junegunn/gv.vim)
 - [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+- [vim-auto-programming](https://github.com/haya14busa/vim-auto-programming)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [vim-github-dashboard](https://github.com/junegunn/vim-github-dashboard)
