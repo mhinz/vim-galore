@@ -106,6 +106,7 @@ Here's a list of commonly used colorschemes:
 - [denite.nvim](https://github.com/Shougo/denite.nvim) (_requires +python3_)
 - [fzf](https://github.com/junegunn/fzf)
 - [unite.vim](https://github.com/Shougo/unite.vim)
+- [vim-fz](https://github.com/mattn/vim-fz)
 
 #### Grep tools
 
