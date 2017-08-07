@@ -1693,12 +1693,9 @@ include all the things put under a certain directory. You have to clone the
 repositories of the plugins there yourself.
 
 Real plugin managers expose commands that help you to install and update plugins
-from within Vim. Hereinafter is a list of commonly used plugin managers:
+from within Vim.
 
-- [dein](https://github.com/Shougo/dein.vim)
-- [plug](https://github.com/junegunn/vim-plug)
-- [vim-addon-manager](https://github.com/MarcWeber/vim-addon-manager)
-- [vundle](https://github.com/VundleVim/Vundle.vim)
+[List of plugin managers](PLUGINS.md#plugin-managers)
 
 ## Block insert
 
