@@ -7,13 +7,15 @@
 - [Alignment](#alignment)
 - [Building and linting](#building-and-linting)
 - [Code completion](#code-completion)
-- [Cycle](#cycle)
 - [Commenters](#commenters)
+- [Cycle](#cycle)
 - [Delimiter](#delimiter)
 - [Fuzzy finders](#fuzzy-finders)
 - [Grep tools](#grep-tools)
 - [Indent](#indent)
+- [Misc](#misc)
 - [Navigation](#navigation)
+- [Plugin managers](#plugin-managers)
 - [Snippets](#snippets)
 - [Statusline](#statusline)
 - [Surround](#surround)
@@ -23,7 +25,6 @@
 - [Undo history](#undo-history)
 - [Version control](#version-control)
 - [Writing](#writing)
-- [Misc](#misc)
 
 #### [By filetype](#by-filetype-1)
 
@@ -130,6 +131,14 @@ Here's a list of commonly used colorschemes:
 - [vimfiler.vim](https://github.com/Shougo/vimfiler.vim) (_depends on other plugins_)
 
 Also see [fuzzy finders](#fuzzy-finders).
+
+#### Plugin managers
+
+- [dein.vim](https://github.com/Shougo/dein.vim)
+- [vim-addon-manager](https://github.com/MarcWeber/vim-addon-manager)
+- [vim-pathogen](https://github.com/tpope/vim-pathogen)
+- [vim-plug](https://github.com/junegunn/vim-plug)
+- [vundle.vim](https://github.com/VundleVim/Vundle.vim)
 
 #### Snippets
 
