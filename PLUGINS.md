@@ -223,6 +223,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
 - [vim-bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
 - [vim-devicons](https://github.com/ryanoasis/vim-devicons)
+- [vim-diff-enhanced](https://github.com/chrisbra/vim-diff-enhanced)
 - [vim-diminactive](https://github.com/blueyed/vim-diminactive)
 - [vim-fixkey](https://github.com/drmikehenry/vim-fixkey)
 - [vim-gnupg](https://github.com/jamessan/vim-gnupg)
