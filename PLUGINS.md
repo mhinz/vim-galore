@@ -285,6 +285,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
 - [vim-javascript](https://github.com/pangloss/vim-javascript)
 - [vim-node](https://github.com/moll/vim-node)
+- [vim-prettier](https://github.com/prettier/vim-prettier)
 - [yajs.vim](https://github.com/othree/yajs.vim)
 
 #### Lua
