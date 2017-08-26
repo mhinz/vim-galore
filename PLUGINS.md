@@ -83,6 +83,7 @@ Here's a list of commonly used colorschemes:
 - [neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
 - [supertab](https://github.com/ervandew/supertab)
 - [vim-mucomplete](https://github.com/lifepillar/vim-mucomplete)
+- [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim)
 
 #### Cycle
 
