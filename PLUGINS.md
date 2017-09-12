@@ -76,14 +76,14 @@ Here's a list of commonly used colorschemes:
 
 #### Code completion
 
-- [VimCompletesMe](https://github.com/ajh17/VimCompletesMe)
-- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 - [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim)
 - [completor.vim](https://github.com/maralla/completor.vim)
 - [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
 - [neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
 - [supertab](https://github.com/ervandew/supertab)
 - [vim-mucomplete](https://github.com/lifepillar/vim-mucomplete)
+- [VimCompletesMe](https://github.com/ajh17/VimCompletesMe)
+- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 
 #### Cycle
 
@@ -214,11 +214,11 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Misc
 
+- [calendar.vim](https://github.com/itchyny/calendar.vim)
 - [CoVim](https://github.com/FredKSchott/CoVim)
 - [FastFold](https://github.com/Konfekt/FastFold)
-- [NrrwRgn](https://github.com/chrisbra/NrrwRgn)
-- [calendar.vim](https://github.com/itchyny/calendar.vim)
 - [goyo.vim](https://github.com/junegunn/goyo.vim)
+- [NrrwRgn](https://github.com/chrisbra/NrrwRgn)
 - [sideways.vim](https://github.com/AndrewRadev/sideways.vim)
 - [splitjoin.vim](https://github.com/AndrewRadev/splitjoin.vim)
 - [targets.vim](https://github.com/wellle/targets.vim)
