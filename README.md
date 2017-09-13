@@ -1441,7 +1441,7 @@ happens to be at major version 11 since 1987, hence X is also often called X11.
 Prior, in X10, [cut
 buffers](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Cut_Buffers)
 were introduced that kind of worked like a _clipboard_ as in copied text was
-actually held by X and it was accessible by all ofter applications. This
+actually held by X and it was accessible by all other applications. This
 mechanism still exists in X, but its use is deprecated now and most software
 doesn't use it anymore.
 
