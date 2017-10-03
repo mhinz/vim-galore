@@ -153,7 +153,7 @@ Discussions and user questions are best done on the
 [vim_use](https://groups.google.com/forum/#!forum/vim_use) mailing list or using
 IRC ([Freenode](https://freenode.net)) in the `#vim` channel.
 
-Development happens on [Github](https://github.com/vim/vim), discussions on the
+Development happens on [GitHub](https://github.com/vim/vim), discussions on the
 [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
 
 Read [Why, oh WHY, do those #?@! nutheads use
@@ -226,7 +226,7 @@ Vim already supports natively.
 
 The user vimrc can be put into `~/.vimrc` or for the sake of better separation
 into `~/.vim/vimrc`. The latter makes it easy to put the entire configuration
-under version control and upload it to, let's say Github.
+under version control and upload it to, let's say GitHub.
 
 You find many "minimal vimrcs" all over the net, and maybe my version isn't as
 minimal as it should be, but it provides a good set of sane settings that I deem
@@ -241,8 +241,8 @@ In case you're interested, here's
 [my vimrc](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc).
 
 **TIP**: Most plugin authors maintain several plugins and also publish their
-vimrc on Github (often in a repository called "vim-config" or "dotfiles"), so
-whenever you find a plugin you like, look up its maintainer's Github page and
+vimrc on GitHub (often in a repository called "vim-config" or "dotfiles"), so
+whenever you find a plugin you like, look up its maintainer's GitHub page and
 look through the repositories.
 
 ## What kind of Vim am I running?
