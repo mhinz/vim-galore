@@ -247,6 +247,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [clang_complete](https://github.com/Rip-Rip/clang_complete)
 - [color_coded](https://github.com/jeaye/color_coded)
 - [lh-cpp](https://github.com/LucHermitte/lh-cpp)
+- [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 
 #### Clojure
 
