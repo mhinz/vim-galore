@@ -138,6 +138,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Plugin managers
 
+- [apt-vim](https://github.com/egalpin/apt-vim)
 - [dein.vim](https://github.com/Shougo/dein.vim)
 - [minpac](https://github.com/k-takata/minpac)
 - [vim-addon-manager](https://github.com/MarcWeber/vim-addon-manager)
