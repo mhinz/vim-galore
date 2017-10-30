@@ -221,6 +221,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [CoVim](https://github.com/FredKSchott/CoVim)
 - [FastFold](https://github.com/Konfekt/FastFold)
 - [goyo.vim](https://github.com/junegunn/goyo.vim)
+- [is.vim](https://github.com/haya14busa/is.vim)
 - [NrrwRgn](https://github.com/chrisbra/NrrwRgn)
 - [sideways.vim](https://github.com/AndrewRadev/sideways.vim)
 - [splitjoin.vim](https://github.com/AndrewRadev/splitjoin.vim)
