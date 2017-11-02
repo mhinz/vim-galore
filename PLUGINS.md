@@ -53,6 +53,7 @@ Here's a list of commonly used colorschemes:
 - [lucius](https://github.com/jonathanfilip/vim-lucius)
 - [molokai](https://github.com/tomasr/molokai)
 - [oceanic-next](https://github.com/mhartington/oceanic-next)
+- [paramount](https://github.com/owickstrom/vim-colors-paramount)
 - [railscasts](https://github.com/jpo/vim-railscasts-theme)
 - [seoul256](https://github.com/junegunn/seoul256.vim)
 - [solarized](https://github.com/altercation/vim-colors-solarized) (or a lighter variant: [flattened](https://github.com/romainl/flattened))
