@@ -266,6 +266,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [alchemist.vim](https://github.com/slashmili/alchemist.vim)
 - [vim-elixir](https://github.com/elixir-editors/vim-elixir)
+- [vim-mix-format](https://github.com/mhinz/vim-mix-format)
 
 #### Go
 
