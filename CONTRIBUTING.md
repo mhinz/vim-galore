@@ -7,6 +7,12 @@ All kinds of contributions are welcome!
 - Is there something you didn't understand right away? Was the explanation too
   complicated?
 - Any other suggestions for improvement? Better wording? Typos? Dead links?
+- Want to add plugins? Please make sure that they have collected a few stars
+  already. There are new plugins every day and I can't possibly test them all,
+  so I rely on "social proof" as an indicator for usefulness. (If you wrote or
+  found a plugin with no or only very few stars but still think it's useful,
+  promote it on [r/vim](https://www.reddit.com/r/vim). It has lots of readers
+  and is great for gaining attention.)
 
 Please report _anything_ that seems wrong to you by
 [creating an issue](https://github.com/mhinz/vim-galore/issues/new) for it.
