@@ -901,21 +901,30 @@ Help:
 
 ## Quickfix and location lists
 
-Every time an action has to return a list of locations, _quickfix_ or _location_
-lists can be used. In this case a location is a file, a line number and
-optionally a column.
+The quickfix list is a data structure that holds file positions. Essentially,
+each entry in the quickfix list consists of a file path, a line number and
+optional column, and a description.
 
-Examples are compiler errors assembled in a quickfix list or matches of an
-external grep tool assembled in a location list.
+Typical use cases are assembling compiler errors or results of a grep tool.
 
-The big advantage over just putting that stuff in an empty buffer is that you
-get a nice uniform interface for browsing the entries.
+Vim has a special type of buffer for showing the quickfix list: the quickfix
+buffer. Each line in the quickfix buffer shows one entry from the quickfix list.
 
-At all time there's only one quickfix list, but every window can have its own
-location list. Both type of lists _feel_ the same, but use slightly different
-commands for navigation.
+Usually you open a new window to display the quickfix list: the quickfix window.
+When that happens, the last window gets associated with the quickfix window.
 
-Most common commands:
+In the quickfix buffer `<cr>` opens the selected entry in the associated window
+and `<c-w><cr>` in a new window.
+
+The quickfix list was named after the "quick fix" feature from the [Aztec C
+compiler](https://en.wikipedia.org/wiki/Aztec_C).
+
+Actually there are two kinds of lists: quickfix and location lists. They behave
+almost the same, but have the follwing differences:
+
+- There is only one quickfix list. There can be multiple location lists; one per
+  window.
+- They use slightly different commands for navigation.
 
 | Action         | Quickfix     | Location     |
 |----------------|--------------|--------------|
@@ -926,11 +935,14 @@ Most common commands:
 | first entry    | `:cfirst`    | `:lfirst`    |
 | last entry     | `:clast`     | `:llast`     |
 
-See `:h :cc` and everything below for all commands.
+See `:h quickfix` for more information and a full list of commands.
+
+For conciseness, _quickfix_ and _location_ are often abbreviated as _qf_ and
+_loc_ respectively.
 
 **Example**:
 
-Let's use our good old friend `grep` for searching the files in the current
+Let us use our good old friend `grep` for searching the files in the current
 directory recursively for a certain query and put the results in the quickfix
 list.
 
