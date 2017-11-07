@@ -935,6 +935,9 @@ almost the same, but have the follwing differences:
 | first entry    | `:cfirst`    | `:lfirst`    |
 | last entry     | `:clast`     | `:llast`     |
 
+Mind that the quickfix and location windows don't need to be open for these
+commands to work.
+
 See `:h quickfix` for more information and a full list of commands.
 
 For conciseness, _quickfix_ and _location_ are often abbreviated as _qf_ and
