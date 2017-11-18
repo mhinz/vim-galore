@@ -1608,7 +1608,7 @@ the file was written to disk, but the swap file won't be deleted. Now, if you
 edit the file again, Vim will offer the chance to recover the file from the swap
 file.
 
-When two persons try to edit the same file, the second person will get a notice
+When two people try to edit the same file, the second person will get a notice
 that the swap file already exists. It prevents people from trying to save
 different versions of a file. If you don't want that behaviour, see `:h
 'directory'`.
