@@ -1953,6 +1953,23 @@ by a terminal emulator that supports true colors. When your colors look weird,
 chances are your terminal emulator doesn't support true colors or your
 colorcheme has no GUI colors defined.
 
+Many people use the terminal multiplexer
+[tmux](https://github.com/tmux/tmux/wiki) which basically sits in between the
+terminal emulator and Vim. To make tmux _forward_ the true color escape
+sequences emitted by Vim, you have to put the following in the user's
+`.tmux.conf`:
+
+```
+set-option -g  default-terminal 'tmux-256color'
+set-option -ga terminal-overrides ',xterm-256color:Tc'
+```
+
+- The first line should be the same for most people and denotes the `$TERM` to
+  be used _within_ tmux.
+- The second line adds the tmux-specific `Tc` (true color) capability to the
+  other terminfo entries of `xterm-256color`. Obviously this assumes that the
+  user is using `TERM=xterm-256color` _outside_ of tmux.
+
 Help: `:h 'termguicolors'`
 
 # Tips
