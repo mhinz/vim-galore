@@ -75,6 +75,7 @@
 - [Running external programs and using filters](#running-external-programs-and-using-filters)
 - [Cscope](#cscope)
 - [MatchIt](#matchit)
+- [True colors](#true-colors)
 
 ### [Tips](#tips-1)
 
@@ -1937,6 +1938,22 @@ Help:
 :h matchit
 :h b:match_words
 ```
+
+## True colors
+
+Using true colors in a terminal emulator means being able to use 24 bits for RGB
+colors. That makes 16777216 (2^24) colors instead of the usual 256.
+
+As explained [here](#colorschemes), colorschemes can actually be _two_
+colorschemes by having definitions for terminals (xterm) and for GUIs (gvim).
+This made sense before terminal emulators learned about true colors.
+
+After `:set termguicolors`, Vim starts emitting escape sequences only understood
+by a terminal emulator that supports true colors. When your colors look weird,
+chances are your terminal emulator doesn't support true colors or your
+colorcheme has no GUI colors defined.
+
+Help: `:h 'termguicolors'`
 
 # Tips
 
