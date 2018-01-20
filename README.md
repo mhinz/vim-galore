@@ -1970,7 +1970,17 @@ set-option -ga terminal-overrides ',xterm-256color:Tc'
   other terminfo entries of `xterm-256color`. Obviously this assumes that the
   user is using `TERM=xterm-256color` _outside_ of tmux.
 
-Help: `:h 'termguicolors'`
+So, here is the checklist for enabling true colors:
+
+- Read `:h 'termguicolors'`.
+- Put `set termguicolors` in your vimrc.
+- Make sure your colorscheme has color definitions for GUIs. (It should contain
+  lines with `guifg` and `guibg`.)
+- Make sure your terminal emulator of choice supports true colors.
+- Using tmux? Configure it to add the `Tc` capability.
+
+A popular reference for colors in the terminal:
+https://gist.github.com/XVilka/8346728
 
 # Tips
 
