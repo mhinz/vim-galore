@@ -291,6 +291,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [node-vim-debugger](https://github.com/sidorares/node-vim-debugger)
 - [tern_for_vim](https://github.com/ternjs/tern_for_vim)
 - [vim-esformatter](https://github.com/millermedeiros/vim-esformatter)
+- [vim-flow](https://github.com/flowtype/vim-flow)
 - [vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
 - [vim-javascript](https://github.com/pangloss/vim-javascript)
 - [vim-node](https://github.com/moll/vim-node)
