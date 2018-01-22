@@ -20,6 +20,7 @@
 - [Statusline](#statusline)
 - [Surround](#surround)
 - [Taking notes](#taking-notes)
+- [Testing](#testing)
 - [Text objects](#text-objects)
 - [Tmux](#tmux)
 - [Undo history](#undo-history)
@@ -175,6 +176,10 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-orgmode](https://github.com/jceb/vim-orgmode)
 - [vim-pad](https://github.com/fmoralesc/vim-pad)
 - [vimwiki](https://github.com/vimwiki/vimwiki)
+
+#### Testing
+
+- [vim-test](https://github.com/janko-m/vim-test)
 
 #### Text objects
 
