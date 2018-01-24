@@ -324,5 +324,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [exception.vim](https://github.com/tweekmonster/exception.vim)
 - [helpful.vim](https://github.com/tweekmonster/helpful.vim)
+- [vader.vim](https://github.com/junegunn/vader.vim)
 - [vim-lookup](https://github.com/mhinz/vim-lookup)
 - [vim-scriptease](https://github.com/tpope/vim-scriptease)
+- [vim-themis](https://github.com/thinca/vim-themis)
