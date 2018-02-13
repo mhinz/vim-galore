@@ -963,8 +963,8 @@ quickfix window.
 ## Macros
 
 Vim allows _recording_ typed characters into a [register](#registers). It's a
-great way to automate certain tasks on the fly. (For more elaborate tasks, [Vim
-scripting](#vim-scripting) should be used instead.)
+great way to automate certain tasks on the fly. (For more elaborate tasks, Vim
+scripting should be used instead.)
 
 - Start recording by typing `q` followed by the register, e.g. `q`. (The
   command-line will signify this via "recording @q".)
