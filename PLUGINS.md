@@ -71,6 +71,7 @@ Alternatively, generate your own colorscheme using [themer](https://github.com/m
 
 - [tabular](https://github.com/godlygeek/tabular)
 - [vim-easy-align](https://github.com/junegunn/vim-easy-align)
+- [vim-lion](https://github.com/tommcdo/vim-lion)
 
 #### Building and linting
 
@@ -185,6 +186,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [targets.vim](https://github.com/wellle/targets.vim)
 - [vim-exchange](https://github.com/tommcdo/vim-exchange)
+- [vim-indent-object](https://github.com/michaeljsmith/vim-indent-object)
 - [vim-textobj-user](https://github.com/kana/vim-textobj-user)
 
 #### Tmux
@@ -232,16 +234,19 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [sideways.vim](https://github.com/AndrewRadev/sideways.vim)
 - [splitjoin.vim](https://github.com/AndrewRadev/splitjoin.vim)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
+- [vim-abolish](https://github.com/tpope/vim-abolish)
 - [vim-bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
 - [vim-devicons](https://github.com/ryanoasis/vim-devicons)
 - [vim-diff-enhanced](https://github.com/chrisbra/vim-diff-enhanced)
 - [vim-diminactive](https://github.com/blueyed/vim-diminactive)
 - [vim-fixkey](https://github.com/drmikehenry/vim-fixkey)
 - [vim-gnupg](https://github.com/jamessan/vim-gnupg)
+- [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)
 - [vim-hackernews](https://github.com/ryanss/vim-hackernews)
 - [vim-move](https://github.com/matze/vim-move)
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [vim-projectionist](https://github.com/tpope/vim-projectionist)
+- [vim-qf](https://github.com/romainl/vim-qf)
 - [vim-rsi](https://github.com/tpope/vim-rsi)
 - [vim-startify](https://github.com/mhinz/vim-startify)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
