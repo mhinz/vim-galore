@@ -231,7 +231,6 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [NrrwRgn](https://github.com/chrisbra/NrrwRgn)
 - [sideways.vim](https://github.com/AndrewRadev/sideways.vim)
 - [splitjoin.vim](https://github.com/AndrewRadev/splitjoin.vim)
-- [targets.vim](https://github.com/wellle/targets.vim)
 - [unicode.vim](https://github.com/chrisbra/unicode.vim)
 - [vim-bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste)
 - [vim-devicons](https://github.com/ryanoasis/vim-devicons)
