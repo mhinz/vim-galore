@@ -58,6 +58,7 @@ Here's a list of commonly used colorschemes:
 - [railscasts](https://github.com/jpo/vim-railscasts-theme)
 - [seoul256](https://github.com/junegunn/seoul256.vim)
 - [solarized](https://github.com/altercation/vim-colors-solarized) (or a lighter variant: [flattened](https://github.com/romainl/flattened))
+- [solarized8](https://github.com/lifepillar/vim-solarized8) (actively maintained fork with support for true-color terminals)
 - [tomorrow](https://github.com/chriskempson/vim-tomorrow-theme)
 - [vividchalk](https://github.com/tpope/vim-vividchalk)
 - [yowish](https://github.com/kabbamine/yowish.vim)
