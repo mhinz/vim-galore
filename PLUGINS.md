@@ -63,7 +63,8 @@ Here's a list of commonly used colorschemes:
 - [yowish](https://github.com/kabbamine/yowish.vim)
 - [zenburn](https://github.com/jnurmine/Zenburn)
 
-Alternatively, generate your own colorscheme using [themer](https://github.com/mjswensen/themer).
+Alternatively, generate your own colorscheme using [themer](https://github.com/mjswensen/themer)
+or [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
 
 ## By topic
 
