@@ -85,6 +85,7 @@ Alternatively, generate your own colorscheme using [themer](https://github.com/m
 - [completor.vim](https://github.com/maralla/completor.vim)
 - [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
 - [neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
+- [nvim-completion-manager](https://github.com/roxma/nvim-completion-manager)
 - [supertab](https://github.com/ervandew/supertab)
 - [vim-mucomplete](https://github.com/lifepillar/vim-mucomplete)
 - [VimCompletesMe](https://github.com/ajh17/VimCompletesMe)
@@ -187,6 +188,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [targets.vim](https://github.com/wellle/targets.vim)
 - [vim-exchange](https://github.com/tommcdo/vim-exchange)
 - [vim-indent-object](https://github.com/michaeljsmith/vim-indent-object)
+- [vim-matchup](https://github.com/andymass/vim-matchup)
 - [vim-textobj-user](https://github.com/kana/vim-textobj-user)
 
 #### Tmux
@@ -248,6 +250,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-projectionist](https://github.com/tpope/vim-projectionist)
 - [vim-qf](https://github.com/romainl/vim-qf)
 - [vim-rsi](https://github.com/tpope/vim-rsi)
+- [vim-sleuth](https://github.com/tpope/vim-sleuth)
 - [vim-startify](https://github.com/mhinz/vim-startify)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 
@@ -318,6 +321,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [impsort.vim](https://github.com/tweekmonster/impsort.vim)
 - [jedi-vim](https://github.com/davidhalter/jedi-vim)
 - [python-mode](https://github.com/klen/python-mode)
+- [SimpylFold](https://github.com/tmhedberg/SimpylFold)
 - [vim-flake8](https://github.com/nvie/vim-flake8)
 
 #### TeX
