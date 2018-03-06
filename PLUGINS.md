@@ -53,6 +53,7 @@ Here's a list of commonly used colorschemes:
 - [jellybeans](https://github.com/nanotech/jellybeans.vim)
 - [lucius](https://github.com/jonathanfilip/vim-lucius)
 - [molokai](https://github.com/tomasr/molokai)
+- [nofrils](https://github.com/robertmeta/nofrils)
 - [oceanic-next](https://github.com/mhartington/oceanic-next)
 - [paramount](https://github.com/owickstrom/vim-colors-paramount)
 - [railscasts](https://github.com/jpo/vim-railscasts-theme)
