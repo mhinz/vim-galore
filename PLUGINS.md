@@ -37,6 +37,7 @@
 - [Java](#java)
 - [Javascript](#javascript)
 - [Lua](#lua)
+- [PHP](#php)
 - [Python](#python)
 - [TeX](#tex)
 - [VimL](#viml)
@@ -316,6 +317,13 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [vim-lua-ftplugin](https://github.com/xolox/vim-lua-ftplugin)
 - [vim-lua-inspect](https://github.com/xolox/vim-lua-inspect)
+
+#### PHP
+
+- [php.vim](https://github.com/StanAngeloff/php.vim)
+- [vim-php-cs-fixer](https://github.com/stephpy/vim-php-cs-fixer)
+- [vim-php-namespace](https://github.com/arnaud-lb/vim-php-namespace)
+- [vim-php-refactoring-toolbox](https://github.com/adoy/vim-php-refactoring-toolbox)
 
 #### Python
 
