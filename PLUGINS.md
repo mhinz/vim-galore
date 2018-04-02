@@ -64,6 +64,9 @@ Here's a list of commonly used colorschemes:
 - [vividchalk](https://github.com/tpope/vim-vividchalk)
 - [yowish](https://github.com/kabbamine/yowish.vim)
 - [zenburn](https://github.com/jnurmine/Zenburn)
+- [mustang](https://github.com/croaker/mustang-vim) / [sorcerer](https://github.com/vim-scripts/Sorcerer) / [sourcerer](https://github.com/xero/sourcerer.vim) / [apprentice](https://github.com/romainl/Apprentice)
+- [and lots more at vimcolors.com](http://vimcolors.com/)
+
 
 Alternatively, generate your own colorscheme using [themer](https://github.com/mjswensen/themer)
 or [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
