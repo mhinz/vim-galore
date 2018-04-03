@@ -313,6 +313,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-node](https://github.com/moll/vim-node)
 - [vim-prettier](https://github.com/prettier/vim-prettier)
 - [yajs.vim](https://github.com/othree/yajs.vim)
+- [yats.vim](https://github.com/HerringtonDarkholme/yats.vim)
 
 #### Lua
 
