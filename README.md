@@ -1061,7 +1061,7 @@ topic.)
 Help:
 
 - `:h 'termguicolors'`
-- [List of colorschemes](#list-of-colorschemes-1)
+- [List of colorschemes](PLUGINS.md#colorschemes-1)
 - [Cosmetic changes to colorschemes](#cosmetic-changes-to-colorschemes)
 
 ## Folding
