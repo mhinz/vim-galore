@@ -2179,18 +2179,20 @@ set complete-=t   " disable searching tags
 
 ## Cosmetic changes to colorschemes
 
-Always use a dark gray statusline, no matter what colorscheme is chosen:
+Always use a dark gray statusline, no matter which colorscheme is chosen:
 
 ```vim
 autocmd ColorScheme * highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
 ```
 
-The same, but only for the "lucius" colorscheme (check `:echo
-color_name` which should be set by all valid colorschemes):
+This triggers every time you use `:colorscheme ...`. If you want it to trigger only for
+a certain colorscheme:
 
 ```vim
-autocmd ColorScheme lucius highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
+autocmd ColorScheme desert highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
 ```
+
+This triggers only for `:colorscheme desert`.
 
 # Commands
 
