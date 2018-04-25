@@ -1143,8 +1143,7 @@ Many of the concepts mentioned above also have _local_ counterparts:
 | `:cd`      | `:lcd`                | window           | `:h :lcd`             |
 | `<leader>` | `<localleader>`       | buffer           | `:h maplocalleader`   |
 
-Variables also sport different scopes, but will be explained in
-[Vim scripting](http://vimdoc.sourceforge.net/htmldoc/usr_41.html).
+[Variables also have different scopes](http://vimdoc.sourceforge.net/htmldoc/usr_41.html#41.2).
 
 # Usage
 
