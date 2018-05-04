@@ -3,18 +3,10 @@
   <img src='https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/logo-vim-galore.png' alt='vim-galore logo' />
   <br /><br /><br /><br />
   <div>
-    <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>
-      <img src='https://img.shields.io/badge/Translation:-Chinese-grey.svg' alt='translation: chinese' />
-    </a>
-    <a href='http://postd.cc/?s=vim-galore'>
-      <img src='https://img.shields.io/badge/Translation:-Japanese-grey.svg' alt='tranlsation: japanese' />
-    </a>
-    <a href='https://github.com/lsrdg/vim-galore'>
-      <img src='https://img.shields.io/badge/Translation:-Portuguese-grey.svg' alt='translation: portuguese' />
-    </a>
-    <a href='http://givi.olnd.ru/vim-galore/vim-galore-ru.html'>
-      <img src='https://img.shields.io/badge/Translation:-Russian-grey.svg' alt='translation: russian' />
-    </a>
+    <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>Chinese</a> |
+    <a href='http://postd.cc/?s=vim-galore'>Japanese</a> |
+    <a href='https://github.com/lsrdg/vim-galore'>Portuguese</a> |
+    <a href='http://givi.olnd.ru/vim-galore/vim-galore-ru.html'>Russian</a>
     <div>
       <br />
       <sub>Licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0<a/>.</sub>
