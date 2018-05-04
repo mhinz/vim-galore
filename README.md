@@ -12,6 +12,9 @@
     <a href='https://github.com/lsrdg/vim-galore'>
       <img src='https://img.shields.io/badge/Translation:-Portuguese-grey.svg' alt='translation: portuguese' />
     </a>
+    <a href='http://givi.olnd.ru/vim-galore/vim-galore-ru.html'>
+      <img src='https://img.shields.io/badge/Translation:-Russian-grey.svg' alt='translation: russian' />
+    </a>
     <div>
       <br />
       <sub>Licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0<a/>.</sub>
