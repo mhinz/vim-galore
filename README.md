@@ -74,6 +74,7 @@
 
 ### [Tips](#tips-1)
 
+- [Go to other end of selected text](#go-to-other-end-of-selected-text)
 - [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Saner command-line history](#saner-command-line-history)
 - [Saner CTRL-L](#saner-ctrl-l)
@@ -1975,6 +1976,17 @@ A popular reference for colors in the terminal:
 https://gist.github.com/XVilka/8346728
 
 # Tips
+
+## Go to other end of selected text
+
+`o` and `O` in a visual selection make the cursor go to the other end. Try with
+blockwise selection to see the difference. This is useful for quickly changing
+the size of the selected text.
+
+```
+:h v_o
+:h v_O
+```
 
 ## Saner behavior of n and N
 
