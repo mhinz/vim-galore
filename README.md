@@ -2521,13 +2521,15 @@ looking at a few distributions:
 
 ## Standard plugins
 
-Surprising to many people, Vim comes with a handful of plugins on its own that
-all get loaded by default. Check `:scriptnames` after starting Vim to see all
-sourced files.
+Many people are surprised by the fact that Vim comes with a handful of standard
+plugins. Some get loaded by default (`:e $VIMRUNTIME/plugin`) and some are not
+(`:e $VIMRUNTIME/pack/dist/opt`). Read `:h pack-add` on how to source the
+latter.
 
-Most of them will never get used, so disable them as you see fit. They will
-still be shown as sourced, but only the first lines actually get read before Vim
-bails out. No further code (mappings, commands, logic) will be processed.
+Most of the plugins that get loaded by default will never get used, though.
+Disable them as you see fit. They will still be shown as sourced
+(`:scriptnames`), but only the first lines actually get read before Vim bails
+out. No further code (mappings, commands, logic) will be processed.
 
 | Plugin     | Disable it using..                  | Help |
 |------------|-------------------------------------|------|
