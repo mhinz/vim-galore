@@ -2189,8 +2189,8 @@ Always use a dark gray statusline, no matter what colorscheme is chosen:
 autocmd ColorScheme * highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
 ```
 
-This triggers every time you use `:colorscheme ...`. If you want it to trigger only for
-a certain colorscheme:
+This triggers every time you use `:colorscheme ...`. If you want it to trigger
+only for a certain colorscheme:
 
 ```vim
 autocmd ColorScheme desert highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
