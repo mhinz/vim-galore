@@ -112,6 +112,7 @@
 - [Vim distributions](#vim-distributions)
 - [Standard plugins](#standard-plugins)
 - [Map CapsLock to Control](#map-capslock-to-control)
+- [Generating HTML from buffer](#generating-html-from-buffer)
 - [Easter eggs](#easter-eggs)
 - [Why hjkl for navigation?](#why-hjkl-for-navigation)
 
@@ -2582,6 +2583,21 @@ An alternative would be using [caps2esc](https://github.com/oblitum/caps2esc) or
 
 See [superuser.com: Map Caps-Lock to Control in Windows
 8.1](http://superuser.com/questions/764782/map-caps-lock-to-control-in-windows-8-1).
+
+## Generating HTML from buffer
+
+Generate HTML from any buffer using `:TOhtml` from the 2html [standard
+plugin](#standard-plugins). The output can be used for printing or easy web
+publishing.
+
+The command creates a new buffer of the same name with `.html` appended. The
+colors are the same as seen in Vim. They depend on the
+[colorscheme](#colorschemes).
+
+The plugin knows several options to finetune the output, e.g. for setting the
+encoding and font.
+
+See `:h :TOhtml`.
 
 ## Easter eggs
 
