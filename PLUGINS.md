@@ -315,6 +315,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-flow](https://github.com/flowtype/vim-flow)
 - [vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
 - [vim-javascript](https://github.com/pangloss/vim-javascript)
+- [vim-jsx](https://github.com/mxw/vim-jsx)
 - [vim-node](https://github.com/moll/vim-node)
 - [vim-prettier](https://github.com/prettier/vim-prettier)
 - [yajs.vim](https://github.com/othree/yajs.vim)
