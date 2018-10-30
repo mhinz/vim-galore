@@ -2493,6 +2493,7 @@ See `:h :syntime`.
 | [Practical Vim (2nd Edition)](http://www.amazon.com/Practical-Vim-Edit-Speed-Thought/dp/1680501275/) | Hands down the best book about Vim. |
 | [Why, oh WHY, do those #?@! nutheads use vi?](http://www.viemu.com/a-why-vi-vim.html) | Common misconceptions explained. |
 | [Your problem with Vim is that you don't grok vi](http://stackoverflow.com/a/1220118) | Concise, informative and correct. A real gem. |
+| [Awesome vim plugins for writers](https://opensource.com/article/17/2/vim-plugins-writers) | Short article about non-technical writing in Vim |
 
 #### Screencasts
 
