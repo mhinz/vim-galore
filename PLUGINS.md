@@ -226,8 +226,12 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Writing
 
+- [thesaurus_query.vim](https://github.com/ron89/thesaurus_query.vim)
 - [vim-grammarous](https://github.com/rhysd/vim-grammarous)
+- [vim-LanguageTool](https://github.com/dpelle/vim-LanguageTool)
 - [vim-online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus)
+- [vim-textobj-quote](https://github.com/reedes/vim-textobj-quote)
+- [vim-wordy](https://github.com/reedes/vim-wordy)
 
 #### Misc
 
@@ -236,6 +240,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [FastFold](https://github.com/Konfekt/FastFold)
 - [goyo.vim](https://github.com/junegunn/goyo.vim)
 - [is.vim](https://github.com/haya14busa/is.vim)
+- [limelight.vim](https://github.com/junegunn/limelight.vim)
 - [NrrwRgn](https://github.com/chrisbra/NrrwRgn)
 - [sideways.vim](https://github.com/AndrewRadev/sideways.vim)
 - [splitjoin.vim](https://github.com/AndrewRadev/splitjoin.vim)
