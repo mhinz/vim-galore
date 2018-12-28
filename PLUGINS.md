@@ -272,6 +272,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [color_coded](https://github.com/jeaye/color_coded)
 - [lh-cpp](https://github.com/LucHermitte/lh-cpp)
 - [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
+- [vim-rtags](https://github.com/lyuts/vim-rtags)
 
 #### Clojure
 
