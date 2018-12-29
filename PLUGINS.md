@@ -222,6 +222,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-github-dashboard](https://github.com/junegunn/vim-github-dashboard)
 - [vim-lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
 - [vim-signify](https://github.com/mhinz/vim-signify)
+- [vim-twiggy](https://github.com/sodapopcan/vim-twiggy)
 - [vimagit](https://github.com/jreybert/vimagit)
 
 #### Writing
