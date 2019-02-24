@@ -9,6 +9,7 @@
 - [Code completion](#code-completion)
 - [Commenters](#commenters)
 - [Cycle](#cycle)
+- [Databases](#databases)
 - [Delimiter](#delimiter)
 - [Fuzzy finders](#fuzzy-finders)
 - [Grep tools](#grep-tools)
@@ -105,6 +106,11 @@ or [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
+
+#### Databases
+
+- [pgsql.vim](https://github.com/lifepillar/pgsql.vim)
+- [vim-dadbod](https://github.com/tpope/vim-dadbod)
 
 #### Delimiter
 
