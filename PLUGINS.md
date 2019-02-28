@@ -40,6 +40,7 @@
 - [Lua](#lua)
 - [PHP](#php)
 - [Python](#python)
+- [Rust](#rust)
 - [TeX](#tex)
 - [VimL](#viml)
 
@@ -349,6 +350,11 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [python-mode](https://github.com/klen/python-mode)
 - [SimpylFold](https://github.com/tmhedberg/SimpylFold)
 - [vim-flake8](https://github.com/nvie/vim-flake8)
+
+#### Rust
+
+- [rust.vim](https://github.com/rust-lang/rust.vim)
+- [vim-racer](https://github.com/racer-rust/vim-racer)
 
 #### TeX
 
