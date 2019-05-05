@@ -746,17 +746,17 @@ See `:h text-objects` for all available text objects.
 
 ## Autocmds
 
-On many occasions, Vim emits events. You hook into these events by using
-autocmds.
+You can trigger an action after many events in Vim, such as a buffer being
+saved or Vim having started up, by so-called _autocmds_.
 
-You wouldn't use Vim if there weren't autocmds. They're used all the time, even
-if you don't notice it. Don't believe me? Check `:au`, but don't let the output
-overwhelm you. These are all the autocmds that are in effect right now!
+Vim relies extensively on autocmds. Don't believe me? Check `:au`, but don't let
+the output overwhelm you. These are all the autocmds that are in effect right
+now!
 
 See `:h {event}` for a quick overview of all available events and `:h
 autocmd-events-abc` for more details.
 
-A typical example would be setting filetype-specific settings:
+A typical example would be filetype-specific settings:
 
 ```vim
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 comments-=:#
