@@ -354,6 +354,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 #### Rust
 
 - [rust.vim](https://github.com/rust-lang/rust.vim)
+- [vim-crates](https://github.com/mhinz/vim-crates)
 - [vim-racer](https://github.com/racer-rust/vim-racer)
 
 #### TeX
