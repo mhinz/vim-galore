@@ -278,6 +278,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [a.vim](https://github.com/vim-scripts/a.vim)
 - [clang_complete](https://github.com/Rip-Rip/clang_complete)
 - [color_coded](https://github.com/jeaye/color_coded)
+- [CurtineIncSw](https://github.com/ericcurtin/CurtineIncSw.vim)
 - [lh-cpp](https://github.com/LucHermitte/lh-cpp)
 - [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 - [vim-rtags](https://github.com/lyuts/vim-rtags)
