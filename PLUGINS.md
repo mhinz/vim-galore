@@ -14,6 +14,7 @@
 - [Fuzzy finders](#fuzzy-finders)
 - [Grep tools](#grep-tools)
 - [Indent](#indent)
+- [LSP](#lsp)
 - [Misc](#misc)
 - [Navigation](#navigation)
 - [Plugin managers](#plugin-managers)
@@ -138,6 +139,10 @@ or [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
 
 - [indentLine](https://github.com/Yggdroot/indentLine)
 - [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
+
+#### LSP
+
+- [coc.nvim](https://github.com/neoclide/coc.nvim)
 
 #### Navigation
 
