@@ -89,6 +89,7 @@ or [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
 
 - [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim)
 - [completor.vim](https://github.com/maralla/completor.vim)
+- [coc.vim](https://github.com/neoclide/coc.nvim)
 - [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
 - [neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
 - [nvim-completion-manager](https://github.com/roxma/nvim-completion-manager)
