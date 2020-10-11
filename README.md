@@ -781,7 +781,7 @@ au BufNewFile,BufRead *.rb,*.rbw  setf ruby
 ```
 
 The `BufNewFile` and `BufRead` events in this case are hardcoded in the C
-sources of Vim and get emitted everytime you open a file via `:e` and similar
+sources of Vim and get emitted every time you open a file via `:e` and similar
 commands. Afterwards all the hundreds of filetypes from `filetype.vim` are
 tested for.
 
