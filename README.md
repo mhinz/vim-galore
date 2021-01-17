@@ -6,7 +6,8 @@
     <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>Chinese</a> |
     <a href='http://postd.cc/?s=vim-galore'>Japanese</a> |
     <a href='https://github.com/lsrdg/vim-galore'>Portuguese</a> |
-    <a href='http://givi.olnd.ru/vim-galore/vim-galore-ru.html'>Russian</a>
+    <a href='http://givi.olnd.ru/vim-galore/vim-galore-ru.html'>Russian</a> |
+    <a href='https://github.com/kyoz/vim-galore-vi'>Vietnamese</a>
     <div>
       <br />
       <sub>Licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0<a/>.</sub>
