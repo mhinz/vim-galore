@@ -2799,7 +2799,7 @@ See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
 `Vim script`, `Vimscript`, and `VimL` all refer to the same thing: The
 programming language used for scripting Vim. Even though
 [8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c)
-changed all references to `VimL` to `Vim script`, which can now be considered
+changed all references from `VimL` to `Vim script`, which can now be considered
 the official term, `VimL` is still widespread all over the internet.
 
 No matter which term you use, everyone will understand it.
