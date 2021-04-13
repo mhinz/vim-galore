@@ -1,7 +1,0 @@
-os: linux
-
-language: go
-go: "1.13"
-
-install: go get github.com/mhinz/gomali
-script: gomali *.md
