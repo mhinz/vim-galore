@@ -2020,12 +2020,15 @@ So far, so good. But `<up>` and `<down>` are even smarter! They recall the
 command-line whose beginning matches the current command-line. E.g. `:echo <up>`
 may change to `:echo "Vim rocks!"`.
 
-Of course, I don't want you to reach to the arrow keys, just map it instead:
+Of course, I don't want you to reach for the arrow keys:
 
 ```vim
-cnoremap <c-n>  <down>
-cnoremap <c-p>  <up>
+cnoremap <expr> <c-n> wildmenumode() ? "\<c-n>" : "\<down>"
+cnoremap <expr> <c-p> wildmenumode() ? "\<c-p>" : "\<up>"
 ```
+
+Here we also distinguish between command-line history and the wildmenu. See `:h
+'wildmenu'`.
 
 I depend on this behaviour several times a day.
 
