@@ -2618,6 +2618,7 @@ See `:h :TOhtml`.
 | `:h map-modes` | `:nunmap can also be used outside of a monastery.` |
 | `:help!` | `E478: Don't panic!` (Glitch? When used in a help buffer (`buftype=help`) this works like `:h help.txt` instead.) |
 | `:smile` | Try it out yourself. ;-) Added in 7.4.1005. |
+| `:hi!` | `Greetings, Vim user!` |
 
 ## Why hjkl for navigation?
 
