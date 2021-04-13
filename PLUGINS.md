@@ -142,7 +142,12 @@ or [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
 
 #### LSP
 
+Plugins for the [Language Server Protocol](https://microsoft.github.io/language-server-protocol)
+
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
+- [languageclient-neovim](https://github.com/autozimu/LanguageClient-neovim)
+- [vim-lsc](https://github.com/natebosch/vim-lsc)
+- [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
 
 #### Navigation
 
