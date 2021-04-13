@@ -51,7 +51,7 @@ if &shell =~# 'fish$'
 endif
 
 " Put all temporary files under the same directory.
-" https://github.com/mhinz/vim-galore#handling-backup-swap-undo-and-viminfo-files
+" https://github.com/mhinz/vim-galore#temporary-files
 set backup
 set backupdir   =$HOME/.vim/files/backup/
 set backupext   =-vimbackup
