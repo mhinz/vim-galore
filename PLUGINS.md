@@ -162,6 +162,7 @@ Plugins for the [Language Server Protocol](https://microsoft.github.io/language-
 - [vim-sneak](https://github.com/justinmk/vim-sneak)
 - [vim-vinegar](https://github.com/tpope/vim-vinegar)
 - [vimfiler.vim](https://github.com/Shougo/vimfiler.vim) (_depends on other plugins_)
+- [zoxide.vim](https://github.com/nanotee/zoxide.vim)
 
 Also see [fuzzy finders](#fuzzy-finders).
 
