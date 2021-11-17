@@ -920,7 +920,7 @@ The quickfix list was named after the "quick fix" feature from the [Aztec C
 compiler](https://en.wikipedia.org/wiki/Aztec_C).
 
 Actually there are two kinds of lists: quickfix and location lists. They behave
-almost the same, but have the follwing differences:
+almost the same, but have the following differences:
 
 - There is only one quickfix list. There can be multiple location lists; one per
   window.
