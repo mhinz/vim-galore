@@ -559,6 +559,7 @@ as short form of `:delete`):
 |---------|----------------|
 | `:d` | Current line. |
 | `:.d` | Current line. |
+| `:0d` | Special "virtual" line _before_ the first line in the buffer. (*some commands, like :move or :copy will interpret it as "before the first line", while others like :delete or :substitute will treat it as the first line) |
 | `:1d` | First line. |
 | `:$d` | Last line. |
 | `:1,$d` | All lines. |
