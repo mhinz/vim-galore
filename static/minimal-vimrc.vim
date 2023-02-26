@@ -52,11 +52,13 @@ endif
 
 " Put all temporary files under the same directory.
 " https://github.com/mhinz/vim-galore#temporary-files
+" To ensure that the following configurations work correctly, please execute the following command.
+" mkdir -p ~/.vim/files/{backup,swap,undo,info} && touch ~/.vim/files/info/viminfo
 set backup
 set backupdir   =$HOME/.vim/files/backup/
 set backupext   =-vimbackup
 set backupskip  =
-set directory   =$HOME/.vim/files/swap//
+set directory   =$HOME/.vim/files/swap/
 set updatecount =100
 set undofile
 set undodir     =$HOME/.vim/files/undo/
