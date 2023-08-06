@@ -241,7 +241,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [vim-github-dashboard](https://github.com/junegunn/vim-github-dashboard)
-- [vim-lawrencium](https://bitbucket.org/ludovicchabant/vim-lawrencium)
+- [vim-lawrencium](https://github.com/ludovicchabant/vim-lawrencium)
 - [vim-signify](https://github.com/mhinz/vim-signify)
 - [vim-twiggy](https://github.com/sodapopcan/vim-twiggy)
 - [vimagit](https://github.com/jreybert/vimagit)
